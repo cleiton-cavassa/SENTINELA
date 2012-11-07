@@ -5073,3 +5073,2230 @@ Compiling...
    Compilation completed in 0.00 seconds
 Removing invalidated units
 Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2745 units from cache.
+Compiling...
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 10.50 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.06 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.05 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2744 cached/archived units.  Used 2744 / 2745 units from cache.
+Compiling...
+   Compilation completed in 0.21 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2744 cached/archived units.  Used 2744 / 2745 units from cache.
+Compiling...
+   Compilation completed in 0.04 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2744 cached/archived units.  Used 2744 / 2745 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2744 cached/archived units.  Used 2744 / 2745 units from cache.
+Compiling...
+   Compilation completed in 0.01 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2744 cached/archived units.  Used 2744 / 2746 units from cache.
+Compiling...
+   Compilation completed in 0.03 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2747 units from cache.
+Compiling...
+   0% complete (ETR: 70 seconds)
+   10% complete (ETR: 48 seconds)
+   20% complete (ETR: 25 seconds)
+   30% complete (ETR: 16 seconds)
+   40% complete (ETR: 14 seconds)
+   50% complete (ETR: 10 seconds)
+   60% complete (ETR: 7 seconds)
+   70% complete (ETR: 6 seconds)
+   80% complete (ETR: 3 seconds)
+   90% complete (ETR: 2 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 28.96 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CampoCNPJ.java'
+      [ERROR] Line 26: The method format(String, null) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2746 cached/archived units.  Used 2746 / 2747 units from cache.
+Compiling...
+   Compilation completed in 0.20 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CampoCNPJ.java'
+      [ERROR] Line 26: The method format(String, null) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CompositeCNPJ.java'
+      [ERROR] Line 45: The method format(String, null) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.05 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CompositeCNPJ.java'
+   [ERROR] Line 45: The method format(String, null) is undefined for the type String
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2747 units from cache.
+Compiling...
+   0% complete (ETR: ?)
+   10% complete (ETR: 113 seconds)
+   20% complete (ETR: 91 seconds)
+   30% complete (ETR: 72 seconds)
+   40% complete (ETR: 62 seconds)
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2718 units from cache.
+Compiling...
+   10% complete (ETR: 22 seconds)
+   10% complete (ETR: 22 seconds)
+   20% complete (ETR: 21 seconds)
+   30% complete (ETR: 16 seconds)
+   40% complete (ETR: 12 seconds)
+   50% complete (ETR: 10 seconds)
+   60% complete (ETR: 8 seconds)
+   70% complete (ETR: 6 seconds)
+   80% complete (ETR: 4 seconds)
+   90% complete (ETR: 2 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 19.52 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2747 units from cache.
+Compiling...
+   Compilation completed in 0.33 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CampoCNPJ.java'
+      [ERROR] Line 26: The method format(String, null) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2747 cached/archived units.  Used 2747 / 2747 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CampoCNPJ.java'
+      [ERROR] Line 26: The method format(String, null) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2746 cached/archived units.  Used 2746 / 2747 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CampoCNPJ.java'
+      [ERROR] Line 26: The method format(String, null) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2746 cached/archived units.  Used 2746 / 2747 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CampoCNPJ.java'
+      [ERROR] Line 26: The method format(String, null) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2718 units from cache.
+Compiling...
+   20% complete (ETR: 13 seconds)
+   20% complete (ETR: 13 seconds)
+   20% complete (ETR: 13 seconds)
+   30% complete (ETR: 13 seconds)
+   40% complete (ETR: 9 seconds)
+   50% complete (ETR: 9 seconds)
+   60% complete (ETR: 6 seconds)
+   70% complete (ETR: 4 seconds)
+   80% complete (ETR: 3 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 35.17 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2718 units from cache.
+Compiling...
+   10% complete (ETR: 39 seconds)
+   10% complete (ETR: 39 seconds)
+   20% complete (ETR: 27 seconds)
+   30% complete (ETR: 19 seconds)
+   40% complete (ETR: 14 seconds)
+   50% complete (ETR: 10 seconds)
+   60% complete (ETR: 7 seconds)
+   70% complete (ETR: 5 seconds)
+   80% complete (ETR: 3 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 25.60 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2748 units from cache.
+Compiling...
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 9.49 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CampoCNPJ.java'
+      [ERROR] Line 26: The method format(String, null) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2747 cached/archived units.  Used 2747 / 2748 units from cache.
+Compiling...
+   Compilation completed in 0.04 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CampoCNPJ.java'
+      [ERROR] Line 26: The method format(String, null) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2747 cached/archived units.  Used 2747 / 2748 units from cache.
+Compiling...
+   Compilation completed in 0.04 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/client/validacao/CampoCNPJ.java'
+      [ERROR] Line 26: The method format(String, null) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePF.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 61: PostalAddress cannot be resolved to a type
+      [ERROR] Line 62: PostalAddress cannot be resolved to a type
+      [ERROR] Line 65: PostalAddress cannot be resolved to a type
+      [ERROR] Line 66: PostalAddress cannot be resolved to a type
+      [ERROR] Line 69: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 104: PostalAddress cannot be resolved to a type
+      [ERROR] Line 107: PhoneNumber cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/ClientePJ.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PostalAddress cannot be resolved to a type
+      [ERROR] Line 63: PostalAddress cannot be resolved to a type
+      [ERROR] Line 64: Missing code implementation in the compiler
+      [ERROR] Line 67: PostalAddress cannot be resolved to a type
+      [ERROR] Line 68: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Corrida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 20: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaAtendida.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 24: PostalAddress cannot be resolved to a type
+      [ERROR] Line 25: PostalAddress cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 41: PostalAddress cannot be resolved to a type
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/CorridaCancelada.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Expediente.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Frota.java'
+      [ERROR] Line 7: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 19: PostalAddress cannot be resolved to a type
+      [ERROR] Line 22: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 25: Email cannot be resolved to a type
+      [ERROR] Line 28: PostalAddress cannot be resolved to a type
+      [ERROR] Line 49: PostalAddress cannot be resolved to a type
+      [ERROR] Line 50: PostalAddress cannot be resolved to a type
+      [ERROR] Line 53: PostalAddress cannot be resolved to a type
+      [ERROR] Line 54: PostalAddress cannot be resolved to a type
+      [ERROR] Line 57: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 58: Missing code implementation in the compiler
+      [ERROR] Line 61: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 62: Missing code implementation in the compiler
+      [ERROR] Line 65: Email cannot be resolved to a type
+      [ERROR] Line 66: Missing code implementation in the compiler
+      [ERROR] Line 69: Email cannot be resolved to a type
+      [ERROR] Line 70: Missing code implementation in the compiler
+      [ERROR] Line 73: PostalAddress cannot be resolved to a type
+      [ERROR] Line 74: Missing code implementation in the compiler
+      [ERROR] Line 77: PostalAddress cannot be resolved to a type
+      [ERROR] Line 78: Missing code implementation in the compiler
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/shared/Funcionario.java'
+      [ERROR] Line 8: The import com.google.appengine.api.datastore cannot be resolved
+      [ERROR] Line 26: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 29: PostalAddress cannot be resolved to a type
+      [ERROR] Line 72: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 73: Missing code implementation in the compiler
+      [ERROR] Line 76: PhoneNumber cannot be resolved to a type
+      [ERROR] Line 77: Missing code implementation in the compiler
+      [ERROR] Line 80: PostalAddress cannot be resolved to a type
+      [ERROR] Line 81: PostalAddress cannot be resolved to a type
+      [ERROR] Line 84: PostalAddress cannot be resolved to a type
+      [ERROR] Line 85: PostalAddress cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method simplePagerFastForward
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForward'
+      Preparing method simplePagerFastForwardDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFastForwardDisabled'
+      Preparing method simplePagerFirstPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPage'
+      Preparing method simplePagerFirstPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerFirstPageDisabled'
+      Preparing method simplePagerLastPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPage'
+      Preparing method simplePagerLastPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerLastPageDisabled'
+      Preparing method simplePagerNextPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPage'
+      Preparing method simplePagerNextPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerNextPageDisabled'
+      Preparing method simplePagerPreviousPage
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPage'
+      Preparing method simplePagerPreviousPageDisabled
+         Adding image 'com.google.gwt.user.cellview.client.SimplePager.Resources.simplePagerPreviousPageDisabled'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface com.google.gwt.user.cellview.client.SimplePager.ImageButtonsConstants
+         Generating method body for fastForward()
+         Generating method body for firstPage()
+         Generating method body for lastPage()
+         Generating method body for nextPage()
+         Generating method body for prevPage()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units

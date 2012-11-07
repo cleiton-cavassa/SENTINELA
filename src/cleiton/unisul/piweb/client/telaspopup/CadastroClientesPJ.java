@@ -1,5 +1,7 @@
 package cleiton.unisul.piweb.client.telaspopup;
 
+import cleiton.unisul.piweb.client.validacao.CampoCNPJ;
+
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Grid;
@@ -17,6 +19,9 @@ import com.google.gwt.user.datepicker.client.DateBox.DefaultFormat;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.cellview.client.SimplePager;
+import com.google.gwt.user.client.ui.IntegerBox;
+import cleiton.unisul.piweb.client.validacao.CompositeCNPJ;
+import com.google.gwt.user.client.ui.DecoratorPanel;
 
 public class CadastroClientesPJ extends Composite {
 
@@ -45,48 +50,58 @@ public class CadastroClientesPJ extends Composite {
 		tabPanel.add(verticalPanel, "Dados do Cliente", false);
 		verticalPanel.setSize("5cm", "3cm");
 		
-		Grid grid = new Grid(4, 2);
+		Grid grid = new Grid(5, 2);
 		verticalPanel.add(grid);
 		
-		Label lblCnpj = new Label("CNPJ:");
-		lblCnpj.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
-		grid.setWidget(0, 0, lblCnpj);
+		Label label = new Label("ID:");
+		label.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
+		grid.setWidget(0, 0, label);
+		
+		Label label_1 = new Label("Ainda n\u00E3o criado");
+		label_1.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
+		grid.setWidget(0, 1, label_1);
+		
+		Label label_2 = new Label("CNPJ:");
+		label_2.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
+		grid.setWidget(1, 0, label_2);
+		
+		CompositeCNPJ compositeCNPJ = new CompositeCNPJ();
+		grid.setWidget(1, 1, compositeCNPJ);
+		
 		
 		Label lblRazoSocial = new Label("Raz\u00E3o Social:");
 		lblRazoSocial.setWordWrap(false);
 		lblRazoSocial.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
-		grid.setWidget(1, 0, lblRazoSocial);
+		grid.setWidget(2, 0, lblRazoSocial);
 		
 		Label lblEndereco = new Label("Endere\u00E7o da Matriz:");
 		lblEndereco.setWordWrap(false);
 		lblEndereco.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
-		grid.setWidget(2, 0, lblEndereco);
+		grid.setWidget(3, 0, lblEndereco);
 		
 		Label lblreaDeAtuao = new Label("Regi\u00E3o de Atua\u00E7\u00E3o:");
-		grid.setWidget(3, 0, lblreaDeAtuao);
+		grid.setWidget(4, 0, lblreaDeAtuao);
 		lblreaDeAtuao.setWidth("123px");
-		
-		TextBox textBox = new TextBox();
-		textBox.setVisibleLength(18);
-		textBox.setMaxLength(14);
-		grid.setWidget(0, 1, textBox);
 		
 		TextBox textBox_1 = new TextBox();
 		textBox_1.setVisibleLength(120);
-		grid.setWidget(1, 1, textBox_1);
+		grid.setWidget(2, 1, textBox_1);
 		
 		TextBox textBox_2 = new TextBox();
 		textBox_2.setVisibleLength(120);
-		grid.setWidget(2, 1, textBox_2);
+		grid.setWidget(3, 1, textBox_2);
 		
 		TextBox textBox_3 = new TextBox();
 		textBox_3.setVisibleLength(120);
-		grid.setWidget(3, 1, textBox_3);
+		grid.setWidget(4, 1, textBox_3);
 		
 				CheckBox checkBox = new CheckBox("Cliente Ativo");
+				checkBox.setStyleName("ativoCheckBox");
 				verticalPanel.add(checkBox);
 				
-				FlowPanel flowPanel_2 = new FlowPanel();
+				HorizontalPanel flowPanel_2 = new HorizontalPanel();
+				flowPanel_2.setSpacing(3);
+				flowPanel_2.setStyleName("separadorBotoes");
 				verticalPanel.add(flowPanel_2);
 				
 				Button button = new Button("New button");
@@ -96,6 +111,10 @@ public class CadastroClientesPJ extends Composite {
 				Button button_1 = new Button("New button");
 				button_1.setText("excluir");
 				flowPanel_2.add(button_1);
+				
+				Button button_2 = new Button("novo Cliente PF");
+				button_2.setText("novo Cliente");
+				flowPanel_2.add(button_2);
 				
 				VerticalPanel verticalPanel_3 = new VerticalPanel();
 				tabPanel.add(verticalPanel_3, "Pessoas F\u00EDsicas Vinculadas", false);
@@ -107,23 +126,32 @@ public class CadastroClientesPJ extends Composite {
 				listBox.setVisibleItemCount(10);
 				
 				Button btnNewButton_1 = new Button("New button");
+				btnNewButton_1.setStyleName("padding5");
 				verticalPanel_3.add(btnNewButton_1);
 				btnNewButton_1.setText("desvincular PF selecionada");
-				
-				VerticalPanel verticalPanel_4 = new VerticalPanel();
-				verticalPanel_3.add(verticalPanel_4);
 				
 				HorizontalPanel horizontalPanel_1 = new HorizontalPanel();
 				verticalPanel_3.add(horizontalPanel_1);
 				
-				Button btnNewButton = new Button("New button");
-				btnNewButton.setText("incluir pessoa f\u00EDsica");
-				horizontalPanel_1.add(btnNewButton);
+				DecoratorPanel decoratorPanel = new DecoratorPanel();
+				decoratorPanel.setStyleName("padding10");
+				horizontalPanel_1.add(decoratorPanel);
+				
+				VerticalPanel verticalPanel_1 = new VerticalPanel();
+				verticalPanel_1.setSpacing(5);
+				decoratorPanel.setWidget(verticalPanel_1);
+				
+				Label lblIncluirNovaPessoa = new Label("INCLUIR nova pessoa f\u00EDsica vinculada");
+				verticalPanel_1.add(lblIncluirNovaPessoa);
 				
 				TextBox txtbxDigiteAquiA = new TextBox();
+				verticalPanel_1.add(txtbxDigiteAquiA);
 				txtbxDigiteAquiA.setMaxLength(11);
 				txtbxDigiteAquiA.setText("digite aqui o CPF");
-				horizontalPanel_1.add(txtbxDigiteAquiA);
+				
+				Button btnNewButton = new Button("New button");
+				verticalPanel_1.add(btnNewButton);
+				btnNewButton.setText("incluir pessoa f\u00EDsica");
 				
 				tabPanel.selectTab(0);
 		

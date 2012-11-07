@@ -59,4 +59,20 @@ boasvindas {
 	color: Teal;
 	font-weight: 900;
 }
+.CNPJsemBordas {
+	border-width: 0px;
+}
+.separadorBotoes {
+	padding: 3px;
+}
+.ativoCheckBox {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.padding5 {
+	padding: 5px;
+}
+.padding10 {
+	padding:10px;
+}
 
