@@ -8,7 +8,7 @@ import javax.jdo.annotations.Persistent;
 import com.google.appengine.api.datastore.*;
 
 @PersistenceCapable
-public class Funcionario {
+public class Motorista {
 
 	@Persistent
 	private String CPF;
@@ -36,6 +36,17 @@ public class Funcionario {
 
 	@Persistent
 	private Boolean carregaAnimais;
+	
+	@Persistent
+	private Boolean fumante;
+
+	public Boolean getFumante() {
+		return fumante;
+	}
+
+	public void setFumante(Boolean fumante) {
+		this.fumante = fumante;
+	}
 
 	public String getCPF() {
 		return CPF;

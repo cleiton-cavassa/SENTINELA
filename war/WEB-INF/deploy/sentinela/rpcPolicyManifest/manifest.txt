@@ -1,2 +1,3 @@
 # Module sentinela
 # RPC service class, partial path of RPC policy file
+cleiton.unisul.piweb.client.GreetingService, 40E251536B99E6FAB794B9B87EC3144E.gwt.rpc

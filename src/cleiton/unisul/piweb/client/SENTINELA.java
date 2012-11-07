@@ -1,9 +1,10 @@
 package cleiton.unisul.piweb.client;
 
 
-import cleiton.unisul.piweb.client.telaspopup.CadastroClientesPF;
+import cleiton.unisul.piweb.client.telaspopup.clientespf.CadastroClientesPF;
 
-import cleiton.unisul.piweb.client.telaspopup.CadastroClientesPJ;
+
+import cleiton.unisul.piweb.client.telaspopup.clientespj.CadastroClientesPJ;
 import cleiton.unisul.piweb.client.telaspopup.CadastroEstaFrota;
 import cleiton.unisul.piweb.client.telaspopup.CadastroFrotasParceiras;
 import cleiton.unisul.piweb.client.telaspopup.CadastroFuncionarios;

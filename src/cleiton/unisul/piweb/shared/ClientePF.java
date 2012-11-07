@@ -9,6 +9,45 @@ import com.google.appengine.api.datastore.*;
 
 @PersistenceCapable
 public class ClientePF {
+	
+	@Persistent
+	private String CPF;
+	
+	@Persistent
+	private String nome;
+	
+	@Persistent
+	private Boolean status;
+	
+	@Persistent
+	private Date dataNascimento;
+	
+	@Persistent
+	private Boolean tipoNacionalidade;
+	
+	@Persistent
+	private List<String> idiomasFalados;
+	
+	@Persistent
+	private PostalAddress endereco;
+	
+	@Persistent
+	private List<PhoneNumber> telefones;
+	
+	@Persistent
+	private Boolean carregaAnimais;
+	
+	@Persistent
+	private Boolean aceitaMotFumante;
+
+
+	public Boolean getAceitaMotFumante() {
+		return aceitaMotFumante;
+	}
+
+	public void setAceitaMotFumante(Boolean aceitaMotFumante) {
+		this.aceitaMotFumante = aceitaMotFumante;
+	}
 
 	public String getCPF() {
 		return CPF;
@@ -82,30 +121,4 @@ public class ClientePF {
 		this.carregaAnimais = carregaAnimais;
 	}
 
-	@Persistent
-	private String CPF;
-	
-	@Persistent
-	private String nome;
-	
-	@Persistent
-	private Boolean status;
-	
-	@Persistent
-	private Date dataNascimento;
-	
-	@Persistent
-	private Boolean tipoNacionalidade;
-	
-	@Persistent
-	private List<String> idiomasFalados;
-	
-	@Persistent
-	private PostalAddress endereco;
-	
-	@Persistent
-	private List<PhoneNumber> telefones;
-	
-	@Persistent
-	private Boolean carregaAnimais;
 }

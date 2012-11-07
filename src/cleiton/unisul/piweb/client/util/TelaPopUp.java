@@ -30,7 +30,7 @@ public class TelaPopUp extends PopupPanel {
 		setAutoHideOnHistoryEventsEnabled(false);
 		setAutoHideEnabled(false);
 		setGlassEnabled(true);
-		setSize("100%", "413px");
+		setSize("100%", "100%");
 		setModal(true);
 		
 		verticalPanel= new VerticalPanel();

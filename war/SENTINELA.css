@@ -4,7 +4,7 @@
 /** Example rules used by the template application (remove for your app) */
 h1 {
 	color: Navy;
-	margin: 40px 0px 70px;
+	margin: 40px 0px 70px 70px 70px;
 	border: Black;
 	font-size: 2em;
 	font-style: normal;
@@ -51,6 +51,7 @@ h1 {
 	vertical-align: middle;
 	text-align: center;
 	background-color: Silver;
+	padding:10px;
 }
 .painelCadastro {
 	border: Black;
@@ -74,5 +75,11 @@ boasvindas {
 }
 .padding10 {
 	padding:10px;
+}
+pager {
+	border-top: medium double Gray;
+	border-right: medium dashed Gray;
+	border-bottom: medium double Gray;
+	border-left: medium double Gray;
 }
 
