@@ -12,7 +12,7 @@ import cleiton.unisul.piweb.client.telaspopup.CorridasCanceladas;
 import cleiton.unisul.piweb.client.telaspopup.CorridasFinalizadas;
 import cleiton.unisul.piweb.client.telaspopup.FrotasQueEmitemVouchers;
 import cleiton.unisul.piweb.client.telaspopup.FuncionariosEmAtividade;
-import cleiton.unisul.piweb.client.telaspopup.TelaPopUp;
+import cleiton.unisul.piweb.client.util.CriadorTela;
 import cleiton.unisul.piweb.shared.Usuario;
 
 import com.google.gwt.core.client.EntryPoint;
@@ -21,27 +21,14 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Grid;
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.TabPanel;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.client.ui.Widget;
-import com.google.gwt.user.datepicker.client.DateBox;
-import com.google.gwt.user.client.ui.Tree;
 import com.google.gwt.user.client.ui.MenuBar;
 import com.google.gwt.user.client.ui.MenuItem;
-import com.google.gwt.user.client.Command;
-import com.google.gwt.user.client.ui.ToggleButton;
-import com.google.gwt.user.client.ui.HorizontalSplitPanel;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 
 /**
@@ -182,23 +169,7 @@ public class SENTINELA implements EntryPoint {
 		menuBar.addItem(mntmNewMenu_3);
 	}
 	
-	private class CriadorTela implements Command{
-		private Widget tela;
-		public void execute() {
-			
-				TelaPopUp p= new TelaPopUp();
-				p.setTela(tela);
-				p.center();		
-				p.setPopupPosition(p.getPopupLeft(), Math.min(40, p.getPopupTop()));
-			
 
-		}
-		
-		CriadorTela(Widget tela){
-			this.tela = tela;
-		}
-	}
-	
 }	
 
 	

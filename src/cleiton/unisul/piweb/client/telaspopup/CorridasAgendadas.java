@@ -2,6 +2,8 @@ package cleiton.unisul.piweb.client.telaspopup;
 
 import java.util.Arrays;
 
+import cleiton.unisul.piweb.client.util.CriadorTela;
+
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Label;
@@ -14,6 +16,10 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.view.client.ListDataProvider;
 import com.google.gwt.user.cellview.client.DataGrid;
 import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.user.cellview.client.Column;
+import com.google.gwt.cell.client.EditTextCell;
 
 public class CorridasAgendadas extends Composite {
 	
@@ -70,7 +76,7 @@ public class CorridasAgendadas extends Composite {
 		
 		DataGrid cellTable = new DataGrid();
 		flowPanel.add(cellTable);
-		cellTable.setSize("734px", "432px");
+		cellTable.setSize("734px", "296px");
 		
 		ListDataProvider<DadosCorridaAgendada> dataProvider = new ListDataProvider<DadosCorridaAgendada>();
 		dataProvider.addDataDisplay(cellTable);
@@ -93,14 +99,6 @@ public class CorridasAgendadas extends Composite {
 		};
 		cellTable.addColumn(textColumn, "Cliente");
 		
-		TextColumn<DadosCorridaAgendada> textColumn_3 = 
-				new TextColumn<DadosCorridaAgendada>() {
-			public String getValue(DadosCorridaAgendada object) {
-				return object.getMotorista();
-			}
-		};
-		cellTable.addColumn(textColumn_3, "Motorista");
-		
 		TextColumn<DadosCorridaAgendada> textColumn_2 = 
 				new TextColumn<DadosCorridaAgendada>() {
 			public String getValue(DadosCorridaAgendada object) {
@@ -115,12 +113,29 @@ public class CorridasAgendadas extends Composite {
 				return object.getHorario();
 			}
 		};
-		cellTable.addColumn(textColumn_1, "Hor\u00E1rio");
+		cellTable.addColumn(textColumn_1, "Data e hora");
+		
+		Column<Object, String> column = new Column<Object, String>(new com.google.gwt.cell.client.TextInputCell()) {
+			@Override
+			public String getValue(Object object) {
+				return (String) null;
+			}
+		};
+		
+		cellTable.addColumn(column, "Motorista");
+		
+
+
 		
 		HorizontalPanel verticalPanel = new HorizontalPanel();
 		flowPanel.add(verticalPanel);
 		
 		Button btnNewButton_1 = new Button("New button");
+		btnNewButton_1.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				new CriadorTela(new CadastroNovaCorrida()).execute();
+			}
+		});
 		verticalPanel.add(btnNewButton_1);
 		btnNewButton_1.setWidth("156px");
 		btnNewButton_1.setText("Agendar nova corrida");

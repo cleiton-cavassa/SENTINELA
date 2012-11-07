@@ -1,4 +1,4 @@
-package cleiton.unisul.piweb.client.telaspopup;
+package cleiton.unisul.piweb.client.util;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
