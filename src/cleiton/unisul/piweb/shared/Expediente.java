@@ -1,14 +1,15 @@
 package cleiton.unisul.piweb.shared;
+
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 
-import com.google.appengine.api.datastore.*;
 
 @PersistenceCapable
-public class Expediente {
+public class Expediente  implements Serializable {
 	
 	@Persistent
 	private Date inicio;

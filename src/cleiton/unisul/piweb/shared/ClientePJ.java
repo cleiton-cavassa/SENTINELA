@@ -1,17 +1,22 @@
 package cleiton.unisul.piweb.shared;
+import java.io.Serializable;
+
 import java.util.Date;
 import java.util.List;
 
+import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
 
-import com.google.appengine.api.datastore.*;
 
+@SuppressWarnings("serial")
 @PersistenceCapable
-public class ClientePJ {
+public class ClientePJ  implements Serializable {
 	
-	@Persistent
-	private String CNPJ;
+    @PrimaryKey
+    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	private Long CNPJ;
 	
 	@Persistent
 	private String razaoSocial;
@@ -21,18 +26,21 @@ public class ClientePJ {
 	
 	@Persistent
 	private List<ClientePF> pessoasFisicas;
-	
+
 	@Persistent
-	private List<PostalAddress> regioesDeAtuacao;
+	private String enderecoMatriz;
+
+	@Persistent
+	private List<String> regioesDeAtuacao;
 	
 	@Persistent
 	private Boolean vouchersAtivos;
 
-	public String getCNPJ() {
+	public Long getCNPJ() {
 		return CNPJ;
 	}
 
-	public void setCNPJ(String cNPJ) {
+	public void setCNPJ(Long cNPJ) {
 		CNPJ = cNPJ;
 	}
 
@@ -60,11 +68,19 @@ public class ClientePJ {
 		this.pessoasFisicas = pessoasFisicas;
 	}
 
-	public List<PostalAddress> getRegioesDeAtuacao() {
+	public List<String> getRegioesDeAtuacao() {
 		return regioesDeAtuacao;
 	}
+	
+	public String getEnderecoMatriz() {
+		return enderecoMatriz;
+	}
 
-	public void setRegioesDeAtuacao(List<PostalAddress> regioesDeAtuacao) {
+	public void setEnderecoMatriz(String enderecoMatriz) {
+		this.enderecoMatriz = enderecoMatriz;
+	}
+
+	public void setRegioesDeAtuacao(List<String> regioesDeAtuacao) {
 		this.regioesDeAtuacao = regioesDeAtuacao;
 	}
 

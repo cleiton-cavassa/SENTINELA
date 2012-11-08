@@ -1,6 +1,5 @@
 package cleiton.unisul.piweb.client.telaspopup.clientespf;
 
-import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.client.ui.Composite;
 
 import com.google.gwt.user.client.ui.Button;
@@ -8,20 +7,9 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.PopupPanel;
-import com.google.gwt.user.client.ui.RadioButton;
-import com.google.gwt.user.client.ui.TabPanel;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.datepicker.client.DateBox;
-import com.google.gwt.user.datepicker.client.DateBox.DefaultFormat;
-import com.google.gwt.user.client.ui.PushButton;
-import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.DockPanel;
 import com.google.gwt.user.cellview.client.SimplePager;
-import com.google.gwt.user.client.ui.Grid;
-import cleiton.unisul.piweb.client.validacao.CompositeCPF;
-import com.google.gwt.user.client.ui.ListBox;
+
 import cleiton.unisul.piweb.client.formularios.FormClientePF;
 
 public class CadastroClientesPF extends Composite {

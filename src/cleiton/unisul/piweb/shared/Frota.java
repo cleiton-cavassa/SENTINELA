@@ -1,13 +1,12 @@
 package cleiton.unisul.piweb.shared;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.jdo.annotations.*;
 
-import com.google.appengine.api.datastore.*;
-
 @PersistenceCapable
-public class Frota {
+public class Frota  implements Serializable {
 	
 	@Persistent
 	private String CNPJ;
@@ -16,16 +15,16 @@ public class Frota {
 	private String razaoSocial;
 	
 	@Persistent
-	private PostalAddress endereco;
+	private String endereco;
 	
 	@Persistent
-	private List<PhoneNumber> telefones;
+	private List<String> telefones;
 	
 	@Persistent
-	private List<Email> emails;
+	private List<String> Strings;
 	
 	@Persistent
-	private List<PostalAddress> regioesDeAtuacao;
+	private List<String> regioesDeAtuacao;
 	
 	@Persistent
 	private List<Integer> ClientesPJ;
@@ -46,35 +45,35 @@ public class Frota {
 		this.razaoSocial = razaoSocial;
 	}
 
-	public PostalAddress getEndereco() {
+	public String getEndereco() {
 		return endereco;
 	}
 
-	public void setEndereco(PostalAddress endereco) {
+	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
 
-	public List<PhoneNumber> getTelefones() {
+	public List<String> getTelefones() {
 		return telefones;
 	}
 
-	public void setTelefones(List<PhoneNumber> telefones) {
+	public void setTelefones(List<String> telefones) {
 		this.telefones = telefones;
 	}
 
-	public List<Email> getEmails() {
-		return emails;
+	public List<String> getStrings() {
+		return Strings;
 	}
 
-	public void setEmails(List<Email> emails) {
-		this.emails = emails;
+	public void setStrings(List<String> Strings) {
+		this.Strings = Strings;
 	}
 
-	public List<PostalAddress> getRegioesDeAtuacao() {
+	public List<String> getRegioesDeAtuacao() {
 		return regioesDeAtuacao;
 	}
 
-	public void setRegioesDeAtuacao(List<PostalAddress> regioesDeAtuacao) {
+	public void setRegioesDeAtuacao(List<String> regioesDeAtuacao) {
 		this.regioesDeAtuacao = regioesDeAtuacao;
 	}
 

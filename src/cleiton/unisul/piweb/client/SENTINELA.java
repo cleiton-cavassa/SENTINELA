@@ -1,10 +1,8 @@
 package cleiton.unisul.piweb.client;
 
 
-import cleiton.unisul.piweb.client.telaspopup.clientespf.CadastroClientesPF;
-
-
-import cleiton.unisul.piweb.client.telaspopup.clientespj.CadastroClientesPJ;
+import cleiton.unisul.piweb.client.telaspopup.clientespf.*;
+import cleiton.unisul.piweb.client.telaspopup.clientespj.*;
 import cleiton.unisul.piweb.client.telaspopup.CadastroEstaFrota;
 import cleiton.unisul.piweb.client.telaspopup.CadastroFrotasParceiras;
 import cleiton.unisul.piweb.client.telaspopup.CadastroFuncionarios;
@@ -31,14 +29,39 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.MenuBar;
 import com.google.gwt.user.client.ui.MenuItem;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
+import com.google.gwt.user.client.ui.Button;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
 public class SENTINELA implements EntryPoint {
-	private final GreetingServiceAsync greetingService = GWT
+	public class SairClickHandler implements ClickHandler {
+
+		@Override
+		public void onClick(ClickEvent event) {
+			greetingService.urlLogout("/SENTINELA.html", new AsyncCallback<String>() {
+				@Override
+				public void onFailure(Throwable caught) {}
+				@Override
+				public void onSuccess(String result) {
+					Window.Location.assign(result);
+				}
+			});
+		}
+	}
+
+
+
+	private static GreetingServiceAsync greetingService = GWT
 			.create(GreetingService.class);
 	
+	public static GreetingServiceAsync getGreetingService() {
+		if (greetingService!=null){
+			greetingService=GWT.create(GreetingService.class);
+		}
+		return greetingService;
+	}
+
 	private Usuario usuario; 
 	
 	//private Button clickMeButton;
@@ -60,21 +83,9 @@ public class SENTINELA implements EntryPoint {
 				gridPanel.setWidget(0, 1,horizontalPanel);
 				
 				
-				Label btnNewButton = new Label("Fazer Logout");
-				btnNewButton.addClickHandler(new ClickHandler() {
-					public void onClick(ClickEvent event) {
-						greetingService.urlLogout("/SENTINELA.html", new AsyncCallback<String>() {
-							@Override
-							public void onFailure(Throwable caught) {}
-							@Override
-							public void onSuccess(String result) {
-								Window.Location.assign(result);
-							}
-						});
-					}
-				});
+				Button btnNewButton = new Button("Logout");
+				btnNewButton.addClickHandler(new SairClickHandler());
 				final Label label2= new Label();
-				label2.setText("aaaaaaaaa");
 				horizontalPanel.add(label2);
 				btnNewButton.setStyleName("botaoLogout");
 				horizontalPanel.add(btnNewButton);
@@ -123,7 +134,7 @@ public class SENTINELA implements EntryPoint {
 		MenuBar menuBar_1 = new MenuBar(true);
 		MenuItem mntmNewMenu = new MenuItem("Clientes", false, menuBar_1);
 		
-		MenuItem mntmNewItem_2 = new MenuItem("Pessoas Jur\u00EDdicas", false, new CriadorTela(new CadastroClientesPJ()));
+		MenuItem mntmNewItem_2 = new MenuItem("Pessoas Jur\u00EDdicas", false, new CriadorTela(new RelacaoClientesPJ()));
 		menuBar_1.addItem(mntmNewItem_2);
 		
 		MenuItem mntmNewItem_7 = new MenuItem("Pessoas F\u00EDsicas", false, new CriadorTela(new CadastroClientesPF()));

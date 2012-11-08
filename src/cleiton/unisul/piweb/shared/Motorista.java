@@ -1,14 +1,13 @@
 package cleiton.unisul.piweb.shared;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 
-import com.google.appengine.api.datastore.*;
-
 @PersistenceCapable
-public class Motorista {
+public class Motorista  implements Serializable {
 
 	@Persistent
 	private String CPF;
@@ -23,10 +22,10 @@ public class Motorista {
 	private String carro;
 
 	@Persistent
-	private List<PhoneNumber> telefones;
+	private List<String> telefones;
 
 	@Persistent
-	private PostalAddress endereco;
+	private String endereco;
 	
 	@Persistent
 	private List<String> idiomasFalados;
@@ -80,19 +79,19 @@ public class Motorista {
 		this.carro = carro;
 	}
 
-	public List<PhoneNumber> getTelefones() {
+	public List<String> getTelefones() {
 		return telefones;
 	}
 
-	public void setTelefones(List<PhoneNumber> telefones) {
+	public void setTelefones(List<String> telefones) {
 		this.telefones = telefones;
 	}
 
-	public PostalAddress getEndereco() {
+	public String getEndereco() {
 		return endereco;
 	}
 
-	public void setEndereco(PostalAddress endereco) {
+	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
 

@@ -37,9 +37,9 @@ h1 {
   margin: 15px 6px 6px;
 }
 .botaoLogout {
-	color: red;
+	color: dimgray;
 	font-size: 12px;
-	text-decoration: underline;
+	font-weight: bolder;
 }
 .h1 {
 	color: Navy;
