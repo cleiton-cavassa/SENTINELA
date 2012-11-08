@@ -2,6 +2,7 @@ package cleiton.unisul.piweb.shared;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class Usuario implements Serializable{
 	public Usuario(){}
 	
