@@ -1,7 +1,7 @@
 package cleiton.unisul.piweb.shared;
 import java.io.Serializable;
 
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
@@ -24,14 +24,22 @@ public class ClientePJ  implements Serializable {
 	@Persistent
 	private Boolean status;
 	
-	@Persistent
-	private List<ClientePF> pessoasFisicas;
+	//@Persistent
+	//private ArrayList<ClientePF> pessoasFisicas;
+/*	public ArrayList<ClientePF> getPessoasFisicas() {
+		return pessoasFisicas;
+	}
+
+	public void setPessoasFisicas(ArrayList<ClientePF> pessoasFisicas) {
+		this.pessoasFisicas = pessoasFisicas;
+	}
+*/
 
 	@Persistent
 	private String enderecoMatriz;
 
 	@Persistent
-	private List<String> regioesDeAtuacao;
+	private ArrayList<String> regioesDeAtuacao;
 	
 	@Persistent
 	private Boolean vouchersAtivos;
@@ -60,15 +68,8 @@ public class ClientePJ  implements Serializable {
 		this.status = status;
 	}
 
-	public List<ClientePF> getPessoasFisicas() {
-		return pessoasFisicas;
-	}
 
-	public void setPessoasFisicas(List<ClientePF> pessoasFisicas) {
-		this.pessoasFisicas = pessoasFisicas;
-	}
-
-	public List<String> getRegioesDeAtuacao() {
+	public ArrayList<String> getRegioesDeAtuacao() {
 		return regioesDeAtuacao;
 	}
 	
@@ -80,7 +81,7 @@ public class ClientePJ  implements Serializable {
 		this.enderecoMatriz = enderecoMatriz;
 	}
 
-	public void setRegioesDeAtuacao(List<String> regioesDeAtuacao) {
+	public void setRegioesDeAtuacao(ArrayList<String> regioesDeAtuacao) {
 		this.regioesDeAtuacao = regioesDeAtuacao;
 	}
 

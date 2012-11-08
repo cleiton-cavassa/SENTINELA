@@ -1,2 +1,0 @@
-serviceClass: cleiton.unisul.piweb.client.GreetingService
-path: D01069D1A6FA150C8A45AB0B8D738ECA.gwt.rpc

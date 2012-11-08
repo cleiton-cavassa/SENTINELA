@@ -2,6 +2,7 @@ package cleiton.unisul.piweb.server;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -55,48 +56,5 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
 		return new Usuario(user.getEmail(),user.getUserId(),user.getNickname(),user.getAuthDomain());
 	}
 
-	public Boolean persistir(ClientePF obj){return persista(obj);}
-	public Boolean persistir(ClientePJ obj){return persista(obj);}
-	public Boolean persistir(Corrida obj){return persista(obj);}
-	public Boolean persistir(CorridaAtendida obj){return persista(obj);}
-	public Boolean persistir(CorridaCancelada obj){return persista(obj);}
-	public Boolean persistir(CorridaMarcada obj){return persista(obj);}
-	public Boolean persistir(Frota obj){return persista(obj);}
-	public Boolean persistir(Motorista obj){return persista(obj);}
-	
-	private Boolean persista(Object objeto){
-	    boolean resultado;    
-		try {
-			pm.makePersistent(objeto);
-			resultado=true;	
-		}catch(Throwable t){
-			resultado=false;
-		}finally {
-			pm.close();
-		}
-		return resultado;
-	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public ArrayList<Serializable> recuperarDadosCategoria(boolean exemplo){
-		Query q = pm.newQuery(ClientePJ.class);
-		//q.setFilter("lastName == lastNameParam");
-		//q.setOrdering("height desc");
-		//q.declareParameters("String lastNameParam");
-		List<Serializable>  r;
-		ArrayList<Serializable>  results;
-		
-		try {
-			r=((List<Serializable>) q.execute());
-
-		}catch(Throwable t){
-			throw new RuntimeException("Problema na consulta");
-		} finally {
-			q.closeAll();
-		}
-		results=(ArrayList<Serializable>)r;
-		return results;
-	}
 
 }

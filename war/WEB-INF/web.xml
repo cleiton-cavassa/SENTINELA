@@ -11,6 +11,16 @@
     <url-pattern>/sentinela/greet</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <servlet-name>armazenamento</servlet-name>
+    <servlet-class>cleiton.unisul.piweb.server.ArmazenamentoImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>armazenamento</servlet-name>
+    <url-pattern>/sentinela/armazenamento</url-pattern>
+  </servlet-mapping>
+  
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>SENTINELA.html</welcome-file>

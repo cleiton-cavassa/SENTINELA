@@ -35,31 +35,23 @@ import com.google.gwt.user.client.ui.Button;
  * Entry point classes define <code>onModuleLoad()</code>.
  */
 public class SENTINELA implements EntryPoint {
-	public class SairClickHandler implements ClickHandler {
-
-		@Override
-		public void onClick(ClickEvent event) {
-			greetingService.urlLogout("/SENTINELA.html", new AsyncCallback<String>() {
-				@Override
-				public void onFailure(Throwable caught) {}
-				@Override
-				public void onSuccess(String result) {
-					Window.Location.assign(result);
-				}
-			});
-		}
-	}
-
-
 
 	private static GreetingServiceAsync greetingService = GWT
 			.create(GreetingService.class);
+	private static ArmazenamentoAsync recuperador= GWT
+			.create(Armazenamento.class);
 	
 	public static GreetingServiceAsync getGreetingService() {
 		if (greetingService!=null){
 			greetingService=GWT.create(GreetingService.class);
 		}
 		return greetingService;
+	}
+	public static ArmazenamentoAsync getArmazenamento() {
+		if (recuperador!=null){
+			recuperador=GWT.create(Armazenamento.class);
+		}
+		return recuperador;
 	}
 
 	private Usuario usuario; 
@@ -181,7 +173,20 @@ public class SENTINELA implements EntryPoint {
 		menuBar.addItem(mntmNewMenu_3);
 	}
 	
+	public class SairClickHandler implements ClickHandler {
 
+		@Override
+		public void onClick(ClickEvent event) {
+			greetingService.urlLogout("/SENTINELA.html", new AsyncCallback<String>() {
+				@Override
+				public void onFailure(Throwable caught) {}
+				@Override
+				public void onSuccess(String result) {
+					Window.Location.assign(result);
+				}
+			});
+		}
+	}
 }	
 
 	

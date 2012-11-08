@@ -53,7 +53,7 @@ public class CriarNovoClientePJ extends Composite {
 				ClientePJ clPJ=eu.montarClientePJ();
 				a.setClPJ(clPJ);
 				if(clPJ!=null){
-					SENTINELA.getGreetingService().persistir(clPJ, a);
+					SENTINELA.getArmazenamento().persistir(clPJ, a);
 				}else{
 					Window.alert("Algum campo requerido deixou de ser preenchido.\nTodos os campos marcados com asterisco (*) precisam ser preenchidos.");
 				}
