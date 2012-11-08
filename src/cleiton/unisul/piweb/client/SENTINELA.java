@@ -126,10 +126,10 @@ public class SENTINELA implements EntryPoint {
 		MenuBar menuBar_1 = new MenuBar(true);
 		MenuItem mntmNewMenu = new MenuItem("Clientes", false, menuBar_1);
 		
-		MenuItem mntmNewItem_2 = new MenuItem("Pessoas Jur\u00EDdicas", false, new CriadorTela(new RelacaoClientesPJ()));
+		MenuItem mntmNewItem_2 = new MenuItem("Pessoas Jur\u00EDdicas", false, new CriadorTela(RelacaoClientesPJ.get()));
 		menuBar_1.addItem(mntmNewItem_2);
 		
-		MenuItem mntmNewItem_7 = new MenuItem("Pessoas F\u00EDsicas", false, new CriadorTela(new CadastroClientesPF()));
+		MenuItem mntmNewItem_7 = new MenuItem("Pessoas F\u00EDsicas", false, new CriadorTela(RelacaoClientesPF.get()));
 		
 		menuBar_1.addItem(mntmNewItem_7);
 		menuBar.addItem(mntmNewMenu);

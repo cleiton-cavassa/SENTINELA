@@ -21,7 +21,7 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 @SuppressWarnings("serial")
 public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenamento{
-	PersistenceManager pm = PMF.get().getPersistenceManager();
+	PersistenceManager pm(){return PMF.get().getPersistenceManager();}
 	
 	@Override
 	public Boolean persistir(ClientePF obj){return persiste(obj);}
@@ -64,7 +64,8 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 	
 	
 	private Boolean persiste(Object objeto){
-	    boolean resultado;    
+	    boolean resultado;
+	    PersistenceManager pm = pm();
 		try {
 			pm.makePersistent(objeto);
 			resultado=true;	
@@ -78,18 +79,24 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 	
 	@SuppressWarnings("unchecked")
 	public <T extends Object> List<T> recupera(T exemplo){
-		Query q = pm.newQuery(ClientePJ.class);
+		//Query q = pm.newQuery(exemplo.getClass());
+	    PersistenceManager pm = pm();
+		Query q   = pm.newQuery("select from "+exemplo.getClass().getName());
+		
 		List<T> a=null;
 		
 		try {
 			a= (List<T>)q.execute();
 
 		}catch(Throwable t){
-			throw new RuntimeException("Problema na consulta");
+			throw new RuntimeException("Problemas na consulta:\n"+t.getLocalizedMessage()+"\n"+t.getMessage());
 		} finally {
 			q.closeAll();
 		}
-		
-		return (List<T>) pm.detachCopyAll(a);
+		if (a==null){
+			return null;
+		}else{
+			return (List<T>) pm.detachCopyAll(a);			
+		}
 	}
 }

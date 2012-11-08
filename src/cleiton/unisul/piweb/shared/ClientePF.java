@@ -1,22 +1,26 @@
 package cleiton.unisul.piweb.shared;
 import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
 
+import java.util.Date;
+
+import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
 
+
+@SuppressWarnings("serial")
 @PersistenceCapable
 public class ClientePF implements Serializable {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -2461200330327200698L;
-
-	@Persistent
-	private String CPF;
+    @PrimaryKey
+    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	private Long CPF;
 	
+    
+    @Persistent
+    private  Long PJVinculada;
+    
 	@Persistent
 	private String nome;
 	
@@ -30,13 +34,13 @@ public class ClientePF implements Serializable {
 	private Boolean tipoNacionalidade;
 	
 	@Persistent
-	private List<String> idiomasFalados;
+	private String idiomasFalados;
 	
 	@Persistent
 	private String endereco;
 	
 	@Persistent
-	private List<String> telefones;
+	private String telefones;
 	
 	@Persistent
 	private Boolean carregaAnimais;
@@ -53,12 +57,20 @@ public class ClientePF implements Serializable {
 		this.aceitaMotFumante = aceitaMotFumante;
 	}
 
-	public String getCPF() {
+	public Long getCPF() {
 		return CPF;
 	}
 
-	public void setCPF(String cPF) {
+	public void setCPF(Long cPF) {
 		CPF = cPF;
+	}
+
+	public Long getPJVinculada() {
+		return PJVinculada;
+	}
+
+	public void setPJVinculada(Long pJVinculada) {
+		PJVinculada = pJVinculada;
 	}
 
 	public String getNome() {
@@ -93,11 +105,11 @@ public class ClientePF implements Serializable {
 		this.tipoNacionalidade = tipoNacionalidade;
 	}
 
-	public List<String> getIdiomasFalados() {
+	public String getIdiomasFalados() {
 		return idiomasFalados;
 	}
 
-	public void setIdiomasFalados(List<String> idiomasFalados) {
+	public void setIdiomasFalados(String idiomasFalados) {
 		this.idiomasFalados = idiomasFalados;
 	}
 
@@ -109,11 +121,11 @@ public class ClientePF implements Serializable {
 		this.endereco = endereco;
 	}
 
-	public List<String> getTelefones() {
+	public String getTelefones() {
 		return telefones;
 	}
 
-	public void setTelefones(List<String> telefones) {
+	public void setTelefones(String telefones) {
 		this.telefones = telefones;
 	}
 

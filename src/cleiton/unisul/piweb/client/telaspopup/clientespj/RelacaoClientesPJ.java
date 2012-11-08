@@ -13,6 +13,7 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 
 import cleiton.unisul.piweb.client.SENTINELA;
+import cleiton.unisul.piweb.client.telaspopup.clientespf.RelacaoClientesPF;
 import cleiton.unisul.piweb.client.util.CriadorTela;
 import cleiton.unisul.piweb.shared.ClientePJ;
 
@@ -27,12 +28,24 @@ import com.google.gwt.cell.client.CheckboxCell;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 
+
+
 public class RelacaoClientesPJ extends Composite{
-	public RelacaoClientesPJ() {
-		
-		
-		
-		
+	
+	private static RelacaoClientesPJ get=new RelacaoClientesPJ();
+	
+	public static RelacaoClientesPJ get(){
+		if(get==null){
+			get=new RelacaoClientesPJ();
+		}
+		return get;
+	}
+	
+	final ListDataProvider<ClientePJ> dataProvider = new ListDataProvider<ClientePJ>();
+	AsyncCallback<List<ClientePJ>> callback= new CallbackArmazenamento(dataProvider);
+	
+	private RelacaoClientesPJ() {
+				
 		FlowPanel flowPanel = new FlowPanel();
 		flowPanel.setStyleName("painelCadastro");
 		initWidget(flowPanel);
@@ -54,13 +67,11 @@ public class RelacaoClientesPJ extends Composite{
 		DecoratorPanel decoratorPanel = new DecoratorPanel();
 		verticalPanel.add(decoratorPanel);
 
-		final ListDataProvider<ClientePJ> dataProvider = new ListDataProvider<ClientePJ>();
 
 		
 		Button button = new Button("novo cliente PJ");
 		ClickHandler h=new ClickHandler() {
 			public void onClick(ClickEvent event) {
-
 				new CriadorTela(new CriarNovoClientePJ()).execute();
 			}
 		};
@@ -118,23 +129,24 @@ public class RelacaoClientesPJ extends Composite{
 		cellTable.addColumn(column, "Ativo?");
 		
 		dataProvider.addDataDisplay(cellTable);
-
-		AsyncCallback<List<ClientePJ>> a= new A(dataProvider);
-		//SENTINELA.getGreetingService().recuperar(true, a);
-		SENTINELA.getArmazenamento().recuperar(new ClientePJ(), a);		
-
-
+		
+		atualizar();
 	}
-	private class A implements AsyncCallback<List<ClientePJ>>{
+	
+	public void atualizar(){
+		SENTINELA.getArmazenamento().recuperar(new ClientePJ(), callback);		
+	}
+	
+	private class CallbackArmazenamento implements AsyncCallback<List<ClientePJ>>{
 		ListDataProvider<ClientePJ> prov;
-		public A(ListDataProvider<ClientePJ> dtPr){
+		public CallbackArmazenamento(ListDataProvider<ClientePJ> dtPr){
 			prov=dtPr;
 		}
 		
 		@Override
 		public void onSuccess(List<ClientePJ> result) {
 			prov.setList(result);
-			Window.alert("Sucesso!");
+			//Window.alert("Sucesso!\nClientePJ");
 		}
 		
 		@Override

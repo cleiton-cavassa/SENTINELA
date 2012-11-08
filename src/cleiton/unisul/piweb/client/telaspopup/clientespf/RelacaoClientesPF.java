@@ -1,5 +1,16 @@
 package cleiton.unisul.piweb.client.telaspopup.clientespf;
 
+import java.util.List;
+
+
+import cleiton.unisul.piweb.client.SENTINELA;
+import cleiton.unisul.piweb.client.telaspopup.clientespj.CriarNovoClientePJ;
+import cleiton.unisul.piweb.client.util.CriadorTela;
+import cleiton.unisul.piweb.shared.ClientePF;
+import cleiton.unisul.piweb.shared.ClientePJ;
+
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Label;
@@ -11,10 +22,29 @@ import com.google.gwt.user.cellview.client.TextColumn;
 import com.google.gwt.user.client.ui.DecoratorPanel;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.cellview.client.Column;
+import com.google.gwt.view.client.ListDataProvider;
 import com.google.gwt.cell.client.CheckboxCell;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 
 public class RelacaoClientesPF extends Composite {
-	public RelacaoClientesPF() {
+	private CellTable<ClientePF> tabela;
+	
+	private static RelacaoClientesPF get=new RelacaoClientesPF();
+	
+	public static RelacaoClientesPF get(){
+		if(get==null){
+			get=new RelacaoClientesPF();
+		}
+		return get;
+	}
+	
+	
+	
+	
+	final ListDataProvider<ClientePF> dataProvider = new ListDataProvider<ClientePF>();
+	
+	private RelacaoClientesPF() {
 		
 		FlowPanel flowPanel = new FlowPanel();
 		flowPanel.setStyleName("painelCadastro");
@@ -34,50 +64,50 @@ public class RelacaoClientesPF extends Composite {
 		flowPanel.add(verticalPanel);
 		verticalPanel.setWidth("");
 		
-		CellTable<Object> cellTable = new CellTable<Object>();
+		CellTable<ClientePF> cellTable = new CellTable<ClientePF>();
 		verticalPanel.add(cellTable);
 		cellTable.setWidth("");
 		
-		TextColumn<Object> textColumn = new TextColumn<Object>() {
-			public String getValue(Object object) {
+		TextColumn<ClientePF> textColumn = new TextColumn<ClientePF>() {
+			public String getValue(ClientePF ClientePF) {
 				return (String) null;
 			}
 		};
 		cellTable.addColumn(textColumn, "ID");
 		
-		TextColumn<Object> textColumn_1 = new TextColumn<Object>() {
-			public String getValue(Object object) {
+		TextColumn<ClientePF> textColumn_1 = new TextColumn<ClientePF>() {
+			public String getValue(ClientePF ClientePF) {
 				return (String) null;
 			}
 		};
 		cellTable.addColumn(textColumn_1, "Nome");
 		
-		Column<Object, Boolean> column = new Column<Object, Boolean>(new CheckboxCell()) {
+		Column<ClientePF, Boolean> column = new Column<ClientePF, Boolean>(new CheckboxCell()) {
 			@Override
-			public Boolean getValue(Object object) {
+			public Boolean getValue(ClientePF ClientePF) {
 				return (Boolean) null;
 			}
 		};
 		cellTable.addColumn(column, "Ativo?");
 		
-		TextColumn<Object> textColumn_2 = new TextColumn<Object>() {
-			public String getValue(Object object) {
+		TextColumn<ClientePF> textColumn_2 = new TextColumn<ClientePF>() {
+			public String getValue(ClientePF ClientePF) {
 				return (String) null;
 			}
 		};
 		cellTable.addColumn(textColumn_2, "idiomas");
 		
-		Column<Object, Boolean> column_1 = new Column<Object, Boolean>(new CheckboxCell()) {
+		Column<ClientePF, Boolean> column_1 = new Column<ClientePF, Boolean>(new CheckboxCell()) {
 			@Override
-			public Boolean getValue(Object object) {
+			public Boolean getValue(ClientePF ClientePF) {
 				return (Boolean) null;
 			}
 		};
 		cellTable.addColumn(column_1, "carrega animais?");
 		
-		Column<Object, Boolean> column_2 = new Column<Object, Boolean>(new CheckboxCell()) {
+		Column<ClientePF, Boolean> column_2 = new Column<ClientePF, Boolean>(new CheckboxCell()) {
 			@Override
-			public Boolean getValue(Object object) {
+			public Boolean getValue(ClientePF ClientePF) {
 				return (Boolean) null;
 			}
 		};
@@ -93,9 +123,44 @@ public class RelacaoClientesPF extends Composite {
 		Button button = new Button("ver e editar dados completos");
 		horizontalPanel_1.add(button);
 		
-		Button button_1 = new Button("novo cliente PJ");
-		button_1.setText("novo cliente PF");
+		Button button_1 = new Button("novo cliente PF");
 		horizontalPanel_1.add(button_1);
+		
+		ClickHandler h=new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				new CriadorTela(new CriarNovoClientePF()).execute();
+			}
+		};
+		button_1.addClickHandler(h); 
+		
+		tabela=cellTable;
+		dataProvider.addDataDisplay(tabela);
+		
+		atualizar();
 	}
-
+	
+	public void atualizar(){
+		AsyncCallback<List<ClientePF>> a= new CallbackArmazenamento(dataProvider);
+		SENTINELA.getArmazenamento().recuperar(new ClientePF(), a);		
+	}
+	
+	private class CallbackArmazenamento implements AsyncCallback<List<ClientePF>>{
+		ListDataProvider<ClientePF> prov;
+		public CallbackArmazenamento(ListDataProvider<ClientePF> dtPr){
+			prov=dtPr;
+		}
+		
+		@Override
+		public void onSuccess(List<ClientePF> result) {
+			prov.setList(result);
+			//Window.alert("Sucesso!\nClientePF");
+		}
+		
+		@Override
+		public void onFailure(Throwable caught) {
+			// TODO Auto-generated method stub
+			
+			Window.alert("Problemas...\n\n"+caught.getMessage());
+		}
+	}
 }

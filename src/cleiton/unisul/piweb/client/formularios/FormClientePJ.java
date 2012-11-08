@@ -38,50 +38,42 @@ public class FormClientePJ extends Composite {
 		tabPanel.add(verticalPanel, "Dados do Cliente", false);
 		verticalPanel.setSize("5cm", "3cm");
 		
-		Grid grid = new Grid(5, 2);
+		Grid grid = new Grid(4, 2);
 		verticalPanel.add(grid);
-		
-		Label label = new Label("ID:");
-		label.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
-		grid.setWidget(0, 0, label);
-		
-		Label label_1 = new Label("Ainda n\u00E3o criado");
-		label_1.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
-		grid.setWidget(0, 1, label_1);
 		
 		Label lblCnpj = new Label("CNPJ(*):");
 		lblCnpj.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
-		grid.setWidget(1, 0, lblCnpj);
+		grid.setWidget(0, 0, lblCnpj);
 		
 		compositeCNPJ = new CompositeCNPJ();
-		grid.setWidget(1, 1, compositeCNPJ);
+		grid.setWidget(0, 1, compositeCNPJ);
 		
 		
 		Label lblRazoSocial = new Label("Raz\u00E3o Social(*):");
 		lblRazoSocial.setWordWrap(false);
 		lblRazoSocial.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
-		grid.setWidget(2, 0, lblRazoSocial);
+		grid.setWidget(1, 0, lblRazoSocial);
 		
 		Label lblEndereco = new Label("Endere\u00E7o da Matriz:");
 		lblEndereco.setWordWrap(false);
 		lblEndereco.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
-		grid.setWidget(3, 0, lblEndereco);
+		grid.setWidget(2, 0, lblEndereco);
 		
 		Label lblreaDeAtuao = new Label("Regi\u00E3o de Atua\u00E7\u00E3o:");
-		grid.setWidget(4, 0, lblreaDeAtuao);
+		grid.setWidget(3, 0, lblreaDeAtuao);
 		lblreaDeAtuao.setWidth("123px");
 		
 		textBox = new TextBox();
 		textBox.setVisibleLength(120);
-		grid.setWidget(2, 1, textBox);
+		grid.setWidget(1, 1, textBox);
 		
 		textBox_2 = new TextBox();
 		textBox_2.setVisibleLength(120);
-		grid.setWidget(3, 1, textBox_2);
+		grid.setWidget(2, 1, textBox_2);
 		
 		textBox_1 = new TextBox();
 		textBox_1.setVisibleLength(120);
-		grid.setWidget(4, 1, textBox_1);
+		grid.setWidget(3, 1, textBox_1);
 		
 				checkBoxAtivo = new CheckBox("Cliente Ativo");
 				checkBoxAtivo.setHTML("cliente Ativo");

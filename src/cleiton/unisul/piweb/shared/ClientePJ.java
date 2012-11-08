@@ -24,16 +24,18 @@ public class ClientePJ  implements Serializable {
 	@Persistent
 	private Boolean status;
 	
-	//@Persistent
-	//private ArrayList<ClientePF> pessoasFisicas;
-/*	public ArrayList<ClientePF> getPessoasFisicas() {
+	/*
+	@Persistent
+	private ArrayList<ClientePF> pessoasFisicas;
+
+	public ArrayList<ClientePF> getPessoasFisicas() {
 		return pessoasFisicas;
 	}
 
 	public void setPessoasFisicas(ArrayList<ClientePF> pessoasFisicas) {
 		this.pessoasFisicas = pessoasFisicas;
 	}
-*/
+	*/
 
 	@Persistent
 	private String enderecoMatriz;

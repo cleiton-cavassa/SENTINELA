@@ -45,26 +45,31 @@ public class CriarNovoClientePJ extends Composite {
 		formClientePJ.setHeight("281px");
 		form=formClientePJ;
 		
-		final respostaArmazenamentoClientePJ a=new respostaArmazenamentoClientePJ() ;
+		final CallbackArmazenamento callback=new CallbackArmazenamento() ;
 		ClickHandler salvarClkHnd=new ClickHandler() {
-
 			@Override
 			public void onClick(ClickEvent event) {
-				ClientePJ clPJ=eu.montarClientePJ();
-				a.setClPJ(clPJ);
-				if(clPJ!=null){
-					SENTINELA.getArmazenamento().persistir(clPJ, a);
-				}else{
-					Window.alert("Algum campo requerido deixou de ser preenchido.\nTodos os campos marcados com asterisco (*) precisam ser preenchidos.");
-				}
+				salvarClientePJ(callback);
 			}
 		};
 		formClientePJ.getBotaoSalvar().addClickHandler(salvarClkHnd);
+		formClientePJ.getBotaoSalvar().setText("novo Cliente");
 		
+		formClientePJ.getBotaoExcluir().setText("descartar");
 		
 		setStyleName("painelCadastro");
 	}
-
+	protected void salvarClientePJ(CallbackArmazenamento callback){
+		ClientePJ clPJ=eu.montarClientePJ();
+		callback.setClPJ(clPJ);
+		if(clPJ!=null){
+			SENTINELA.getArmazenamento().persistir(clPJ, callback);
+		}else{
+			Window.alert("Algum campo requerido deixou de ser preenchido.\nTodos os campos marcados com asterisco (*) precisam ser preenchidos.");
+		}
+	}
+	
+	
 	protected ClientePJ montarClientePJ() {
 
 	//CNPJ
@@ -103,7 +108,7 @@ public class CriarNovoClientePJ extends Composite {
 		return result;
 	}
 
-	private class respostaArmazenamentoClientePJ implements AsyncCallback<Boolean>{
+	private class CallbackArmazenamento implements AsyncCallback<Boolean>{
 		private ClientePJ clPJ;
 		public ClientePJ getClPJ() {
 			return clPJ;
@@ -117,9 +122,10 @@ public class CriarNovoClientePJ extends Composite {
 		public void onSuccess(Boolean result) {
 			if (result){
 				StringBuilder b=new StringBuilder();
-				b.append("Dados de Cliente PJ salvos com sucesso!\n");
+				b.append("Dados de Cliente PF salvos com sucesso!\n");
 				b.append("CNPJ: "+clPJ.getCNPJ()+"\n");
 				b.append("RazSocial: "+clPJ.getRazaoSocial());
+				RelacaoClientesPJ.get().atualizar();
 				Window.alert(b.toString());
 			}else{
 				falha();
