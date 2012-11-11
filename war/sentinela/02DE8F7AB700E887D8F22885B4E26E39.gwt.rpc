@@ -19,6 +19,7 @@ cleiton.unisul.piweb.shared.Frota, true, true, true, true, cleiton.unisul.piweb.
 [Lcleiton.unisul.piweb.shared.Frota;, true, true, false, false, [Lcleiton.unisul.piweb.shared.Frota;/3648495806, 3648495806
 cleiton.unisul.piweb.shared.Motorista, true, true, true, true, cleiton.unisul.piweb.shared.Motorista/590635010, 590635010
 [Lcleiton.unisul.piweb.shared.Motorista;, true, true, false, false, [Lcleiton.unisul.piweb.shared.Motorista;/3558222024, 3558222024
+cleiton.unisul.piweb.shared.ObjetoChaveado$RespostaPersistencia, true, true, false, false, cleiton.unisul.piweb.shared.ObjetoChaveado$RespostaPersistencia/4020358153, 4020358153
 cleiton.unisul.piweb.shared.Usuario, true, true, true, true, cleiton.unisul.piweb.shared.Usuario/2807286041, 2807286041
 [Lcleiton.unisul.piweb.shared.Usuario;, true, true, false, false, [Lcleiton.unisul.piweb.shared.Usuario;/1025895081, 1025895081
 com.google.gwt.event.shared.UmbrellaException, true, true, false, false, com.google.gwt.event.shared.UmbrellaException/3104463596, 3104463596

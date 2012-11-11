@@ -9,6 +9,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import cleiton.unisul.piweb.client.validacao.CompositeCNPJ;
+
 
 @PersistenceCapable
 public class Corrida  implements Serializable, ObjetoChaveado {
@@ -58,6 +60,9 @@ public class Corrida  implements Serializable, ObjetoChaveado {
 		this.localEmbarque = localEmbarque;
 	}
 
-
+	@Override
+	public String resumo() {
+		return "";
+	}
 	
 }

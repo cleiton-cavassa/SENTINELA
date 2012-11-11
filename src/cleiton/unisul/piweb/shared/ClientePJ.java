@@ -9,6 +9,9 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import cleiton.unisul.piweb.client.validacao.CompositeCNPJ;
+import cleiton.unisul.piweb.client.validacao.CompositeCPF;
+
 
 @SuppressWarnings("serial")
 @PersistenceCapable
@@ -94,4 +97,30 @@ public class ClientePJ  implements Serializable, ObjetoChaveado {
 	public void setVouchersAtivos(Boolean vouchersAtivos) {
 		this.vouchersAtivos = vouchersAtivos;
 	}
+	
+	@Override
+	public String resumo() {
+		StringBuilder b= new StringBuilder();
+		b.append("CNPJ: ");
+			b.append(CompositeCNPJ.mascaraCNPJ( this.getChave() ));
+			b.append("\n");
+		b.append("Razao Social: ");
+			b.append(this.getRazaoSocial());
+			b.append("\n");
+		b.append("Cliente ativo? ");
+			b.append((this.getStatus()?"Sim":"Nao"));
+			b.append("\n");
+		b.append("Endere\u00E7o da Matriz: ");
+			b.append(this.getEnderecoMatriz());
+			b.append("\n");
+		b.append("Vouchers ativos? ");
+			b.append((this.getVouchersAtivos()?"Sim":"Nao"));
+			b.append("\n");
+		b.append("Regi›es de Atuacao: ");
+			b.append(this.regioesDeAtuacao.toString());
+			b.append("\n");
+		
+		return b.toString();
+	}
+
 }

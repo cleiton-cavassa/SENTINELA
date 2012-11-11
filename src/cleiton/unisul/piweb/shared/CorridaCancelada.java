@@ -69,7 +69,10 @@ public class CorridaCancelada  implements Serializable, ObjetoChaveado {
 	public void setHorarioCancelamento(Date horarioCancelamento) {
 		this.horarioCancelamento = horarioCancelamento;
 	}
-
+	@Override
+	public String resumo() {
+		return "";
+	}
 
 
 }

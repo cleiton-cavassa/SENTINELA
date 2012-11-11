@@ -14,16 +14,23 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
+import com.google.gwt.user.client.ui.Widget;
 
 import cleiton.unisul.piweb.client.SENTINELA;
+import cleiton.unisul.piweb.client.classesabstratas.CadastroNovaPessoa;
+import cleiton.unisul.piweb.client.classesabstratas.TelaBloqueada;
+import cleiton.unisul.piweb.client.classesabstratas.TelaNovoRegistro;
 import cleiton.unisul.piweb.client.formularios.FormClientePF;
+import cleiton.unisul.piweb.client.validacao.CompositeCPF;
 import cleiton.unisul.piweb.shared.ClientePF;
 import cleiton.unisul.piweb.shared.ObjetoChaveado.RespostaPersistencia;
+import com.google.gwt.user.client.ui.DockPanel;
+import com.google.gwt.user.client.ui.SimplePanel;
 
-public class CriarNovoClientePF extends Composite {
+public class CriarNovoClientePF extends Composite implements TelaNovoRegistro<ClientePF>{
 	
-	private FormClientePF form;
-	
+	private String tipoRegistro="Cliente Pessoa F’sica";
+	private ClientePF objeto =new ClientePF();
 	
 	private static CriarNovoClientePF get=new CriarNovoClientePF(); 
 	
@@ -34,12 +41,18 @@ public class CriarNovoClientePF extends Composite {
 		return get;
 	}
 
+
+	private TelaBloqueada compositeTelaBloqueada ;
+	private boolean telaBloqueada; 
+	private FormClientePF form;
+	private Widget widgetTelaDesbloqueada;
 	/**
 	 * @wbp.parser.constructor
 	 */
-	private CriarNovoClientePF() {
+	public CriarNovoClientePF() {
 		
 		FlowPanel flowPanel1 = new FlowPanel();
+		widgetTelaDesbloqueada=flowPanel1;
 		flowPanel1.setStyleName("painelCadastro");
 		initWidget(flowPanel1);
 		flowPanel1.setSize("", "");
@@ -70,6 +83,7 @@ public class CriarNovoClientePF extends Composite {
 			form.getBotaoSalvar().addClickHandler(salvarClkHnd);
 		
 		form.getBotaoExcluir().setText("descartar");
+		compositeTelaBloqueada =new TelaBloqueada();
 	}
 	
 	protected void salvarClientePF(){
@@ -177,6 +191,51 @@ public class CriarNovoClientePF extends Composite {
 		}
 		
 	}
+
+	private String mensagemTelaBloqueada(){
+		StringBuilder mensagem=new StringBuilder ();
+		mensagem.append("Tipo de Registro: novo ");
+	 		mensagem.append(objeto().getClass().getName());
+	 		mensagem.append("\n");
+	 	mensagem.append("CPF: ");
+ 			mensagem.append(CompositeCPF.mascaraCPF(objeto().getChave()));
+	 		mensagem.append("\n");
+ 		mensagem.append("Nome: ");
+ 			mensagem.append(objeto().getNome());
+	 		mensagem.append("\n");
+	 	return mensagem.toString();
+	}
+	
+	@Override
+	public void salvar(ClientePF objeto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setTelaBloqueada(boolean telaBloqueada) {
+		if (isTelaBloqueada()==telaBloqueada){
+			return;
+		}
+		this.telaBloqueada =telaBloqueada;
+		
+		if (telaBloqueada){
+			compositeTelaBloqueada.setMensagem(mensagemTelaBloqueada());
+			initWidget(compositeTelaBloqueada);
+		}else{
+			initWidget(widgetTelaDesbloqueada);
+		}
+	}
+	@Override
+	public ClientePF objeto() {
+		return objeto;
+	}
+
+	@Override
+	public boolean isTelaBloqueada(){
+		return telaBloqueada;
+	}
+
 
 
 }

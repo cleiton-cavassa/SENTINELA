@@ -58,5 +58,9 @@ public class CorridaAtendida  implements Serializable, ObjetoChaveado {
 		this.horarioDesembarque = horarioDesembarque;
 	}
 
+	@Override
+	public String resumo() {
+		return "";
+	}
 	
 }

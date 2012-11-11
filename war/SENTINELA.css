@@ -82,4 +82,20 @@ pager {
 	border-bottom: medium double Gray;
 	border-left: medium double Gray;
 }
+.tituloTelaBloqueada {
+	color: Maroon;
+	padding-bottom: 20px;
+	font-size: 18px;
+	font-weight: bolder;
+}
+.estiloTelaBloqueada {
+	background-color: #0099cc;
+}
+.dadosRegistro {
+	font-style: italic;
+	background-color: #cccccc;
+}
+.tituloDadosRegistro {
+	font-style: italic;
+}
 

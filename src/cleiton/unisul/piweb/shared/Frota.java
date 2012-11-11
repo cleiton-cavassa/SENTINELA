@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.jdo.annotations.*;
 
+import cleiton.unisul.piweb.client.validacao.CompositeCNPJ;
+
 @PersistenceCapable
 public class Frota implements Serializable, ObjetoChaveado {
 	
@@ -95,4 +97,23 @@ public class Frota implements Serializable, ObjetoChaveado {
 
 	@Persistent
 	List<Integer> ClientesPF;
+	
+	@Override
+	public String resumo() {
+		StringBuilder b= new StringBuilder();
+		b.append("CNPJ: ");
+			b.append(CompositeCNPJ.mascaraCNPJ( this.getChave() ));
+			b.append("\n");
+		b.append("Razao Social: ");
+			b.append(this.getRazaoSocial());
+			b.append("\n");
+		b.append("Regi›es de Atuacao: ");
+			b.append(this.regioesDeAtuacao.toString());
+			b.append("\n");
+		b.append("Telefones: ");
+			b.append(this.getTelefones().toString());
+			b.append("\n");
+		
+		return b.toString();
+	}
 }

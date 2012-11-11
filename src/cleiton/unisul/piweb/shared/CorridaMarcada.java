@@ -45,4 +45,8 @@ public class CorridaMarcada  implements Serializable, ObjetoChaveado {
 		this.motorista = motorista;
 	}
 
+	@Override
+	public String resumo() {
+		return "";
+	}
 }

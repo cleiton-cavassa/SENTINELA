@@ -3,18 +3,12 @@ package cleiton.unisul.piweb.shared;
 import java.io.Serializable;
 
 public interface ObjetoChaveado {
-	final static int erro_FalhaGenericaAoPesquisarObjetoComChave=8;
-	final static int erro_FalhaGenericaAoSalvarObjeto=7;
-	final static int erro_JaExisteObjetoComMesmaChave=6;
-	final static int erro_NaoExisteObjetoComMesmaChave=5;
-	final static int salvo_JaExistiaObjetoComMesmaChave=4;
-	final static int salvo_NaoExistiaObjetoComMesmaChave=3;
-	final static int salvo_SemRessalvas=2;
-	
-	//final static int erro_JaExisteObjetoComMesmaChave=8;
 	
 	Long getChave();
 	void setChave(Long chave);
+	String resumo();
+	
+	
 	public class RespostaPersistencia implements Serializable{
 		//o campo abaixo informa se o banco de dados j‡ possuia objeto com o mesmo id do que se tentou salvar
 		private Boolean idObjetoJaExistia;

@@ -6,6 +6,9 @@ import java.util.List;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 
+import cleiton.unisul.piweb.client.validacao.CompositeCNPJ;
+import cleiton.unisul.piweb.client.validacao.CompositeCPF;
+
 @PersistenceCapable
 public class Motorista  implements Serializable, ObjetoChaveado {
 
@@ -118,4 +121,39 @@ public class Motorista  implements Serializable, ObjetoChaveado {
 	public void setCarregaAnimais(Boolean carregaAnimais) {
 		this.carregaAnimais = carregaAnimais;
 	}
+	
+	@Override
+	public String resumo() {
+		StringBuilder b= new StringBuilder();
+		b.append("CPF: ");
+			b.append(CompositeCPF.mascaraCPF( this.getChave() ));
+			b.append("\n");
+		b.append("Nome: ");
+			b.append(this.getNome());
+			b.append("\n");
+		b.append("Data de Nascimento: ");
+			b.append(String.format("d/m/Y", this.getDataNascimento()));
+			b.append("\n");
+		b.append("Carro: ");
+			b.append(this.getCarro());
+			b.append("\n");
+		b.append("Idiomas Falados: ");
+			b.append(this.getIdiomasFalados());
+			b.append("\n");
+		b.append("Endere\u00E7o: ");
+			b.append(this.getEndereco());
+			b.append("\n");
+		b.append("Telefones: ");
+			b.append(this.getTelefones());
+			b.append("\n");
+		b.append("Aceita motorista fumante? ");
+			b.append((this.getFumante()?"Sim":"Nao"));
+			b.append("\n");
+		b.append("Carrega animais? ");
+			b.append((this.getCarregaAnimais()?"Sim":"Nao"));
+			b.append("\n");
+		
+		return b.toString();
+	}
+
 }
