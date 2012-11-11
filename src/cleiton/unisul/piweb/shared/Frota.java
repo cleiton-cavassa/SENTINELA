@@ -6,10 +6,10 @@ import java.util.List;
 import javax.jdo.annotations.*;
 
 @PersistenceCapable
-public class Frota  implements Serializable {
+public class Frota implements Serializable, ObjetoChaveado {
 	
 	@Persistent
-	private String CNPJ;
+	private Long CNPJ;
 	
 	@Persistent
 	private String razaoSocial;
@@ -29,11 +29,11 @@ public class Frota  implements Serializable {
 	@Persistent
 	private List<Integer> ClientesPJ;
 	
-	public String getCNPJ() {
+	public Long getChave() {
 		return CNPJ;
 	}
 
-	public void setCNPJ(String cNPJ) {
+	public void setChave(Long cNPJ) {
 		CNPJ = cNPJ;
 	}
 

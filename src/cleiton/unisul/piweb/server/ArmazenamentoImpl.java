@@ -1,9 +1,11 @@
 package cleiton.unisul.piweb.server;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
+import javax.jdo.identity.LongIdentity;
 
 import cleiton.unisul.piweb.client.Armazenamento;
 import cleiton.unisul.piweb.shared.ClientePF;
@@ -15,8 +17,12 @@ import cleiton.unisul.piweb.shared.CorridaMarcada;
 import cleiton.unisul.piweb.shared.Expediente;
 import cleiton.unisul.piweb.shared.Frota;
 import cleiton.unisul.piweb.shared.Motorista;
+import cleiton.unisul.piweb.shared.ClientesPFePJ;
+import cleiton.unisul.piweb.shared.ObjetoChaveado;
+import cleiton.unisul.piweb.shared.ObjetoChaveado.RespostaPersistencia;
 import cleiton.unisul.piweb.shared.Usuario;
 
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 @SuppressWarnings("serial")
@@ -24,47 +30,109 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 	PersistenceManager pm(){return PMF.get().getPersistenceManager();}
 	
 	@Override
-	public Boolean persistir(ClientePF obj){return persiste(obj);}
+	public RespostaPersistencia persistir(ClientePF obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 	@Override
-	public Boolean persistir(ClientePJ obj){return persiste(obj);}
+	public RespostaPersistencia persistir(ClientePJ obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 	@Override
-	public Boolean persistir(Corrida obj){return persiste(obj);}
+	public RespostaPersistencia persistir(Corrida obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 	@Override
-	public Boolean persistir(CorridaAtendida obj){return persiste(obj);}
+	public RespostaPersistencia persistir(CorridaAtendida obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 	@Override
-	public Boolean persistir(CorridaCancelada obj){return persiste(obj);}
+	public RespostaPersistencia persistir(CorridaCancelada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 	@Override
-	public Boolean persistir(CorridaMarcada obj){return persiste(obj);}
+	public RespostaPersistencia persistir(CorridaMarcada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 	@Override
-	public Boolean persistir(Frota obj){return persiste(obj);}
+	public RespostaPersistencia persistir(Frota obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 	@Override
-	public Boolean persistir(Motorista obj){return persiste(obj);}
+	public RespostaPersistencia persistir(Motorista obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 
 	
 	@Override
-	public List<ClientePF> recuperar(ClientePF exemplo){return recupera(exemplo);}
+	public List<ClientePF> recuperar(ClientePF exemplo)throws Exception{return recupera(exemplo);}
 	@Override
-	public List<ClientePJ> recuperar(ClientePJ exemplo){return recupera(exemplo);}
+	public List<ClientePJ> recuperar(ClientePJ exemplo)throws Exception{return recupera(exemplo);}
 	@Override
-	public List<Corrida> recuperar(Corrida exemplo){return recupera(exemplo);}
+	public List<Corrida> recuperar(Corrida exemplo)throws Exception{return recupera(exemplo);}
 	@Override
-	public List<CorridaAtendida> recuperar(CorridaAtendida exemplo){return recupera(exemplo);}
+	public List<CorridaAtendida> recuperar(CorridaAtendida exemplo)throws Exception{return recupera(exemplo);}
 	@Override
-	public List<CorridaCancelada> recuperar(CorridaCancelada exemplo){return recupera(exemplo);}
+	public List<CorridaCancelada> recuperar(CorridaCancelada exemplo)throws Exception{return recupera(exemplo);}
 	@Override
-	public List<CorridaMarcada> recuperar(CorridaMarcada exemplo){return recupera(exemplo);}
+	public List<CorridaMarcada> recuperar(CorridaMarcada exemplo)throws Exception{return recupera(exemplo);}
 	@Override
-	public List<Expediente> recuperar(Expediente exemplo){return recupera(exemplo);}
+	public List<Expediente> recuperar(Expediente exemplo)throws Exception{return recupera(exemplo);}
 	@Override
-	public List<Frota> recuperar(Frota exemplo){return recupera(exemplo);}
+	public List<Frota> recuperar(Frota exemplo)throws Exception{return recupera(exemplo);}
 	@Override
-	public List<Motorista> recuperar(Motorista exemplo){return recupera(exemplo);}
-	@Override
-	public List<Usuario> recuperar(Usuario exemplo){return recupera(exemplo);}
+	public List<Motorista> recuperar(Motorista exemplo)throws Exception{return recupera(exemplo);}
+	@Override 
+	public List<Usuario> recuperar(Usuario exemplo) throws Exception{return recupera(exemplo);}
+	//public List<Usuario> recuperar(Usuario exemplo){try { return recupera(exemplo);}catch (Exception e) {throw new RuntimeException(e.getMessage());}}
 	
+	@Override
+	public List<ClientesPFePJ> recuperar(ClientesPFePJ exemplo) throws Exception{
+		List<ClientePF> pfs = recupera(new ClientePF());
+		
+		LinkedList<ClientesPFePJ> resposta= new LinkedList<ClientesPFePJ>(); 
+		PersistenceManager pm = pm();
+		for(ClientePF pf:pfs){
+			ClientePJ pj;
+			boolean PJexisteNoBD=true;
+			try{
+				pj=(ClientePJ)pm.getObjectById(new LongIdentity(ClientePJ.class, pf.getPJVinculada()));
+			}catch(Throwable t){
+				
+				pj=new ClientePJ();
+				pj.setChave(pf.getPJVinculada());
+				pj.setRazaoSocial("Ainda n‹o existe pessoa jur’dica com esse CNPJ cadastrada na base de dados");
+				PJexisteNoBD=false;
+			}
+			ClientesPFePJ resp = new ClientesPFePJ();
+				resp.setClientePF(pf);
+				resp.setClientePJ(pj);
+				resp.setPJexisteNaBaseDeDados(PJexisteNoBD);
+			resposta.add(resp);
+		}
+		return resposta;
+	}
 	
-	private Boolean persiste(Object objeto){
-	    boolean resultado;
+	private RespostaPersistencia persiste(ObjetoChaveado objeto, Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){
+		PersistenceManager pm=pm();
+		RespostaPersistencia resultado=new RespostaPersistencia();
+		
+		Boolean conformeEsperado=null;
+		Boolean objetoJaExiste=null;
+		Boolean salvoComSucesso=null;
+		try{
+			pm.getObjectById(new LongIdentity(objeto.getClass(), objeto.getChave()));
+			objetoJaExiste=true;
+			conformeEsperado=!novoRegistro;
+		}catch(javax.jdo.JDOObjectNotFoundException t){
+			objetoJaExiste=false;
+			conformeEsperado=novoRegistro;
+		}catch(Throwable t){}
+		
+		if((salvarMesmoSeNaoOcorrerOEsperado.booleanValue())||(conformeEsperado.booleanValue())){
+			try {
+				pm.makePersistent(objeto);
+				salvoComSucesso=true;
+			}catch(Throwable t){
+				salvoComSucesso=false;
+			}finally {
+				pm.close();
+			}
+		}else{
+			
+		}
+		resultado.setIdObjetoJaExistia(objetoJaExiste);
+		resultado.setObjetoConformeEsperado(conformeEsperado);
+		resultado.setOperacaoBemSucedida(salvoComSucesso);
+		return resultado;
+	}
+	
+	private boolean persiste(Object objeto){
+	   
+		boolean resultado;
 	    PersistenceManager pm = pm();
 		try {
 			pm.makePersistent(objeto);
@@ -78,25 +146,39 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 	}
 	
 	@SuppressWarnings("unchecked")
-	public <T extends Object> List<T> recupera(T exemplo){
-		//Query q = pm.newQuery(exemplo.getClass());
+	public <T extends Object> List<T> recupera(T exemplo) throws Exception{
 	    PersistenceManager pm = pm();
-		Query q   = pm.newQuery("select from "+exemplo.getClass().getName());
-		
+		List<T> a=(List<T>)consulta(pm, "select from "+exemplo.getClass().getName());
+		/*
 		List<T> a=null;
-		
-		try {
-			a= (List<T>)q.execute();
 
+		Query q   = pm.newQuery("select from "+exemplo.getClass().getName());
+		try {
+			//result= q.execute();
+			a=(List<T>)q.execute();
 		}catch(Throwable t){
-			throw new RuntimeException("Problemas na consulta:\n"+t.getLocalizedMessage()+"\n"+t.getMessage());
+			throw new java.lang.Exception("Problemas na consulta:\n"+t.getLocalizedMessage()+"\n"+t.getMessage());
 		} finally {
 			q.closeAll();
 		}
+		*/
 		if (a==null){
 			return null;
 		}else{
 			return (List<T>) pm.detachCopyAll(a);			
 		}
+	}
+	
+	private Object consulta(PersistenceManager pm, String consulta) throws Exception{
+		Object result;
+		Query q   = pm.newQuery(consulta);
+		try {
+			result= q.execute();
+		}catch(Throwable t){
+			throw new java.lang.Exception("Problemas na consulta:\n"+t.getLocalizedMessage()+"\n"+t.getMessage());
+		} finally {
+			q.closeAll();
+		}
+		return result;
 	}
 }

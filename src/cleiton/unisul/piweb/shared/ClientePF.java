@@ -11,7 +11,7 @@ import javax.jdo.annotations.PrimaryKey;
 
 @SuppressWarnings("serial")
 @PersistenceCapable
-public class ClientePF implements Serializable {
+public class ClientePF implements Serializable, ObjetoChaveado {
 	
     @PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
@@ -57,11 +57,11 @@ public class ClientePF implements Serializable {
 		this.aceitaMotFumante = aceitaMotFumante;
 	}
 
-	public Long getCPF() {
+	public Long getChave() {
 		return CPF;
 	}
 
-	public void setCPF(Long cPF) {
+	public void setChave(Long cPF) {
 		CPF = cPF;
 	}
 

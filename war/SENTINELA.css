@@ -42,16 +42,16 @@ h1 {
 	font-weight: bolder;
 }
 .h1 {
-	color: Navy;
+	color: Yellow;
 	margin: 0px;
+	padding: 10px;
 	border: Black;
 	font-size: 1em;
 	font-style: normal;
 	font-weight: bolder;
 	vertical-align: middle;
 	text-align: center;
-	background-color: Silver;
-	padding:10px;
+	background-color: darkslategrey;
 }
 .painelCadastro {
 	border: Black;

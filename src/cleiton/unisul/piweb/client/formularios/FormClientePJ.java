@@ -27,7 +27,9 @@ public class FormClientePJ extends Composite {
 	private CheckBox checkBoxAtivo;
 	private CheckBox chckbxVouchersAtivosPara;
 	private TextBox textBox_2;
-
+	private Button botaoNovaPF;
+	private Button btnNewButton;
+	
 	public FormClientePJ() {
 
 		TabPanel tabPanel = new TabPanel();
@@ -96,7 +98,7 @@ public class FormClientePJ extends Composite {
 				button_1 = new Button("New button");
 				button_1.setText("excluir");
 				flowPanel_2.add(button_1);
-		
+		/*
 		VerticalPanel verticalPanel_3 = new VerticalPanel();
 		tabPanel.add(verticalPanel_3, "Pessoas F\u00EDsicas Vinculadas", false);
 		verticalPanel_3.setSize("100%", "3cm");
@@ -154,24 +156,11 @@ public class FormClientePJ extends Composite {
 		verticalPanel_3.add(decoratorPanel);
 		decoratorPanel.setStyleName("padding10");
 		
-		HorizontalPanel horizontalPanel = new HorizontalPanel();
-		decoratorPanel.setWidget(horizontalPanel);
-		horizontalPanel.setSpacing(10);
-		
-		Button btnNewButton = new Button("New button");
+		btnNewButton = new Button("New button");
+		decoratorPanel.setWidget(btnNewButton);
 		btnNewButton.setStyleName("padding5");
-		btnNewButton.setText("editar");
-		horizontalPanel.add(btnNewButton);
-		
-		Button button_3 = new Button("New button");
-		button_3.setText("excluir");
-		button_3.setStyleName("padding5");
-		horizontalPanel.add(button_3);
-		
-		Button btnNewButton_1 = new Button("New button");
-		horizontalPanel.add(btnNewButton_1);
-		btnNewButton_1.setStyleName("padding5");
-		btnNewButton_1.setText("nova Pessoa F\u00EDsica");
+		btnNewButton.setText("nova Pessoa F\u00EDsica");
+		*/
 		
 		setStyleName("painelCadastro");
 		tabPanel.selectTab(0);
@@ -201,4 +190,7 @@ public class FormClientePJ extends Composite {
 	public TextBox getEnderecoMatriz() {
 		return textBox_2;
 	}
+//	public Button getBotaoNovoClientePF() {
+//		return btnNewButton;
+//	}
 }

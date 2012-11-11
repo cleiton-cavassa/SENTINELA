@@ -7,10 +7,10 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 
 @PersistenceCapable
-public class Motorista  implements Serializable {
+public class Motorista  implements Serializable, ObjetoChaveado {
 
 	@Persistent
-	private String CPF;
+	private Long CPF;
 	
 	@Persistent
 	private String nome;
@@ -47,11 +47,11 @@ public class Motorista  implements Serializable {
 		this.fumante = fumante;
 	}
 
-	public String getCPF() {
+	public Long getChave() {
 		return CPF;
 	}
 
-	public void setCPF(String cPF) {
+	public void setChave(Long cPF) {
 		CPF = cPF;
 	}
 

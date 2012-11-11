@@ -1,16 +1,21 @@
 package cleiton.unisul.piweb.client;
 
 
-import cleiton.unisul.piweb.client.telaspopup.clientespf.*;
-import cleiton.unisul.piweb.client.telaspopup.clientespj.*;
-import cleiton.unisul.piweb.client.telaspopup.CadastroEstaFrota;
-import cleiton.unisul.piweb.client.telaspopup.CadastroFrotasParceiras;
-import cleiton.unisul.piweb.client.telaspopup.CadastroFuncionarios;
-import cleiton.unisul.piweb.client.telaspopup.CorridasAgendadas;
-import cleiton.unisul.piweb.client.telaspopup.CorridasCanceladas;
-import cleiton.unisul.piweb.client.telaspopup.CorridasFinalizadas;
-import cleiton.unisul.piweb.client.telaspopup.FrotasQueEmitemVouchers;
-import cleiton.unisul.piweb.client.telaspopup.FuncionariosEmAtividade;
+import cleiton.unisul.piweb.client.telaspopup.clientes.RelacaoClientesPFePJ;
+import cleiton.unisul.piweb.client.telaspopup.clientes.clientespf.CriarNovoClientePF;
+import cleiton.unisul.piweb.client.telaspopup.clientes.clientespf.RelacaoClientesPF;
+import cleiton.unisul.piweb.client.telaspopup.clientes.clientespj.CriarNovoClientePJ;
+import cleiton.unisul.piweb.client.telaspopup.clientes.clientespj.RelacaoClientesPJ;
+import cleiton.unisul.piweb.client.telaspopup.corridas.CorridasAgendadas;
+import cleiton.unisul.piweb.client.telaspopup.corridas.CorridasCanceladas;
+import cleiton.unisul.piweb.client.telaspopup.corridas.CorridasFinalizadas;
+
+import cleiton.unisul.piweb.client.telaspopup.frotas.CadastroEstaFrota;
+import cleiton.unisul.piweb.client.telaspopup.frotas.CadastroFrotasParceiras;
+import cleiton.unisul.piweb.client.telaspopup.frotas.FrotasQueEmitemVouchers;
+import cleiton.unisul.piweb.client.telaspopup.funcionarios.CadastroFuncionarios;
+import cleiton.unisul.piweb.client.telaspopup.funcionarios.FuncionariosEmAtividade;
+
 import cleiton.unisul.piweb.client.util.CriadorTela;
 import cleiton.unisul.piweb.shared.Usuario;
 
@@ -126,14 +131,31 @@ public class SENTINELA implements EntryPoint {
 		MenuBar menuBar_1 = new MenuBar(true);
 		MenuItem mntmNewMenu = new MenuItem("Clientes", false, menuBar_1);
 		
-		MenuItem mntmNewItem_2 = new MenuItem("Pessoas Jur\u00EDdicas", false, new CriadorTela(RelacaoClientesPJ.get()));
-		menuBar_1.addItem(mntmNewItem_2);
+		MenuBar menuBar_PJ = new MenuBar(true);
+		MenuItem menuItemPJ = new MenuItem("Pessoas Jur\u00EDdicas",false, menuBar_PJ);
+			MenuItem menuItemRelaPJ = new MenuItem("listagem de Pessoas Jur\u00EDdicas", false, new CriadorTela(RelacaoClientesPJ.get()));
+			menuBar_PJ.addItem(menuItemRelaPJ);
+			MenuItem menuItemNovaPJ = new MenuItem("nova Pessoa Jur\u00EDdica", false, new CriadorTela(CriarNovoClientePJ.get()));
+			menuBar_PJ.addItem(menuItemNovaPJ);
+		menuBar_1.addItem(menuItemPJ);
+
 		
-		MenuItem mntmNewItem_7 = new MenuItem("Pessoas F\u00EDsicas", false, new CriadorTela(RelacaoClientesPF.get()));
-		
-		menuBar_1.addItem(mntmNewItem_7);
+		MenuBar menuBar_PF = new MenuBar(true);
+		MenuItem menuItemPF = new MenuItem("Pessoas F\u00EDsicas",false, menuBar_PF);
+			MenuItem menuItemRelaPF = new MenuItem("listagem de Pessoas F\u00EDsicas", false, new CriadorTela(RelacaoClientesPF.get()));
+			menuBar_PF.addItem(menuItemRelaPF);
+			MenuItem menuItemNovaPF = new MenuItem("nova Pessoa F\u00EDsica", false, new CriadorTela(CriarNovoClientePF.get()));
+			menuBar_PF.addItem(menuItemNovaPF);
+		menuBar_1.addItem(menuItemPF);
 		menuBar.addItem(mntmNewMenu);
+		
+		MenuItem menuItemPFePJ = new MenuItem("Pessoas F\u00EDsicas e Pessoas Jur\u00EDdicas relacionadas",false, new CriadorTela(RelacaoClientesPFePJ.get()));
+		menuBar_1.addItem(menuItemPFePJ);
+		
+		
 		MenuBar menuBar_2 = new MenuBar(true);
+		
+
 		
 		MenuItem mntmNewMenu_1 = new MenuItem("Funcion\u00E1rios", false, menuBar_2);
 		

@@ -3,12 +3,18 @@ package cleiton.unisul.piweb.shared;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
 
 
 @PersistenceCapable
-public class CorridaCancelada  implements Serializable {
+public class CorridaCancelada  implements Serializable, ObjetoChaveado {
+	
+	@PrimaryKey
+    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	private Long chave;
 	
 	@Persistent
 	private Corrida corrida;
@@ -21,6 +27,15 @@ public class CorridaCancelada  implements Serializable {
 	
 	@Persistent
 	private String motoristaId;
+	
+	public Long getChave() {
+		return chave;
+	}
+
+	public void setChave(Long chave) {
+		this.chave = chave;
+	}
+
 	
 	
 	public String getMotoristaId() {

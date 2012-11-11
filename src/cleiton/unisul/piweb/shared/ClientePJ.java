@@ -12,10 +12,10 @@ import javax.jdo.annotations.PrimaryKey;
 
 @SuppressWarnings("serial")
 @PersistenceCapable
-public class ClientePJ  implements Serializable {
+public class ClientePJ  implements Serializable, ObjetoChaveado {
 	
     @PrimaryKey
-    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+    @Persistent
 	private Long CNPJ;
 	
 	@Persistent
@@ -41,16 +41,16 @@ public class ClientePJ  implements Serializable {
 	private String enderecoMatriz;
 
 	@Persistent
-	private ArrayList<String> regioesDeAtuacao;
+	private ArrayList<String> regioesDeAtuacao=new ArrayList<String>();
 	
 	@Persistent
 	private Boolean vouchersAtivos;
 
-	public Long getCNPJ() {
+	public Long getChave() {
 		return CNPJ;
 	}
 
-	public void setCNPJ(Long cNPJ) {
+	public void setChave(Long cNPJ) {
 		CNPJ = cNPJ;
 	}
 

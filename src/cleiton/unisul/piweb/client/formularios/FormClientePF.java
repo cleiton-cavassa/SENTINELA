@@ -45,6 +45,7 @@ import cleiton.unisul.piweb.client.validacao.CompositeCNPJ;
 			TabPanel tabPanel = new TabPanel();
 			tabPanel.setStyleName("painelCadastro");
 			initWidget(tabPanel);
+			tabPanel.setSize("914px", "300");
 			
 			VerticalPanel caractPessoaisPanel = new VerticalPanel();
 			tabPanel.add(caractPessoaisPanel, "Caracter\u00EDsticas Pessoais", false);
@@ -148,12 +149,12 @@ import cleiton.unisul.piweb.client.validacao.CompositeCNPJ;
 			
 			VerticalPanel horizontalPanel = new VerticalPanel();
 			tabPanel.add(horizontalPanel, "Prefer\u00EAncias", false);
-			horizontalPanel.setSize("905", "269");
+			horizontalPanel.setSize("5cm", "300");
 			
 			pshbtnNewButton = new CheckBox("New button");
 			pshbtnNewButton.setHTML("animal de estima\u00E7\u00E3o");
 			horizontalPanel.add(pshbtnNewButton);
-			pshbtnNewButton.setSize("129px", "20");
+			pshbtnNewButton.setSize("914", "300");
 			
 			pushButton = new CheckBox("New button");
 			pushButton.setHTML("permite motorista fumante");
