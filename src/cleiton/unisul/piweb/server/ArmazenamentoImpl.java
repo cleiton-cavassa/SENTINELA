@@ -1,6 +1,7 @@
 package cleiton.unisul.piweb.server;
 
 import java.util.LinkedList;
+
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -10,19 +11,18 @@ import javax.jdo.identity.LongIdentity;
 import cleiton.unisul.piweb.client.Armazenamento;
 import cleiton.unisul.piweb.shared.ClientePF;
 import cleiton.unisul.piweb.shared.ClientePJ;
-import cleiton.unisul.piweb.shared.Corrida;
-import cleiton.unisul.piweb.shared.CorridaAtendida;
-import cleiton.unisul.piweb.shared.CorridaCancelada;
-import cleiton.unisul.piweb.shared.CorridaMarcada;
-import cleiton.unisul.piweb.shared.Expediente;
-import cleiton.unisul.piweb.shared.Frota;
-import cleiton.unisul.piweb.shared.Motorista;
+//import cleiton.unisul.piweb.shared.Corrida;
+//import cleiton.unisul.piweb.shared.CorridaAtendida;
+//import cleiton.unisul.piweb.shared.CorridaCancelada;
+//import cleiton.unisul.piweb.shared.CorridaMarcada;
+//import cleiton.unisul.piweb.shared.Expediente;
+//import cleiton.unisul.piweb.shared.Frota;
+//import cleiton.unisul.piweb.shared.Motorista;
+//import cleiton.unisul.piweb.shared.Usuario;
 import cleiton.unisul.piweb.shared.ClientesPFePJ;
 import cleiton.unisul.piweb.shared.ObjetoChaveado;
-import cleiton.unisul.piweb.shared.ObjetoChaveado.RespostaPersistencia;
-import cleiton.unisul.piweb.shared.Usuario;
+import cleiton.unisul.piweb.shared.RespostaPersistencia;
 
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 @SuppressWarnings("serial")
@@ -32,7 +32,7 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 	@Override 
 	public <T extends ObjetoChaveado> RespostaPersistencia persistir(T obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 	@Override 
-	public <T> List<T> recuperar(T exemplo) throws Exception{return recupera(exemplo);}
+	public <T extends ObjetoChaveado> List<T> recuperar(T exemplo) throws Exception{return recupera(exemplo);}
 	
 
 	

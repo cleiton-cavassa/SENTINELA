@@ -1,13 +1,9 @@
 package cleiton.unisul.piweb.client;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import cleiton.unisul.piweb.shared.*;
-import cleiton.unisul.piweb.shared.ObjetoChaveado.RespostaPersistencia;
 
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
@@ -18,7 +14,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 public interface Armazenamento extends RemoteService {
 	
 	<T extends ObjetoChaveado> RespostaPersistencia persistir(T obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
-	<T> List<T> recuperar(T exemplo) throws Exception;
+	<T extends ObjetoChaveado> List<T> recuperar(T exemplo) throws Exception;
 
 //	RespostaPersistencia persistir(ClientePF obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
 //	RespostaPersistencia persistir(ClientePJ obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);

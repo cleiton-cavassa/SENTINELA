@@ -9,6 +9,7 @@ import cleiton.unisul.piweb.client.telaspopup.clientes.clientespj.CriarNovoClien
 import cleiton.unisul.piweb.client.util.CriadorTela;
 import cleiton.unisul.piweb.shared.ClientePF;
 import cleiton.unisul.piweb.shared.ClientePJ;
+import cleiton.unisul.piweb.shared.ServicoArmazenamento;
 
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -150,7 +151,7 @@ public class RelacaoClientesPF extends Composite {
 	
 	public void atualizar(){
 		AsyncCallback<List<ClientePF>> a= new CallbackArmazenamento(dataProvider);
-		SENTINELA.getArmazenamento().recuperar(new ClientePF(), a);		
+		ServicoArmazenamento.getArmazenamento().recuperar(new ClientePF(), a);		
 	}
 	
 	private class CallbackArmazenamento implements AsyncCallback<List<ClientePF>>{

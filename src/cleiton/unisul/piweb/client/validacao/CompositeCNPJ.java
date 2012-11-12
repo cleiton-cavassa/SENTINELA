@@ -20,7 +20,7 @@ public class CompositeCNPJ extends CompositeMascara {
 	}
 
 	@Override
-	protected String mascara(long valor) {
+	protected String mascara(Long valor) {
 		if (valor<0){
 			return "";
 		}

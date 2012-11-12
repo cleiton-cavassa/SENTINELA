@@ -2,6 +2,7 @@ package cleiton.unisul.piweb.client.telaspopup.clientes.clientespj;
 
 import java.util.ArrayList;
 
+
 import cleiton.unisul.piweb.client.SENTINELA;
 
 
@@ -16,7 +17,8 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import cleiton.unisul.piweb.client.formularios.FormClientePJ;
 import cleiton.unisul.piweb.shared.ClientePJ;
-import cleiton.unisul.piweb.shared.ObjetoChaveado.RespostaPersistencia;
+import cleiton.unisul.piweb.shared.RespostaPersistencia;
+import cleiton.unisul.piweb.shared.ServicoArmazenamento;
 
 public class CriarNovoClientePJ extends Composite {
 
@@ -96,7 +98,7 @@ public class CriarNovoClientePJ extends Composite {
 		ClientePJ clPJ=eu.montarClientePJ();
 		callback.setClPJ(clPJ);
 		if(clPJ!=null){
-			SENTINELA.getArmazenamento().persistir(clPJ,true, false, callback);
+			ServicoArmazenamento.getArmazenamento().persistir(clPJ,true, false, callback);
 		}else{
 			Window.alert("Algum campo requerido deixou de ser preenchido.\nTodos os campos marcados com asterisco (*) precisam ser preenchidos.");
 		}

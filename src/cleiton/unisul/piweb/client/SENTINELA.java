@@ -42,17 +42,7 @@ import com.google.gwt.user.client.ui.Button;
 public class SENTINELA implements EntryPoint {
 
 	private static GreetingServiceAsync greetingService = GWT
-			.create(GreetingService.class);
-	private static ArmazenamentoAsync recuperador= GWT
-			.create(Armazenamento.class);
-
-	public static ArmazenamentoAsync getArmazenamento() {
-		if (recuperador!=null){
-			recuperador=GWT.create(Armazenamento.class);
-		}
-		return recuperador;
-	}
-	
+			.create(GreetingService.class);	
 	public static GreetingServiceAsync getGreetingService() {
 		if (greetingService!=null){
 			greetingService=GWT.create(GreetingService.class);

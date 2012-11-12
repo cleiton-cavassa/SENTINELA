@@ -13,6 +13,7 @@ import cleiton.unisul.piweb.client.validacao.CompositeCPF;
 import cleiton.unisul.piweb.shared.ClientePF;
 import cleiton.unisul.piweb.shared.ClientesPFePJ;
 import cleiton.unisul.piweb.shared.ClientesPFePJ;
+import cleiton.unisul.piweb.shared.ServicoArmazenamento;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.Cell;
@@ -159,7 +160,7 @@ public class RelacaoClientesPFePJ extends Composite {
 	public void atualizar(){
 		AsyncCallback<List<ClientesPFePJ>> a= new CallbackArmazenamento(dataProvider);
 		try {
-			SENTINELA.getArmazenamento().montarLista(new ClientesPFePJ(), a);
+			ServicoArmazenamento.getArmazenamento().montarLista(new ClientesPFePJ(), a);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}		

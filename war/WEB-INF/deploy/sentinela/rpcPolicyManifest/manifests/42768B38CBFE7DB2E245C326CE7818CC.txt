@@ -1,2 +1,0 @@
-serviceClass: cleiton.unisul.piweb.client.Armazenamento
-path: 02DE8F7AB700E887D8F22885B4E26E39.gwt.rpc

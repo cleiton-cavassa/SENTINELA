@@ -2,29 +2,22 @@ package cleiton.unisul.piweb.client.telaspopup.clientes.clientespf;
 
 import java.util.Date;
 
-
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Composite;
 
-import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.DockPanel;
 import com.google.gwt.user.client.ui.ListBox;
-import com.google.gwt.user.cellview.client.SimplePager;
 
-import cleiton.unisul.piweb.client.SENTINELA;
 import cleiton.unisul.piweb.client.formularios.FormClientePF;
-import cleiton.unisul.piweb.client.formularios.FormClientePJ;
 import cleiton.unisul.piweb.shared.ClientePF;
-import cleiton.unisul.piweb.shared.ClientePJ;
 import cleiton.unisul.piweb.shared.ObjetoChaveado;
-import cleiton.unisul.piweb.shared.ObjetoChaveado.RespostaPersistencia;
+import cleiton.unisul.piweb.shared.RespostaPersistencia;
+import cleiton.unisul.piweb.shared.ServicoArmazenamento;
 
 public class CadastroClientesPF extends Composite {
 	
@@ -102,7 +95,7 @@ public class CadastroClientesPF extends Composite {
 		ClientePF clPF=montarClientePF();
 		callback.setClPF(clPF);
 		if(clPF!=null){
-			SENTINELA.getArmazenamento().persistir((ObjetoChaveado)clPF, false, false, callback);
+			ServicoArmazenamento.getArmazenamento().persistir((ObjetoChaveado)clPF, false, false, callback);
 		}else{
 			Window.alert("Algum campo requerido deixou de ser preenchido.\nTodos os campos marcados com asterisco (*) precisam ser preenchidos.");
 		}
@@ -152,7 +145,7 @@ public class CadastroClientesPF extends Composite {
 		return cliente;
 	}
 
-	private class CallbackArmazenamento implements AsyncCallback<RespostaPersistencia>{
+	private class CallbackArmazenamento implements AsyncCallback<cleiton.unisul.piweb.shared.RespostaPersistencia>{
 		private ClientePF clPF;
 		public ClientePF getClPF() {
 			return clPF;
@@ -163,7 +156,7 @@ public class CadastroClientesPF extends Composite {
 		}
 
 		@Override
-		public void onSuccess(RespostaPersistencia result) {
+		public void onSuccess(cleiton.unisul.piweb.shared.RespostaPersistencia result) {
 			
 			if (result.getOperacaoBemSucedida()){
 				StringBuilder b=new StringBuilder();

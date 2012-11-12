@@ -12,21 +12,21 @@ import com.google.gwt.event.dom.client.KeyUpHandler;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 
 abstract public class CompositeMascara extends Composite {
-	protected long valor;
+	protected Long valor;
 	protected abstract String mascaraPadrao();
-	abstract protected String mascara(long valor); 
-	public long getValor() {
+	abstract protected String mascara(Long valor); 
+	public Long getValor() {
 		try{
 			valor=Long.parseLong(digitador.getText());
 		}catch(Throwable tr){
-			valor=-1;
+			valor= 0l;
 		}
 		return valor;
 	}
-	public void setValor(long valor) {
-		this.valor=valor;
-		eu.digitador.setText(String.valueOf(valor));
-		eu.exibidor.setText(mascara(valor));
+	public void setValor(Long valor) {
+		this.valor=((valor==null)?0l:valor);
+		eu.digitador.setText(String.valueOf(this.valor));
+		eu.exibidor.setText(mascara(this.valor));
 	}
 	protected TextBox digitador;
 	protected Label exibidor;
@@ -102,11 +102,11 @@ abstract public class CompositeMascara extends Composite {
 		}
 
 		private void atualizaExibidor(){
-			long valor;
+			Long valor;
 			try{
 				valor = Long.parseLong(eu.digitador.getText());
 			}catch(Throwable t){
-				valor =-1;
+				valor =0l;
 			}
 			if (valor>0){
 				eu.exibidor.setText(eu.mascara(valor));
