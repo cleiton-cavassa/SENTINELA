@@ -61,7 +61,7 @@ public class Corrida  implements Serializable, ObjetoChaveado {
 	}
 
 	@Override
-	public String resumo() {
+	public String getResumo() {
 		return "";
 	}
 	

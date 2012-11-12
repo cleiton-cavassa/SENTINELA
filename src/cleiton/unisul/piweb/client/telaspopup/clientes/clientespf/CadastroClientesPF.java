@@ -23,6 +23,7 @@ import cleiton.unisul.piweb.client.formularios.FormClientePF;
 import cleiton.unisul.piweb.client.formularios.FormClientePJ;
 import cleiton.unisul.piweb.shared.ClientePF;
 import cleiton.unisul.piweb.shared.ClientePJ;
+import cleiton.unisul.piweb.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.shared.ObjetoChaveado.RespostaPersistencia;
 
 public class CadastroClientesPF extends Composite {
@@ -101,7 +102,7 @@ public class CadastroClientesPF extends Composite {
 		ClientePF clPF=montarClientePF();
 		callback.setClPF(clPF);
 		if(clPF!=null){
-			SENTINELA.getArmazenamento().persistir(clPF, false, false, callback);
+			SENTINELA.getArmazenamento().persistir((ObjetoChaveado)clPF, false, false, callback);
 		}else{
 			Window.alert("Algum campo requerido deixou de ser preenchido.\nTodos os campos marcados com asterisco (*) precisam ser preenchidos.");
 		}

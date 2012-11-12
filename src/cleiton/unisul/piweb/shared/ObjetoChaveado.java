@@ -6,7 +6,7 @@ public interface ObjetoChaveado {
 	
 	Long getChave();
 	void setChave(Long chave);
-	String resumo();
+	String getResumo();
 	
 	
 	public class RespostaPersistencia implements Serializable{

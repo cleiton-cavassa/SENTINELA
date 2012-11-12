@@ -99,7 +99,7 @@ public class ClientePJ  implements Serializable, ObjetoChaveado {
 	}
 	
 	@Override
-	public String resumo() {
+	public String getResumo() {
 		StringBuilder b= new StringBuilder();
 		b.append("CNPJ: ");
 			b.append(CompositeCNPJ.mascaraCNPJ( this.getChave() ));

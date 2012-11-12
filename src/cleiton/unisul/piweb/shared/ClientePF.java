@@ -141,7 +141,7 @@ public class ClientePF implements Serializable, ObjetoChaveado {
 	}
 
 	@Override
-	public String resumo() {
+	public String getResumo() {
 		StringBuilder b= new StringBuilder();
 		b.append("CPF: ");
 			b.append(CompositeCPF.mascaraCPF( this.getChave() ));
@@ -150,7 +150,8 @@ public class ClientePF implements Serializable, ObjetoChaveado {
 			b.append(this.getNome());
 			b.append("\n");
 		b.append("Data de Nascimento: ");
-			b.append(String.format("d/m/Y", this.getDataNascimento()));
+			//b.append(String.format("d/m/Y", this.getDataNascimento()));
+			b.append(getDataNascimento().toString());
 			b.append("\n");
 		b.append("Cliente ativo? ");
 			b.append((this.getStatus()?"Sim":"Nao"));

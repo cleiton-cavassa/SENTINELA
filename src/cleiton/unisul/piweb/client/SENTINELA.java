@@ -45,18 +45,19 @@ public class SENTINELA implements EntryPoint {
 			.create(GreetingService.class);
 	private static ArmazenamentoAsync recuperador= GWT
 			.create(Armazenamento.class);
+
+	public static ArmazenamentoAsync getArmazenamento() {
+		if (recuperador!=null){
+			recuperador=GWT.create(Armazenamento.class);
+		}
+		return recuperador;
+	}
 	
 	public static GreetingServiceAsync getGreetingService() {
 		if (greetingService!=null){
 			greetingService=GWT.create(GreetingService.class);
 		}
 		return greetingService;
-	}
-	public static ArmazenamentoAsync getArmazenamento() {
-		if (recuperador!=null){
-			recuperador=GWT.create(Armazenamento.class);
-		}
-		return recuperador;
 	}
 
 	private Usuario usuario; 

@@ -70,7 +70,7 @@ public class CorridaCancelada  implements Serializable, ObjetoChaveado {
 		this.horarioCancelamento = horarioCancelamento;
 	}
 	@Override
-	public String resumo() {
+	public String getResumo() {
 		return "";
 	}
 

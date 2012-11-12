@@ -158,7 +158,11 @@ public class RelacaoClientesPFePJ extends Composite {
 	
 	public void atualizar(){
 		AsyncCallback<List<ClientesPFePJ>> a= new CallbackArmazenamento(dataProvider);
-		SENTINELA.getArmazenamento().recuperar(new ClientesPFePJ(), a);		
+		try {
+			SENTINELA.getArmazenamento().montarLista(new ClientesPFePJ(), a);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
 	}
 	
 	private class CallbackArmazenamento implements AsyncCallback<List<ClientesPFePJ>>{

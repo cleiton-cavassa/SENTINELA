@@ -59,7 +59,7 @@ public class CorridaAtendida  implements Serializable, ObjetoChaveado {
 	}
 
 	@Override
-	public String resumo() {
+	public String getResumo() {
 		return "";
 	}
 	

@@ -29,48 +29,15 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenamento{
 	PersistenceManager pm(){return PMF.get().getPersistenceManager();}
 	
-	@Override
-	public RespostaPersistencia persistir(ClientePF obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
-	@Override
-	public RespostaPersistencia persistir(ClientePJ obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
-	@Override
-	public RespostaPersistencia persistir(Corrida obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
-	@Override
-	public RespostaPersistencia persistir(CorridaAtendida obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
-	@Override
-	public RespostaPersistencia persistir(CorridaCancelada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
-	@Override
-	public RespostaPersistencia persistir(CorridaMarcada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
-	@Override
-	public RespostaPersistencia persistir(Frota obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
-	@Override
-	public RespostaPersistencia persistir(Motorista obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+	@Override 
+	public <T extends ObjetoChaveado> RespostaPersistencia persistir(T obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+	@Override 
+	public <T> List<T> recuperar(T exemplo) throws Exception{return recupera(exemplo);}
+	
 
 	
 	@Override
-	public List<ClientePF> recuperar(ClientePF exemplo)throws Exception{return recupera(exemplo);}
-	@Override
-	public List<ClientePJ> recuperar(ClientePJ exemplo)throws Exception{return recupera(exemplo);}
-	@Override
-	public List<Corrida> recuperar(Corrida exemplo)throws Exception{return recupera(exemplo);}
-	@Override
-	public List<CorridaAtendida> recuperar(CorridaAtendida exemplo)throws Exception{return recupera(exemplo);}
-	@Override
-	public List<CorridaCancelada> recuperar(CorridaCancelada exemplo)throws Exception{return recupera(exemplo);}
-	@Override
-	public List<CorridaMarcada> recuperar(CorridaMarcada exemplo)throws Exception{return recupera(exemplo);}
-	@Override
-	public List<Expediente> recuperar(Expediente exemplo)throws Exception{return recupera(exemplo);}
-	@Override
-	public List<Frota> recuperar(Frota exemplo)throws Exception{return recupera(exemplo);}
-	@Override
-	public List<Motorista> recuperar(Motorista exemplo)throws Exception{return recupera(exemplo);}
-	@Override 
-	public List<Usuario> recuperar(Usuario exemplo) throws Exception{return recupera(exemplo);}
-	//public List<Usuario> recuperar(Usuario exemplo){try { return recupera(exemplo);}catch (Exception e) {throw new RuntimeException(e.getMessage());}}
-	
-	@Override
-	public List<ClientesPFePJ> recuperar(ClientesPFePJ exemplo) throws Exception{
+	public List<ClientesPFePJ> montarLista(ClientesPFePJ exemplo) throws Exception{
 		List<ClientePF> pfs = recupera(new ClientePF());
 		
 		LinkedList<ClientesPFePJ> resposta= new LinkedList<ClientesPFePJ>(); 
@@ -96,7 +63,7 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 		return resposta;
 	}
 	
-	private RespostaPersistencia persiste(ObjetoChaveado objeto, Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){
+	private <T extends ObjetoChaveado>RespostaPersistencia persiste(T objeto, Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){
 		PersistenceManager pm=pm();
 		RespostaPersistencia resultado=new RespostaPersistencia();
 		
@@ -130,38 +97,12 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 		return resultado;
 	}
 	
-	private boolean persiste(Object objeto){
-	   
-		boolean resultado;
-	    PersistenceManager pm = pm();
-		try {
-			pm.makePersistent(objeto);
-			resultado=true;	
-		}catch(Throwable t){
-			resultado=false;
-		}finally {
-			pm.close();
-		}
-		return resultado;
-	}
+
 	
 	@SuppressWarnings("unchecked")
 	public <T extends Object> List<T> recupera(T exemplo) throws Exception{
 	    PersistenceManager pm = pm();
 		List<T> a=(List<T>)consulta(pm, "select from "+exemplo.getClass().getName());
-		/*
-		List<T> a=null;
-
-		Query q   = pm.newQuery("select from "+exemplo.getClass().getName());
-		try {
-			//result= q.execute();
-			a=(List<T>)q.execute();
-		}catch(Throwable t){
-			throw new java.lang.Exception("Problemas na consulta:\n"+t.getLocalizedMessage()+"\n"+t.getMessage());
-		} finally {
-			q.closeAll();
-		}
-		*/
 		if (a==null){
 			return null;
 		}else{
@@ -181,4 +122,59 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 		}
 		return result;
 	}
+
+//	@Override
+//	public RespostaPersistencia persistir(ClientePF obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+//	@Override
+//	public RespostaPersistencia persistir(ClientePJ obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+//	@Override
+//	public RespostaPersistencia persistir(Corrida obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+//	@Override
+//	public RespostaPersistencia persistir(CorridaAtendida obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+//	@Override
+//	public RespostaPersistencia persistir(CorridaCancelada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+//	@Override
+//	public RespostaPersistencia persistir(CorridaMarcada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+//	@Override
+//	public RespostaPersistencia persistir(Frota obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+//	@Override
+//	public RespostaPersistencia persistir(Motorista obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+
+	
+//	@Override
+//	public List<ClientePF> recuperar(ClientePF exemplo)throws Exception{return recupera(exemplo);}
+//	@Override
+//	public List<ClientePJ> recuperar(ClientePJ exemplo)throws Exception{return recupera(exemplo);}
+//	@Override
+//	public List<Corrida> recuperar(Corrida exemplo)throws Exception{return recupera(exemplo);}
+//	@Override
+//	public List<CorridaAtendida> recuperar(CorridaAtendida exemplo)throws Exception{return recupera(exemplo);}
+//	@Override
+//	public List<CorridaCancelada> recuperar(CorridaCancelada exemplo)throws Exception{return recupera(exemplo);}
+//	@Override
+//	public List<CorridaMarcada> recuperar(CorridaMarcada exemplo)throws Exception{return recupera(exemplo);}
+//	@Override
+//	public List<Expediente> recuperar(Expediente exemplo)throws Exception{return recupera(exemplo);}
+//	@Override
+//	public List<Frota> recuperar(Frota exemplo)throws Exception{return recupera(exemplo);}
+//	@Override
+//	public List<Motorista> recuperar(Motorista exemplo)throws Exception{return recupera(exemplo);}
+//	@Override 
+//	public List<Usuario> recuperar(Usuario exemplo) throws Exception{return recupera(exemplo);}
+//	public List<Usuario> recuperar(Usuario exemplo){try { return recupera(exemplo);}catch (Exception e) {throw new RuntimeException(e.getMessage());}}
+
+//	private boolean persiste(Object objeto){
+//	   
+//		boolean resultado;
+//	    PersistenceManager pm = pm();
+//		try {
+//			pm.makePersistent(objeto);
+//			resultado=true;	
+//		}catch(Throwable t){
+//			resultado=false;
+//		}finally {
+//			pm.close();
+//		}
+//		return resultado;
+//	}
 }
