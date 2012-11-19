@@ -1,9 +1,9 @@
-package cleiton.unisul.piweb.classesrpc.server;
+package cleiton.unisul.piweb.rpc.server;
 
 import javax.jdo.PersistenceManager;
 
-import cleiton.unisul.piweb.classesrpc.client.GreetingService;
-import cleiton.unisul.piweb.classesrpc.shared.Usuario;
+import cleiton.unisul.piweb.rpc.client.GreetingService;
+import cleiton.unisul.piweb.rpc.shared.Usuario;
 import cleiton.unisul.piweb.sistema.shared.*;
 
 import com.google.appengine.api.users.User;

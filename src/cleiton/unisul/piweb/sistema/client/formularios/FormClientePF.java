@@ -1,21 +1,23 @@
 package cleiton.unisul.piweb.sistema.client.formularios;
 
-import cleiton.unisul.piweb.classesrpc.shared.ClientePF;
-import cleiton.unisul.piweb.classesrpc.shared.ClientePF.TipoNacionalidade;
 import cleiton.unisul.piweb.ferramentasVisuais.client.enums.ListBoxEnumeracoes;
+
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.MotoristaFumante;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF.Status;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF.TipoNacionalidade;
 import cleiton.unisul.piweb.sistema.client.validacao.CompositeCNPJ;
 import cleiton.unisul.piweb.sistema.client.validacao.CompositeCPF;
 
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Grid;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TabPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -27,13 +29,13 @@ import com.google.gwt.user.datepicker.client.DateBox.DefaultFormat;
 		private CompositeCPF compositeCPF;
 		private CompositeCNPJ compositeCNPJ;
 		private DateBox dateBox;
-		private ListBox comboBox;
+		private ListBoxEnumeracoes<TipoNacionalidade> comboBox;
 		private TextBox textBox_1;
 		private TextBox textBox_2;
 		private TextBox textBox_3;
-		private CheckBox chckbxNewCheckBox;
-		private CheckBox pshbtnNewButton;
-		private CheckBox pushButton;
+		private ListBoxEnumeracoes<Status> chckbxNewCheckBox;
+		private ListBoxEnumeracoes<TransportaAnimais> pshbtnNewButton;
+		private ListBoxEnumeracoes<MotoristaFumante> pushButton;
 		private Button btnNewButton;
 		private Button button;
 
@@ -112,7 +114,7 @@ import com.google.gwt.user.datepicker.client.DateBox.DefaultFormat;
 						FlowPanel flowPanel = new FlowPanel();
 						grid.setWidget(4, 1, flowPanel);
 						
-						comboBox = new ListBoxEnumeracoes<TipoNacionalidade>(ClientePF.TipoNacionalidade.BRASILEIRO);
+						comboBox = new ListBoxEnumeracoes<TipoNacionalidade>(ClientePF.TipoNacionalidade.Brasileiro);
 
 						flowPanel.add(comboBox);
 						
@@ -128,7 +130,7 @@ import com.google.gwt.user.datepicker.client.DateBox.DefaultFormat;
 						textBox_3.setVisibleLength(120);
 						grid.setWidget(7, 1, textBox_3);
 						
-						chckbxNewCheckBox = new CheckBox("Cliente Ativo");
+						chckbxNewCheckBox = new ListBoxEnumeracoes<Status>(Status.Ativo);
 						chckbxNewCheckBox.setStyleName("ativoCheckBox");
 						caractPessoaisPanel.add(chckbxNewCheckBox);
 						
@@ -150,15 +152,26 @@ import com.google.gwt.user.datepicker.client.DateBox.DefaultFormat;
 			tabPanel.add(horizontalPanel, "Prefer\u00EAncias", false);
 			horizontalPanel.setSize("5cm", "300");
 			
-			pshbtnNewButton = new CheckBox("New button");
-			pshbtnNewButton.setHTML("animal de estima\u00E7\u00E3o");
-			horizontalPanel.add(pshbtnNewButton);
-			pshbtnNewButton.setSize("914", "300");
+			Grid grid_1 = new Grid(2, 2);
+			horizontalPanel.add(grid_1);
 			
-			pushButton = new CheckBox("New button");
-			pushButton.setHTML("permite motorista fumante");
-			horizontalPanel.add(pushButton);
+			Label lblTransportaAnimais = new Label("Carrega animais?");
+			lblTransportaAnimais.setWordWrap(false);
+			grid_1.setWidget(0, 0, lblTransportaAnimais);
+			
+			pshbtnNewButton = new ListBoxEnumeracoes<TransportaAnimais>(TransportaAnimais.Nao);
+			grid_1.setWidget(0, 1, pshbtnNewButton);
+			pshbtnNewButton.setSize("", "");
+			
+			Label lblMotoristaFumante = new Label("Aceita motorista fumante?");
+			lblMotoristaFumante.setWordWrap(false);
+			grid_1.setWidget(1, 0, lblMotoristaFumante);
+			
+			pushButton = new ListBoxEnumeracoes<MotoristaFumante>(MotoristaFumante.Nao);
+			grid_1.setWidget(1, 1, pushButton);
 			pushButton.setSize("129px", "20");
+			grid_1.getCellFormatter().setHorizontalAlignment(0, 0, HasHorizontalAlignment.ALIGN_RIGHT);
+			grid_1.getCellFormatter().setHorizontalAlignment(1, 0, HasHorizontalAlignment.ALIGN_RIGHT);
 			setStyleName("painelCadastro"); 
 			
 			tabPanel.selectTab(0);
@@ -176,7 +189,7 @@ import com.google.gwt.user.datepicker.client.DateBox.DefaultFormat;
 		public DateBox getDateBoxNascimento() {
 			return dateBox;
 		}
-		public ListBox getComboBoxTipoNacionalidade() {
+		public ListBoxEnumeracoes<TipoNacionalidade> getComboBoxTipoNacionalidade() {
 			return comboBox;
 		}
 		public TextBox getTextBoxIdiomas() {
@@ -188,13 +201,13 @@ import com.google.gwt.user.datepicker.client.DateBox.DefaultFormat;
 		public TextBox getTextBoxTelefones() {
 			return textBox_3;
 		}
-		public CheckBox getChckbxStatus() {
+		public ListBoxEnumeracoes<Status> getChckbxStatus() {
 			return chckbxNewCheckBox;
 		}
-		public CheckBox getCheckBoxCarregaAnimais() {
+		public ListBoxEnumeracoes<TransportaAnimais> getCheckBoxTransportaAnimais() {
 			return pshbtnNewButton;
 		}
-		public CheckBox getCheckBoxPermiteMotFumante() {
+		public ListBoxEnumeracoes<MotoristaFumante> getCheckBoxPermiteMotFumante() {
 			return pushButton;
 		}
 		public Button getBotaoSalvar() {

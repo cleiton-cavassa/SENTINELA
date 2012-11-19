@@ -1,10 +1,10 @@
-package cleiton.unisul.piweb.classesrpc.client;
+package cleiton.unisul.piweb.rpc.client;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import cleiton.unisul.piweb.classesrpc.shared.Usuario;
+import cleiton.unisul.piweb.rpc.shared.Usuario;
 import cleiton.unisul.piweb.sistema.shared.*;
 
 import com.google.gwt.user.client.rpc.RemoteService;

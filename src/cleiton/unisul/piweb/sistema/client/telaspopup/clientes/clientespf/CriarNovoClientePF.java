@@ -2,22 +2,22 @@ package cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf;
 
 import java.util.Date;
 
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.MotoristaFumante;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF.Status;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF.TipoNacionalidade;
+import cleiton.unisul.piweb.sistema.client.formularios.FormClientePF;
+import cleiton.unisul.piweb.sistema.client.formularios.FormContatos;
+import cleiton.unisul.piweb.sistema.client.telaspopup.telasnovoregistro.TelaNovoRegistro;
 
 import com.google.gwt.event.dom.client.ClickEvent;
-
 import com.google.gwt.event.dom.client.ClickHandler;
-
-import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.Widget;
-
-import cleiton.unisul.piweb.classesrpc.shared.ClientePF;
-import cleiton.unisul.piweb.sistema.client.formularios.FormClientePF;
-import cleiton.unisul.piweb.sistema.client.telaspopup.telasnovoregistro.TelaNovoRegistro;
 
 public class CriarNovoClientePF extends TelaNovoRegistro<ClientePF> {
 	
@@ -65,6 +65,10 @@ public class CriarNovoClientePF extends TelaNovoRegistro<ClientePF> {
 //		FormClientePF formClientePF = new FormClientePF();
 //		form = formClientePF ;
 		widgetTelaDesbloqueada.add(form);
+		
+		FormContatos formContatos = new FormContatos();
+		widgetTelaDesbloqueada.add(formContatos);
+		
 		setStyleName("painelCadastro");
 		
 		final CriarNovoClientePF eu=this;
@@ -116,63 +120,65 @@ public class CriarNovoClientePF extends TelaNovoRegistro<ClientePF> {
 	
 	@Override
 	public ClientePF getObjeto() {
-		String nome=form.getTextBoxNome().getText();
-		Long cpf=form.getCompositeCPF().getValor();		
-		Long cnpjPJorigem=form.getCompositePJdeOrigem().getValor();
-		Date nascimento = form.getDateBoxNascimento().getValue();
-		boolean nacionalidade;
-			ListBox n= form.getComboBoxTipoNacionalidade();
-			nacionalidade=(n.getValue(n.getSelectedIndex()).equals("brasileiro"));
-		String idiomas=form.getTextBoxIdiomas().getText();
-		String endereco= form.getTextBoxEndereco().getText();
-		String telefones=form.getTextBoxTelefones().getText();
-		boolean status = form.getChckbxStatus().getValue();
-		boolean carregaAnimais=form.getCheckBoxCarregaAnimais().getValue();
-		boolean aceitaMotFumante = form.getCheckBoxPermiteMotFumante().getValue();
-		
+//		String nome=form.getTextBoxNome().getText();
+//		Long cpf=form.getCompositeCPF().getValor();		
+//		Long cnpjPJorigem=form.getCompositePJdeOrigem().getValor();
+//		Date nascimento = form.getDateBoxNascimento().getValue();
+//		TipoNacionalidade nacionalidade=form.getComboBoxTipoNacionalidade().getEnumSelecionada();
+////		boolean nacionalidade;
+////			ListBox n= form.getComboBoxTipoNacionalidade();
+////			nacionalidade=(n.getValue(n.getSelectedIndex()).equals("brasileiro"));
+//		String idiomas=form.getTextBoxIdiomas().getText();
+//		String endereco= form.getTextBoxEndereco().getText();
+//		String telefones=form.getTextBoxTelefones().getText();
+//		Status status = form.getChckbxStatus().getEnumSelecionada();
+//		TransportaAnimais carregaAnimais=form.getCheckBoxTransportaAnimais().getEnumSelecionada();
+//		MotoristaFumante aceitaMotFumante = form.getCheckBoxPermiteMotFumante().getEnumSelecionada();
+//		
 		ClientePF cliente=new ClientePF();
-			cliente.setNome(nome);
-			cliente.setChave(cpf);
-			cliente.setPJVinculada(cnpjPJorigem);
-			cliente.setDataNascimento(nascimento);
-			cliente.setTipoNacionalidade(nacionalidade);
-			cliente.setIdiomasFalados(idiomas);
-			cliente.setEndereco(endereco);
-			cliente.setTelefones(telefones);
-			cliente.setStatus(status);
-			cliente.setCarregaAnimais(carregaAnimais);
-			cliente.setAceitaMotFumante(aceitaMotFumante);
+//			cliente.setNome(nome);
+//			cliente.setChave(cpf);
+//			cliente.setPJVinculada(cnpjPJorigem);
+//			cliente.setDataNascimento(nascimento);
+//			cliente.setTipoNacionalidade(nacionalidade);
+//			cliente.setIdiomasFalados(idiomas);
+//			cliente.setEndereco(endereco);
+//			cliente.setTelefones(telefones);
+//			cliente.setStatus(status);
+//			cliente.setTransportaAnimais(carregaAnimais);
+//			cliente.setAceitaMotFumante(aceitaMotFumante);
 		return cliente;
 	}
 
 	@Override
 	public void setObjeto(ClientePF cliente) {
-		String nome=cliente.getNome();
-		Long cpf=cliente.getChave();		
-		Long cnpjPJorigem=cliente.getPJVinculada();
-		Date nascimento = cliente.getDataNascimento();
-		Boolean nacionalidade=cliente.getTipoNacionalidade();
-			nacionalidade=(nacionalidade==null?false:nacionalidade);
-		String idiomas=cliente.getIdiomasFalados();
-		String endereco= cliente.getEndereco();
-		String telefones=cliente.getTelefones();
-		Boolean status = cliente.getStatus();
-			status=(status==null?false:status);
-		Boolean carregaAnimais=cliente.getCarregaAnimais();
-			carregaAnimais=(carregaAnimais==null?false:carregaAnimais);
-		Boolean aceitaMotFumante = cliente.getAceitaMotFumante();
-			aceitaMotFumante=(aceitaMotFumante==null?false:aceitaMotFumante);
-		form.getTextBoxNome().setText(nome);
-		form.getCompositeCPF().setValor(cpf);		
-		form.getCompositePJdeOrigem().setValor(cnpjPJorigem);
-		form.getDateBoxNascimento().setValue(nascimento);
-		form.getComboBoxTipoNacionalidade().setItemSelected((nacionalidade?1:0), true);
-		form.getTextBoxIdiomas().setText(idiomas);
-		form.getTextBoxEndereco().setText(endereco);
-		form.getTextBoxTelefones().setText(telefones);
-		form.getChckbxStatus().setValue(status);
-		form.getCheckBoxCarregaAnimais().setValue(carregaAnimais);
-		form.getCheckBoxPermiteMotFumante().setValue(aceitaMotFumante);
+//		String nome=cliente.getNome();
+//		Long cpf=cliente.getChave();		
+//		Long cnpjPJorigem=cliente.getPJVinculada();
+//		Date nascimento = cliente.getDataNascimento();
+////		Boolean nacionalidade=cliente.getTipoNacionalidade();
+////			nacionalidade=(nacionalidade==null?false:nacionalidade);
+//		String idiomas=cliente.getIdiomasFalados();
+//		String endereco= cliente.getEndereco();
+//		String telefones=cliente.getTelefones();
+////		Boolean status = cliente.getStatus();
+////			status=(status==null?false:status);
+////		Boolean carregaAnimais=cliente.getTransportaAnimais();
+////			carregaAnimais=(carregaAnimais==null?false:carregaAnimais);
+////		Boolean aceitaMotFumante = cliente.getAceitaMotFumante();
+////			aceitaMotFumante=(aceitaMotFumante==null?false:aceitaMotFumante);
+//		form.getTextBoxNome().setText(nome);
+//		form.getCompositeCPF().setValor(cpf);		
+//		form.getCompositePJdeOrigem().setValor(cnpjPJorigem);
+//		form.getDateBoxNascimento().setValue(nascimento);
+////		form.getComboBoxTipoNacionalidade().setItemSelected((nacionalidade?1:0), true);
+//		form.getComboBoxTipoNacionalidade().setEnumSelecionada(cliente.getTipoNacionalidade());
+//		form.getTextBoxIdiomas().setText(idiomas);
+//		form.getTextBoxEndereco().setText(endereco);
+//		form.getTextBoxTelefones().setText(telefones);
+//		form.getChckbxStatus().setEnumSelecionada(cliente.getStatus());
+//		form.getCheckBoxTransportaAnimais().setEnumSelecionada(cliente.getTransportaAnimais());
+//		form.getCheckBoxPermiteMotFumante().setEnumSelecionada(cliente.getAceitaMotFumante());
 	}
 	
 //	private ClientePF montarComValidacao() {
@@ -199,18 +205,18 @@ public class CriarNovoClientePF extends TelaNovoRegistro<ClientePF> {
 	@Override
 	protected boolean validar() {
 		ClientePF cliente = getObjeto();
-			String nome=cliente.getNome();
-			Long cpf=cliente.getChave();		
-			Date nascimento = cliente.getDataNascimento();
-		if ((nome==null)||(nome.equalsIgnoreCase(""))){
-			return false;
-		}
-		if (cpf<=0){
-			return false;
-		}
-		if (nascimento==null){
-			return false;
-		}
+//			String nome=cliente.getNome();
+//			Long cpf=cliente.getChave();		
+//			Date nascimento = cliente.getDataNascimento();
+//		if ((nome==null)||(nome.equalsIgnoreCase(""))){
+//			return false;
+//		}
+//		if (cpf<=0){
+//			return false;
+//		}
+//		if (nascimento==null){
+//			return false;
+//		}
 		return true;
 	}
 
@@ -219,10 +225,10 @@ public class CriarNovoClientePF extends TelaNovoRegistro<ClientePF> {
 		return widgetTelaDesbloqueada;
 	}
 
-	@Override
-	protected Button getBotaoSalvar() {
-		return form.getBotaoSalvar();
-	}
+//	@Override
+//	protected Button getBotaoSalvar() {
+//		return form.getBotaoSalvar();
+//	}
 
 	@Override
 	public void limpar() {

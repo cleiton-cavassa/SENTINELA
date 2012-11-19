@@ -2,34 +2,24 @@ package cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf;
 
 import java.util.List;
 
-
-import cleiton.unisul.piweb.classesrpc.shared.ClientePF;
-import cleiton.unisul.piweb.classesrpc.shared.ClientePJ;
-import cleiton.unisul.piweb.classesrpc.shared.ServicoArmazenamento;
-import cleiton.unisul.piweb.sistema.client.SENTINELA;
-import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.CadastroClientesPJ;
-import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.CriarNovoClientePJ;
+import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
 import cleiton.unisul.piweb.sistema.client.util.CriadorTela;
 
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.cellview.client.CellTable;
-import com.google.gwt.user.cellview.client.TextColumn;
-import com.google.gwt.user.client.ui.DecoratorPanel;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.cellview.client.Column;
-import com.google.gwt.view.client.ListDataProvider;
-import com.google.gwt.cell.client.CheckboxCell;
+import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.cell.client.ButtonCell;
+import com.google.gwt.user.cellview.client.CellTable;
+import com.google.gwt.user.cellview.client.Column;
+import com.google.gwt.user.cellview.client.TextColumn;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.view.client.ListDataProvider;
 
 public class RelacaoClientesPF extends Composite {
 	private CellTable<ClientePF> tabela;
@@ -45,8 +35,8 @@ public class RelacaoClientesPF extends Composite {
 	}
 	
 	final ListDataProvider<ClientePF> dataProvider = new ListDataProvider<ClientePF>();
-	final String strPositivo="Sim";
-	final String strNegativo="Nao";
+//	final String strPositivo="Sim";
+//	final String strNegativo="Nao";
 	
 	private RelacaoClientesPF() {
 		
@@ -99,14 +89,14 @@ public class RelacaoClientesPF extends Composite {
 		
 		TextColumn<ClientePF> textColumn = new TextColumn<ClientePF>() {
 			public String getValue(ClientePF clientePF) {
-				return String.valueOf(clientePF.getChave());
+				return String.valueOf(clientePF.getDadosPessoais().getCpf());
 			}
 		};
 		cellTable.addColumn(textColumn, "CPF");
 		
 		TextColumn<ClientePF> textColumn_1 = new TextColumn<ClientePF>() {
 			public String getValue(ClientePF clientePF) {
-				return clientePF.getNome();
+				return clientePF.getDadosPessoais().getNome();
 			}
 		};
 		cellTable.addColumn(textColumn_1, "Nome");
@@ -114,14 +104,14 @@ public class RelacaoClientesPF extends Composite {
 		TextColumn<ClientePF> column = new TextColumn<ClientePF>() {
 			@Override
 			public String getValue(ClientePF clientePF) {
-				return (clientePF.getStatus()?strPositivo:strNegativo);
+				return (clientePF.getStatus().name());
 			}
 		};
 		cellTable.addColumn(column, "Ativo?");
 		
 		TextColumn<ClientePF> textColumn_2 = new TextColumn<ClientePF>() {
 			public String getValue(ClientePF clientePF) {
-				return clientePF.getIdiomasFalados();
+				return clientePF.getDadosPessoais().getIdiomasFalados().toString();
 			}
 		};
 		cellTable.addColumn(textColumn_2, "idiomas");
@@ -129,7 +119,8 @@ public class RelacaoClientesPF extends Composite {
 		TextColumn<ClientePF> column_1 = new TextColumn<ClientePF>() {
 			@Override
 			public String getValue(ClientePF clientePF) {
-				return (clientePF.getCarregaAnimais()?strPositivo:strNegativo);
+//				return (clientePF.getCarregaAnimais()?strPositivo:strNegativo);
+				return (clientePF.getPreferencias().getTransportaAnimais().name());
 			}
 		};
 		cellTable.addColumn(column_1, "carrega animais?");
@@ -137,7 +128,8 @@ public class RelacaoClientesPF extends Composite {
 		TextColumn<ClientePF> column_2 = new TextColumn<ClientePF>() {
 			@Override
 			public String getValue(ClientePF clientePF) {
-				return (  clientePF.getAceitaMotFumante()?strPositivo:strNegativo);
+//				return (  clientePF.getAceitaMotFumante()?strPositivo:strNegativo);
+				return (  clientePF.getPreferencias().getMotoristaFumante().name());
 			}
 		};
 		cellTable.addColumn(column_2, "aceita motoristas fumantes?");

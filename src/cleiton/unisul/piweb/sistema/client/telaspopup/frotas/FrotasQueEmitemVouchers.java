@@ -49,7 +49,7 @@ public class FrotasQueEmitemVouchers extends Composite {
 				return object.getFrota();
 			}
 		};
-		cellTable.addColumn(textColumn, "Frota");
+		cellTable.addColumn(textColumn, "FrotaModeloAntigo");
 		
 		TextColumn<DadosFrotaClienteVoucher> textColumn_1 = new TextColumn<DadosFrotaClienteVoucher>() {
 			public String getValue(DadosFrotaClienteVoucher object) {

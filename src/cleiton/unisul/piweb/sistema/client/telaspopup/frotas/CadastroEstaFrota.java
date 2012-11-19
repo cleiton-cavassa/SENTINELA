@@ -17,7 +17,7 @@ public class CadastroEstaFrota extends Composite {
 		
 		FlowPanel flowPanel = new FlowPanel();
 		initWidget(flowPanel);
-		flowPanel.setSize("910px", "262px");
+		flowPanel.setSize("910px", "371px");
 		
 		Label lblSentinelaDados = new Label("SENTINELA - dados desta frota");
 		lblSentinelaDados.setStyleName("h1");

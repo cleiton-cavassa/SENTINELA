@@ -1,8 +1,6 @@
-package cleiton.unisul.piweb.classesrpc.shared;
+package cleiton.unisul.piweb.rpc.client;
 
 
-import cleiton.unisul.piweb.classesrpc.client.Armazenamento;
-import cleiton.unisul.piweb.classesrpc.client.ArmazenamentoAsync;
 
 import com.google.gwt.core.client.GWT;
 

@@ -1,6 +1,6 @@
 package cleiton.unisul.piweb.sistema.client.bloqueio;
 
-import cleiton.unisul.piweb.classesrpc.shared.ObjetoChaveado;
+import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 
 public interface TelaComBloqueio{
 

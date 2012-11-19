@@ -25,9 +25,6 @@ public class CadastroFrotasParceiras extends Composite {
 		flowPanel.add(lblSentinelaDados);
 		lblSentinelaDados.setSize("100%", "20px");
 		
-		SimplePager simplePager = new SimplePager();
-		flowPanel.add(simplePager);
-		
 		Grid grid=new Grid(7, 2);
 		flowPanel.add(grid);
 		

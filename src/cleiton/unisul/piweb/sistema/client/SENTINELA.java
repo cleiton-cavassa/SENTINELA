@@ -3,13 +3,14 @@ package cleiton.unisul.piweb.sistema.client;
 
 
 
-import cleiton.unisul.piweb.classesrpc.shared.ServicoUsuario;
-import cleiton.unisul.piweb.classesrpc.shared.Usuario;
-import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.RelacaoClientesPFePJ;
+import cleiton.unisul.piweb.rpc.client.ServicoUsuario;
+
+import cleiton.unisul.piweb.rpc.shared.Usuario;
+//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.RelacaoClientesPFePJ;
 import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.CriarNovoClientePF;
 import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.RelacaoClientesPF;
-import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.CriarNovoClientePJ;
-import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.RelacaoClientesPJ;
+//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.CriarNovoClientePJ;
+//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.RelacaoClientesPJ;
 import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasAgendadas;
 import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasCanceladas;
 import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasFinalizadas;
@@ -115,10 +116,10 @@ public class SENTINELA implements EntryPoint {
 		
 		MenuBar menuBar_PJ = new MenuBar(true);
 		MenuItem menuItemPJ = new MenuItem("Pessoas Jur\u00EDdicas",false, menuBar_PJ);
-			MenuItem menuItemRelaPJ = new MenuItem("listagem de Pessoas Jur\u00EDdicas", false, new CriadorTela(RelacaoClientesPJ.get()));
-			menuBar_PJ.addItem(menuItemRelaPJ);
-			MenuItem menuItemNovaPJ = new MenuItem("nova Pessoa Jur\u00EDdica", false, new CriadorTela(CriarNovoClientePJ.get()));
-			menuBar_PJ.addItem(menuItemNovaPJ);
+//			MenuItem menuItemRelaPJ = new MenuItem("listagem de Pessoas Jur\u00EDdicas", false, new CriadorTela(RelacaoClientesPJ.get()));
+//			menuBar_PJ.addItem(menuItemRelaPJ);
+//			MenuItem menuItemNovaPJ = new MenuItem("nova Pessoa Jur\u00EDdica", false, new CriadorTela(CriarNovoClientePJ.get()));
+//			menuBar_PJ.addItem(menuItemNovaPJ);
 		menuBar_1.addItem(menuItemPJ);
 
 		
@@ -131,8 +132,8 @@ public class SENTINELA implements EntryPoint {
 		menuBar_1.addItem(menuItemPF);
 		menuBar.addItem(mntmNewMenu);
 		
-		MenuItem menuItemPFePJ = new MenuItem("Pessoas F\u00EDsicas e Pessoas Jur\u00EDdicas relacionadas",false, new CriadorTela(RelacaoClientesPFePJ.get()));
-		menuBar_1.addItem(menuItemPFePJ);
+//		MenuItem menuItemPFePJ = new MenuItem("Pessoas F\u00EDsicas e Pessoas Jur\u00EDdicas relacionadas",false, new CriadorTela(RelacaoClientesPFePJ.get()));
+//		menuBar_1.addItem(menuItemPFePJ);
 		
 		
 		MenuBar menuBar_2 = new MenuBar(true);

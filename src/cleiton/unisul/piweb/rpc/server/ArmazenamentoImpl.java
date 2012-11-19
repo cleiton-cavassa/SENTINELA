@@ -1,13 +1,20 @@
-package cleiton.unisul.piweb.classesrpc.server;
+package cleiton.unisul.piweb.rpc.server;
 
 import java.util.LinkedList;
-
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 import javax.jdo.identity.LongIdentity;
 
+import cleiton.unisul.piweb.rpc.client.Armazenamento;
+import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
+import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ;
+//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.antigos.ClientesPFePJ;
+
+import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 //import cleiton.unisul.piweb.shared.Corrida;
 //import cleiton.unisul.piweb.shared.CorridaAtendida;
 //import cleiton.unisul.piweb.shared.CorridaCancelada;
@@ -16,14 +23,6 @@ import javax.jdo.identity.LongIdentity;
 //import cleiton.unisul.piweb.shared.Frota;
 //import cleiton.unisul.piweb.shared.Motorista;
 //import cleiton.unisul.piweb.shared.Usuario;
-import cleiton.unisul.piweb.classesrpc.client.Armazenamento;
-import cleiton.unisul.piweb.classesrpc.shared.ClientePF;
-import cleiton.unisul.piweb.classesrpc.shared.ClientePJ;
-import cleiton.unisul.piweb.classesrpc.shared.ClientesPFePJ;
-import cleiton.unisul.piweb.classesrpc.shared.ObjetoChaveado;
-import cleiton.unisul.piweb.classesrpc.shared.RespostaPersistencia;
-
-import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 @SuppressWarnings("serial")
 public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenamento{
@@ -36,32 +35,34 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 	
 
 	
-	@Override
-	public List<ClientesPFePJ> montarLista(ClientesPFePJ exemplo) throws Exception{
-		List<ClientePF> pfs = recupera(new ClientePF());
-		
-		LinkedList<ClientesPFePJ> resposta= new LinkedList<ClientesPFePJ>(); 
-		PersistenceManager pm = pm();
-		for(ClientePF pf:pfs){
-			ClientePJ pj;
-			boolean PJexisteNoBD=true;
-			try{
-				pj=(ClientePJ)pm.getObjectById(new LongIdentity(ClientePJ.class, pf.getPJVinculada()));
-			}catch(Throwable t){
-				
-				pj=new ClientePJ();
-				pj.setChave(pf.getPJVinculada());
-				pj.setRazaoSocial("Ainda n‹o existe pessoa jur’dica com esse CNPJ cadastrada na base de dados");
-				PJexisteNoBD=false;
-			}
-			ClientesPFePJ resp = new ClientesPFePJ();
-				resp.setClientePF(pf);
-				resp.setClientePJ(pj);
-				resp.setPJexisteNaBaseDeDados(PJexisteNoBD);
-			resposta.add(resp);
-		}
-		return resposta;
-	}
+//	@Override
+//	public List<ClientesPFePJ> montarLista(ClientesPFePJ exemplo) throws Exception{
+//		List<ClientePF> pfs = recupera(new ClientePF());
+//		
+//		//this.getThreadLocalRequest().getSession().setAttribute("FrotaModeloAntigo", new FrotaModeloAntigo());
+//		
+//		LinkedList<ClientesPFePJ> resposta= new LinkedList<ClientesPFePJ>(); 
+//		PersistenceManager pm = pm();
+//		for(ClientePF pf:pfs){
+//			ClientePJ pj;
+//			boolean PJexisteNoBD=true;
+//			try{
+//				pj=(ClientePJ)pm.getObjectById(new LongIdentity(ClientePJ.class, pf.getPJVinculada()));
+//			}catch(Throwable t){
+//				
+//				pj=new ClientePJ();
+//				pj.setChave(pf.getPJVinculada());
+//				pj.setRazaoSocial("Ainda n‹o existe pessoa jur’dica com esse CNPJ cadastrada na base de dados");
+//				PJexisteNoBD=false;
+//			}
+//			ClientesPFePJ resp = new ClientesPFePJ();
+//				resp.setClientePF(pf);
+//				resp.setClientePJ(pj);
+//				resp.setPJexisteNaBaseDeDados(PJexisteNoBD);
+//			resposta.add(resp);
+//		}
+//		return resposta;
+//	}
 	
 	private <T extends ObjetoChaveado>RespostaPersistencia persiste(T objeto, Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){
 		PersistenceManager pm=pm();
@@ -71,7 +72,8 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 		Boolean objetoJaExiste=null;
 		Boolean salvoComSucesso=null;
 		try{
-			pm.getObjectById(new LongIdentity(objeto.getClass(), objeto.getChave()));
+//			pm.getObjectById(new LongIdentity(objeto.getClass(), objeto.getChave()));
+//			pm.getObjectById(objeto.getChave());
 			objetoJaExiste=true;
 			conformeEsperado=!novoRegistro;
 		}catch(javax.jdo.JDOObjectNotFoundException t){
@@ -123,6 +125,7 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 		return result;
 	}
 
+
 //	@Override
 //	public RespostaPersistencia persistir(ClientePF obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 //	@Override
@@ -134,9 +137,9 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 //	@Override
 //	public RespostaPersistencia persistir(CorridaCancelada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 //	@Override
-//	public RespostaPersistencia persistir(CorridaMarcada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+//	public RespostaPersistencia persistir(CorridaAgendada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 //	@Override
-//	public RespostaPersistencia persistir(Frota obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+//	public RespostaPersistencia persistir(FrotaModeloAntigo obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 //	@Override
 //	public RespostaPersistencia persistir(Motorista obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 
@@ -152,11 +155,11 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 //	@Override
 //	public List<CorridaCancelada> recuperar(CorridaCancelada exemplo)throws Exception{return recupera(exemplo);}
 //	@Override
-//	public List<CorridaMarcada> recuperar(CorridaMarcada exemplo)throws Exception{return recupera(exemplo);}
+//	public List<CorridaAgendada> recuperar(CorridaAgendada exemplo)throws Exception{return recupera(exemplo);}
 //	@Override
 //	public List<Expediente> recuperar(Expediente exemplo)throws Exception{return recupera(exemplo);}
 //	@Override
-//	public List<Frota> recuperar(Frota exemplo)throws Exception{return recupera(exemplo);}
+//	public List<FrotaModeloAntigo> recuperar(FrotaModeloAntigo exemplo)throws Exception{return recupera(exemplo);}
 //	@Override
 //	public List<Motorista> recuperar(Motorista exemplo)throws Exception{return recupera(exemplo);}
 //	@Override 

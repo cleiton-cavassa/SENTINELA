@@ -1,4 +1,4 @@
-package cleiton.unisul.piweb.classesrpc.shared;
+package cleiton.unisul.piweb.rpc.shared;
 
 import java.io.Serializable;
 

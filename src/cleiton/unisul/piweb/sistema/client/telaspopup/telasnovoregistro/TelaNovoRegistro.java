@@ -8,8 +8,8 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
-import cleiton.unisul.piweb.classesrpc.shared.ObjetoChaveado;
-import cleiton.unisul.piweb.classesrpc.shared.ServicoArmazenamento;
+import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
+import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.sistema.client.bloqueio.TelaComBloqueio;
 import cleiton.unisul.piweb.sistema.client.bloqueio.TelaPadraoBloqueada;
 import cleiton.unisul.piweb.sistema.client.persistencia.TelaPersistencia;
@@ -21,7 +21,7 @@ implements TelaComBloqueio, TelaPersistencia<T>, TelaLimpavel{
 	
 	protected abstract boolean validar();
 	protected abstract Widget getWidgetTelaDesbloqueada();
-	protected abstract Button getBotaoSalvar();
+//	protected abstract Button getBotaoSalvar();
 	
 	@Override
 	public abstract T getObjeto();
@@ -40,14 +40,14 @@ implements TelaComBloqueio, TelaPersistencia<T>, TelaLimpavel{
 //		widgetTelaDesbloqueada=getWidgetTelaDesbloqueada();
 		compositeTelaBloqueada =new TelaPadraoBloqueada();
 		compositeTelaBloqueada.setVisible(false);
-		try{
-			getBotaoSalvar().addClickHandler(new ClickHandler() {
-				@Override
-				public void onClick(ClickEvent event) {
-					salvarCommand().execute();
-				}
-			});
-		}catch(Throwable tr){}
+//		try{
+//			getBotaoSalvar().addClickHandler(new ClickHandler() {
+//				@Override
+//				public void onClick(ClickEvent event) {
+//					salvarCommand().execute();
+//				}
+//			});
+//		}catch(Throwable tr){}
 	}
 	
 	private void salvar(){

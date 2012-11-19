@@ -1,12 +1,12 @@
-package cleiton.unisul.piweb.classesrpc.client;
+package cleiton.unisul.piweb.rpc.client;
 
 import java.util.List;
 
-import cleiton.unisul.piweb.classesrpc.shared.ClientesPFePJ;
-import cleiton.unisul.piweb.classesrpc.shared.ObjetoChaveado;
-import cleiton.unisul.piweb.classesrpc.shared.RespostaPersistencia;
-import cleiton.unisul.piweb.sistema.shared.*;
 
+
+import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
+import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
+//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.antigos.ClientesPFePJ;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
@@ -24,8 +24,8 @@ public interface Armazenamento extends RemoteService {
 //	RespostaPersistencia persistir(Corrida obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
 //	RespostaPersistencia persistir(CorridaAtendida obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
 //	RespostaPersistencia persistir(CorridaCancelada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
-//	RespostaPersistencia persistir(CorridaMarcada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
-//	RespostaPersistencia persistir(Frota cliente,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
+//	RespostaPersistencia persistir(CorridaAgendada obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
+//	RespostaPersistencia persistir(FrotaModeloAntigo cliente,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
 //	RespostaPersistencia persistir(Motorista obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
 //	
 //	RespostaPersistencia persistir(ObjetoChaveado obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
@@ -35,11 +35,11 @@ public interface Armazenamento extends RemoteService {
 //	List<Corrida> recuperar(Corrida exemplo) throws Exception;
 //	List<CorridaAtendida> recuperar(CorridaAtendida exemplo) throws Exception;
 //	List<CorridaCancelada> recuperar(CorridaCancelada exemplo) throws Exception;
-//	List<CorridaMarcada> recuperar(CorridaMarcada exemplo) throws Exception;
+//	List<CorridaAgendada> recuperar(CorridaAgendada exemplo) throws Exception;
 //	List<Expediente> recuperar(Expediente exemplo) throws Exception;
-//	List<Frota> recuperar(Frota exemplo) throws Exception;
+//	List<FrotaModeloAntigo> recuperar(FrotaModeloAntigo exemplo) throws Exception;
 //	List<Motorista> recuperar(Motorista exemplo) throws Exception;
 //	List<Usuario> recuperar(Usuario exemplo) throws Exception;	
-	List<ClientesPFePJ> montarLista(ClientesPFePJ exemplo) throws Exception;
+//	List<ClientesPFePJ> montarLista(ClientesPFePJ exemplo) throws Exception;
 
 }
