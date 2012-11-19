@@ -1,0 +1,2 @@
+# Module cleiton.unisul.piweb.rpc.ClassesRPC
+# RPC service class, partial path of RPC policy file

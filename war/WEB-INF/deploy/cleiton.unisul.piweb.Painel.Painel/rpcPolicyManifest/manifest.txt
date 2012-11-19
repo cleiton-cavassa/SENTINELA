@@ -1,0 +1,2 @@
+# Module cleiton.unisul.piweb.Painel.Painel
+# RPC service class, partial path of RPC policy file

@@ -1,0 +1,379 @@
+<,cleiton.cavassa@gmail.com> <http://www.architexa.com/rdf/core#creator> "true" .
+
+@prefix atxa-rse-eclipse: <http://www.architexa.com/rdf/rse-eclipse#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix atxa-jdt-wkspc: <http://www.architexa.com/rdf/jdt-wkspc#> .
+@prefix atxa-ann: <http://www.architexa.com/rdf/ann#> .
+@prefix atxa-core: <http://www.architexa.com/rdf/core#> .
+@prefix atxa: <http://www.architexa.com/rdf/> .
+@prefix atxa-jdt: <http://www.architexa.com/rdf/jdt#> .
+
+<http://www.architexa.com/rdf/rse-eclipse#ClassesPersistencia.atxa> a atxa-core:reloFile .
+
+atxa:DetailNode atxa-core:detailLevel "0" .
+
+atxa-core:docRoot atxa-core:browseModel "com.architexa.diagrams.relo.jdt/com.architexa.diagrams.relo.jdt.browse.ClassStrucBrowseModel" ;
+	atxa-core:contains _:node17c9q42gox5 .
+
+_:node17c9q42gox5 a atxa-core:node ;
+	atxa-core:model atxa-jdt-wkspc:newPackage ;
+	atxa-core:posX "-33" ;
+	atxa-core:posY "71" .
+
+atxa-jdt-wkspc:newPackage atxa-core:contains _:node17c9q42gox48 , _:node17c9q42gox4 , _:node17c9q42gox91 , _:node17c9q42gox79 , _:node17c9q42gox85 , _:node17c9q42gox104 , _:node17c9q42gox73 , _:node17c9q42gox97 , _:node17c9q42gox55 , _:node17c9q42gox67 , _:node17c9q42gox61 , _:node17c9q42gox116 , _:node17c9q42gox110 , _:node17c9q42gox122 ;
+	atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "cleiton.unisul.piweb.architexa  " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:package .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox47 .
+
+_:node17c9q42gox47 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox48 ;
+	atxa-core:posX "1" ;
+	atxa-core:posY "98" .
+
+_:node17c9q42gox48 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$UsuarioAdministrativo " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox3 .
+
+_:node17c9q42gox3 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox4 ;
+	atxa-core:posX "4" ;
+	atxa-core:posY "171" .
+
+_:node17c9q42gox4 atxa-core:contains _:node17c9q42gox42 ;
+	atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$Frota  " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox185 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox3 ;
+	rdf:object _:node17c9q42gox54 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox188 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox3 ;
+	rdf:object _:node17c9q42gox96 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox191 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox3 ;
+	rdf:object _:node17c9q42gox47 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox3 atxa-core:contains _:node17c9q42gox41 .
+
+_:node17c9q42gox41 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox42 ;
+	atxa-core:posX "5" ;
+	atxa-core:posY "189" .
+
+_:node17c9q42gox42 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$NewClass.ArrayList<UsuarioAdministrativo> getUsuariosAdministrativos()     " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:method .
+
+_:node17c9q42gox243 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox41 ;
+	rdf:object _:node17c9q42gox84 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox246 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox41 ;
+	rdf:object _:node17c9q42gox90 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox249 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox41 ;
+	rdf:object _:node17c9q42gox78 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox90 .
+
+_:node17c9q42gox90 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox91 ;
+	atxa-core:posX "-27" ;
+	atxa-core:posY "344" .
+
+_:node17c9q42gox91 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$CorridaFinalizada " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox237 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox90 ;
+	rdf:object _:node17c9q42gox78 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox78 .
+
+_:node17c9q42gox78 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox79 ;
+	atxa-core:posX "133" ;
+	atxa-core:posY "281" .
+
+_:node17c9q42gox79 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$CorridaSolicitada " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox84 .
+
+_:node17c9q42gox84 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox85 ;
+	atxa-core:posX "281" ;
+	atxa-core:posY "347" .
+
+_:node17c9q42gox85 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$CorridaCancelada " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox240 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox84 ;
+	rdf:object _:node17c9q42gox78 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox103 .
+
+_:node17c9q42gox103 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox104 ;
+	atxa-core:posX "428" ;
+	atxa-core:posY "249" .
+
+_:node17c9q42gox104 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$PessoaFisica " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox72 .
+
+_:node17c9q42gox72 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox73 ;
+	atxa-core:posX "481" ;
+	atxa-core:posY "180" .
+
+_:node17c9q42gox73 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$ClientePJ " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox199 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox72 ;
+	rdf:object _:node17c9q42gox96 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox228 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox72 ;
+	rdf:object _:node17c9q42gox66 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox96 .
+
+_:node17c9q42gox96 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox97 ;
+	atxa-core:posX "318" ;
+	atxa-core:posY "98" .
+
+_:node17c9q42gox97 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$PessoaJuridica " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox54 .
+
+_:node17c9q42gox54 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox55 ;
+	atxa-core:posX "464" ;
+	atxa-core:posY "96" .
+
+_:node17c9q42gox55 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$FrotaDadosCompartilhados " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox196 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox54 ;
+	rdf:object _:node17c9q42gox72 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox66 .
+
+_:node17c9q42gox66 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox67 ;
+	atxa-core:posX "608" ;
+	atxa-core:posY "215" .
+
+_:node17c9q42gox67 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$ClientePF " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox207 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox66 ;
+	rdf:object _:node17c9q42gox103 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox213 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox66 ;
+	rdf:object _:node17c9q42gox109 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox60 .
+
+_:node17c9q42gox60 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox61 ;
+	atxa-core:posX "606" ;
+	atxa-core:posY "270" .
+
+_:node17c9q42gox61 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$Motorista " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox210 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox60 ;
+	rdf:object _:node17c9q42gox103 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox216 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox60 ;
+	rdf:object _:node17c9q42gox109 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox219 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox60 ;
+	rdf:object _:node17c9q42gox115 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox115 .
+
+_:node17c9q42gox115 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox116 ;
+	atxa-core:posX "602" ;
+	atxa-core:posY "337" .
+
+_:node17c9q42gox116 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$DadosProfisionais " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox234 a atxa-core:link ;
+	atxa-core:model atxa-ann:namedRel ;
+	rdf:subject _:node17c9q42gox115 ;
+	rdf:object _:node17c9q42gox121 ;
+	atxa-core:width "2" ;
+	atxa-core:commentTxt "  " .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox109 .
+
+_:node17c9q42gox109 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox110 ;
+	atxa-core:posX "781" ;
+	atxa-core:posY "242" .
+
+_:node17c9q42gox110 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$Preferencias " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox5 atxa-core:contains _:node17c9q42gox121 .
+
+_:node17c9q42gox121 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox122 ;
+	atxa-core:posX "591" ;
+	atxa-core:posY "384" .
+
+_:node17c9q42gox122 atxa-core:contains _:node17c9q42gox182 , _:node17c9q42gox128 ;
+	atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$Turno " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:class .
+
+_:node17c9q42gox121 atxa-core:contains _:node17c9q42gox181 .
+
+_:node17c9q42gox181 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox182 ;
+	atxa-core:posX "592" ;
+	atxa-core:posY "402" .
+
+_:node17c9q42gox182 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$NewClass.Date getFinal() " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:method .
+
+_:node17c9q42gox121 atxa-core:contains _:node17c9q42gox127 .
+
+_:node17c9q42gox127 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox128 ;
+	atxa-core:posX "592" ;
+	atxa-core:posY "418" .
+
+_:node17c9q42gox128 atxa-core:userCreated "true" ;
+	atxa-core:userCreatedNameText "newPackage$NewClass.Date getInicio() " ;
+	atxa-jdt:access atxa-jdt:access-public ;
+	a atxa-jdt:method .
+
+<http://www.architexa.com/rdf/rse-eclipse#ClassesPersistencia.atxa> atxa-core:contains _:node17c9q42gox264 .
+
+_:node17c9q42gox264 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox263 .
+
+atxa-core:docRoot atxa-core:contains _:node17c9q42gox264 .
+
+_:node17c9q42gox264 a atxa-core:node ;
+	atxa-core:model _:node17c9q42gox263 ;
+	atxa-core:posX "169" ;
+	atxa-core:posY "99" ;
+	atxa-core:commentTxt "criado" .
+
+_:node17c9q42gox263 a atxa-ann:comment .
+
+@prefix atxa-rse-eclipse: <http://www.architexa.com/rdf/rse-eclipse#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix atxa-jdt-wkspc: <http://www.architexa.com/rdf/jdt-wkspc#> .
+@prefix atxa-ann: <http://www.architexa.com/rdf/ann#> .
+@prefix atxa-core: <http://www.architexa.com/rdf/core#> .
+@prefix atxa: <http://www.architexa.com/rdf/> .
+@prefix atxa-jdt: <http://www.architexa.com/rdf/jdt#> .
+
+<http://www.architexa.com/rdf/rse-eclipse#ClassesPersistencia.atxa> a atxa-core:reloFile ;
+	atxa-core:contains _:node17c9q42gox47 , _:node17c9q42gox41 , _:node17c9q42gox3 , _:node17c9q42gox90 , _:node17c9q42gox78 , _:node17c9q42gox84 , _:node17c9q42gox103 , _:node17c9q42gox72 , _:node17c9q42gox96 , _:node17c9q42gox54 , _:node17c9q42gox66 , _:node17c9q42gox60 , _:node17c9q42gox115 , _:node17c9q42gox109 , _:node17c9q42gox181 , _:node17c9q42gox127 , _:node17c9q42gox121 , _:node17c9q42gox5 , atxa-core:docRoot , _:node17c9q42gox47 , _:node17c9q42gox41 , _:node17c9q42gox3 , _:node17c9q42gox90 , _:node17c9q42gox78 , _:node17c9q42gox84 , _:node17c9q42gox103 , _:node17c9q42gox72 , _:node17c9q42gox96 , _:node17c9q42gox54 , _:node17c9q42gox66 , _:node17c9q42gox60 , _:node17c9q42gox115 , _:node17c9q42gox109 , _:node17c9q42gox181 , _:node17c9q42gox127 , _:node17c9q42gox121 , _:node17c9q42gox5 , atxa-core:docRoot , _:node17c9q42gox185 , _:node17c9q42gox188 , _:node17c9q42gox191 , _:node17c9q42gox243 , _:node17c9q42gox246 , _:node17c9q42gox249 , _:node17c9q42gox237 , _:node17c9q42gox240 , _:node17c9q42gox199 , _:node17c9q42gox228 , _:node17c9q42gox196 , _:node17c9q42gox207 , _:node17c9q42gox213 , _:node17c9q42gox210 , _:node17c9q42gox216 , _:node17c9q42gox219 , _:node17c9q42gox234 , _:node17c9q42gox185 , _:node17c9q42gox188 , _:node17c9q42gox191 , _:node17c9q42gox243 , _:node17c9q42gox246 , _:node17c9q42gox249 , _:node17c9q42gox237 , _:node17c9q42gox240 , _:node17c9q42gox199 , _:node17c9q42gox228 , _:node17c9q42gox196 , _:node17c9q42gox207 , _:node17c9q42gox213 , _:node17c9q42gox210 , _:node17c9q42gox216 , _:node17c9q42gox219 , _:node17c9q42gox234 .
+
