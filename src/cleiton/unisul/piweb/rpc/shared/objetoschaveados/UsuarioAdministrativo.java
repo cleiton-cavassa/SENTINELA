@@ -6,6 +6,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import org.datanucleus.api.jpa.annotations.Extension;
+
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
@@ -15,9 +17,10 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
 	
     public enum NivelDeAcesso{Administrador1,Administrador2}
 	
-//    @PrimaryKey
-//	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
+	private String chave;
 	
     @Persistent
     private String email=null;
@@ -25,14 +28,30 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
     @Persistent
     private NivelDeAcesso nivelAcesso=null;
     
-//	public Object getChave() {return chave;}
+	public String getChave() {
+		return chave;
+	}
+
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
+
 	public String getEmail() {
 		return email;
 	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public NivelDeAcesso getNivelAcesso() {
 		return nivelAcesso;
 	}
-	
+
+	public void setNivelAcesso(NivelDeAcesso nivelAcesso) {
+		this.nivelAcesso = nivelAcesso;
+	}
+
 	@Override
 	public String getResumo(){
     	StringBuilder b=new StringBuilder();
@@ -43,15 +62,4 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
 				
 		return b.toString();
 	}
-
-//	public void setChave(Object chave) {this.chave = chave;}
-	
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	public void setNivelAcesso(NivelDeAcesso nivelAcesso) {
-		this.nivelAcesso = nivelAcesso;
-	}
-	
 }

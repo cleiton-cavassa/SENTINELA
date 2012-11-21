@@ -8,12 +8,12 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.sistema.client.bloqueio.TelaComBloqueio;
 import cleiton.unisul.piweb.sistema.client.bloqueio.TelaPadraoBloqueada;
 import cleiton.unisul.piweb.sistema.client.persistencia.TelaPersistencia;
-import cleiton.unisul.piweb.sistema.client.util.CriadorTela;
 
 public abstract class TelaNovoRegistro 
 <T extends ObjetoChaveado> extends Composite 

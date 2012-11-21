@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public interface ObjetoChaveado extends Serializable{
 	
-//	Object getChave();
-//	void setChave(Object chave);
+	String getChave();
+	void setChave(String chave);
 	String getResumo();
 	
 	

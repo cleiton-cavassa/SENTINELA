@@ -6,6 +6,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import org.datanucleus.api.jpa.annotations.Extension;
+
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
@@ -13,49 +15,37 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @SuppressWarnings("serial")
 @PersistenceCapable
 public class ClientePF implements ObjetoChaveado {
-
-	public enum Status{Ativo,Inativo}
-	public enum TipoNacionalidade{Brasileiro, Estrangeiro}
 	
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
-	
-//	@PrimaryKey
-//	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
 	
 	@Persistent
 	private PessoaFisica dadosPessoais;
-	
+
+
 	@Persistent
 	private Preferencias preferencias;
+
+	private DadosClientePF dadosClientePF;
+
+	public DadosClientePF getDadosClientePF() {
+		return dadosClientePF;
+	}
+
+	public void setDadosClientePF(DadosClientePF dadosClientePF) {
+		this.dadosClientePF = dadosClientePF;
+	}
+
+	public String getChave() {
+		return chave;
+	}
 	
-	@Persistent
-	private Status status;
-
-	@Persistent
-	private TipoNacionalidade tipoNacionalidade;
-
-	public TipoNacionalidade getTipoNacionalidade() {
-		return tipoNacionalidade;
-	}
-
-
-	public void setTipoNacionalidade(TipoNacionalidade tipoNacionalidade) {
-		this.tipoNacionalidade = tipoNacionalidade;
-	}
-
-
-//	public Object getChave() {
-//		return chave;
-//	}
-
-
 	public PessoaFisica getDadosPessoais() {
 		return dadosPessoais;
 	}
-
+	
 
 	public Preferencias getPreferencias() {
 		return preferencias;
@@ -74,15 +64,9 @@ public class ClientePF implements ObjetoChaveado {
  	}
 
 
-	public Status getStatus() {
-		return status;
+	public void setChave(String chave) {
+		this.chave = chave;
 	}
-
-
-//	public void setChave(Object chave) {
-//		this.chave = chave;
-//	}
-
 
 	public void setDadosPessoais(PessoaFisica dadosPessoais) {
 		this.dadosPessoais = dadosPessoais;
@@ -91,11 +75,6 @@ public class ClientePF implements ObjetoChaveado {
 
 	public void setPreferencias(Preferencias preferencias) {
 		this.preferencias = preferencias;
-	}
-	
-
-	public void setStatus(Status status) {
-		this.status = status;
 	}
 
 }

@@ -1,12 +1,11 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
-import java.util.ArrayList;
-
-
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
+
+import org.datanucleus.api.jpa.annotations.Extension;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
@@ -15,69 +14,44 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @PersistenceCapable
 public class PessoaJuridica implements ObjetoChaveado {
 	
-//    @PrimaryKey
-//	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
-    
-    @Persistent
-	private Long cnpj;
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
+	private String chave;
 	
 	@Persistent
-	private String razaoSocial;
-
-	@Persistent
-    private ArrayList<String> regioesDeAtuacao;
+    private DadosPessoaJuridica dadosPessoaJuridica;
 	
 	@Persistent
 	private DadosDeContato dadosDeContato;
 	
 
-//    public Object getChave() {
-//		return chave;
-//	}
-
-
-//	public void setChave(Object chave) {
-//		this.chave = chave;
-//	}
-
-
-	public Long getCnpj() {
-		return cnpj;
+	public String getChave() {
+		return chave;
 	}
 
 
-	public void setCnpj(Long cnpj) {
-		this.cnpj = cnpj;
+	public void setChave(String chave) {
+		this.chave = chave;
 	}
 
 
-	public String getRazaoSocial() {
-		return razaoSocial;
+	public DadosPessoaJuridica getDadosPessoaJuridica() {
+		return dadosPessoaJuridica;
 	}
 
 
-	public void setRazaoSocial(String razaoSocial) {
-		this.razaoSocial = razaoSocial;
+	public void setDadosPessoaJuridica(DadosPessoaJuridica dadosPessoaJuridica) {
+		this.dadosPessoaJuridica = dadosPessoaJuridica;
 	}
 
 
-	public ArrayList<String> getRegioesDeAtuacao() {
-		return regioesDeAtuacao;
-	}
-
-
-	public void setRegioesDeAtuacao(ArrayList<String> regioesDeAtuacao) {
-		this.regioesDeAtuacao = regioesDeAtuacao;
-	}
-
-
-	public DadosDeContato getContatos() {
+	public DadosDeContato getDadosDeContato() {
 		return dadosDeContato;
 	}
 
 
-	public void setContatos(DadosDeContato dadosDeContato) {
+	public void setDadosDeContato(DadosDeContato dadosDeContato) {
 		this.dadosDeContato = dadosDeContato;
 	}
 
@@ -87,10 +61,7 @@ public class PessoaJuridica implements ObjetoChaveado {
     	StringBuilder b=new StringBuilder();
     	
     	PadraoItemResumo p = PadraoItemResumo.get();
-    	p.gerarItem(b, "CNPJ", cnpj);
-    	p.gerarItem(b, "Razao Social", razaoSocial);
-    	p.gerarItem(b, "DadosDeContato", dadosDeContato);
-    	p.gerarItem(b, "Regioes de Atuacao", regioesDeAtuacao);
+    	p.gerarItem(b, "Dados da Pessoa Juridica", dadosPessoaJuridica);
 		
 		return b.toString();
 	}

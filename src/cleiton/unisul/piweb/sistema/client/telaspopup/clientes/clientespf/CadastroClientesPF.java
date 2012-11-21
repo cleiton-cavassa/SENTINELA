@@ -1,16 +1,16 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf;
 
-import java.util.Date;
+//import java.util.Date;
 
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF.Status;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF.TipoNacionalidade;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.MotoristaFumante;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais;
+//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF.Status;
+//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF.TipoNacionalidade;
+//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.MotoristaFumante;
+//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais;
 import cleiton.unisul.piweb.sistema.client.formularios.FormClientePF;
-import cleiton.unisul.piweb.sistema.client.formularios.FormContatos;
+import cleiton.unisul.piweb.sistema.client.formularios.FormDadosDeContato;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -38,17 +38,17 @@ public class CadastroClientesPF extends Composite {
 
 
 	private void preencherTelaComDadosCliente() {
-		form.getTextBoxNome().setText(cliente.getDadosPessoais().getNome());
-		form.getCompositeCPF().setValor(cliente.getDadosPessoais().getCpf());
-//		form.getCompositePJdeOrigem().setValor(cliente.getPJVinculada());
-		form.getDateBoxNascimento().setValue(cliente.getDadosPessoais().getDataNascimento());
-		form.getComboBoxTipoNacionalidade().setEnumSelecionada(cliente.getTipoNacionalidade());
-		form.getTextBoxIdiomas().setText(cliente.getDadosPessoais().getIdiomasFalados().toString());
-		form.getTextBoxEndereco().setText(cliente.getDadosPessoais().getDadosDeContato().getEndereco());
-		form.getTextBoxTelefones().setText(cliente.getDadosPessoais().getDadosDeContato().getTelefones().toString());
-		form.getChckbxStatus().setEnumSelecionada(cliente.getStatus());
-		form.getCheckBoxTransportaAnimais().setEnumSelecionada(cliente.getPreferencias().getTransportaAnimais());
-		form.getCheckBoxPermiteMotFumante().setEnumSelecionada(cliente.getPreferencias().getMotoristaFumante());
+//		form.getTextBoxNome().setText(cliente.getDadosPessoais().getNome());
+//		form.getCompositeCPF().setValor(cliente.getDadosPessoais().getCpf());
+////		form.getCompositePJdeOrigem().setValor(cliente.getPJVinculada());
+//		form.getDateBoxNascimento().setValue(cliente.getDadosPessoais().getDataNascimento());
+//		form.getComboBoxTipoNacionalidade().setEnumSelecionada(cliente.getTipoNacionalidade());
+//		form.getTextBoxIdiomas().setText(cliente.getDadosPessoais().getIdiomasFalados().toString());
+//		form.getTextBoxEndereco().setText(cliente.getDadosPessoais().getDadosDeContato().getEndereco());
+//		form.getTextBoxTelefones().setText(cliente.getDadosPessoais().getDadosDeContato().getTelefones().toString());
+//		form.getChckbxStatus().setEnumSelecionada(cliente.getStatus());
+//		form.getCheckBoxTransportaAnimais().setEnumSelecionada(cliente.getPreferencias().getTransportaAnimais());
+//		form.getCheckBoxPermiteMotFumante().setEnumSelecionada(cliente.getPreferencias().getMotoristaFumante());
 	}
 
 	
@@ -73,8 +73,8 @@ public class CadastroClientesPF extends Composite {
 		FormClientePF formClientePF = new FormClientePF();
 		flowPanel1.add(formClientePF);
 		
-		FormContatos formContatos = new FormContatos();
-		flowPanel1.add(formContatos);
+		FormDadosDeContato formDadosDeContato = new FormDadosDeContato();
+		flowPanel1.add(formDadosDeContato);
 		
 		form = formClientePF;
 		setStyleName("painelCadastro");
@@ -88,7 +88,7 @@ public class CadastroClientesPF extends Composite {
 		};
 		
 		
-		form.getBotaoSalvar().addClickHandler(salvarClkHnd);
+//		form.getBotaoSalvar().addClickHandler(salvarClkHnd);
 	}
 	
 	protected void salvarClientePF(){
@@ -109,33 +109,33 @@ public class CadastroClientesPF extends Composite {
 
 	private ClientePF montarClientePF() {
 
-		String nome=form.getTextBoxNome().getText();
-		Long cpf=form.getCompositeCPF().getValor();		
-		Long cnpjPJorigem=form.getCompositePJdeOrigem().getValor();
-		Date nascimento = form.getDateBoxNascimento().getValue();
-		TipoNacionalidade nacionalidade=form.getComboBoxTipoNacionalidade().getEnumSelecionada();
-//		boolean nacionalidade;
-//			ListBox n= form.getComboBoxTipoNacionalidade();
-//			nacionalidade=(n.getValue(n.getSelectedIndex()).equals("brasileiro"));
-		String idiomas=form.getTextBoxIdiomas().getText();
-		String endereco= form.getTextBoxEndereco().getText();
-		String telefones=form.getTextBoxTelefones().getText();
-		Status status = form.getChckbxStatus().getEnumSelecionada();
-		TransportaAnimais carregaAnimais=form.getCheckBoxTransportaAnimais().getEnumSelecionada();
-		MotoristaFumante aceitaMotFumante = form.getCheckBoxPermiteMotFumante().getEnumSelecionada();
-		
-		if ((nome==null)||(nome.equalsIgnoreCase(""))){
-			return null;
-		}
-		
-		if (cpf==0){
-			return null;
-		}
-		
-		if (nascimento==null){
-			return null;
-		}
-		
+//		String nome=form.getTextBoxNome().getText();
+//		Long cpf=form.getCompositeCPF().getValor();		
+//		Long cnpjPJorigem=form.getCompositePJdeOrigem().getValor();
+//		Date nascimento = form.getDateBoxNascimento().getValue();
+//		TipoNacionalidade nacionalidade=form.getComboBoxTipoNacionalidade().getEnumSelecionada();
+////		boolean nacionalidade;
+////			ListBox n= form.getComboBoxTipoNacionalidade();
+////			nacionalidade=(n.getValue(n.getSelectedIndex()).equals("brasileiro"));
+//		String idiomas=form.getTextBoxIdiomas().getText();
+//		String endereco= form.getTextBoxEndereco().getText();
+//		String telefones=form.getTextBoxTelefones().getText();
+//		Status status = form.getChckbxStatus().getEnumSelecionada();
+//		TransportaAnimais carregaAnimais=form.getCheckBoxTransportaAnimais().getEnumSelecionada();
+////		MotoristaFumante aceitaMotFumante = form.getCheckBoxPermiteMotFumante().getEnumSelecionada();
+////		
+//		if ((nome==null)||(nome.equalsIgnoreCase(""))){
+//			return null;
+//		}
+//		
+//		if (cpf==0){
+//			return null;
+//		}
+//		
+//		if (nascimento==null){
+//			return null;
+//		}
+//		
 		ClientePF cliente=new ClientePF();
 //			cliente.setNome(nome);
 //			cliente.setChave(cpf);
@@ -167,7 +167,7 @@ public class CadastroClientesPF extends Composite {
 			if (result.getOperacaoBemSucedida()){
 				StringBuilder b=new StringBuilder();
 				b.append("Dados de Cliente PF salvos com sucesso!\n");
-				b.append("CPF: "+clPF.getDadosPessoais().getCpf()+"\n");
+				b.append("CPF: "+clPF.getDadosPessoais().getDadosPessoaFisica().getCpf()+"\n");
 //				b.append("Nome: "+clPF.getNome());
 				RelacaoClientesPF.get().atualizar();
 				Window.alert(b.toString());
@@ -192,7 +192,7 @@ public class CadastroClientesPF extends Composite {
 			b.append("Houve falha durante o armazenamento dos dados do novo Cliente Pessoa Jur’dica.\n");
 			b.append("Por favor, tente novamente em outra oportunidade.\n");
 			b.append("Dados do cliente:\n");
-			b.append("CNPJ: "+this.getClPF().getDadosPessoais().getCpf()+"\n");
+			b.append("CNPJ: "+this.getClPF().getDadosPessoais().getDadosPessoaFisica().getCpf()+"\n");
 //			b.append("Raz‹o Social: "+this.getClPF().getNome()+"\n");
 			b.append(((texto==null)?"":texto));
 			Window.alert(b.toString());

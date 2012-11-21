@@ -1,11 +1,14 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
+
+import org.datanucleus.api.jpa.annotations.Extension;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
@@ -14,24 +17,43 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @PersistenceCapable
 public class DadosProfissionais implements ObjetoChaveado {
 	
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
+	private String chave;
+	
 	@Persistent
 	private String carro;
 	
-//	@PrimaryKey
-//	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
-	
 	@Persistent
-	private ArrayList<Turno> turnos;
+	private Collection<Turno> turnos;
 	
+	public String getChave() {
+		return chave;
+	}
+
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
+
 	public String getCarro() {
 		return carro;
 	}
 
-//	public Object getChave() {
-//		return chave;
-//	}
+	public void setCarro(String carro) {
+		this.carro = carro;
+	}
 
+	public Collection<Turno> getTurnos() {
+		return turnos;
+	}
+
+	public void setTurnos(Collection<Turno> turnos) {
+		this.turnos = turnos;
+	}
+
+	
+	
 	@Override
  	public String getResumo(){
      	StringBuilder b=new StringBuilder();
@@ -42,22 +64,5 @@ public class DadosProfissionais implements ObjetoChaveado {
  		
  		return b.toString();
  	}
-
-	public ArrayList<Turno> getTurnos() {
-		return turnos;
-	}
-
-	public void setCarro(String carro) {
-		this.carro = carro;
-	}
-
-//	public void setChave(Object chave) {
-//		this.chave = chave;
-//	}
-
-	public void setTurnos(ArrayList<Turno> turnos) {
-		this.turnos = turnos;
-	}
-
 
 }

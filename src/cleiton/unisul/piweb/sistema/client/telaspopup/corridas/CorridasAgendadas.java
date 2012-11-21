@@ -2,7 +2,7 @@ package cleiton.unisul.piweb.sistema.client.telaspopup.corridas;
 
 import java.util.Arrays;
 
-import cleiton.unisul.piweb.sistema.client.util.CriadorTela;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;

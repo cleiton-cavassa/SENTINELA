@@ -2,9 +2,9 @@ package cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf;
 
 import java.util.List;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
-import cleiton.unisul.piweb.sistema.client.util.CriadorTela;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
@@ -89,14 +89,14 @@ public class RelacaoClientesPF extends Composite {
 		
 		TextColumn<ClientePF> textColumn = new TextColumn<ClientePF>() {
 			public String getValue(ClientePF clientePF) {
-				return String.valueOf(clientePF.getDadosPessoais().getCpf());
+				return String.valueOf(clientePF.getDadosPessoais().getDadosPessoaFisica().getCpf());
 			}
 		};
 		cellTable.addColumn(textColumn, "CPF");
 		
 		TextColumn<ClientePF> textColumn_1 = new TextColumn<ClientePF>() {
 			public String getValue(ClientePF clientePF) {
-				return clientePF.getDadosPessoais().getNome();
+				return clientePF.getDadosPessoais().getDadosPessoaFisica().getNome();
 			}
 		};
 		cellTable.addColumn(textColumn_1, "Nome");
@@ -104,14 +104,14 @@ public class RelacaoClientesPF extends Composite {
 		TextColumn<ClientePF> column = new TextColumn<ClientePF>() {
 			@Override
 			public String getValue(ClientePF clientePF) {
-				return (clientePF.getStatus().name());
+				return (clientePF.getDadosClientePF().getStatus().name());
 			}
 		};
 		cellTable.addColumn(column, "Ativo?");
 		
 		TextColumn<ClientePF> textColumn_2 = new TextColumn<ClientePF>() {
 			public String getValue(ClientePF clientePF) {
-				return clientePF.getDadosPessoais().getIdiomasFalados().toString();
+				return clientePF.getDadosPessoais().getDadosPessoaFisica().getIdiomasFalados().toString();
 			}
 		};
 		cellTable.addColumn(textColumn_2, "idiomas");

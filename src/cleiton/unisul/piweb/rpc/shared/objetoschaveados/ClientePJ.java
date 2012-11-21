@@ -1,13 +1,14 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 
-import java.util.ArrayList;
-
+import java.util.Collection;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
+
+import org.datanucleus.api.jpa.annotations.Extension;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
@@ -15,70 +16,58 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @SuppressWarnings("serial")
 @PersistenceCapable
 public class ClientePJ implements ObjetoChaveado {
+    
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
+	private String chave;
 	
-    public enum Status{Ativo,Inativo}
-    public enum Voucher{Ativado,Desativado}
-	
-//    @PrimaryKey
-//	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
-    @Persistent
-    private Status status;
-//    public Object getChave() {
-//		return chave;
-//	}
-
-//	public void setChave(Object chave) {
-//		this.chave = chave;
-//	}
-
-	public Status getStatus() {
-		return status;
+	public String getChave() {
+		return chave;
 	}
 
-	public void setStatus(Status status) {
-		this.status = status;
+	public void setChave(String chave) {
+		this.chave = chave;
 	}
 
-	public Voucher getVoucher() {
-		return voucher;
+	public DadosClientePJ getDadosClientePJ() {
+		return dadosClientePJ;
 	}
 
-	public void setVoucher(Voucher voucher) {
-		this.voucher = voucher;
+	public void setDadosClientePJ(DadosClientePJ dadosClientePJ) {
+		this.dadosClientePJ = dadosClientePJ;
 	}
 
-	public ArrayList<Object> getClientesPFVinculados() {
+	public Collection<String> getClientesPFVinculados() {
 		return clientesPFVinculados;
 	}
 
-	public void setClientesPFVinculados(ArrayList<Object> clientesPFVinculados) {
+	public void setClientesPFVinculados(Collection<String> clientesPFVinculados) {
 		this.clientesPFVinculados = clientesPFVinculados;
 	}
 
-	public PessoaJuridica getDadosPessoaJuridica() {
-		return dadosPessoaJuridica;
+	public PessoaJuridica getPessoaJuridica() {
+		return pessoaJuridica;
 	}
 
-	public void setDadosPessoaJuridica(PessoaJuridica dadosPessoaJuridica) {
-		this.dadosPessoaJuridica = dadosPessoaJuridica;
+	public void setPessoaJuridica(PessoaJuridica pessoaJuridica) {
+		this.pessoaJuridica = pessoaJuridica;
 	}
 
 	@Persistent
-    private Voucher voucher;
+	private DadosClientePJ dadosClientePJ;
+    @Persistent//chave codificada
+    private Collection<String> clientesPFVinculados;
     @Persistent
-    private ArrayList<Object> clientesPFVinculados;
-    @Persistent
-    private PessoaJuridica dadosPessoaJuridica;
+    private PessoaJuridica pessoaJuridica;
     
     @Override
  	public String getResumo(){
      	StringBuilder b=new StringBuilder();
      	
      	PadraoItemResumo p = PadraoItemResumo.get();
-     	p.gerarItem(b, "Dados da Pessoa Jur\u00EDdica", dadosPessoaJuridica);
-     	p.gerarItem(b, "Status", status);
-     	p.gerarItem(b, "Voucher", voucher);
+     	p.gerarItem(b, "Pessoa Jur\u00EDdica", pessoaJuridica);
+     	p.gerarItem(b, "", dadosClientePJ);
  		
  		return b.toString();
  	}

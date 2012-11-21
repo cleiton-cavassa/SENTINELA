@@ -3,9 +3,13 @@ package cleiton.unisul.piweb.sistema.client;
 
 
 
+import java.lang.reflect.Field;
+
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.client.ServicoUsuario;
 
 import cleiton.unisul.piweb.rpc.shared.Usuario;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
 //import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.RelacaoClientesPFePJ;
 import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.CriarNovoClientePF;
 import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.RelacaoClientesPF;
@@ -19,7 +23,6 @@ import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.CadastroFrotasParce
 import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.FrotasQueEmitemVouchers;
 import cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios.CadastroFuncionarios;
 import cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios.FuncionariosEmAtividade;
-import cleiton.unisul.piweb.sistema.client.util.CriadorTela;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -46,6 +49,7 @@ public class SENTINELA implements EntryPoint {
 	
 	//private Button clickMeButton;
 	public void onModuleLoad() {
+		
 		RootPanel rootPanel = RootPanel.get();
 		rootPanel.setSize("100%", "100%");
 		

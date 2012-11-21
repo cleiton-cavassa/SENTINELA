@@ -7,6 +7,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import org.datanucleus.api.jpa.annotations.Extension;
+
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
@@ -14,42 +16,35 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @PersistenceCapable
 public class CorridaCancelada implements ObjetoChaveado {
 	
-//	@PrimaryKey
-//	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
 	
-//	public Object getChave() {
-//		return chave;
-//	}
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
+	private String chave;
+
+	@Persistent
+	private CorridaSolicitada corridaSolicitada;
 
 
 
-//	public void setChave(Object chave) {
-//		this.chave = chave;
-//	}
+	@Persistent
+	private Date dataHoraCancelamento;
+
+
+
+	@Persistent
+	private String motivo;
+
+
+
+	public String getChave() {
+		return chave;
+	}
 
 
 
 	public CorridaSolicitada getCorridaSolicitada() {
 		return corridaSolicitada;
-	}
-
-
-
-	public void setCorridaSolicitada(CorridaSolicitada corridaSolicitada) {
-		this.corridaSolicitada = corridaSolicitada;
-	}
-
-
-
-	public String getMotivo() {
-		return motivo;
-	}
-
-
-
-	public void setMotivo(String motivo) {
-		this.motivo = motivo;
 	}
 
 
@@ -60,22 +55,11 @@ public class CorridaCancelada implements ObjetoChaveado {
 
 
 
-	public void setDataHoraCancelamento(Date dataHoraCancelamento) {
-		this.dataHoraCancelamento = dataHoraCancelamento;
+	public String getMotivo() {
+		return motivo;
 	}
 
 
-
-	@Persistent
-	private CorridaSolicitada corridaSolicitada;
-	
-	@Persistent
-	private String motivo;
-	
-	@Persistent
-	private Date dataHoraCancelamento;
-	
-	
 
 	@Override
  	public String getResumo(){
@@ -88,6 +72,26 @@ public class CorridaCancelada implements ObjetoChaveado {
   	
  		return b.toString();
  	}
+
+
+
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
+	
+	public void setCorridaSolicitada(CorridaSolicitada corridaSolicitada) {
+		this.corridaSolicitada = corridaSolicitada;
+	}
+	
+	public void setDataHoraCancelamento(Date dataHoraCancelamento) {
+		this.dataHoraCancelamento = dataHoraCancelamento;
+	}
+	
+	
+
+	public void setMotivo(String motivo) {
+		this.motivo = motivo;
+	}
 
 
 

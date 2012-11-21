@@ -1,11 +1,13 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.colecoes;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.eventoExclusao.ExcludeMePleaseEvent;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.eventoExclusao.ExcludeMePleaseHandler;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.eventoExclusao.HasExcludeMePleaseHandlers;
+import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.exibidor.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.CriadorWidgets;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.ParserForIsWidgets;
 
@@ -16,15 +18,15 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DecoratorPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object, P extends ParserForIsWidgets<Ob, T>> extends Composite {
+public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extends Composite implements InputView<Collection<Ob>> {
 	
 	
 	private final ArrayList<T> widgets;
 	private final Button botaoMais;
 	private final VerticalPanel painelWidgets;
-	private final P parser; 
+	private final ParserForIsWidgets<Ob, T>parser; 
 	
-	public List<Ob> getValores(){
+	public Collection<Ob> getInput(){
 		if(parser==null){
 			return null;
 		}
@@ -37,7 +39,7 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object, P exte
 		return result;
 	}
 	
-	public boolean setValores(List<Ob> objetos){
+	public boolean setInput(Collection<Ob> objetos){
 		if ((objetos==null)||(parser==null)){
 			return false;
 		}
@@ -56,7 +58,7 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object, P exte
 		return true;
 	}
 	
-	public Rol(CriadorWidgets<T> criador, P parser){
+	public Rol(CriadorWidgets<T> criador, ParserForIsWidgets<Ob, T> parser){
 		widgets = new ArrayList<T>();
 		botaoMais = new BotaoMais(criador);
 		painelWidgets= new VerticalPanel();
@@ -104,7 +106,4 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object, P exte
 		}
 	};
 	
-
-	
-
 }

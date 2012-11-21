@@ -4,16 +4,15 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.CriadorWidget
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.ParserEnumWidgetComBotaoMenos;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.ParserForIsWidgets;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.WidgetComBotaoMenos;
-import cleiton.unisul.piweb.ferramentasVisuais.client.enums.ListBoxEnumeracoes;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputviews.InputViewListBoxEnumeracoes;
 
 public class RolEnumerativo <E extends Enum<E>> extends
-Rol<WidgetComBotaoMenos<ListBoxEnumeracoes<E>>, 
-E, ParserForIsWidgets<E,WidgetComBotaoMenos<ListBoxEnumeracoes<E>>>>
+Rol<WidgetComBotaoMenos<InputViewListBoxEnumeracoes<E>>, E>
 {
 
 	public RolEnumerativo(E exemplo){
 		super(
-		(CriadorWidgets<WidgetComBotaoMenos<ListBoxEnumeracoes<E>>>)
+		(CriadorWidgets<WidgetComBotaoMenos<InputViewListBoxEnumeracoes<E>>>)
 			(new Criador<E>(exemplo)), 
 				new ParserEnumWidgetComBotaoMenos<E>()
 				);
@@ -22,7 +21,7 @@ E, ParserForIsWidgets<E,WidgetComBotaoMenos<ListBoxEnumeracoes<E>>>>
 	//RolEnumerativo<TipoNacionalidade> rol=new RolEnumerativo<TipoNacionalidade>(TipoNacionalidade.BRASILEIRO);
 	
 	
-	private static class Criador <F extends Enum<F>> implements CriadorWidgets<WidgetComBotaoMenos<ListBoxEnumeracoes<F>>>{
+	private static class Criador <F extends Enum<F>> implements CriadorWidgets<WidgetComBotaoMenos<InputViewListBoxEnumeracoes<F>>>{
 		
 		private F exemplo;
 		public Criador(F exemplo){
@@ -30,8 +29,8 @@ E, ParserForIsWidgets<E,WidgetComBotaoMenos<ListBoxEnumeracoes<E>>>>
 		}
 		
 		@Override
-		public WidgetComBotaoMenos<ListBoxEnumeracoes<F>> criarWidget() {
-			return new WidgetComBotaoMenos<ListBoxEnumeracoes<F>> (new ListBoxEnumeracoes<F>(exemplo, true));
+		public WidgetComBotaoMenos<InputViewListBoxEnumeracoes<F>> criarWidget() {
+			return new WidgetComBotaoMenos<InputViewListBoxEnumeracoes<F>> (new InputViewListBoxEnumeracoes<F>(exemplo, true));
 		} 
 	}
 

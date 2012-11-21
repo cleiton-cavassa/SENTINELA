@@ -6,6 +6,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import org.datanucleus.api.jpa.annotations.Extension;
+
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
@@ -13,9 +15,10 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @PersistenceCapable
 public class Motorista implements ObjetoChaveado {
 	
-//	@PrimaryKey
-//	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
+	private String chave;
 	
 	@Persistent
 	private PessoaFisica dadosPessoais;
@@ -25,21 +28,37 @@ public class Motorista implements ObjetoChaveado {
 	
 	@Persistent
 	private Preferencias preferencias;
-	
-//	public Object getChave() {
-//		return chave;
-//	}
+
+	public String getChave() {
+		return chave;
+	}
+
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
 
 	public PessoaFisica getDadosPessoais() {
 		return dadosPessoais;
+	}
+
+	public void setDadosPessoais(PessoaFisica dadosPessoais) {
+		this.dadosPessoais = dadosPessoais;
 	}
 
 	public DadosProfissionais getDadosProfissionais() {
 		return dadosProfissionais;
 	}
 
+	public void setDadosProfissionais(DadosProfissionais dadosProfissionais) {
+		this.dadosProfissionais = dadosProfissionais;
+	}
+
 	public Preferencias getPreferencias() {
 		return preferencias;
+	}
+
+	public void setPreferencias(Preferencias preferencias) {
+		this.preferencias = preferencias;
 	}
 
 	@Override
@@ -54,22 +73,5 @@ public class Motorista implements ObjetoChaveado {
      	
  		return b.toString();
  	}
-
-//	public void setChave(Object chave) {
-//		this.chave = chave;
-//	}
-
-	public void setDadosPessoais(PessoaFisica dadosPessoais) {
-		this.dadosPessoais = dadosPessoais;
-	}
-
-	public void setDadosProfissionais(DadosProfissionais dadosProfissionais) {
-		this.dadosProfissionais = dadosProfissionais;
-	}
-
-	public void setPreferencias(Preferencias preferencias) {
-		this.preferencias = preferencias;
-	}
-
 
 }

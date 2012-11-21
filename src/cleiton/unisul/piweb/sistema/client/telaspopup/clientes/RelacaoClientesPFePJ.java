@@ -7,8 +7,8 @@
 //import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.CadastroClientesPF;
 //import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.CadastroClientesPJ;
 //import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.CriarNovoClientePJ;
-//import cleiton.unisul.piweb.sistema.client.util.CriadorTela;
-//import cleiton.unisul.piweb.sistema.client.validacao.CompositeCNPJ;
+//import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
+//import cleiton.unisul.piweb.ferramentasVisuais.client.validacao.CompositeCNPJ;
 //
 //import com.google.gwt.cell.client.ButtonCell;
 //import com.google.gwt.cell.client.FieldUpdater;
@@ -65,7 +65,7 @@
 //		
 //		TextColumn<ClientesPFePJ> textColumn = new TextColumn<ClientesPFePJ>() {
 //			public String getValue(ClientesPFePJ dados) {
-////				return CompositeCPF.mascaraCPF(dados.getClientePF().getChave());
+////				return InputViewCPF.mascaraCPF(dados.getClientePF().getChave());
 //				return null;
 //			}
 //		};
@@ -103,7 +103,7 @@
 //				if (dados.getClientePJ()==null){
 //					return "";
 //				}
-//				return CompositeCNPJ.mascaraCNPJ(dados.getClientePJ().getChave());
+//				return InputViewCNPJ.mascaraCNPJ(dados.getClientePJ().getChave());
 //			}
 //		};
 //		cellTable.addColumn(textColumn_2, "CNPJ");

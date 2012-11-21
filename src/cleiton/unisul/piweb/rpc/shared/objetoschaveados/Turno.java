@@ -8,6 +8,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import org.datanucleus.api.jpa.annotations.Extension;
+
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
@@ -15,32 +17,40 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @PersistenceCapable
 public class Turno implements ObjetoChaveado {
 	
-//	@PrimaryKey
-//	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
+	private String chave;
 	
 	@Persistent
 	private Date fim;
 
-
 	@Persistent
 	private Date inicio;
 
+	public String getChave() {
+		return chave;
+	}
 
-//	public Object getChave() {
-//		return chave;
-//	}
-
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
 
 	public Date getFim() {
 		return fim;
 	}
 
+	public void setFim(Date fim) {
+		this.fim = fim;
+	}
 
 	public Date getInicio() {
 		return inicio;
 	}
 
+	public void setInicio(Date inicio) {
+		this.inicio = inicio;
+	}
 
 	@Override
  	public String getResumo(){
@@ -52,19 +62,5 @@ public class Turno implements ObjetoChaveado {
  		
  		return b.toString();
  	}
-
-
-//	public void setChave(Object chave) {
-//		this.chave = chave;
-//	}
 	
-	public void setFim(Date fim) {
-		this.fim = fim;
-	}
-	
-	
-	public void setInicio(Date inicio) {
-		this.inicio = inicio;
-	}
-
 }

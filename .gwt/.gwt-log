@@ -18727,7 +18727,7 @@ Translatable source found in...
 Found 2730 cached/archived units.  Used 2730 / 2731 units from cache.
 Compiling...
    Compilation completed in 0.01 seconds
-Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.telefones.ParserPadraoTextBox
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.textbox.ParserPadraoTextBox
 Invalid units found: 1
 Compiling...
    Compilation completed in 0.02 seconds
@@ -18951,4 +18951,1724 @@ Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
    Adding '3' new generated units
       Compiling...
          Compilation completed in 0.03 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2741 units from cache.
+Compiling...
+   10% complete (ETR: 23 seconds)
+   10% complete (ETR: 23 seconds)
+   20% complete (ETR: 22 seconds)
+   30% complete (ETR: 20 seconds)
+   40% complete (ETR: 25 seconds)
+   50% complete (ETR: 17 seconds)
+   60% complete (ETR: 12 seconds)
+   70% complete (ETR: 8 seconds)
+   80% complete (ETR: 5 seconds)
+   90% complete (ETR: 2 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 25.98 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2740 cached/archived units.  Used 2740 / 2742 units from cache.
+Compiling...
+   Compilation completed in 0.04 seconds
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.Rol
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.RolEnumerativo
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.RolTextBox
+Invalid units found: 3
+Compiling...
+   Compilation completed in 0.04 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2742 cached/archived units.  Used 2742 / 2742 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2741 cached/archived units.  Used 2741 / 2797 units from cache.
+Compiling...
+   Compilation completed in 0.62 seconds
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.Painel
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.Rol
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.RolEnumerativo
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.RolTextBox
+Invalid units found: 4
+Compiling...
+   Compilation completed in 0.06 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2797 cached/archived units.  Used 2797 / 2797 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2797 cached/archived units.  Used 2797 / 2797 units from cache.
+Compiling...
+   Compilation completed in 0.01 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2718 units from cache.
+Compiling...
+   20% complete (ETR: 19 seconds)
+   20% complete (ETR: 19 seconds)
+   20% complete (ETR: 19 seconds)
+   30% complete (ETR: 15 seconds)
+   40% complete (ETR: 13 seconds)
+   50% complete (ETR: 10 seconds)
+   60% complete (ETR: 8 seconds)
+   70% complete (ETR: 6 seconds)
+   80% complete (ETR: 4 seconds)
+   90% complete (ETR: 2 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 35.77 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2797 units from cache.
+Compiling...
+   Compilation completed in 0.77 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.08 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2738 cached/archived units.  Used 2738 / 2741 units from cache.
+Compiling...
+   Compilation completed in 0.07 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2739 cached/archived units.  Used 2739 / 2797 units from cache.
+Compiling...
+   Compilation completed in 0.76 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2741 cached/archived units.  Used 2741 / 2741 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2797 units from cache.
+Compiling...
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 10.97 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2797 units from cache.
+Compiling...
+   20% complete (ETR: 13 seconds)
+   20% complete (ETR: 13 seconds)
+   20% complete (ETR: 13 seconds)
+   30% complete (ETR: 12 seconds)
+   40% complete (ETR: 9 seconds)
+   50% complete (ETR: 7 seconds)
+   60% complete (ETR: 5 seconds)
+   70% complete (ETR: 4 seconds)
+   80% complete (ETR: 3 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 16.98 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2798 units from cache.
+Compiling...
+   30% complete (ETR: 11 seconds)
+   30% complete (ETR: 11 seconds)
+   30% complete (ETR: 11 seconds)
+   30% complete (ETR: 11 seconds)
+   40% complete (ETR: 9 seconds)
+   50% complete (ETR: 6 seconds)
+   60% complete (ETR: 6 seconds)
+   70% complete (ETR: 4 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 18.74 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2796 cached/archived units.  Used 2796 / 2799 units from cache.
+Compiling...
+   Compilation completed in 0.30 seconds
+Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormClientePJ
+Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormClientePF
+Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormDadosDeContato
+Invalid units found: 3
+Compiling...
+   Compilation completed in 0.08 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2799 units from cache.
+Compiling...
+   30% complete (ETR: 8 seconds)
+   30% complete (ETR: 8 seconds)
+   30% complete (ETR: 8 seconds)
+   30% complete (ETR: 8 seconds)
+   40% complete (ETR: 8 seconds)
+   50% complete (ETR: 6 seconds)
+   60% complete (ETR: 4 seconds)
+   70% complete (ETR: 3 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 21.17 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2798 cached/archived units.  Used 2798 / 2799 units from cache.
+Compiling...
+   Compilation completed in 0.03 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 50: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 51: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2805 units from cache.
+Compiling...
+   0% complete (ETR: 78 seconds)
+   10% complete (ETR: 69 seconds)
+   20% complete (ETR: 50 seconds)
+   30% complete (ETR: 40 seconds)
+   40% complete (ETR: 37 seconds)
+   50% complete (ETR: 29 seconds)
+   60% complete (ETR: 25 seconds)
+   70% complete (ETR: 19 seconds)
+   80% complete (ETR: 13 seconds)
+   90% complete (ETR: 7 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 73.23 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2718 units from cache.
+Compiling...
+   20% complete (ETR: 19 seconds)
+   20% complete (ETR: 19 seconds)
+   20% complete (ETR: 19 seconds)
+   30% complete (ETR: 14 seconds)
+   40% complete (ETR: 11 seconds)
+   50% complete (ETR: 9 seconds)
+   60% complete (ETR: 7 seconds)
+   70% complete (ETR: 5 seconds)
+   80% complete (ETR: 3 seconds)
+   90% complete (ETR: 2 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 18.51 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2808 units from cache.
+Compiling...
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 9.70 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePF.java'
+      [ERROR] Line 3: The import com.google.appengine.repackaged cannot be resolved
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/telaspopup/clientes/clientespf/CadastroClientesPF.java'
+      [ERROR] Line 91: The method getBotaoSalvar() is undefined for the type FormClientePF
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/telaspopup/clientes/clientespf/CriarNovoClientePF.java'
+      [ERROR] Line 76: The method getBotaoSalvar() is undefined for the type FormClientePF
+      [ERROR] Line 77: The method getBotaoSalvar() is undefined for the type FormClientePF
+      [ERROR] Line 79: The method getBotaoExcluir() is undefined for the type FormClientePF
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2808 units from cache.
+Compiling...
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 9.52 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+      [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<T>
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/telaspopup/clientes/clientespf/CadastroClientesPF.java'
+      [ERROR] Line 91: The method getBotaoSalvar() is undefined for the type FormClientePF
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/telaspopup/clientes/clientespf/CriarNovoClientePF.java'
+      [ERROR] Line 76: The method getBotaoSalvar() is undefined for the type FormClientePF
+      [ERROR] Line 77: The method getBotaoSalvar() is undefined for the type FormClientePF
+      [ERROR] Line 79: The method getBotaoExcluir() is undefined for the type FormClientePF
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+   [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<T>
+Public resources found in...
+Translatable source found in...
+Found 2808 cached/archived units.  Used 2808 / 2808 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+      [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<T>
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/telaspopup/clientes/clientespf/CadastroClientesPF.java'
+      [ERROR] Line 91: The method getBotaoSalvar() is undefined for the type FormClientePF
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/telaspopup/clientes/clientespf/CriarNovoClientePF.java'
+      [ERROR] Line 76: The method getBotaoSalvar() is undefined for the type FormClientePF
+      [ERROR] Line 77: The method getBotaoSalvar() is undefined for the type FormClientePF
+      [ERROR] Line 79: The method getBotaoExcluir() is undefined for the type FormClientePF
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+   [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<T>
+Public resources found in...
+Translatable source found in...
+Found 2806 cached/archived units.  Used 2806 / 2808 units from cache.
+Compiling...
+   Compilation completed in 0.05 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+      [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<T>
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+   [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<T>
+Public resources found in...
+Translatable source found in...
+Found 2808 cached/archived units.  Used 2808 / 2808 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+      [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<T>
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+   [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<T>
+Public resources found in...
+Translatable source found in...
+Found 2807 cached/archived units.  Used 2807 / 2808 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+      [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<capture#1-of ? extends Enum>
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+   [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<capture#1-of ? extends Enum>
+Public resources found in...
+Translatable source found in...
+Found 2808 cached/archived units.  Used 2808 / 2808 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+      [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<capture#1-of ? extends Enum>
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/InputViewForEnums.java'
+   [ERROR] Line 22: The method getSimpleName() is undefined for the type Class<capture#1-of ? extends Enum>
+Public resources found in...
+Translatable source found in...
+Found 2807 cached/archived units.  Used 2807 / 2808 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormDadosClientePF
+Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormPreferencias
+Invalid units found: 2
+Compiling...
+   Compilation completed in 0.01 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormDadosClientePF.java'
+      [ERROR] Line 14: The constructor InputViewForEnums<DadosClientePF.Status>(DadosClientePF.Status, boolean) is undefined
+      [ERROR] Line 15: The constructor InputViewForEnums<DadosClientePF.TipoNacionalidade>(DadosClientePF.TipoNacionalidade, boolean) is undefined
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormPreferencias.java'
+      [ERROR] Line 15: The constructor InputViewForEnums<Preferencias.MotoristaFumante>(Preferencias.MotoristaFumante, boolean) is undefined
+      [ERROR] Line 16: The constructor InputViewForEnums<Preferencias.TransportaAnimais>(Preferencias.TransportaAnimais, boolean) is undefined
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormPreferencias.java'
+   [ERROR] Line 15: The constructor InputViewForEnums<Preferencias.MotoristaFumante>(Preferencias.MotoristaFumante, boolean) is undefined
+   [ERROR] Line 16: The constructor InputViewForEnums<Preferencias.TransportaAnimais>(Preferencias.TransportaAnimais, boolean) is undefined
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormDadosClientePF.java'
+   [ERROR] Line 14: The constructor InputViewForEnums<DadosClientePF.Status>(DadosClientePF.Status, boolean) is undefined
+   [ERROR] Line 15: The constructor InputViewForEnums<DadosClientePF.TipoNacionalidade>(DadosClientePF.TipoNacionalidade, boolean) is undefined
+Public resources found in...
+Translatable source found in...
+Found 2806 cached/archived units.  Used 2806 / 2808 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2809 units from cache.
+Compiling...
+   0% complete (ETR: 59 seconds)
+   10% complete (ETR: 50 seconds)
+   20% complete (ETR: 42 seconds)
+   30% complete (ETR: 36 seconds)
+   40% complete (ETR: 31 seconds)
+   50% complete (ETR: 29 seconds)
+   60% complete (ETR: 24 seconds)
+   70% complete (ETR: 18 seconds)
+   80% complete (ETR: 13 seconds)
+   90% complete (ETR: 6 seconds)
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2718 units from cache.
+Compiling...
+   20% complete (ETR: 16 seconds)
+   20% complete (ETR: 16 seconds)
+   20% complete (ETR: 16 seconds)
+   30% complete (ETR: 13 seconds)
+   40% complete (ETR: 10 seconds)
+   50% complete (ETR: 7 seconds)
+   60% complete (ETR: 5 seconds)
+   70% complete (ETR: 4 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 23.45 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2809 units from cache.
+Compiling...
+   Compilation completed in 0.62 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2809 cached/archived units.  Used 2809 / 2809 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2807 cached/archived units.  Used 2807 / 2809 units from cache.
+Compiling...
+   Compilation completed in 0.05 seconds
+Invalid Unit: cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.CriarNovoClientePF
+Invalid Unit: cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.CadastroClientesPF
+Invalid units found: 2
+Compiling...
+   Compilation completed in 0.04 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2808 cached/archived units.  Used 2808 / 2809 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormClientePF
+Invalid units found: 1
+Compiling...
+   Compilation completed in 0.01 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2808 cached/archived units.  Used 2808 / 2809 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2808 cached/archived units.  Used 2808 / 2809 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormClientePF
+Invalid units found: 1
+Compiling...
+   Compilation completed in 0.01 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2808 cached/archived units.  Used 2808 / 2810 units from cache.
+Compiling...
+   Compilation completed in 0.03 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/sistema/client/formularios/FormClientePJ.java'
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.setInput(ClientePJ)
+      [ERROR] Line 20: The type FormClientePJ must implement the inherited abstract method InputView<ClientePJ>.getInput()
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2811 units from cache.
+Compiling...
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 10.07 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellTable.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellTableFooterBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableFooterBackground'
+      Preparing method cellTableHeaderBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableHeaderBackground'
+      Preparing method cellTableLoading
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableLoading'
+      Preparing method cellTableSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSelectedBackground'
+      Preparing method cellTableSortAscending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortAscending'
+      Preparing method cellTableSortDescending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortDescending'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.AbstractCellTable.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.AbstractCellTable.Template
+         Generating method body for div()
+         Generating method body for tbody()
+         Generating method body for td()
+         Generating method body for tdBothAlign()
+         Generating method body for tdHorizontalAlign()
+         Generating method body for tdVerticalAlign()
+         Generating method body for tfoot()
+         Generating method body for thead()
+         Generating method body for tr()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2811 units from cache.
+Compiling...
+   30% complete (ETR: 8 seconds)
+   30% complete (ETR: 8 seconds)
+   30% complete (ETR: 8 seconds)
+   30% complete (ETR: 8 seconds)
+   40% complete (ETR: 8 seconds)
+   50% complete (ETR: 6 seconds)
+   60% complete (ETR: 4 seconds)
+   70% complete (ETR: 4 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 16.23 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/rpc/shared/objetoschaveados/Turno.java'
+      [ERROR] Line 60: The method format(String, Date) is undefined for the type String
+      [ERROR] Line 61: The method format(String, Date) is undefined for the type String
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellTable.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellTableFooterBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableFooterBackground'
+      Preparing method cellTableHeaderBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableHeaderBackground'
+      Preparing method cellTableLoading
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableLoading'
+      Preparing method cellTableSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSelectedBackground'
+      Preparing method cellTableSortAscending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortAscending'
+      Preparing method cellTableSortDescending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortDescending'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.AbstractCellTable.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.AbstractCellTable.Template
+         Generating method body for div()
+         Generating method body for tbody()
+         Generating method body for td()
+         Generating method body for tdBothAlign()
+         Generating method body for tdHorizontalAlign()
+         Generating method body for tdVerticalAlign()
+         Generating method body for tfoot()
+         Generating method body for thead()
+         Generating method body for tr()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
       Removing invalidated units

@@ -16,8 +16,8 @@
 //import cleiton.unisul.piweb.rpc.shared.objetoschaveados.antigos.ClientePJ;
 //import cleiton.unisul.piweb.sistema.client.SENTINELA;
 //import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.RelacaoClientesPF;
-//import cleiton.unisul.piweb.sistema.client.util.CriadorTela;
-//import cleiton.unisul.piweb.sistema.client.validacao.CompositeCNPJ;
+//import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
+//import cleiton.unisul.piweb.ferramentasVisuais.client.validacao.CompositeCNPJ;
 //
 //import com.google.gwt.user.client.ui.VerticalPanel;
 //import com.google.gwt.user.cellview.client.CellTable;
@@ -105,7 +105,7 @@
 //		TextColumn<ClientePJ> textColumn = new TextColumn<ClientePJ>() {
 //			@Override
 //			public String getValue(ClientePJ object) {
-//				return CompositeCNPJ.mascaraCNPJ(object.getChave());
+//				return InputViewCNPJ.mascaraCNPJ(object.getChave());
 //			}
 //		};
 //		cellTable.addColumn(textColumn, "CNPJ");

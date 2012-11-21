@@ -8,6 +8,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import org.datanucleus.api.jpa.annotations.Extension;
+
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
@@ -15,10 +17,54 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @PersistenceCapable
 public class ConviteEnviado implements ObjetoChaveado {
 
-//	@PrimaryKey
-//	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
 	
+	
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
+	private String chave;
+	
+	
+	public String getChave() {
+		return chave;
+	}
+
+
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
+
+
+	public Long getCnpj() {
+		return cnpj;
+	}
+
+
+	public void setCnpj(Long cnpj) {
+		this.cnpj = cnpj;
+	}
+
+
+	public Date getDataConvite() {
+		return dataConvite;
+	}
+
+
+	public void setDataConvite(Date dataConvite) {
+		this.dataConvite = dataConvite;
+	}
+
+
+	public String getRazaoSocial() {
+		return razaoSocial;
+	}
+
+
+	public void setRazaoSocial(String razaoSocial) {
+		this.razaoSocial = razaoSocial;
+	}
+
+
 	@Persistent
 	private Long cnpj;
 	
@@ -28,21 +74,6 @@ public class ConviteEnviado implements ObjetoChaveado {
 	@Persistent
 	private String razaoSocial;
 	
-//	public Object getChave() {
-//		return chave;
-//	}
-
-	public Long getCnpj() {
-		return cnpj;
-	}
-
-	public Date getDataConvite() {
-		return dataConvite;
-	}
-
-	public String getRazaoSocial() {
-		return razaoSocial;
-	}
 
 	@Override
  	public String getResumo(){
@@ -56,20 +87,5 @@ public class ConviteEnviado implements ObjetoChaveado {
  		return b.toString();
  	}
 
-//	public void setChave(Object chave) {
-//		this.chave = chave;
-//	}
-
-	public void setCnpj(Long cnpj) {
-		this.cnpj = cnpj;
-	}
-
-	public void setDataConvite(Date dataConvite) {
-		this.dataConvite = dataConvite;
-	}
-
-	public void setRazaoSocial(String razaoSocial) {
-		this.razaoSocial = razaoSocial;
-	}
 }
 

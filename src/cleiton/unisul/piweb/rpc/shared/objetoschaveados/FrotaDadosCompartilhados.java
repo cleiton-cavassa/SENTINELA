@@ -1,12 +1,13 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
-import java.util.ArrayList;
-
+import java.util.Collection;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
+
+import org.datanucleus.api.jpa.annotations.Extension;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
@@ -16,33 +17,50 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @PersistenceCapable
 public class FrotaDadosCompartilhados implements ObjetoChaveado {
 
-	@Persistent
-	ArrayList<ClientePF> clientesPF;
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
+	private String chave;
 	
 	@Persistent
-	ArrayList<ClientePJ> clientesPJ;
+	Collection<ClientePF> clientesPF;
+	
+	@Persistent
+	Collection<ClientePJ> clientesPJ;
 	
 	@Persistent
 	PessoaJuridica dadosPessoaJuridica;
 
-//	@PrimaryKey
-//	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
+	public String getChave() {
+		return chave;
+	}
 
-//	public Object getChave() {
-//		return chave;
-//	}
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
 
-	public ArrayList<ClientePF> getClientesPF() {
+	public Collection<ClientePF> getClientesPF() {
 		return clientesPF;
 	}
 
-	public ArrayList<ClientePJ> getClientesPJ() {
+	public void setClientesPF(Collection<ClientePF> clientesPF) {
+		this.clientesPF = clientesPF;
+	}
+
+	public Collection<ClientePJ> getClientesPJ() {
 		return clientesPJ;
+	}
+
+	public void setClientesPJ(Collection<ClientePJ> clientesPJ) {
+		this.clientesPJ = clientesPJ;
 	}
 
 	public PessoaJuridica getDadosPessoaJuridica() {
 		return dadosPessoaJuridica;
+	}
+
+	public void setDadosPessoaJuridica(PessoaJuridica dadosPessoaJuridica) {
+		this.dadosPessoaJuridica = dadosPessoaJuridica;
 	}
 
 	@Override
@@ -54,20 +72,4 @@ public class FrotaDadosCompartilhados implements ObjetoChaveado {
  		
  		return b.toString();
  	}
-
-//	public void setChave(Object chave) {
-//		this.chave = chave;
-//	}
-
-	public void setClientesPF(ArrayList<ClientePF> clientesPF) {
-		this.clientesPF = clientesPF;
-	}
-	
-	public void setClientesPJ(ArrayList<ClientePJ> clientesPJ) {
-		this.clientesPJ = clientesPJ;
-	}
-	
-	public void setDadosPessoaJuridica(PessoaJuridica dadosPessoaJuridica) {
-		this.dadosPessoaJuridica = dadosPessoaJuridica;
-	}
 }

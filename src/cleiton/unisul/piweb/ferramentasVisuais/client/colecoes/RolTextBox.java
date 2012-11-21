@@ -2,10 +2,11 @@ package cleiton.unisul.piweb.ferramentasVisuais.client.colecoes;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.CriadorWidgets;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.WidgetComBotaoMenos;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.telefones.ParserPadraoTextBox;
+import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.textbox.ParserPadraoTextBox;
+
 import com.google.gwt.user.client.ui.TextBox;
 
-public class RolTextBox extends Rol<WidgetComBotaoMenos<TextBox>, String, ParserPadraoTextBox>{
+public class RolTextBox extends Rol<WidgetComBotaoMenos<TextBox>, String>{
 
 	public RolTextBox(CriadorWidgets<WidgetComBotaoMenos<TextBox>> criador,
 			ParserPadraoTextBox parser) {

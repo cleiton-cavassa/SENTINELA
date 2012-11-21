@@ -1,14 +1,8 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf;
 
-import java.util.Date;
-
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.MotoristaFumante;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF.Status;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF.TipoNacionalidade;
 import cleiton.unisul.piweb.sistema.client.formularios.FormClientePF;
-import cleiton.unisul.piweb.sistema.client.formularios.FormContatos;
+import cleiton.unisul.piweb.sistema.client.formularios.FormDadosDeContato;
 import cleiton.unisul.piweb.sistema.client.telaspopup.telasnovoregistro.TelaNovoRegistro;
 
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -66,8 +60,8 @@ public class CriarNovoClientePF extends TelaNovoRegistro<ClientePF> {
 //		form = formClientePF ;
 		widgetTelaDesbloqueada.add(form);
 		
-		FormContatos formContatos = new FormContatos();
-		widgetTelaDesbloqueada.add(formContatos);
+		FormDadosDeContato formDadosDeContato = new FormDadosDeContato();
+		widgetTelaDesbloqueada.add(formDadosDeContato);
 		
 		setStyleName("painelCadastro");
 		
@@ -79,10 +73,10 @@ public class CriarNovoClientePF extends TelaNovoRegistro<ClientePF> {
 			}
 		};
 		
-		form.getBotaoSalvar().setText("novo Cliente");
-			form.getBotaoSalvar().addClickHandler(salvarClkHnd);
-		
-		form.getBotaoExcluir().setText("descartar");
+//		form.getBotaoSalvar().setText("novo Cliente");
+//			form.getBotaoSalvar().addClickHandler(salvarClkHnd);
+//		
+//		form.getBotaoExcluir().setText("descartar");
 		
 		thePanel.add(this.compositeTelaBloqueada);
 //		compositeTelaBloqueada =new TelaPadraoBloqueada();

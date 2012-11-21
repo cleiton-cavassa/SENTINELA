@@ -6,11 +6,18 @@ import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import org.datanucleus.api.jpa.annotations.Extension;
+
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 @SuppressWarnings("serial")
 public class Frota implements ObjetoChaveado{
+	
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
+	private String chave;
 	
 	@Persistent
     ArrayList<CorridaCancelada> corridasCanceladas;
@@ -24,8 +31,8 @@ public class Frota implements ObjetoChaveado{
 	@Persistent
 	ArrayList<FrotaDadosCompartilhados> frotasParceirasForaDaRede;
 	
-//	@Persistent
-//	ArrayList<Object> frotasParceirasNaRede;
+	@Persistent//chave codificada
+	ArrayList<String> frotasParceirasNaRede;
 	
 	@Persistent
 	FrotaDadosCompartilhados meusDadosCompartilhados;
@@ -41,151 +48,101 @@ public class Frota implements ObjetoChaveado{
 	
 	@Persistent
 	ArrayList<ConviteRecebido> convitesRecebidosPendentes;
-	
-//	@PrimaryKey
-//    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-//	private Object chave;
-	
 
-	
+	public String getChave() {
+		return chave;
+	}
+
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
+
 	public ArrayList<CorridaCancelada> getCorridasCanceladas() {
 		return corridasCanceladas;
 	}
-
-
 
 	public void setCorridasCanceladas(ArrayList<CorridaCancelada> corridasCanceladas) {
 		this.corridasCanceladas = corridasCanceladas;
 	}
 
-
-
 	public ArrayList<CorridaFinalizada> getCorridasFinalizadas() {
 		return corridasFinalizadas;
 	}
-
-
 
 	public void setCorridasFinalizadas(
 			ArrayList<CorridaFinalizada> corridasFinalizadas) {
 		this.corridasFinalizadas = corridasFinalizadas;
 	}
 
-
-
 	public ArrayList<CorridaSolicitada> getCorridasSolicitadas() {
 		return corridasSolicitadas;
 	}
-
-
 
 	public void setCorridasSolicitadas(
 			ArrayList<CorridaSolicitada> corridasSolicitadas) {
 		this.corridasSolicitadas = corridasSolicitadas;
 	}
 
-
-
 	public ArrayList<FrotaDadosCompartilhados> getFrotasParceirasForaDaRede() {
 		return frotasParceirasForaDaRede;
 	}
-
-
 
 	public void setFrotasParceirasForaDaRede(
 			ArrayList<FrotaDadosCompartilhados> frotasParceirasForaDaRede) {
 		this.frotasParceirasForaDaRede = frotasParceirasForaDaRede;
 	}
 
+	public ArrayList<String> getFrotasParceirasNaRede() {
+		return frotasParceirasNaRede;
+	}
 
-
-//	public ArrayList<Object> getFrotasParceirasNaRede() {
-//		return frotasParceirasNaRede;
-//	}
-//
-//
-//
-//	public void setFrotasParceirasNaRede(ArrayList<Object> frotasParceirasNaRede) {
-//		this.frotasParceirasNaRede = frotasParceirasNaRede;
-//	}
-
-
+	public void setFrotasParceirasNaRede(ArrayList<String> frotasParceirasNaRede) {
+		this.frotasParceirasNaRede = frotasParceirasNaRede;
+	}
 
 	public FrotaDadosCompartilhados getMeusDadosCompartilhados() {
 		return meusDadosCompartilhados;
 	}
-
-
 
 	public void setMeusDadosCompartilhados(
 			FrotaDadosCompartilhados meusDadosCompartilhados) {
 		this.meusDadosCompartilhados = meusDadosCompartilhados;
 	}
 
-
-
 	public ArrayList<Motorista> getMotoristas() {
 		return motoristas;
 	}
-
-
 
 	public void setMotoristas(ArrayList<Motorista> motoristas) {
 		this.motoristas = motoristas;
 	}
 
-
-
 	public ArrayList<UsuarioAdministrativo> getUsuariosAdministrativos() {
 		return usuariosAdministrativos;
 	}
-
-
 
 	public void setUsuariosAdministrativos(
 			ArrayList<UsuarioAdministrativo> usuariosAdministrativos) {
 		this.usuariosAdministrativos = usuariosAdministrativos;
 	}
 
-
-
 	public ArrayList<ConviteRecebido> getConvitesEnviadosPendentes() {
 		return convitesEnviadosPendentes;
 	}
-
-
 
 	public void setConvitesEnviadosPendentes(
 			ArrayList<ConviteRecebido> convitesEnviadosPendentes) {
 		this.convitesEnviadosPendentes = convitesEnviadosPendentes;
 	}
 
-
-
 	public ArrayList<ConviteRecebido> getConvitesRecebidosPendentes() {
 		return convitesRecebidosPendentes;
 	}
-
-
 
 	public void setConvitesRecebidosPendentes(
 			ArrayList<ConviteRecebido> convitesRecebidosPendentes) {
 		this.convitesRecebidosPendentes = convitesRecebidosPendentes;
 	}
-
-
-//
-//	public Object getChave() {
-//		return chave;
-//	}
-//
-//
-//
-//	public void setChave(Object chave) {
-//		this.chave = chave;
-//	}
-
-
 
 	@Override
  	public String getResumo(){
