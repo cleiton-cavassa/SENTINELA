@@ -21,7 +21,11 @@ public class InputCollectionToHTMLStringParser <T extends Object> implements Inp
 		for(T a: input){
 			i++;
 			b.append(formataNumero(i));
-			b.append(a.toString());
+//			try {
+				b.append(a.toString());
+//			} catch (Throwable e) {
+//				b.append("vazio");
+//			}
 			b.append(divisor);
 		}
 		return b.toString();

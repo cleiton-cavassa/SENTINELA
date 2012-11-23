@@ -60,8 +60,7 @@ public class CriarNovoClientePF extends TelaNovoRegistro<ClientePF> {
 //		form = formClientePF ;
 		widgetTelaDesbloqueada.add(form);
 		
-		FormDadosDeContato formDadosDeContato = new FormDadosDeContato();
-		widgetTelaDesbloqueada.add(formDadosDeContato);
+	
 		
 		setStyleName("painelCadastro");
 		

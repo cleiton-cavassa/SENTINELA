@@ -38,6 +38,7 @@ public class Painel <Input extends Object> extends Composite implements InputVie
 	}
 
 	private final InputProperty inputProperty=new InputProperty();
+	private final InputParser<Input, String> inputParser;
 	private class InputProperty {
 		private Input input;
 
@@ -57,7 +58,7 @@ public class Painel <Input extends Object> extends Composite implements InputVie
 	
 	
 	private final HTML lugar=new HTML("<i>Painel vazio. Para preench\u00EA-lo, aperte o bot\u00E3o <b>editar</b></i>"); 
-	private final InputParser<Input, String> inputParser;
+
 	private final CaixaInput caixaInput;
 	
 	/**

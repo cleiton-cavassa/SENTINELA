@@ -20,5 +20,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/v2"/>
+	<classpathentry exported="true" kind="lib" path="/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto Integrador Web II/Google App Engine/gwt-timepicker-0.21.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

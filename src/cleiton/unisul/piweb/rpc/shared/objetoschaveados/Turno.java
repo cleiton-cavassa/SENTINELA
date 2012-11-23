@@ -57,10 +57,33 @@ public class Turno implements ObjetoChaveado {
      	StringBuilder b=new StringBuilder();
      	
      	PadraoItemResumo p = PadraoItemResumo.get();
-     	p.gerarItem(b, "in’cio", String.format("R", inicio));
-     	p.gerarItem(b, "in’cio", String.format("R", fim));
+//     	p.gerarItem(b, "in’cio", String.format("R", inicio));
+//     	p.gerarItem(b, "fim", String.format("R", fim));
  		
  		return b.toString();
  	}
+	
+	@SuppressWarnings("deprecation")
+	@Override
+	public String toString(){
+		StringBuilder b = new StringBuilder();
+		
+		Date buffer;
+		
+		buffer=inicio;
+		
+		b.append("inicia ");
+		b.append(buffer.getHours()+":");
+		b.append((buffer.getMinutes()<10?"0":""));
+		b.append(buffer.getMinutes());
+		
+		buffer=fim;
+		b.append(" e termina ");
+		b.append(buffer.getHours()+":");
+		b.append((buffer.getMinutes()<10?"0":""));
+		b.append(buffer.getMinutes());
+		
+		return b.toString();
+	}
 	
 }
