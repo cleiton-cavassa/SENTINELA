@@ -8,7 +8,7 @@
 
   <servlet-mapping>
     <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/cleiton.unisul.piweb.rpc.ClassesRPC/greet</url-pattern>
+    <url-pattern>/sentinela/greet</url-pattern>
   </servlet-mapping>
     
     <servlet>
@@ -18,7 +18,7 @@
   
     <servlet-mapping>
     <servlet-name>armazenamento</servlet-name>
-    <url-pattern>/cleiton.unisul.piweb.rpc.ClassesRPC/armazenamento</url-pattern>
+    <url-pattern>/sentinela/armazenamento</url-pattern>
   </servlet-mapping>
   
 

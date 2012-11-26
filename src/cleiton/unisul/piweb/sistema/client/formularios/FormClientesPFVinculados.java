@@ -3,8 +3,8 @@ package cleiton.unisul.piweb.sistema.client.formularios;
 import java.util.List;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
-import cleiton.unisul.piweb.rpc.shared.ParChaveDescricao;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
 import cleiton.unisul.piweb.sistema.client.formularios.FormPesquisar.PesquisaCallBack;
 
 import com.google.gwt.cell.client.ButtonCell;
@@ -132,5 +132,11 @@ public class FormClientesPFVinculados extends Formulario<DadosPessoaFisica>{
 		@Override
 		public void semResposta() {}	
 	};
+
+
+	@Override
+	protected DadosPessoaFisica criarInputVazio() {
+		return new DadosPessoaFisica();
+	}
 
 }

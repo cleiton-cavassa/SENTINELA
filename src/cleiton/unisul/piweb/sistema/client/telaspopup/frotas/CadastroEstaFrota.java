@@ -1,19 +1,15 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.frotas;
 
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados;
 import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
-import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Grid;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.datepicker.client.DateBox;
-import com.google.gwt.user.client.ui.CheckBox;
 
-public class CadastroEstaFrota extends Formulario {
+public class CadastroEstaFrota extends Formulario<FrotaDadosCompartilhados> {
 
 	public CadastroEstaFrota() {
 		
@@ -89,6 +85,11 @@ public class CadastroEstaFrota extends Formulario {
 		TextBox textBox_5 = new TextBox();
 		textBox_5.setVisibleLength(120);
 		grid.setWidget(6, 1, textBox_5);
+	}
+
+	@Override
+	protected FrotaDadosCompartilhados criarInputVazio() {
+		return new FrotaDadosCompartilhados();
 	}
 
 }

@@ -1,16 +1,25 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
+import java.io.Serializable;
+
 import javax.jdo.annotations.IdGeneratorStrategy;
+
+import javax.jdo.annotations.Extension;
+import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-import org.datanucleus.api.jpa.annotations.Extension;
-
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 
-@SuppressWarnings("serial")
-public class DadosClientePF implements ObjetoChaveado {
+
+@PersistenceCapable(detachable="true")
+public class DadosClientePF implements ObjetoChaveado, Serializable  {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2248410917580218590L;
+
 	public enum Status{Ativo,Inativo}
 	public enum TipoNacionalidade{Brasileiro, Estrangeiro}
     
@@ -19,8 +28,10 @@ public class DadosClientePF implements ObjetoChaveado {
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
 	
-	
+	@Persistent
 	private Status status;
+	
+	@Persistent
 	private TipoNacionalidade tipoNacionalidade;
 	
 	public Status getStatus() {

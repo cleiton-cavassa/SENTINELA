@@ -2,6 +2,7 @@ package cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.ListBox;
 
 public class InputViewListBoxEnumeracoes <T extends Enum<T>> extends ListBox implements InputView<T>{
@@ -11,7 +12,7 @@ public class InputViewListBoxEnumeracoes <T extends Enum<T>> extends ListBox imp
 		return "campo para enum";
 	}
 	
-	T exemplo;
+	private T exemplo;
 	
 //	public InputViewListBoxEnumeracoes(List<T> valores){
 	public InputViewListBoxEnumeracoes(T exemplo){
@@ -23,6 +24,7 @@ public class InputViewListBoxEnumeracoes <T extends Enum<T>> extends ListBox imp
 	}
 	
 	public InputViewListBoxEnumeracoes(T exemplo, Boolean selecaoInicial){
+		this.exemplo=exemplo;
 		for(T valorLista: exemplo.getDeclaringClass().getEnumConstants()){
 			this.addItem(valorLista.name());
 		}
@@ -33,10 +35,25 @@ public class InputViewListBoxEnumeracoes <T extends Enum<T>> extends ListBox imp
 	
 	@SuppressWarnings("unchecked")
 	public T getEnumSelecionada(){
-		return (T) Enum.valueOf(exemplo.getClass(), this.getItemText(this.getSelectedIndex()));
+		if(exemplo.getClass()==null){
+			Window.alert("classe nula");
+		}
+		if(		this.getItemText(
+				this.getSelectedIndex())==null){
+			Window.alert("Item nulo:\n"+this.getSelectedIndex());
+		}
+		return (T) Enum.valueOf(
+				exemplo.getClass(), 
+				this.getItemText(
+						this.getSelectedIndex()));
 	}
 	
 	public Boolean setEnumSelecionada(T selecao){
+		
+		if (selecao==null){
+			return false;
+		}
+		
 		for(int i=0; i<this.getItemCount();i++){
 			if (this.getItemText(i).equals(selecao.name())){
 				this.setSelectedIndex(i);

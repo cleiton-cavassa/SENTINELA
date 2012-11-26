@@ -2,6 +2,7 @@ package cleiton.unisul.piweb.rpc.shared;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class RespostaPersistencia implements Serializable{
 	//o campo abaixo informa se o banco de dados j‡ possuia objeto com o mesmo id do que se tentou salvar
 	private Boolean idObjetoJaExistia;

@@ -65,4 +65,9 @@ public class FormFrota extends Formulario<FrotaDadosCompartilhados>{
 		
 		return input;
 	}
+
+	@Override
+	protected FrotaDadosCompartilhados criarInputVazio() {
+		return new FrotaDadosCompartilhados();
+	}
 }

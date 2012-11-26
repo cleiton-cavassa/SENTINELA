@@ -115,4 +115,9 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 			input.setObservacao(observacao.getInput());
 		return input;
 	}
+
+	@Override
+	protected CorridaSolicitada criarInputVazio() {
+		return new CorridaSolicitada();
+	}
 }

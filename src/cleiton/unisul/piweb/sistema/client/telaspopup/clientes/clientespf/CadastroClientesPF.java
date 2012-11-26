@@ -22,7 +22,7 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.Label;
 
-public class CadastroClientesPF extends Formulario {
+public class CadastroClientesPF extends Formulario<ClientePF> {
 	
 	private static CadastroClientesPF get = new CadastroClientesPF();
 	
@@ -168,7 +168,7 @@ public class CadastroClientesPF extends Formulario {
 			if (result.getOperacaoBemSucedida()){
 				StringBuilder b=new StringBuilder();
 				b.append("Dados de Cliente PF salvos com sucesso!\n");
-				b.append("CPF: "+clPF.getDadosPessoais().getDadosPessoaFisica().getCpf()+"\n");
+				b.append("CPF: "+clPF.getDadosPessoaFisica().getCpf()+"\n");
 //				b.append("Nome: "+clPF.getNome());
 				RelacaoClientesPF.get().atualizar();
 				Window.alert(b.toString());
@@ -193,11 +193,16 @@ public class CadastroClientesPF extends Formulario {
 			b.append("Houve falha durante o armazenamento dos dados do novo Cliente Pessoa Jur’dica.\n");
 			b.append("Por favor, tente novamente em outra oportunidade.\n");
 			b.append("Dados do cliente:\n");
-			b.append("CNPJ: "+this.getClPF().getDadosPessoais().getDadosPessoaFisica().getCpf()+"\n");
+			b.append("CNPJ: "+this.getClPF().getDadosPessoaFisica().getCpf()+"\n");
 //			b.append("Raz‹o Social: "+this.getClPF().getNome()+"\n");
 			b.append(((texto==null)?"":texto));
 			Window.alert(b.toString());
 		}
+	}
+
+	@Override
+	protected ClientePF criarInputVazio() {
+		return new ClientePF();
 	}
 
 		

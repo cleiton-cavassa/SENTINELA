@@ -37,9 +37,21 @@ public class FormDadosClientePF extends Formulario<DadosClientePF>{
 
 	@Override
 	public DadosClientePF getInput() {
-		DadosClientePF input = super.getInput();
+		
+		DadosClientePF input;
+		if(super.getInput()==null){
+			input=new DadosClientePF();
+		}else{
+			input=super.getInput();
+		}
+		
 			input.setStatus(status.getInput());
 			input.setTipoNacionalidade(tipoNacionalidade.getInput());
 		return input;
+	}
+
+	@Override
+	protected DadosClientePF criarInputVazio() {
+		return new DadosClientePF();
 	}
 }

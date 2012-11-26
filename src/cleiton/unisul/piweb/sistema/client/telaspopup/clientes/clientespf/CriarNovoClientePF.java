@@ -227,4 +227,9 @@ public class CriarNovoClientePF extends TelaNovoRegistro<ClientePF> {
 	public void limpar() {
 		setObjeto(new ClientePF());
 	}
+
+	@Override
+	protected ClientePF criarInputVazio() {
+		return new ClientePF();
+	}
 }

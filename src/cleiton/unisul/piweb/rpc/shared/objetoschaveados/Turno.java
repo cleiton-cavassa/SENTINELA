@@ -2,16 +2,13 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import java.util.Date;
 
-
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-import org.datanucleus.api.jpa.annotations.Extension;
-
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 @SuppressWarnings("serial")
 @PersistenceCapable
@@ -56,7 +53,7 @@ public class Turno implements ObjetoChaveado {
  	public String getResumo(){
      	StringBuilder b=new StringBuilder();
      	
-     	PadraoItemResumo p = PadraoItemResumo.get();
+//     	PadraoItemResumo p = PadraoItemResumo.get();
 //     	p.gerarItem(b, "in’cio", String.format("R", inicio));
 //     	p.gerarItem(b, "fim", String.format("R", fim));
  		

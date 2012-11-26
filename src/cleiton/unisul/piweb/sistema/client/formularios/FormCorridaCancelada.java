@@ -78,6 +78,13 @@ public class FormCorridaCancelada extends Formulario<CorridaCancelada> {
 		
 		return input;
 	}
+
+	@Override
+	protected CorridaCancelada criarInputVazio() {
+		return new CorridaCancelada();
+	}
+	
+	
 	
 }
 

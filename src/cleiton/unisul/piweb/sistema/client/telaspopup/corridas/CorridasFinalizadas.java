@@ -1,20 +1,17 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.corridas;
 
 
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada;
 import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.cellview.client.CellTable;
-import com.google.gwt.user.cellview.client.TextColumn;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.cellview.client.DataGrid;
+import com.google.gwt.user.cellview.client.TextColumn;
+import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.view.client.ListDataProvider;
 
-public class CorridasFinalizadas extends Formulario {
+public class CorridasFinalizadas extends Formulario<CorridaFinalizada> {
 		
 	private static class DadosCorridaFinalizada{
 			
@@ -148,6 +145,12 @@ public class CorridasFinalizadas extends Formulario {
 						)
 			);
 		}
+	}
+
+
+	@Override
+	protected CorridaFinalizada criarInputVazio() {
+		return new CorridaFinalizada();
 	}
 
 }

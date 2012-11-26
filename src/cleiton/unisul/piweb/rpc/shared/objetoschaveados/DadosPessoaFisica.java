@@ -1,31 +1,42 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-import org.datanucleus.api.jpa.annotations.Extension;
-
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
-@SuppressWarnings("serial")
-public class DadosPessoaFisica implements ObjetoChaveado {
 
-	
+@PersistenceCapable(detachable="true")
+public class DadosPessoaFisica implements ObjetoChaveado, Serializable  {
+
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3562565852292295322L;
+
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
 	
 	@Persistent
-	private Long cpf;
+	private long cpf;
 
 	@Persistent
 	private Date dataNascimento;
 
+//	@Persistent(defaultFetchGroup="true")
+	@Persistent
 	private Collection<String> idiomasFalados;
 
 	@Persistent
@@ -35,7 +46,7 @@ public class DadosPessoaFisica implements ObjetoChaveado {
 		return chave;
 	}
 
-	public Long getCpf() {
+	public long getCpf() {
 		return cpf;
 	}
 
@@ -53,15 +64,20 @@ public class DadosPessoaFisica implements ObjetoChaveado {
 
 	@Override
 	public String getResumo() {
-		// TODO Auto-generated method stub
-		return null;
+   	StringBuilder b=new StringBuilder();
+     	
+     	PadraoItemResumo p = PadraoItemResumo.get();
+     	p.gerarItem(b, "Nome", nome);
+     	p.gerarItem(b, "CPF", cpf);
+ 		
+ 		return b.toString();
 	}
 
 	public void setChave(String chave) {
 		this.chave = chave;
 	}
 	
-	public void setCpf(Long cpf) {
+	public void setCpf(long cpf) {
 		this.cpf = cpf;
 	}
 	

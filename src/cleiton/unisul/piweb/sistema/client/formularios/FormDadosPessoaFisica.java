@@ -67,4 +67,10 @@ public class FormDadosPessoaFisica extends Formulario<DadosPessoaFisica>{
 		return input;
 	}
 
+	@Override
+	protected DadosPessoaFisica criarInputVazio() {
+		// TODO Auto-generated method stub
+		return new DadosPessoaFisica();
+	}
+
 }

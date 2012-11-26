@@ -1,33 +1,38 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
+import java.io.Serializable;
 import java.util.Collection;
 
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-import org.datanucleus.api.jpa.annotations.Extension;
-
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
-@SuppressWarnings("serial")
-@PersistenceCapable
-public class DadosDeContato implements ObjetoChaveado{
+
+@PersistenceCapable(detachable="true")
+public class DadosDeContato implements ObjetoChaveado, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8294374056793000729L;
 
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
 	
-	@Persistent
+	@Persistent(defaultFetchGroup="true")
     private Collection<String> emails;
 
 	@Persistent
     private String endereco;
 
-	@Persistent
+	@Persistent(defaultFetchGroup="true")
     private Collection<String> telefones;   
 	
 	public String getChave() {
@@ -38,7 +43,6 @@ public class DadosDeContato implements ObjetoChaveado{
 	public void setChave(String chave) {
 		this.chave = chave;
 	}
-
 
 	public Collection<String> getEmails() {
 		return emails;

@@ -1,20 +1,26 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
+import java.io.Serializable;
+
 import javax.jdo.annotations.IdGeneratorStrategy;
 
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-import org.datanucleus.api.jpa.annotations.Extension;
-
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
-@SuppressWarnings("serial")
-@PersistenceCapable
-public class Preferencias implements ObjetoChaveado {
-    public enum MotoristaFumante{Nao,Sim}
+
+@PersistenceCapable(detachable="true")
+public class Preferencias implements ObjetoChaveado, Serializable  {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public enum MotoristaFumante{Nao,Sim}
     public enum TransportaAnimais{Nao,Sim}
 
 	@PrimaryKey

@@ -39,4 +39,9 @@ public class FormPreferencias extends Formulario<Preferencias>{
 			input.setTransportaAnimais(animais.getInput());
 		return input;
 	}
+
+	@Override
+	protected Preferencias criarInputVazio() {
+		return new Preferencias();
+	}
 }

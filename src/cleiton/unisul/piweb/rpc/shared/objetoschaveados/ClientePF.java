@@ -1,36 +1,71 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
-import javax.jdo.annotations.IdGeneratorStrategy;
+import java.io.Serializable;
 
+import javax.jdo.annotations.FetchGroup;
+import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-import org.datanucleus.api.jpa.annotations.Extension;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 
-@SuppressWarnings("serial")
-@PersistenceCapable
-public class ClientePF implements ObjetoChaveado {
+@PersistenceCapable(detachable="true")
+@FetchGroup(name="grupo", members={@Persistent(name="dadosPessoaFisica"),
+								@Persistent(name="dadosDeContato"),
+								@Persistent(name="preferencias"),
+								@Persistent(name="dadosClientePF")
+								})
+public class ClientePF implements ObjetoChaveado, Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3890031823483388597L;
+
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
 	
 	@Persistent
-	private PessoaFisica dadosPessoais;
-
+	private DadosPessoaFisica dadosPessoaFisica;
+	
+	@Persistent
+	private DadosDeContato dadosDeContato;
 
 	@Persistent
 	private Preferencias preferencias;
 
+	@Persistent
 	private DadosClientePF dadosClientePF;
 
+
+	public DadosPessoaFisica getDadosPessoaFisica() {
+		return dadosPessoaFisica;
+	}
+
+	public void setDadosPessoaFisica(DadosPessoaFisica dadosPessoaFisica) {
+		this.dadosPessoaFisica = dadosPessoaFisica;
+	}
+	
+	public DadosDeContato getDadosDeContato() {
+		return dadosDeContato;
+	}
+
+	public void setDadosDeContato(DadosDeContato dadosDeContato) {
+		this.dadosDeContato = dadosDeContato;
+	}
+
+
 	public DadosClientePF getDadosClientePF() {
+//		if(dadosClientePF==null){
+//			setDadosClientePF(new DadosClientePF());
+//		}
 		return dadosClientePF;
 	}
 
@@ -42,12 +77,11 @@ public class ClientePF implements ObjetoChaveado {
 		return chave;
 	}
 	
-	public PessoaFisica getDadosPessoais() {
-		return dadosPessoais;
-	}
-	
 
 	public Preferencias getPreferencias() {
+//		if(preferencias==null){
+//			setPreferencias(new Preferencias());
+//		}
 		return preferencias;
 	}
 
@@ -57,8 +91,9 @@ public class ClientePF implements ObjetoChaveado {
      	StringBuilder b=new StringBuilder();
      	
      	PadraoItemResumo p = PadraoItemResumo.get();
-     	p.gerarItem(b, "Dados Pessoais", dadosPessoais);
-     	p.gerarItem(b, "Preferencias", preferencias);
+     	p.gerarItem(b, "Dados Pessoa Fisica", dadosPessoaFisica.getResumo());
+     	p.gerarItem(b, "Dados de Contato", dadosDeContato.getResumo());
+     	p.gerarItem(b, "Preferencias", preferencias.getResumo());
  		
  		return b.toString();
  	}
@@ -66,10 +101,6 @@ public class ClientePF implements ObjetoChaveado {
 
 	public void setChave(String chave) {
 		this.chave = chave;
-	}
-
-	public void setDadosPessoais(PessoaFisica dadosPessoais) {
-		this.dadosPessoais = dadosPessoais;
 	}
 
 

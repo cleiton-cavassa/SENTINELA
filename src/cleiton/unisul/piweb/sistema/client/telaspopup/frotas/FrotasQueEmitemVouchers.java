@@ -1,5 +1,6 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.frotas;
 
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
 import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
 import com.google.gwt.user.client.ui.Composite;
@@ -12,7 +13,7 @@ import com.google.gwt.user.cellview.client.DataGrid;
 import com.google.gwt.view.client.ListDataProvider;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class FrotasQueEmitemVouchers extends Formulario{
+public class FrotasQueEmitemVouchers extends Formulario<ParChaveDescricao>{
 
 	private class DadosFrotaClienteVoucher{
 		public String getFrota() {
@@ -70,6 +71,11 @@ public class FrotasQueEmitemVouchers extends Formulario{
 						"cliente PJ "+i)
 			);
 		}
+	}
+
+	@Override
+	protected ParChaveDescricao criarInputVazio() {
+		return new ParChaveDescricao();
 	}
 	
 

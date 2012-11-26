@@ -13,7 +13,7 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Widget;
 
 public abstract class TelaNovoRegistro 
-<T extends ObjetoChaveado> extends Formulario 
+<T extends ObjetoChaveado> extends Formulario<T> 
 implements TelaComBloqueio, TelaPersistencia<T>, TelaLimpavel{
 	
 	protected abstract boolean validar();

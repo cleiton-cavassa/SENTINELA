@@ -1,19 +1,15 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.frotas;
 
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
 import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
-import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Grid;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.cellview.client.SimplePager;
-import com.google.gwt.user.client.ui.SimplePanel;
 
-public class CadastroFrotasParceiras extends Formulario {
+public class CadastroFrotasParceiras extends Formulario<ParChaveDescricao> {
 
 	public CadastroFrotasParceiras() {
 		
@@ -90,6 +86,12 @@ public class CadastroFrotasParceiras extends Formulario {
 		textBox_5.setVisibleLength(120);
 		grid.setWidget(6, 1, textBox_5);
 		setStyleName("painelCadastro");
+	}
+
+	@Override
+	protected ParChaveDescricao criarInputVazio() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

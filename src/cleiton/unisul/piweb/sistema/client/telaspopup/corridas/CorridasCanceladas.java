@@ -1,18 +1,17 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.corridas;
 
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaCancelada;
 import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.TextColumn;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.view.client.ListDataProvider;
 
-public class CorridasCanceladas extends Formulario {
+public class CorridasCanceladas extends Formulario<CorridaCancelada> {
 	
 	private static class DadosCorridaCancelada{
 		public String getCliente() {
@@ -124,6 +123,11 @@ public class CorridasCanceladas extends Formulario {
 						)
 			);
 		}
+	}
+
+	@Override
+	protected CorridaCancelada criarInputVazio() {
+		return new CorridaCancelada();
 	}
 
 }

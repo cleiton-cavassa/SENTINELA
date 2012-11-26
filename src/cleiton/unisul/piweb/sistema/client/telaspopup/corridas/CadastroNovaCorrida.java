@@ -1,22 +1,20 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.corridas;
 
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada;
 import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.cellview.client.SimplePager;
-import com.google.gwt.user.client.ui.Grid;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.datepicker.client.DateBox;
-import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.CheckBox;
-import com.google.gwt.user.datepicker.client.DatePicker;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.CheckBox;
+import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.Grid;
+import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.datepicker.client.DateBox;
 
-public class CadastroNovaCorrida extends Formulario {
+public class CadastroNovaCorrida extends Formulario<CorridaSolicitada> {
 	public CadastroNovaCorrida() {
 		
 		FlowPanel flowPanel = new FlowPanel();
@@ -79,6 +77,11 @@ public class CadastroNovaCorrida extends Formulario {
 		Button btnNewButton = new Button("New button");
 		horizontalPanel.add(btnNewButton);
 		btnNewButton.setText("criar nova corrida!");
+	}
+
+	@Override
+	protected CorridaSolicitada criarInputVazio() {
+		return new CorridaSolicitada();
 	}
 	
 	

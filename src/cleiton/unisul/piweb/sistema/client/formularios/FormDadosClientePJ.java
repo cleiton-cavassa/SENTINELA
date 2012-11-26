@@ -41,4 +41,9 @@ public class FormDadosClientePJ extends Formulario<DadosClientePJ>{
 			input.setVoucher(voucher.getInput());
 		return input;
 	}
+
+	@Override
+	protected DadosClientePJ criarInputVazio(){ 
+		return new DadosClientePJ();
+	}
 }

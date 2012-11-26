@@ -80,6 +80,10 @@ public class FormClientePJ extends Formulario<ClientePJ>{
 		
 		return null;
 	}
+	@Override
+	protected ClientePJ criarInputVazio() {
+		return new ClientePJ();
+	}
 }
 
 //import com.google.gwt.user.client.ui.Grid;

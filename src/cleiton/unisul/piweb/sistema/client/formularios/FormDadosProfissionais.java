@@ -50,5 +50,10 @@ public class FormDadosProfissionais  extends Formulario<DadosProfissionais>{
 		
 		return result;
 	}
+
+	@Override
+	protected DadosProfissionais criarInputVazio() {
+		return new DadosProfissionais();
+	}
 	
 }

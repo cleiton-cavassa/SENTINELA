@@ -153,4 +153,9 @@ public class CorridasSolicitadas extends Formulario<CorridaSolicitada> {
 
 	}
 
+	@Override
+	protected CorridaSolicitada criarInputVazio() {
+		return new CorridaSolicitada();
+	}
+
 }

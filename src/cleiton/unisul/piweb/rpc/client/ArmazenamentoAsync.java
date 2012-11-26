@@ -8,7 +8,6 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
-//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.antigos.ClientesPFePJ;
 
 //import cleiton.unisul.piweb.shared.ClientePF;
 //import cleiton.unisul.piweb.shared.ClientePJ;

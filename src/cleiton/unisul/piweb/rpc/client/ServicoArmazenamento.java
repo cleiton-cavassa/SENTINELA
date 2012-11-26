@@ -6,9 +6,6 @@ import com.google.gwt.core.client.GWT;
 
 public class ServicoArmazenamento {
 	
-	
-	
-	
 	private static ArmazenamentoAsync recuperador= GWT
 			.create(Armazenamento.class);
 

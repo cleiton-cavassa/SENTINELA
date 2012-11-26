@@ -5,24 +5,23 @@ import java.util.List;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
+import cleiton.unisul.piweb.sistema.client.formularios.FormClientePF;
 import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.TextColumn;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.view.client.ListDataProvider;
 
-public class RelacaoClientesPF extends Formulario {
+public class RelacaoClientesPF extends Formulario<ClientePF>{
 	private CellTable<ClientePF> tabela;
 	
 	private static RelacaoClientesPF get=new RelacaoClientesPF();
@@ -52,11 +51,11 @@ public class RelacaoClientesPF extends Formulario {
 		flowPanel.add(lblSentinelaRelao);
 		lblSentinelaRelao.setSize("", "");
 
-		ClickHandler h=new ClickHandler() {
-			public void onClick(ClickEvent event) {
-				new CriadorTela(CriarNovoClientePF.get()).execute();
-			}
-		};
+//		ClickHandler h=new ClickHandler() {
+//			public void onClick(ClickEvent event) {
+//				new CriadorTela(CriarNovoClientePF.get()).execute();
+//			}
+//		};
 		
 		VerticalPanel verticalPanel = new VerticalPanel();
 		flowPanel.add(verticalPanel);
@@ -78,8 +77,11 @@ public class RelacaoClientesPF extends Formulario {
 		colBotoes.setFieldUpdater(new FieldUpdater<ClientePF, String>(){
 			@Override
 			public void update(int index, ClientePF object, String value) {
-				CadastroClientesPF c =CadastroClientesPF.get();
-				c.setCliente(object);
+//				CadastroClientesPF c =CadastroClientesPF.get();
+//				c.setCliente(object);
+				FormClientePF c = new FormClientePF();
+				c.setInput(object);
+				Window.alert(object.getResumo());
 				new CriadorTela(c).execute();				
 			}
 			
@@ -90,14 +92,28 @@ public class RelacaoClientesPF extends Formulario {
 		
 		TextColumn<ClientePF> textColumn = new TextColumn<ClientePF>() {
 			public String getValue(ClientePF clientePF) {
-				return String.valueOf(clientePF.getDadosPessoais().getDadosPessoaFisica().getCpf());
+				try{
+					return String.valueOf(clientePF.
+							getDadosPessoaFisica().
+							getCpf());
+				}catch(NullPointerException nEx){
+					return "vazio";
+				}
+
 			}
 		};
 		cellTable.addColumn(textColumn, "CPF");
 		
 		TextColumn<ClientePF> textColumn_1 = new TextColumn<ClientePF>() {
 			public String getValue(ClientePF clientePF) {
-				return clientePF.getDadosPessoais().getDadosPessoaFisica().getNome();
+				try{
+					return clientePF.
+							getDadosPessoaFisica().
+							getNome();
+				}catch(NullPointerException nEx){
+					return "vazio";
+				}
+
 			}
 		};
 		cellTable.addColumn(textColumn_1, "Nome");
@@ -105,14 +121,24 @@ public class RelacaoClientesPF extends Formulario {
 		TextColumn<ClientePF> column = new TextColumn<ClientePF>() {
 			@Override
 			public String getValue(ClientePF clientePF) {
-				return (clientePF.getDadosClientePF().getStatus().name());
+				try{
+					return (clientePF.getDadosClientePF().getStatus().name());
+				}catch(NullPointerException nEx){
+					return "vazio";
+				}
 			}
 		};
 		cellTable.addColumn(column, "Ativo?");
 		
 		TextColumn<ClientePF> textColumn_2 = new TextColumn<ClientePF>() {
 			public String getValue(ClientePF clientePF) {
-				return clientePF.getDadosPessoais().getDadosPessoaFisica().getIdiomasFalados().toString();
+				try{
+					return clientePF.
+							getDadosPessoaFisica().
+							getIdiomasFalados().toString();
+				}catch(NullPointerException nEx){
+					return "vazio";
+				}
 			}
 		};
 		cellTable.addColumn(textColumn_2, "idiomas");
@@ -120,8 +146,11 @@ public class RelacaoClientesPF extends Formulario {
 		TextColumn<ClientePF> column_1 = new TextColumn<ClientePF>() {
 			@Override
 			public String getValue(ClientePF clientePF) {
-//				return (clientePF.getCarregaAnimais()?strPositivo:strNegativo);
-				return (clientePF.getPreferencias().getTransportaAnimais().name());
+				try{
+					return (clientePF.getPreferencias().getTransportaAnimais().name());
+				}catch(NullPointerException nEx){
+					return "vazio";
+				}
 			}
 		};
 		cellTable.addColumn(column_1, "carrega animais?");
@@ -129,17 +158,21 @@ public class RelacaoClientesPF extends Formulario {
 		TextColumn<ClientePF> column_2 = new TextColumn<ClientePF>() {
 			@Override
 			public String getValue(ClientePF clientePF) {
-//				return (  clientePF.getAceitaMotFumante()?strPositivo:strNegativo);
-				return (  clientePF.getPreferencias().getMotoristaFumante().name());
+				try{
+					return (  clientePF.getPreferencias().getMotoristaFumante().name());
+				}catch(NullPointerException nEx){
+					return "vazio";
+				}
+				
 			}
 		};
 		cellTable.addColumn(column_2, "aceita motoristas fumantes?");
 		
 		
 		tabela=cellTable;
-		dataProvider.addDataDisplay(tabela);
-		
+
 		atualizar();
+		dataProvider.addDataDisplay(tabela);
 	}
 	
 	public void atualizar(){
@@ -156,12 +189,17 @@ public class RelacaoClientesPF extends Formulario {
 		@Override
 		public void onSuccess(List<ClientePF> result) {
 			prov.setList(result);
-			//Window.alert("Sucesso!\nClientePF");
+			
 		}
 		
 		@Override
 		public void onFailure(Throwable caught) {
-			//Window.alert("Problemas...\n\n"+caught.getMessage());
+
 		}
+	}
+
+	@Override
+	protected ClientePF criarInputVazio() {
+		return new ClientePF();
 	}
 }

@@ -77,4 +77,9 @@ public class FormDadosDeContato extends Formulario<DadosDeContato>  {
 		return input;
 	}
 
+	@Override
+	protected DadosDeContato criarInputVazio() {
+		return new DadosDeContato();
+	}
+
 }

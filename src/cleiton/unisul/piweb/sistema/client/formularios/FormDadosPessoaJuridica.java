@@ -57,4 +57,9 @@ public class FormDadosPessoaJuridica extends Formulario<DadosPessoaJuridica>{
 		return input;
 	}
 
+	@Override
+	protected DadosPessoaJuridica criarInputVazio() {
+		return new DadosPessoaJuridica();
+	}
+
 }

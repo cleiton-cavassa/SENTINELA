@@ -78,6 +78,11 @@ public class FormCorridaFinalizada extends Formulario<CorridaFinalizada> {
 		
 		return input;
 	}
+
+	@Override
+	protected CorridaFinalizada criarInputVazio() {
+		return new CorridaFinalizada();
+	}
 		
 	
 

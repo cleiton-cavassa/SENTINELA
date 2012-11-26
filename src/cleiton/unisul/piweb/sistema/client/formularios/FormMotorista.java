@@ -79,6 +79,11 @@ public class FormMotorista extends Formulario<Motorista> {
 		m.setPreferencias(preferencias.getInput());
 		return m;
 	}
+
+	@Override
+	protected Motorista criarInputVazio() {
+		return new Motorista();
+	}
 	
 	
 

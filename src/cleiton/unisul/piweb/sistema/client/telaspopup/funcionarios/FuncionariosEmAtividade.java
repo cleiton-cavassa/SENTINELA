@@ -2,6 +2,7 @@ package cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios;
 
 
 
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista;
 import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
 import com.google.gwt.user.cellview.client.CellTable;
@@ -11,7 +12,7 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.view.client.ListDataProvider;
 
-public class FuncionariosEmAtividade extends Formulario {
+public class FuncionariosEmAtividade extends Formulario<Motorista> {
 	
 	private class DadosFuncionarioEmAtividade{
 		public String getNome() {
@@ -104,6 +105,11 @@ public class FuncionariosEmAtividade extends Formulario {
 			}
 		};
 		cellTable.addColumn(textColumn_3, "Telefones");
+	}
+
+	@Override
+	protected Motorista criarInputVazio() {
+		return new Motorista();
 	}
 
 }

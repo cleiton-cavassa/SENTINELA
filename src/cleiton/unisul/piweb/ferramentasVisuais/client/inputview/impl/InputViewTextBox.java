@@ -30,7 +30,7 @@ public class InputViewTextBox extends TextBox implements InputView<String>{
 
 	@Override
 	public String getInput() {
-		return this.getText();
+		return this.getValue();
 	}
 
 	@Override

@@ -4,7 +4,7 @@ import java.util.List;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewTextBox;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewWithTitle;
-import cleiton.unisul.piweb.rpc.shared.ParChaveDescricao;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
@@ -107,5 +107,13 @@ public class FormPesquisar extends Formulario<ParChaveDescricao>{
 		void sucesso(ParChaveDescricao resposta);
 		void semResposta();
 	}
+
+
+	@Override
+	protected ParChaveDescricao criarInputVazio() {
+		return new ParChaveDescricao();
+	}
+	
+	
 	
 }

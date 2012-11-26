@@ -1,9 +1,10 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios;
 
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista;
 import cleiton.unisul.piweb.sistema.client.formularios.FormMotorista;
 import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
-public class CadastroFuncionarios extends Formulario {
+public class CadastroFuncionarios extends Formulario<Motorista> {
 	
 	@Override
 	public String getTitulo(){
@@ -15,6 +16,11 @@ public class CadastroFuncionarios extends Formulario {
 		FormMotorista formMotorista = new FormMotorista();
 		initWidget(formMotorista);
 		
+	}
+
+	@Override
+	protected Motorista criarInputVazio() {
+		return new Motorista();
 	}
 
 //	public CadastroFuncionarios() {

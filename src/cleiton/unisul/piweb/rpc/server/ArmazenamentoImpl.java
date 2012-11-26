@@ -1,20 +1,17 @@
 package cleiton.unisul.piweb.rpc.server;
 
-import java.util.LinkedList;
 import java.util.List;
 
+import javax.jdo.FetchPlan;
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
-import javax.jdo.identity.LongIdentity;
 
 import cleiton.unisul.piweb.rpc.client.Armazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ;
-//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.antigos.ClientesPFePJ;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.antigos.ClientesPFePJ;
 //import cleiton.unisul.piweb.shared.Corrida;
 //import cleiton.unisul.piweb.shared.CorridaAtendida;
 //import cleiton.unisul.piweb.shared.CorridaCancelada;
@@ -26,7 +23,11 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 @SuppressWarnings("serial")
 public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenamento{
-	PersistenceManager pm(){return PMF.get().getPersistenceManager();}
+	PersistenceManager pm(){
+//		PersistenceManagerFactory p = PMF.get();
+//		p.setDetachAllOnCommit(true);
+		return PMF.get().getPersistenceManager();
+		}
 	
 	@Override 
 	public <T extends ObjetoChaveado> RespostaPersistencia persistir(T obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
@@ -71,22 +72,32 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 		Boolean conformeEsperado=null;
 		Boolean objetoJaExiste=null;
 		Boolean salvoComSucesso=null;
-		try{
-//			pm.getObjectById(new LongIdentity(objeto.getClass(), objeto.getChave()));
-//			pm.getObjectById(objeto.getChave());
-			objetoJaExiste=true;
-			conformeEsperado=!novoRegistro;
-		}catch(javax.jdo.JDOObjectNotFoundException t){
+		
+		
+		
+		if (objeto.getChave()==null){
 			objetoJaExiste=false;
 			conformeEsperado=novoRegistro;
-		}catch(Throwable t){}
-		
-		if((salvarMesmoSeNaoOcorrerOEsperado.booleanValue())||(conformeEsperado.booleanValue())){
+		}else{
+			try{
+	//			pm.getObjectById(new LongIdentity(objeto.getClass(), objeto.getChave()));
+				pm.getObjectById(objeto.getChave());
+				objetoJaExiste=true;
+				conformeEsperado=!novoRegistro;
+			}catch(javax.jdo.JDOObjectNotFoundException t){
+				objetoJaExiste=false;
+				conformeEsperado=novoRegistro;
+			}catch(Throwable t){
+				throw new RuntimeException(t.getMessage());
+			}
+		}
+		if((salvarMesmoSeNaoOcorrerOEsperado.booleanValue())||(conformeEsperado==null?false:conformeEsperado.booleanValue())){
 			try {
 				pm.makePersistent(objeto);
 				salvoComSucesso=true;
 			}catch(Throwable t){
 				salvoComSucesso=false;
+				throw new RuntimeException(t.getMessage());
 			}finally {
 				pm.close();
 			}
@@ -101,15 +112,24 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 	
 
 	
+
 	@SuppressWarnings("unchecked")
 	public <T extends Object> List<T> recupera(T exemplo) throws Exception{
+		List<T> result;
 	    PersistenceManager pm = pm();
+		pm.getFetchPlan().addGroup("grupo");
+//		pm.getFetchPlan().setMaxFetchDepth(-1);
+//		pm.getFetchPlan().setFetchSize(FetchPlan.FETCH_SIZE_GREEDY);
+		
 		List<T> a=(List<T>)consulta(pm, "select from "+exemplo.getClass().getName());
 		if (a==null){
-			return null;
+			result=null;
 		}else{
-			return (List<T>) pm.detachCopyAll(a);			
+			result = (List<T>) pm.detachCopyAll(a);			
 		}
+		
+		pm.close();
+		return result;
 	}
 	
 	private Object consulta(PersistenceManager pm, String consulta) throws Exception{

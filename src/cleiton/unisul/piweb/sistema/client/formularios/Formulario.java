@@ -4,7 +4,7 @@ import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 
 import com.google.gwt.user.client.ui.Composite;
 
-public class Formulario <Ob extends ObjetoChaveado>extends Composite implements IsFormulario, InputView<Ob>{
+abstract public class Formulario <Ob extends ObjetoChaveado>extends Composite implements IsFormulario, InputView<Ob>{
 	
 	private Ob objeto;
 
@@ -29,6 +29,15 @@ public class Formulario <Ob extends ObjetoChaveado>extends Composite implements 
 
 	@Override
 	public Ob getInput() {
-		return objeto;
+		return (objeto==null?criarInputVazio():objeto);
 	};
+	
+	/**
+	 * Esse método precisa ser implementado pelas subclasses de Formulario{@literal <Ob>},
+	 * e é usado para obter um objeto de retorno para o método <i>Ob getInput()</i>
+	 * quando nenhum objeto diferente de null foi passado por meio do método 
+	 * <i>boolean setInput(Ob input)</i>.
+	 * @return um objeto do tipo Ob sem qualquer valor significante preenchido.
+	 */
+	protected abstract Ob criarInputVazio();
 }

@@ -9,7 +9,7 @@ import com.google.gwt.user.client.ui.Widget;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
-import cleiton.unisul.piweb.rpc.shared.ParChaveDescricao;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
 import cleiton.unisul.piweb.sistema.client.formularios.FormPesquisar;
 import cleiton.unisul.piweb.sistema.client.formularios.FormPesquisar.PesquisaCallBack;
 

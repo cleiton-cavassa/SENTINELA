@@ -2,13 +2,11 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import java.util.Date;
 
-
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
-
-import org.datanucleus.api.jpa.annotations.Extension;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
@@ -17,12 +15,20 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @PersistenceCapable
 public class ConviteEnviado implements ObjetoChaveado {
 
-	
-	
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
+	
+	@Persistent
+	private Long cnpj;
+	
+	@Persistent
+	private Date dataConvite;
+	
+	@Persistent
+	private String razaoSocial;
+	
 	
 	
 	public String getChave() {
@@ -65,15 +71,7 @@ public class ConviteEnviado implements ObjetoChaveado {
 	}
 
 
-	@Persistent
-	private Long cnpj;
-	
-	@Persistent
-	private Date dataConvite;
-	
-	@Persistent
-	private String razaoSocial;
-	
+
 
 	@Override
  	public String getResumo(){
