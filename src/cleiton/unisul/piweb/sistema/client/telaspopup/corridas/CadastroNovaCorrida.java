@@ -1,5 +1,7 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.corridas;
 
+import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
+
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Label;
@@ -14,7 +16,7 @@ import com.google.gwt.user.datepicker.client.DatePicker;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class CadastroNovaCorrida extends Composite {
+public class CadastroNovaCorrida extends Formulario {
 	public CadastroNovaCorrida() {
 		
 		FlowPanel flowPanel = new FlowPanel();

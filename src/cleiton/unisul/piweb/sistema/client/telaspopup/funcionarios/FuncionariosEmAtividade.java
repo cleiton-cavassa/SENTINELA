@@ -1,18 +1,17 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios;
 
-import java.util.ArrayList;
 
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.FlexTable;
-import com.google.gwt.user.cellview.client.DataGrid;
-import com.google.gwt.user.cellview.client.TextColumn;
+
+import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
+
 import com.google.gwt.user.cellview.client.CellTable;
+import com.google.gwt.user.cellview.client.TextColumn;
+import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.view.client.ListDataProvider;
 
-public class FuncionariosEmAtividade extends Composite {
+public class FuncionariosEmAtividade extends Formulario {
 	
 	private class DadosFuncionarioEmAtividade{
 		public String getNome() {

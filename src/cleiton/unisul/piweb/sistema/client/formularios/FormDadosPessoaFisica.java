@@ -2,30 +2,34 @@ package cleiton.unisul.piweb.sistema.client.formularios;
 
 import java.util.Collection;
 
-import sun.awt.HorizBagLayout;
+import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.Mural;
+import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.inputparsers.InputParserCollectionToHTMLString;
+import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.impl.RolTextBox;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewCPF;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewForDate;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewTextBox;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewWithTitle;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica;
 
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.InputViewForDate;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.InputViewWithTitle;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.Painel;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.RolTextBox;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.exibidor.InputCollectionToHTMLStringParser;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.exibidor.InputView;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputviews.InputViewCPF;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputviews.InputViewTextBox;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica;
+public class FormDadosPessoaFisica extends Formulario<DadosPessoaFisica>{
 
-public class FormDadosPessoaFisica extends Formulario implements InputView<DadosPessoaFisica>{
-
+	
+	@Override
+	public String getTitulo(){
+		return "Sentinela - Dados de Pessoa Fisica";
+	}
+	
+	
+	
 	private final VerticalPanel vp= new VerticalPanel();
 	private final HorizontalPanel nomeEcPF=new HorizontalPanel();
 	private final InputViewWithTitle<Long> cpf = new InputViewWithTitle<Long>("CPF",new InputViewCPF()); 
 	private final InputViewWithTitle<String> nome=new InputViewWithTitle<String>("Nome", new InputViewTextBox(70,500));
 	private final InputViewForDate dataNascimento = new InputViewForDate("Data de Nascimento");
-	private final Painel<Collection<String>> idiomasFalados= new Painel<Collection<String>>("Idiomas Falados",new RolTextBox(40,500), new InputCollectionToHTMLStringParser<String>()); 
+	private final Mural<Collection<String>> idiomasFalados= new Mural<Collection<String>>("Idiomas Falados",new RolTextBox(40,500), new InputParserCollectionToHTMLString<String>()); 
 	public FormDadosPessoaFisica(){
 		
 		nomeEcPF.add(nome);
@@ -40,6 +44,8 @@ public class FormDadosPessoaFisica extends Formulario implements InputView<Dados
 	
 	@Override
 	public boolean setInput(DadosPessoaFisica input) {
+		super.setInput(input);
+		
 		Boolean result;
 		result = cpf.setInput(input.getCpf());
 		result&= nome.setInput(input.getNome());
@@ -51,7 +57,7 @@ public class FormDadosPessoaFisica extends Formulario implements InputView<Dados
 
 	@Override
 	public DadosPessoaFisica getInput() {
-		DadosPessoaFisica input = new DadosPessoaFisica();
+		DadosPessoaFisica input = super.getInput();
 		
 		input.setCpf(cpf.getInput());
 		input.setDataNascimento(dataNascimento.getInput());

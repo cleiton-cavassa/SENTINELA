@@ -1,5 +1,7 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.corridas;
 
+import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
+
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Label;
@@ -10,7 +12,7 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.view.client.ListDataProvider;
 
-public class CorridasCanceladas extends Composite {
+public class CorridasCanceladas extends Formulario {
 	
 	private static class DadosCorridaCancelada{
 		public String getCliente() {

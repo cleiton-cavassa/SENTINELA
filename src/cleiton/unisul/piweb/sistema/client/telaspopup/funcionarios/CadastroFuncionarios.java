@@ -1,9 +1,14 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios;
 
-import com.google.gwt.user.client.ui.Composite;
 import cleiton.unisul.piweb.sistema.client.formularios.FormMotorista;
+import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
-public class CadastroFuncionarios extends Composite {
+public class CadastroFuncionarios extends Formulario {
+	
+	@Override
+	public String getTitulo(){
+		return "SENTINELA - Cadastro de Motorista";
+	}
 	
 	public CadastroFuncionarios() {
 		

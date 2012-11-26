@@ -1,12 +1,13 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.util;
 
 
+import cleiton.unisul.piweb.sistema.client.formularios.IsFormulario;
+
 import com.google.gwt.user.client.Command;
-import com.google.gwt.user.client.ui.Widget;
 
 public class CriadorTela implements Command{
 		
-		public Widget tela;
+		public IsFormulario tela;
 		public void execute() {
 				TelaPopUp p= new TelaPopUp();
 				p.setTela(tela);
@@ -14,7 +15,7 @@ public class CriadorTela implements Command{
 				p.setPopupPosition(p.getPopupLeft(), Math.min(40, p.getPopupTop()));
 		}
 		
-		public CriadorTela(Widget tela){
+		public CriadorTela(IsFormulario tela){
 			this.tela = tela;
 		}
 }

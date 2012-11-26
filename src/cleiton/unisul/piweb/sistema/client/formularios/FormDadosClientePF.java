@@ -1,14 +1,19 @@
 package cleiton.unisul.piweb.sistema.client.formularios;
 
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.InputViewForEnums;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.exibidor.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewForEnums;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF.Status;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF.TipoNacionalidade;
 
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class FormDadosClientePF extends Formulario implements InputView<DadosClientePF>{
+public class FormDadosClientePF extends Formulario<DadosClientePF>{
+	
+	@Override
+	public String getTitulo(){
+		return "Sentinela - Dados de Cliente Pessoa Fisica";
+	}
+	
 	
 	private final VerticalPanel verticalPanel=new VerticalPanel();
 	private final InputViewForEnums<Status>status= new InputViewForEnums<Status>(Status.Ativo,"Status",false); 
@@ -22,6 +27,8 @@ public class FormDadosClientePF extends Formulario implements InputView<DadosCli
 
 	@Override
 	public boolean setInput(DadosClientePF input) {
+		super.setInput(input);
+		
 		Boolean result;
 		result = status.setInput(input.getStatus());
 		result &= tipoNacionalidade.setInput(input.getTipoNacionalidade());
@@ -30,7 +37,7 @@ public class FormDadosClientePF extends Formulario implements InputView<DadosCli
 
 	@Override
 	public DadosClientePF getInput() {
-		DadosClientePF input = new DadosClientePF();
+		DadosClientePF input = super.getInput();
 			input.setStatus(status.getInput());
 			input.setTipoNacionalidade(tipoNacionalidade.getInput());
 		return input;

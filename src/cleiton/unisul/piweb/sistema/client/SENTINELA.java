@@ -3,25 +3,20 @@ package cleiton.unisul.piweb.sistema.client;
 
 
 
-import java.lang.reflect.Field;
-
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.client.ServicoUsuario;
-
 import cleiton.unisul.piweb.rpc.shared.Usuario;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
-//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.RelacaoClientesPFePJ;
-import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.CriarNovoClientePF;
+import cleiton.unisul.piweb.sistema.client.formularios.FormClientePF;
+import cleiton.unisul.piweb.sistema.client.formularios.FormClientePJ;
+import cleiton.unisul.piweb.sistema.client.formularios.FormCorridaSolicitada;
+import cleiton.unisul.piweb.sistema.client.formularios.FormMotorista;
 import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.RelacaoClientesPF;
-//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.CriarNovoClientePJ;
-//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.RelacaoClientesPJ;
-import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasAgendadas;
+import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasSolicitadas;
 import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasCanceladas;
 import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasFinalizadas;
 import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.CadastroEstaFrota;
 import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.CadastroFrotasParceiras;
 import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.FrotasQueEmitemVouchers;
-import cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios.CadastroFuncionarios;
 import cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios.FuncionariosEmAtividade;
 
 import com.google.gwt.core.client.EntryPoint;
@@ -29,16 +24,19 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Grid;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.MenuBar;
 import com.google.gwt.user.client.ui.MenuItem;
-import com.google.gwt.user.client.ui.HasVerticalAlignment;
-import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.RootPanel;
+//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.RelacaoClientesPFePJ;
+//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.CriarNovoClientePJ;
+//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.RelacaoClientesPJ;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -122,8 +120,8 @@ public class SENTINELA implements EntryPoint {
 		MenuItem menuItemPJ = new MenuItem("Pessoas Jur\u00EDdicas",false, menuBar_PJ);
 //			MenuItem menuItemRelaPJ = new MenuItem("listagem de Pessoas Jur\u00EDdicas", false, new CriadorTela(RelacaoClientesPJ.get()));
 //			menuBar_PJ.addItem(menuItemRelaPJ);
-//			MenuItem menuItemNovaPJ = new MenuItem("nova Pessoa Jur\u00EDdica", false, new CriadorTela(CriarNovoClientePJ.get()));
-//			menuBar_PJ.addItem(menuItemNovaPJ);
+			MenuItem menuItemNovaPJ = new MenuItem("nova Pessoa Jur\u00EDdica", false, new CriadorTela(new FormClientePJ()));
+			menuBar_PJ.addItem(menuItemNovaPJ);
 		menuBar_1.addItem(menuItemPJ);
 
 		
@@ -131,7 +129,7 @@ public class SENTINELA implements EntryPoint {
 		MenuItem menuItemPF = new MenuItem("Pessoas F\u00EDsicas",false, menuBar_PF);
 			MenuItem menuItemRelaPF = new MenuItem("listagem de Pessoas F\u00EDsicas", false, new CriadorTela(RelacaoClientesPF.get()));
 			menuBar_PF.addItem(menuItemRelaPF);
-			MenuItem menuItemNovaPF = new MenuItem("nova Pessoa F\u00EDsica", false, new CriadorTela(CriarNovoClientePF.get()));
+			MenuItem menuItemNovaPF = new MenuItem("nova Pessoa F\u00EDsica", false, new CriadorTela(new FormClientePF() ));
 			menuBar_PF.addItem(menuItemNovaPF);
 		menuBar_1.addItem(menuItemPF);
 		menuBar.addItem(mntmNewMenu);
@@ -146,7 +144,7 @@ public class SENTINELA implements EntryPoint {
 		
 		MenuItem mntmNewMenu_1 = new MenuItem("Funcion\u00E1rios", false, menuBar_2);
 		
-		MenuItem mntmNewItem_5 = new MenuItem("Cadastro", false, new CriadorTela(new CadastroFuncionarios()));
+		MenuItem mntmNewItem_5 = new MenuItem("Cadastro", false, new CriadorTela(new FormMotorista()));
 		menuBar_2.addItem(mntmNewItem_5);
 		
 		MenuItem mntmNewItem_6 = new MenuItem("Funcion\u00E1rios em atividade agora", false, new CriadorTela(new FuncionariosEmAtividade()));
@@ -170,7 +168,18 @@ public class SENTINELA implements EntryPoint {
 		
 		MenuItem mntmNewMenu_3 = new MenuItem("Corridas", false, menuBar_4);
 		
-		MenuItem mntmNewItem_4 = new MenuItem("Corridas a atender", false, new CriadorTela(new CorridasAgendadas()));
+		
+		MenuBar menuBar_corridasSolicitadas = new MenuBar(true);
+		MenuItem mntmNewItem_4 = new MenuItem("Corridas solicitadas", false, menuBar_corridasSolicitadas);
+		
+		menuBar_corridasSolicitadas.addItem(
+			new MenuItem("nova corrida solicitada", false, new CriadorTela(new FormCorridaSolicitada()) )
+				);
+		menuBar_corridasSolicitadas.addItem(
+				new MenuItem("todas as corridas", false, new CriadorTela(new CorridasSolicitadas()) )
+					);
+		
+		
 		menuBar_4.addItem(mntmNewItem_4);
 		
 		MenuItem mntmNewItem_3 = new MenuItem("Corridas canceladas", false,  new CriadorTela(new CorridasCanceladas()));

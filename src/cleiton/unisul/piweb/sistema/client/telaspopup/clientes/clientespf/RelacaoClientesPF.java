@@ -5,6 +5,7 @@ import java.util.List;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
+import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
@@ -21,7 +22,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.view.client.ListDataProvider;
 
-public class RelacaoClientesPF extends Composite {
+public class RelacaoClientesPF extends Formulario {
 	private CellTable<ClientePF> tabela;
 	
 	private static RelacaoClientesPF get=new RelacaoClientesPF();

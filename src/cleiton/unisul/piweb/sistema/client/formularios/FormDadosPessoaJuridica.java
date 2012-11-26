@@ -2,25 +2,28 @@ package cleiton.unisul.piweb.sistema.client.formularios;
 
 import java.util.Collection;
 
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.InputViewWithTitle;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.Painel;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.RolTextBox;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.exibidor.InputCollectionToHTMLStringParser;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.exibidor.InputView;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputviews.InputViewCNPJ;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputviews.InputViewTextBox;
+import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.Mural;
+import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.inputparsers.InputParserCollectionToHTMLString;
+import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.impl.RolTextBox;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewCNPJ;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewTextBox;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewWithTitle;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica;
 
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class FormDadosPessoaJuridica extends Formulario implements InputView<DadosPessoaJuridica>{
+public class FormDadosPessoaJuridica extends Formulario<DadosPessoaJuridica>{
 
+	@Override
+	public String getTitulo(){
+		return "Sentinela - Dados de Pessoa Juridica";
+	}
 	
 	private final VerticalPanel vp= new VerticalPanel();
 //	private final HorizontalPanel cnpjErazaoSocial=new HorizontalPanel();
 	private final InputViewWithTitle<Long> cnpj = new InputViewWithTitle<Long>("CNPJ",new InputViewCNPJ()); 
 	private final InputViewWithTitle<String> razaoSocial=new InputViewWithTitle<String>("Raz\u00E3o Social", new InputViewTextBox(100,500));
-	private final Painel<Collection<String>> regioesDeAtuacao= new Painel<Collection<String>>("Regi\u00F5es de Atua\u00E7\u00E3o",new RolTextBox(100,500), new InputCollectionToHTMLStringParser<String>());
+	private final Mural<Collection<String>> regioesDeAtuacao= new Mural<Collection<String>>("Regi\u00F5es de Atua\u00E7\u00E3o",new RolTextBox(100,500), new InputParserCollectionToHTMLString<String>());
 	
 	public FormDadosPessoaJuridica(){
 		initWidget(vp);
@@ -33,6 +36,8 @@ public class FormDadosPessoaJuridica extends Formulario implements InputView<Dad
 	
 	@Override
 	public boolean setInput(DadosPessoaJuridica input) {
+		super.setInput(input);
+		
 		Boolean result;
 		result = cnpj.setInput(input.getCnpj());
 		result &= razaoSocial.setInput(input.getRazaoSocial());
@@ -43,7 +48,7 @@ public class FormDadosPessoaJuridica extends Formulario implements InputView<Dad
 
 	@Override
 	public DadosPessoaJuridica getInput() {
-		DadosPessoaJuridica input = new DadosPessoaJuridica();
+		DadosPessoaJuridica input = super.getInput();
 		
 		input.setCnpj(cnpj.getInput());
 		input.setRazaoSocial(razaoSocial.getInput());

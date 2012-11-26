@@ -1,5 +1,7 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.frotas;
 
+import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
+
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.TextColumn;
@@ -10,7 +12,7 @@ import com.google.gwt.user.cellview.client.DataGrid;
 import com.google.gwt.view.client.ListDataProvider;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class FrotasQueEmitemVouchers extends Composite {
+public class FrotasQueEmitemVouchers extends Formulario{
 
 	private class DadosFrotaClienteVoucher{
 		public String getFrota() {

@@ -1,5 +1,7 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.util;
 
+import cleiton.unisul.piweb.sistema.client.formularios.IsFormulario;
+
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
@@ -8,20 +10,31 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.client.ui.Widget;
 
 public class TelaPopUp extends PopupPanel implements FecharPopUpEventHandler{
-	Widget tela;
+	IsFormulario tela;
+	final private Label labelTitulo = new Label();
+	
 	private VerticalPanel verticalPanel;
-	public Widget getTela() {
+	public IsFormulario getTela() {
 		return tela;
 	}
-	public void setTela(Widget tela) {
+	public void setTela(IsFormulario tela) {
 		this.tela = tela;
+		tela.asWidget().addHandler(this, FecharPopUpEventType.get());
+		String s = tela.getTitulo();
+		if(s!=null){
+			labelTitulo.setText(s);
+		}
 		
-		tela.addHandler(this, FecharPopUpEventType.get());
 		verticalPanel.add(tela);
 	}
+	
+	public TelaPopUp(String titulo){
+		this();
+		labelTitulo.setText(titulo);
+	}
+	
 	public TelaPopUp() {
 		super(true);
 		final TelaPopUp eu=this;
@@ -42,8 +55,7 @@ public class TelaPopUp extends PopupPanel implements FecharPopUpEventHandler{
 		horizontalPanel .setStyleName("h1");
 		verticalPanel.add(horizontalPanel);
 //		verticalPanel.setCellHorizontalAlignment(horizontalPanel, HasHorizontalAlignment.ALIGN_RIGHT);
-		
-		Label labelTitulo = new Label("SENTINELA - novo Cliente Pessoa F\u00EDsica");
+	
 		labelTitulo.setStyleName("padding5");
 		labelTitulo.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 //		labelTitulo.setStyleName("h1");

@@ -75,6 +75,12 @@ boasvindas {
 .padding10 {
 	padding:10px;
 }
+.padding15 {
+	padding:15px;
+}
+.padding20 {
+	padding:20px;
+}
 pager {
 	border-top: medium double Gray;
 	border-right: medium dashed Gray;

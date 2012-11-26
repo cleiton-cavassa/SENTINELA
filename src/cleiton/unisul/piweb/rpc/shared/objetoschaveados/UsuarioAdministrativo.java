@@ -28,6 +28,9 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
     @Persistent
     private NivelDeAcesso nivelAcesso=null;
     
+    @Persistent
+    private PessoaFisica pessoaFisica; 
+
 	public String getChave() {
 		return chave;
 	}
@@ -50,6 +53,14 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
 
 	public void setNivelAcesso(NivelDeAcesso nivelAcesso) {
 		this.nivelAcesso = nivelAcesso;
+	}
+	
+	public PessoaFisica getPessoaFisica() {
+		return pessoaFisica;
+	}
+
+	public void setPessoaFisica(PessoaFisica pessoaFisica) {
+		this.pessoaFisica = pessoaFisica;
 	}
 
 	@Override

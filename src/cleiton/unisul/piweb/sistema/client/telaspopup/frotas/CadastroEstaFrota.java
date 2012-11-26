@@ -1,5 +1,7 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.frotas;
 
+import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
+
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Grid;
@@ -11,7 +13,7 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.datepicker.client.DateBox;
 import com.google.gwt.user.client.ui.CheckBox;
 
-public class CadastroEstaFrota extends Composite {
+public class CadastroEstaFrota extends Formulario {
 
 	public CadastroEstaFrota() {
 		

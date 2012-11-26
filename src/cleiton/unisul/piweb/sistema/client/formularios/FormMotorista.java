@@ -1,18 +1,20 @@
 package cleiton.unisul.piweb.sistema.client.formularios;
 
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica;
+
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.TabPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.exibidor.InputView;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica;
+public class FormMotorista extends Formulario<Motorista> {
 
-public class FormMotorista extends Formulario implements InputView<Motorista> {
-
+	
+	@Override
+	public String getTitulo(){
+		return "Sentinela - Cadastro de Motorista";
+	}
 	
 	private VerticalPanel raiz;
 	private FormDadosPessoaFisica dadosPessoaFisica = new FormDadosPessoaFisica();
@@ -56,7 +58,8 @@ public class FormMotorista extends Formulario implements InputView<Motorista> {
 	
 	@Override
 	public boolean setInput(Motorista input) {
-		// TODO Auto-generated method stub
+		super.setInput(input);
+		
 		Boolean result;
 		result = dadosPessoaFisica.setInput(input.getDadosPessoais().getDadosPessoaFisica());
 		result &= dadosDeContato.setInput(input.getDadosPessoais().getDadosDeContato());
@@ -67,7 +70,7 @@ public class FormMotorista extends Formulario implements InputView<Motorista> {
 
 	@Override
 	public Motorista getInput() {
-		Motorista m = new Motorista();
+		Motorista m = super.getInput();
 		PessoaFisica d = new PessoaFisica();
 			d.setDadosPessoaFisica(dadosPessoaFisica.getInput());
 			d.setDadosDeContato(dadosDeContato.getInput());

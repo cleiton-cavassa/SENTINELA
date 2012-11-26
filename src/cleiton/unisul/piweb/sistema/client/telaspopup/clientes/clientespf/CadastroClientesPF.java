@@ -11,6 +11,7 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
 //import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais;
 import cleiton.unisul.piweb.sistema.client.formularios.FormClientePF;
 import cleiton.unisul.piweb.sistema.client.formularios.FormDadosDeContato;
+import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -21,7 +22,7 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.Label;
 
-public class CadastroClientesPF extends Composite {
+public class CadastroClientesPF extends Formulario {
 	
 	private static CadastroClientesPF get = new CadastroClientesPF();
 	

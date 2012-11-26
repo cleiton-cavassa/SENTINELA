@@ -1,22 +1,19 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.telasnovoregistro;
 
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Command;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.Widget;
-
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.sistema.client.bloqueio.TelaComBloqueio;
 import cleiton.unisul.piweb.sistema.client.bloqueio.TelaPadraoBloqueada;
+import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 import cleiton.unisul.piweb.sistema.client.persistencia.TelaPersistencia;
 
+import com.google.gwt.user.client.Command;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.Widget;
+
 public abstract class TelaNovoRegistro 
-<T extends ObjetoChaveado> extends Composite 
+<T extends ObjetoChaveado> extends Formulario 
 implements TelaComBloqueio, TelaPersistencia<T>, TelaLimpavel{
 	
 	protected abstract boolean validar();

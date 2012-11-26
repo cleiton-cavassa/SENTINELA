@@ -10,6 +10,7 @@ import javax.jdo.annotations.PrimaryKey;
 import org.datanucleus.api.jpa.annotations.Extension;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
+import cleiton.unisul.piweb.rpc.shared.ParChaveDescricao;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 
@@ -23,10 +24,10 @@ public class CorridaSolicitada implements ObjetoChaveado {
 	private String chave;
 	
 	@Persistent//chave codificada do cliente
-	private String cliente;
+	private ParChaveDescricao cliente;
 	
 	@Persistent//chave codificada do motorista
-	private String motorista;
+	private ParChaveDescricao motorista;
 	
 	@Persistent
 	private Date dataHoraEmbarque;
@@ -49,19 +50,19 @@ public class CorridaSolicitada implements ObjetoChaveado {
 		this.chave = chave;
 	}
 
-	public String getCliente() {
+	public ParChaveDescricao getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(String cliente) {
+	public void setCliente(ParChaveDescricao cliente) {
 		this.cliente = cliente;
 	}
 
-	public String getMotorista() {
+	public ParChaveDescricao getMotorista() {
 		return motorista;
 	}
 
-	public void setMotorista(String motorista) {
+	public void setMotorista(ParChaveDescricao motorista) {
 		this.motorista = motorista;
 	}
 

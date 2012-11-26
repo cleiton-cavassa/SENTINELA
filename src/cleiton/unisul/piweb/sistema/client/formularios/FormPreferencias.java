@@ -1,15 +1,18 @@
 package cleiton.unisul.piweb.sistema.client.formularios;
 
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.InputViewForEnums;
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.exibidor.InputView;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewForEnums;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.MotoristaFumante;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais;
 
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class FormPreferencias extends Formulario implements InputView<Preferencias>{
+public class FormPreferencias extends Formulario<Preferencias>{
+	
+	@Override
+	public String getTitulo(){
+		return "Sentinela - Preferencias";
+	}
 	
 	private VerticalPanel verticalPanel=new VerticalPanel();
 	private InputViewForEnums<MotoristaFumante>motFum= new InputViewForEnums<MotoristaFumante>(MotoristaFumante.Sim,"Motorista fumante ?",false); 
@@ -23,14 +26,15 @@ public class FormPreferencias extends Formulario implements InputView<Preferenci
 
 	@Override
 	public boolean setInput(Preferencias input) {
-		Boolean result =motFum.setInput(input.getMotoristaFumante());
-		result &=animais.setInput(input.getTransportaAnimais());
+		Boolean result = true;
+		result &= motFum.setInput(input.getMotoristaFumante());
+		result &= animais.setInput(input.getTransportaAnimais());
 		return result;
 	}
 
 	@Override
 	public Preferencias getInput() {
-		Preferencias input=new Preferencias();
+		Preferencias input= super.getInput();
 			input.setMotoristaFumante(motFum.getInput());
 			input.setTransportaAnimais(animais.getInput());
 		return input;

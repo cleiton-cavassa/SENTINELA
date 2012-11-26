@@ -1,31 +1,19 @@
 package cleiton.unisul.piweb.sistema.client.formularios;
 
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.Grid;
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.TabPanel;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.datepicker.client.DateBox;
-
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.exibidor.InputView;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputviews.InputViewCNPJ;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputviews.InputViewCPF;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputviews.InputViewListBoxEnumeracoes;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF.Status;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF.TipoNacionalidade;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.MotoristaFumante;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais;
+
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.TabPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
 
 
-public class FormClientePF extends Formulario implements InputView<ClientePF> {
-	
+public class FormClientePF extends Formulario<ClientePF>{
+	@Override
+	public String getTitulo(){
+		return "Sentinela - Clientes Pessoa Fisica";
+	}
 	
 	private VerticalPanel raiz;
 	private FormDadosPessoaFisica dadosPessoaFisica = new FormDadosPessoaFisica();
@@ -69,6 +57,8 @@ public class FormClientePF extends Formulario implements InputView<ClientePF> {
 
 	@Override
 	public boolean setInput(ClientePF input) {
+		super.setInput(input);
+		
 		Boolean result;
 		
 		result=dadosPessoaFisica.setInput(input.getDadosPessoais().getDadosPessoaFisica());
@@ -81,7 +71,7 @@ public class FormClientePF extends Formulario implements InputView<ClientePF> {
 
 	@Override
 	public ClientePF getInput() {
-		ClientePF input = new ClientePF();
+		ClientePF input = super.getInput();
 		
 		input.setDadosClientePF(dadosClientePF.getInput());
 		
@@ -104,7 +94,7 @@ public class FormClientePF extends Formulario implements InputView<ClientePF> {
 
 
 //import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.exibidor.InputView;
-//import cleiton.unisul.piweb.ferramentasVisuais.client.inputviews.InputViewListBoxEnumeracoes;
+//import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputViewListBoxEnumeracoes;
 //import cleiton.unisul.piweb.ferramentasVisuais.client.validacao.CompositeCNPJ;
 //import cleiton.unisul.piweb.ferramentasVisuais.client.validacao.CompositeCPF;
 //
