@@ -1,7 +1,7 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.frotas;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
-import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.cellview.client.CellTable;

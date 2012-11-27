@@ -3,7 +3,7 @@ package cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.ExcludeMePleaseEvent;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.ExcludeMePleaseHandler;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.HasExcludeMePleaseHandlers;
-import cleiton.unisul.piweb.sistema.client.formularios.IsFormulario;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

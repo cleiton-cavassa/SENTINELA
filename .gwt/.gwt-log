@@ -19509,7 +19509,7 @@ Compiling...
    Compilation completed in 0.30 seconds
 Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormClientePJ
 Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormClientePF
-Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormDadosDeContato
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato
 Invalid units found: 3
 Compiling...
    Compilation completed in 0.08 seconds
@@ -20062,7 +20062,7 @@ Found 2807 cached/archived units.  Used 2807 / 2808 units from cache.
 Compiling...
    Compilation completed in 0.02 seconds
 Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormDadosClientePF
-Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormPreferencias
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPreferencias
 Invalid units found: 2
 Compiling...
    Compilation completed in 0.01 seconds
@@ -21585,24 +21585,24 @@ Compiling...
    Compilation completed in 0.18 seconds
 Validating units:
    [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/excludeMePlease/HasExcludeMePleaseHandlers.java'
-      [ERROR] Line 8: No source code is available for type cleiton.unisul.piweb.sistema.client.formularios.IsFormulario; did you forget to inherit a required module?
+      [ERROR] Line 8: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
    [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/excludeMePlease/impl/WidgetComBotaoMenos.java'
-      [ERROR] Line 17: No source code is available for type cleiton.unisul.piweb.sistema.client.formularios.IsFormulario; did you forget to inherit a required module?
+      [ERROR] Line 17: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
    [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/mural/Mural.java'
-      [ERROR] Line 104: No source code is available for type cleiton.unisul.piweb.sistema.client.formularios.Formulario; did you forget to inherit a required module?
+      [ERROR] Line 104: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario; did you forget to inherit a required module?
    [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/rol/impl/RolTextBox.java'
-      [ERROR] Line 9: No source code is available for type cleiton.unisul.piweb.sistema.client.formularios.IsFormulario; did you forget to inherit a required module?
+      [ERROR] Line 9: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
    [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/rol/impl/RolTurnos.java'
       [ERROR] Line 18: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno; did you forget to inherit a required module?
-      [ERROR] Line 68: No source code is available for type cleiton.unisul.piweb.sistema.client.formularios.IsFormulario; did you forget to inherit a required module?
+      [ERROR] Line 68: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
    [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/inputview/InputView.java'
-      [ERROR] Line 5: No source code is available for type cleiton.unisul.piweb.sistema.client.formularios.IsFormulario; did you forget to inherit a required module?
+      [ERROR] Line 5: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
    [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/inputview/impl/InputViewTurno.java'
       [ERROR] Line 16: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno; did you forget to inherit a required module?
    [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/util/CriadorTela.java'
-      [ERROR] Line 11: No source code is available for type cleiton.unisul.piweb.sistema.client.formularios.Formulario; did you forget to inherit a required module?
+      [ERROR] Line 11: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario; did you forget to inherit a required module?
    [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/util/TelaPopUp.java'
-      [ERROR] Line 16: No source code is available for type cleiton.unisul.piweb.sistema.client.formularios.Formulario; did you forget to inherit a required module?
+      [ERROR] Line 16: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario; did you forget to inherit a required module?
 Removing invalidated units
 Finding entry point classes
 Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
@@ -21980,9 +21980,9 @@ Translatable source found in...
 Found 2810 cached/archived units.  Used 2810 / 2812 units from cache.
 Compiling...
    Compilation completed in 0.27 seconds
-Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormDadosPessoaJuridica
-Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormDadosDeContato
-Invalid Unit: cleiton.unisul.piweb.sistema.client.formularios.FormDadosPessoaFisica
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaJuridica
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato
+Invalid Unit: cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaFisica
 Invalid units found: 3
 Compiling...
    Compilation completed in 0.05 seconds
@@ -22836,4 +22836,632 @@ Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
    Adding '3' new generated units
       Compiling...
          Compilation completed in 0.02 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2781 units from cache.
+Compiling...
+   0% complete (ETR: ?)
+   10% complete (ETR: 194 seconds)
+   20% complete (ETR: 167 seconds)
+   30% complete (ETR: 129 seconds)
+   40% complete (ETR: 109 seconds)
+   50% complete (ETR: 93 seconds)
+   60% complete (ETR: 81 seconds)
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2718 units from cache.
+Compiling...
+   20% complete (ETR: 15 seconds)
+   20% complete (ETR: 15 seconds)
+   20% complete (ETR: 15 seconds)
+   30% complete (ETR: 13 seconds)
+   40% complete (ETR: 10 seconds)
+   50% complete (ETR: 8 seconds)
+   60% complete (ETR: 6 seconds)
+   70% complete (ETR: 4 seconds)
+   80% complete (ETR: 3 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 14.92 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2781 units from cache.
+Compiling...
+   Compilation completed in 0.48 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/excludeMePlease/HasExcludeMePleaseHandlers.java'
+      [ERROR] Line 8: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/excludeMePlease/impl/WidgetComBotaoMenos.java'
+      [ERROR] Line 16: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/mural/Mural.java'
+      [ERROR] Line 101: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/rol/impl/RolTurnos.java'
+      [ERROR] Line 68: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/inputview/InputView.java'
+      [ERROR] Line 5: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/inputview/impl/InputViewParChaveDescricao.java'
+      [ERROR] Line 42: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar; did you forget to inherit a required module?
+      [ERROR] Line 48: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar.PesquisaCallBack; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/util/CriadorTela.java'
+      [ERROR] Line 10: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/util/TelaPopUp.java'
+      [ERROR] Line 15: No source code is available for type cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario; did you forget to inherit a required module?
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellTable.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellTableFooterBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableFooterBackground'
+      Preparing method cellTableHeaderBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableHeaderBackground'
+      Preparing method cellTableLoading
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableLoading'
+      Preparing method cellTableSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSelectedBackground'
+      Preparing method cellTableSortAscending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortAscending'
+      Preparing method cellTableSortDescending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortDescending'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.09 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.AbstractCellTable.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.AbstractCellTable.Template
+         Generating method body for div()
+         Generating method body for tbody()
+         Generating method body for td()
+         Generating method body for tdBothAlign()
+         Generating method body for tdHorizontalAlign()
+         Generating method body for tdVerticalAlign()
+         Generating method body for tfoot()
+         Generating method body for thead()
+         Generating method body for tr()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2822 units from cache.
+Compiling...
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 10.37 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2756 units from cache.
+Compiling...
+   50% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   60% complete (ETR: 4 seconds)
+   70% complete (ETR: 3 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 12.26 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/FormDadosDeContato.java'
+      [ERROR] Line 18: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/FormDadosPessoaFisica.java'
+      [ERROR] Line 17: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/FormDadosPessoaJuridica.java'
+      [ERROR] Line 15: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/FormDadosProfissionais.java'
+      [ERROR] Line 15: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosProfissionais; did you forget to inherit a required module?
+      [ERROR] Line 23: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/FormFrota.java'
+      [ERROR] Line 10: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/FormPesquisar.java'
+      [ERROR] Line 18: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/FormPreferencias.java'
+      [ERROR] Line 10: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias; did you forget to inherit a required module?
+      [ERROR] Line 18: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.MotoristaFumante; did you forget to inherit a required module?
+      [ERROR] Line 19: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/Formulario.java'
+      [ERROR] Line 7: No source code is available for type cleiton.unisul.piweb.rpc.shared.ObjetoChaveado; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/rol/impl/RolTurnos.java'
+      [ERROR] Line 18: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/inputview/impl/InputViewCorridaSolicitada.java'
+      [ERROR] Line 10: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada; did you forget to inherit a required module?
+      [ERROR] Line 37: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/inputview/impl/InputViewParChaveDescricao.java'
+      [ERROR] Line 16: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/inputview/impl/InputViewTurno.java'
+      [ERROR] Line 12: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno; did you forget to inherit a required module?
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/Formulario.java'
+   [ERROR] Line 7: No source code is available for type cleiton.unisul.piweb.rpc.shared.ObjetoChaveado; did you forget to inherit a required module?
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2797 units from cache.
+Compiling...
+   20% complete (ETR: 17 seconds)
+   20% complete (ETR: 17 seconds)
+   20% complete (ETR: 17 seconds)
+   30% complete (ETR: 16 seconds)
+   40% complete (ETR: 11 seconds)
+   50% complete (ETR: 10 seconds)
+   60% complete (ETR: 8 seconds)
+   70% complete (ETR: 7 seconds)
+   80% complete (ETR: 5 seconds)
+   90% complete (ETR: 2 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 29.25 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellTable.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellTableFooterBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableFooterBackground'
+      Preparing method cellTableHeaderBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableHeaderBackground'
+      Preparing method cellTableLoading
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableLoading'
+      Preparing method cellTableSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSelectedBackground'
+      Preparing method cellTableSortAscending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortAscending'
+      Preparing method cellTableSortDescending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortDescending'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.06 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.AbstractCellTable.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.AbstractCellTable.Template
+         Generating method body for div()
+         Generating method body for tbody()
+         Generating method body for td()
+         Generating method body for tdBothAlign()
+         Generating method body for tdHorizontalAlign()
+         Generating method body for tdVerticalAlign()
+         Generating method body for tfoot()
+         Generating method body for thead()
+         Generating method body for tr()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2797 units from cache.
+Compiling...
+   0% complete (ETR: ?)
+   10% complete (ETR: 166 seconds)
+   20% complete (ETR: 145 seconds)
+   30% complete (ETR: 132 seconds)
+   40% complete (ETR: 123 seconds)
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2718 units from cache.
+Compiling...
+   20% complete (ETR: 15 seconds)
+   20% complete (ETR: 14 seconds)
+   20% complete (ETR: 14 seconds)
+   30% complete (ETR: 14 seconds)
+   40% complete (ETR: 11 seconds)
+   50% complete (ETR: 9 seconds)
+   60% complete (ETR: 6 seconds)
+   70% complete (ETR: 5 seconds)
+   80% complete (ETR: 3 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 16.79 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2718 cached/archived units.  Used 2718 / 2718 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2797 units from cache.
+Compiling...
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 10.38 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellTable.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellTableFooterBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableFooterBackground'
+      Preparing method cellTableHeaderBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableHeaderBackground'
+      Preparing method cellTableLoading
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableLoading'
+      Preparing method cellTableSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSelectedBackground'
+      Preparing method cellTableSortAscending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortAscending'
+      Preparing method cellTableSortDescending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortDescending'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.AbstractCellTable.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.AbstractCellTable.Template
+         Generating method body for div()
+         Generating method body for tbody()
+         Generating method body for td()
+         Generating method body for tdBothAlign()
+         Generating method body for tdHorizontalAlign()
+         Generating method body for tdVerticalAlign()
+         Generating method body for tfoot()
+         Generating method body for thead()
+         Generating method body for tr()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2792 cached/archived units.  Used 2792 / 2797 units from cache.
+Compiling...
+   Compilation completed in 0.44 seconds
+Invalid Unit: cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota
+Invalid Unit: cleiton.unisul.piweb.superusuario.client.telas.formularios.FormUsuarioAdministrativo
+Invalid Unit: cleiton.unisul.piweb.superusuario.client.telas.formularios.basicos.FormTabelaUsuariosAdministrativos
+Invalid units found: 3
+Compiling...
+   Compilation completed in 0.18 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/superusuario/client/telas/formularios/basicos/FormTabelaUsuariosAdministrativos.java'
+      [ERROR] Line 79: The method getEmail() is undefined for the type UsuarioAdministrativo
+      [ERROR] Line 87: The method getNivelAcesso() is undefined for the type UsuarioAdministrativo
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellTable.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellTableFooterBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableFooterBackground'
+      Preparing method cellTableHeaderBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableHeaderBackground'
+      Preparing method cellTableLoading
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableLoading'
+      Preparing method cellTableSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSelectedBackground'
+      Preparing method cellTableSortAscending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortAscending'
+      Preparing method cellTableSortDescending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortDescending'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.AbstractCellTable.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.AbstractCellTable.Template
+         Generating method body for div()
+         Generating method body for tbody()
+         Generating method body for td()
+         Generating method body for tdBothAlign()
+         Generating method body for tdHorizontalAlign()
+         Generating method body for tdVerticalAlign()
+         Generating method body for tfoot()
+         Generating method body for thead()
+         Generating method body for tr()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2795 cached/archived units.  Used 2795 / 2797 units from cache.
+Compiling...
+   Compilation completed in 0.09 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellTable.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellTableFooterBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableFooterBackground'
+      Preparing method cellTableHeaderBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableHeaderBackground'
+      Preparing method cellTableLoading
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableLoading'
+      Preparing method cellTableSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSelectedBackground'
+      Preparing method cellTableSortAscending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortAscending'
+      Preparing method cellTableSortDescending
+         Adding image 'com.google.gwt.user.cellview.client.CellTable.Resources.cellTableSortDescending'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.client.ui.impl.ClippedImageImpl.Template
+         Generating method body for image()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.AbstractCellTable.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.AbstractCellTable.Template
+         Generating method body for div()
+         Generating method body for tbody()
+         Generating method body for td()
+         Generating method body for tdBothAlign()
+         Generating method body for tdHorizontalAlign()
+         Generating method body for tdVerticalAlign()
+         Generating method body for tfoot()
+         Generating method body for thead()
+         Generating method body for tr()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
       Removing invalidated units

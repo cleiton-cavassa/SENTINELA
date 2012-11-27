@@ -10,10 +10,14 @@ import javax.jdo.annotations.PrimaryKey;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 
-@SuppressWarnings("serial")
-@PersistenceCapable
+@PersistenceCapable(detachable="true")
 public class Turno implements ObjetoChaveado {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6356764366956782444L;
+
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")

@@ -1,8 +1,8 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.corridas;
 
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada;
-import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
 import com.google.gwt.user.cellview.client.DataGrid;
 import com.google.gwt.user.cellview.client.TextColumn;
@@ -141,7 +141,7 @@ public class CorridasFinalizadas extends Formulario<CorridaFinalizada> {
 						"Local "+i,
 						"motorista "+i,
 						"local 2"+i,
-						"horario f"+i
+						"horario flow"+i
 						)
 			);
 		}

@@ -1,5 +1,10 @@
 package cleiton.unisul.piweb.sistema.client.formularios;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaFisica;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosProfissionais;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPreferencias;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica;
 

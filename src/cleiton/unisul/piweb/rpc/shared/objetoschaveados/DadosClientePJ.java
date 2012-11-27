@@ -9,11 +9,16 @@ import javax.jdo.annotations.PrimaryKey;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 
-@SuppressWarnings("serial")
-@PersistenceCapable
+@PersistenceCapable(detachable="true")
 public class DadosClientePJ implements ObjetoChaveado {
 	
-    public enum Status{Ativo,Inativo}
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 2469194265211650759L;
+
+
+	public enum Status{Ativo,Inativo}
     public enum Voucher{Ativado,Desativado}
 	
     @PrimaryKey

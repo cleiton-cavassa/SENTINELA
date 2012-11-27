@@ -1,5 +1,8 @@
 package cleiton.unisul.piweb.sistema.client.formularios;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaJuridica;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaJuridica;
 

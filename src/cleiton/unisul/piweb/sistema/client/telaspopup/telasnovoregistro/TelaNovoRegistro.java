@@ -1,11 +1,11 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.telasnovoregistro;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.sistema.client.bloqueio.TelaComBloqueio;
 import cleiton.unisul.piweb.sistema.client.bloqueio.TelaPadraoBloqueada;
-import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 import cleiton.unisul.piweb.sistema.client.persistencia.TelaPersistencia;
 
 import com.google.gwt.user.client.Command;

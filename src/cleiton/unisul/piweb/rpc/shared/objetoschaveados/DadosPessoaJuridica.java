@@ -10,9 +10,13 @@ import javax.jdo.annotations.PrimaryKey;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 
-@SuppressWarnings("serial")
-@PersistenceCapable
+@PersistenceCapable(detachable="true")
 public class DadosPessoaJuridica implements ObjetoChaveado {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5639742467355654224L;
 
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)

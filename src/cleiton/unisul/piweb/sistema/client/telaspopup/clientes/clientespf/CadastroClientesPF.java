@@ -2,6 +2,8 @@ package cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf;
 
 //import java.util.Date;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
@@ -10,8 +12,6 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
 //import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.MotoristaFumante;
 //import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais;
 import cleiton.unisul.piweb.sistema.client.formularios.FormClientePF;
-import cleiton.unisul.piweb.sistema.client.formularios.FormDadosDeContato;
-import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -65,7 +65,7 @@ public class CadastroClientesPF extends Formulario<ClientePF> {
 		initWidget(flowPanel1);
 		flowPanel1.setSize("921px", "");
 		
-		Label lblSentinelaCadastro = new Label("SENTINELA - Cadastro de Clientes - pessoas f\u00EDsicas");
+		Label lblSentinelaCadastro = new Label("SENTINELA - Cadastro de Clientes - pessoas flow\u00EDsicas");
 		lblSentinelaCadastro.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 		lblSentinelaCadastro.setStyleName("h1");
 		flowPanel1.add(lblSentinelaCadastro);

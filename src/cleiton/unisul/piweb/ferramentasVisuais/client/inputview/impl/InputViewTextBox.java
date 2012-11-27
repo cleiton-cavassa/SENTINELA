@@ -14,6 +14,7 @@ public class InputViewTextBox extends TextBox implements InputView<String>{
 	
 	public InputViewTextBox(int visibleLenght, int maxLenght){
 		super();
+		this.addStyleName("padding5");
 		this.setVisibleLength(visibleLenght);
 		this.setMaxLength(maxLenght);
 	}

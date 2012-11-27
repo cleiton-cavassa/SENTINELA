@@ -1,9 +1,9 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.corridas;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada;
 import cleiton.unisul.piweb.sistema.client.formularios.FormCorridaSolicitada;
-import cleiton.unisul.piweb.sistema.client.formularios.Formulario;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;

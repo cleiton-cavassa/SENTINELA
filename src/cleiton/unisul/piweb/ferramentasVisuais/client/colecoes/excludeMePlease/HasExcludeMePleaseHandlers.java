@@ -1,6 +1,6 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease;
 
-import cleiton.unisul.piweb.sistema.client.formularios.IsFormulario;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario;
 
 import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.event.shared.HasHandlers;

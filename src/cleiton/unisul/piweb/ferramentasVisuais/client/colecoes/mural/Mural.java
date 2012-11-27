@@ -1,9 +1,9 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEvent;
-import cleiton.unisul.piweb.sistema.client.formularios.IsFormulario;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

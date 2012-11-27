@@ -12,9 +12,13 @@ import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 
-@SuppressWarnings("serial")
-@PersistenceCapable
+@PersistenceCapable(detachable="true")
 public class FrotaDadosCompartilhados implements ObjetoChaveado {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2567723009307417897L;
 
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)

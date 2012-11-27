@@ -11,9 +11,13 @@ import javax.jdo.annotations.PrimaryKey;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
-@SuppressWarnings("serial")
-@PersistenceCapable
+@PersistenceCapable(detachable="true")
 public class ConviteEnviado implements ObjetoChaveado {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1426896638543186081L;
 
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)

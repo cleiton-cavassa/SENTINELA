@@ -12,10 +12,14 @@ import javax.jdo.annotations.PrimaryKey;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
-@SuppressWarnings("serial")
-@PersistenceCapable
+
+@PersistenceCapable(detachable="true")
 public class ClientePJ implements ObjetoChaveado {
     
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2244823849227873688L;
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")

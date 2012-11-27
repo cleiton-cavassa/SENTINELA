@@ -7,11 +7,11 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Widget;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar.PesquisaCallBack;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
-import cleiton.unisul.piweb.sistema.client.formularios.FormPesquisar;
-import cleiton.unisul.piweb.sistema.client.formularios.FormPesquisar.PesquisaCallBack;
 
 public class InputViewParChaveDescricao implements InputView<ParChaveDescricao>{
 	

@@ -2,10 +2,12 @@ package cleiton.unisul.piweb.sistema.client.formularios;
 
 import java.util.List;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar.PesquisaCallBack;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
-import cleiton.unisul.piweb.sistema.client.formularios.FormPesquisar.PesquisaCallBack;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;

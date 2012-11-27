@@ -1,8 +1,8 @@
 package cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
 import cleiton.unisul.piweb.sistema.client.formularios.FormClientePF;
-import cleiton.unisul.piweb.sistema.client.formularios.FormDadosDeContato;
 import cleiton.unisul.piweb.sistema.client.telaspopup.telasnovoregistro.TelaNovoRegistro;
 
 import com.google.gwt.event.dom.client.ClickEvent;

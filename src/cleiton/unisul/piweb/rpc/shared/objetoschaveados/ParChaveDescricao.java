@@ -8,10 +8,14 @@ import javax.jdo.annotations.PrimaryKey;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 
-@SuppressWarnings("serial")
-@PersistenceCapable
+@PersistenceCapable(detachable="true")
 public class ParChaveDescricao implements ObjetoChaveado{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8730906869318818438L;
+
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")

@@ -1,5 +1,6 @@
 package cleiton.unisul.piweb.sistema.client.formularios;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewForEnums;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF.Status;

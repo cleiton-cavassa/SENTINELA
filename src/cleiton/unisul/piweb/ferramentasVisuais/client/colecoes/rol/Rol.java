@@ -101,10 +101,10 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extend
 			T widget = parser.set();
 			
 			widget.addExcludeMeHandler(this);
-//			FlowPanel f= new FlowPanel();
-//				f.add(new BotaoMenos(f));
-//				f.add(widget);
-//			painelWidgets.add(f);
+//			FlowPanel flow= new FlowPanel();
+//				flow.add(new BotaoMenos(flow));
+//				flow.add(widget);
+//			painelWidgets.add(flow);
 			painelWidgets.add(widget);
 			formularios.add(widget);
 		}

@@ -1,0 +1,2 @@
+# Module cleiton.unisul.piweb.superusuario.superusuario
+# RPC service class, partial path of RPC policy file
