@@ -1,5 +1,7 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.formularios;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
+
 import com.google.gwt.user.client.ui.IsWidget;
 
 public interface IsFormulario extends IsWidget{
@@ -10,4 +12,7 @@ public interface IsFormulario extends IsWidget{
 	 * */
 	String validarDados();
 	String getTitulo();
+	
+	boolean setFecharHandler(FecharPopUpEventHandler f);
+	void fechar();
 }

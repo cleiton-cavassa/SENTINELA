@@ -3,6 +3,7 @@ package cleiton.unisul.piweb.superusuario.client.telas.formularios.basicos;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewForEnums;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewTextBox;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewWithTitle;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo.NivelAcesso;
 
@@ -13,7 +14,7 @@ public class FormDadosUsuarioAdministrativo extends
 
 	private FlowPanel flow = new FlowPanel();
 	
-	private InputViewTextBox email = new InputViewTextBox(50, 100);
+	private InputViewWithTitle<String> email = new InputViewWithTitle<String>("email",  new InputViewTextBox(50, 100));
 	private InputViewForEnums<NivelAcesso> nivel= 
 				new InputViewForEnums<NivelAcesso>
 					(NivelAcesso.Administrador1,

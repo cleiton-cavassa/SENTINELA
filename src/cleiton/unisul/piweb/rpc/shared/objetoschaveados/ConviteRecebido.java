@@ -14,11 +14,10 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @PersistenceCapable(detachable="true")
 public class ConviteRecebido implements ObjetoChaveado {
 
-	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 7542375069150710576L;
+	private static final long serialVersionUID = -6353431444954508293L;
 
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
@@ -26,13 +25,13 @@ public class ConviteRecebido implements ObjetoChaveado {
 	private String chave;
 	
 	@Persistent
-	private Long cnpj;
+	private long cnpj;
 	
 	@Persistent
 	private Date dataConvite;
 	
-	@Persistent
-	private Object frotaRemetente;
+	@Persistent//chave codificada
+	private String frotaRemetente;
 	
 	@Persistent
 	private String razaoSocial;
@@ -45,11 +44,11 @@ public class ConviteRecebido implements ObjetoChaveado {
 		this.chave = chave;
 	}
 
-	public Long getCnpj() {
+	public long getCnpj() {
 		return cnpj;
 	}
 
-	public void setCnpj(Long cnpj) {
+	public void setCnpj(long cnpj) {
 		this.cnpj = cnpj;
 	}
 
@@ -61,11 +60,11 @@ public class ConviteRecebido implements ObjetoChaveado {
 		this.dataConvite = dataConvite;
 	}
 
-	public Object getFrotaRemetente() {
+	public String getFrotaRemetente() {
 		return frotaRemetente;
 	}
 
-	public void setFrotaRemetente(Object frotaRemetente) {
+	public void setFrotaRemetente(String frotaRemetente) {
 		this.frotaRemetente = frotaRemetente;
 	}
 
@@ -88,4 +87,9 @@ public class ConviteRecebido implements ObjetoChaveado {
  		
  		return b.toString();
  	}
+	
+	@Override 
+	public String toString(){
+		return getResumo();
+	}
 }

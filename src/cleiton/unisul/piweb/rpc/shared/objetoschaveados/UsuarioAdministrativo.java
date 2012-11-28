@@ -3,6 +3,7 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
 
+import javax.jdo.annotations.FetchGroup;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
@@ -11,6 +12,10 @@ import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 @PersistenceCapable(detachable="true")
+@FetchGroup(name="grupo",members={
+		@Persistent(name="pessoaFisica"),
+		@Persistent(name="dadosUsuarioAdministrativo")
+		})
 public class UsuarioAdministrativo implements ObjetoChaveado{
 	
     /**
@@ -18,6 +23,8 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
 	 */
 	private static final long serialVersionUID = 7694901771463034009L;
 
+	public UsuarioAdministrativo() {}
+	
 	public enum NivelDeAcesso{Administrador1,Administrador2}
 	
 	@PrimaryKey
@@ -42,6 +49,9 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
 	
 	
 	public DadosUsuarioAdministrativo getDadosUsuarioAdministrativo() {
+		if(dadosUsuarioAdministrativo==null){
+			setDadosUsuarioAdministrativo(new DadosUsuarioAdministrativo());
+		}
 		return dadosUsuarioAdministrativo;
 	}
 
@@ -51,6 +61,9 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
 	}
 
 	public PessoaFisica getPessoaFisica() {
+		if(pessoaFisica==null){
+			setPessoaFisica(new PessoaFisica());
+		}
 		return pessoaFisica;
 	}
 
@@ -66,5 +79,10 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
     	p.gerarItem(b, "Dados do usuAdm", dadosUsuarioAdministrativo.getResumo());
 				
 		return b.toString();
+	}
+	
+	@Override
+	public String toString(){		
+		return dadosUsuarioAdministrativo.getEmail() + " - "+ dadosUsuarioAdministrativo.getNivelAcesso();
 	}
 }

@@ -1,6 +1,7 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -48,6 +49,18 @@ public class InputViewForEnums <T extends Enum<T>> implements InputView<T> {
 	@Override
 	public String validarDados() {
 		return null;
+	}
+
+	@Override
+	public boolean setFecharHandler(FecharPopUpEventHandler f) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void fechar() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

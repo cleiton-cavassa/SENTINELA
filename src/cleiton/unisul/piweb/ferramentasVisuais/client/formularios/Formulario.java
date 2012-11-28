@@ -1,5 +1,6 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.formularios;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 
 import com.google.gwt.user.client.ui.Composite;
@@ -7,6 +8,7 @@ import com.google.gwt.user.client.ui.Composite;
 abstract public class Formulario <Ob extends ObjetoChaveado>extends Composite implements IsFormulario, InputView<Ob>{
 	
 	private Ob objeto;
+	private FecharPopUpEventHandler f;
 
 	@Override
 	public String validarDados(){
@@ -29,8 +31,23 @@ abstract public class Formulario <Ob extends ObjetoChaveado>extends Composite im
 
 	@Override
 	public Ob getInput() {
-		return (objeto==null?criarInputVazio():objeto);
+		if(objeto==null){
+			setInput(criarInputVazio());
+		}
+		return objeto;
 	};
+
+	public boolean setFecharHandler(FecharPopUpEventHandler f){
+		this.f=f;
+		return true;
+	}
+	
+	public void fechar(){
+		try{
+			f.fecharPopUp();
+		}catch(Throwable t){}
+	}
+	
 	
 	/**
 	 * Esse método precisa ser implementado pelas subclasses de Formulario{@literal <Ob>},

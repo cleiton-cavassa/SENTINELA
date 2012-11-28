@@ -25,7 +25,7 @@ public class ConviteEnviado implements ObjetoChaveado {
 	private String chave;
 	
 	@Persistent
-	private Long cnpj;
+	private long cnpj;
 	
 	@Persistent
 	private Date dataConvite;
@@ -45,12 +45,12 @@ public class ConviteEnviado implements ObjetoChaveado {
 	}
 
 
-	public Long getCnpj() {
+	public long getCnpj() {
 		return cnpj;
 	}
 
 
-	public void setCnpj(Long cnpj) {
+	public void setCnpj(long cnpj) {
 		this.cnpj = cnpj;
 	}
 

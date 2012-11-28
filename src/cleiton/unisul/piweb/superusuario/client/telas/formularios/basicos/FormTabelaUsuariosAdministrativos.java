@@ -1,9 +1,11 @@
 package cleiton.unisul.piweb.superusuario.client.telas.formularios.basicos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 import cleiton.unisul.piweb.rpc.client.TabelasAtualizador;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormUsuarioAdministrativo;
@@ -23,24 +25,27 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.view.client.ListDataProvider;
 
 public class FormTabelaUsuariosAdministrativos extends Composite implements
-		InputView<List<UsuarioAdministrativo>> {
+		InputView<ArrayList<UsuarioAdministrativo>> {
 
 	
 	
-	private TabelasAtualizador<UsuarioAdministrativo> atualizador;
-	private UsuarioAdministrativo exemplo =new UsuarioAdministrativo();
+//	private TabelasAtualizador<UsuarioAdministrativo> atualizador;
+//	private UsuarioAdministrativo exemplo =new UsuarioAdministrativo();
 	private ListDataProvider<UsuarioAdministrativo> dp= new ListDataProvider<UsuarioAdministrativo>();
 
-	private ClickHandler hNovo = new ClickHandler() {
-		@Override
-		public void onClick(ClickEvent event) {
-			new CriadorTela(new FormUsuarioAdministrativo()).execute();
-		}
-	};
+
 	
 	public FormTabelaUsuariosAdministrativos(){
 		
-		atualizador=new TabelasAtualizador<UsuarioAdministrativo>(dp);
+//		atualizador=new TabelasAtualizador<UsuarioAdministrativo>(dp);
+		
+		
+		ClickHandler hNovo = new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				new CriadorTela(new FormUsuarioAdministrativo(dp)).execute();
+			}
+		};
 		
 		FlowPanel flow = new FlowPanel();
 		initWidget(flow);
@@ -73,9 +78,13 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 		TextColumn<UsuarioAdministrativo> textColumn = new TextColumn<UsuarioAdministrativo>() {
 			@Override
 			public String getValue(UsuarioAdministrativo object) {
-				return object.
+				try{
+					return object.
 						getDadosUsuarioAdministrativo().
 						getEmail();
+				}catch(NullPointerException nEx){
+					return "vazio";
+				}
 			}
 		};
 		cellTable.addColumn(textColumn, "email");
@@ -83,21 +92,26 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 		TextColumn<UsuarioAdministrativo> textColumnNivel = new TextColumn<UsuarioAdministrativo>() {
 			@Override
 			public String getValue(UsuarioAdministrativo object) {
-				return object.
+				try{
+					return object.
 						getDadosUsuarioAdministrativo().
 						getNivelAcesso().toString();
+				}catch(NullPointerException nEx){
+					return "vazio";
+				}
+				
 			}
 		};
 		cellTable.addColumn(textColumnNivel, "Nivel");
 				
 		dp.addDataDisplay(cellTable);
-		atualizar();
+//		atualizar();
 
 	}
 
-	public void atualizar(){
-		atualizador.atualizar(exemplo, dp);
-	}
+//	public void atualizar(){
+//		atualizador.atualizar(exemplo, dp);
+//	}
 
 	@Override
 	public String validarDados() {
@@ -110,14 +124,28 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 	}
 
 	@Override
-	public boolean setInput(List<UsuarioAdministrativo> input) {
+	public boolean setInput(ArrayList<UsuarioAdministrativo> input) {
 		dp.setList(input);
 		return true;
 	}
 
 	@Override
-	public List<UsuarioAdministrativo> getInput() {
-		return dp.getList();
+	public ArrayList<UsuarioAdministrativo> getInput() {
+		ArrayList<UsuarioAdministrativo> a = new ArrayList<UsuarioAdministrativo>(dp.getList().size());
+				a.addAll(dp.getList());
+		return a;
+	}
+
+	@Override
+	public boolean setFecharHandler(FecharPopUpEventHandler f) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void fechar() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

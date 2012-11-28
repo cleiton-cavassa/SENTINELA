@@ -11,6 +11,7 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar.PesquisaCallBack;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
 
 public class InputViewParChaveDescricao implements InputView<ParChaveDescricao>{
@@ -94,6 +95,18 @@ public class InputViewParChaveDescricao implements InputView<ParChaveDescricao>{
 	@Override
 	public ParChaveDescricao getInput() {
 		return inputProperty.getInput();
+	}
+
+	@Override
+	public boolean setFecharHandler(FecharPopUpEventHandler f) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void fechar() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

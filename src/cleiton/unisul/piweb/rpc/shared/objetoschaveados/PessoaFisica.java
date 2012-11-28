@@ -24,10 +24,10 @@ public class PessoaFisica implements ObjetoChaveado, Serializable  {
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
 	
-	@Persistent(defaultFetchGroup="true")
+	@Persistent
 	private DadosPessoaFisica dadosPessoaFisica;
 	
-	@Persistent(defaultFetchGroup="true")
+	@Persistent
 	private DadosDeContato dadosDeContato;
 
 
@@ -45,9 +45,9 @@ public class PessoaFisica implements ObjetoChaveado, Serializable  {
 
 
 	public DadosPessoaFisica getDadosPessoaFisica() {
-//		if(dadosPessoaFisica==null){
-//			setDadosPessoaFisica(new DadosPessoaFisica());
-//		}
+		if(dadosPessoaFisica==null){
+			setDadosPessoaFisica(new DadosPessoaFisica());
+		}
 		return dadosPessoaFisica;
 	}
 
@@ -60,6 +60,9 @@ public class PessoaFisica implements ObjetoChaveado, Serializable  {
 
 
 	public DadosDeContato getDadosDeContato() {
+		if(dadosDeContato==null){
+			setDadosDeContato(new DadosDeContato());
+		}
 		return dadosDeContato;
 	}
 

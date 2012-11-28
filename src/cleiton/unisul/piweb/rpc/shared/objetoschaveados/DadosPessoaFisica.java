@@ -1,6 +1,7 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
@@ -55,6 +56,9 @@ public class DadosPessoaFisica implements ObjetoChaveado, Serializable  {
 	}
 	
 	public Collection<String> getIdiomasFalados() {
+		if(idiomasFalados==null){
+			setIdiomasFalados(new ArrayList<String>());
+		}
 		return idiomasFalados;
 	}
 	

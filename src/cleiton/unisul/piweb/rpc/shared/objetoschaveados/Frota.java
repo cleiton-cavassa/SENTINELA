@@ -3,6 +3,7 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 import java.util.ArrayList;
 
 import javax.jdo.annotations.Extension;
+import javax.jdo.annotations.FetchGroup;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -12,6 +13,10 @@ import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 @PersistenceCapable(detachable="true")
+@FetchGroup(name="grupo",members={
+		@Persistent(name="usuariosAdministrativos"),
+		@Persistent(name="meusDadosCompartilhados")
+		})
 public class Frota implements ObjetoChaveado{
 	
 	/**
@@ -19,6 +24,7 @@ public class Frota implements ObjetoChaveado{
 	 */
 	private static final long serialVersionUID = 5996312483963695634L;
 
+	
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
@@ -36,7 +42,7 @@ public class Frota implements ObjetoChaveado{
 	@Persistent
 	ArrayList<FrotaDadosCompartilhados> frotasParceirasForaDaRede;
 	
-	@Persistent//chave codificada
+	@Persistent//chaves codificadas
 	ArrayList<String> frotasParceirasNaRede;
 	
 	@Persistent
@@ -49,7 +55,7 @@ public class Frota implements ObjetoChaveado{
 	ArrayList<UsuarioAdministrativo> usuariosAdministrativos;
 	
 	@Persistent
-	ArrayList<ConviteRecebido> convitesEnviadosPendentes;
+	ArrayList<ConviteEnviado> convitesEnviadosPendentes;
 	
 	@Persistent
 	ArrayList<ConviteRecebido> convitesRecebidosPendentes;
@@ -63,6 +69,9 @@ public class Frota implements ObjetoChaveado{
 	}
 
 	public ArrayList<CorridaCancelada> getCorridasCanceladas() {
+		if(corridasCanceladas==null){
+			setCorridasCanceladas(new ArrayList<CorridaCancelada>());
+		}
 		return corridasCanceladas;
 	}
 
@@ -71,6 +80,9 @@ public class Frota implements ObjetoChaveado{
 	}
 
 	public ArrayList<CorridaFinalizada> getCorridasFinalizadas() {
+		if(corridasFinalizadas==null){
+			setCorridasFinalizadas(new ArrayList<CorridaFinalizada>());
+		}
 		return corridasFinalizadas;
 	}
 
@@ -80,6 +92,9 @@ public class Frota implements ObjetoChaveado{
 	}
 
 	public ArrayList<CorridaSolicitada> getCorridasSolicitadas() {
+		if(corridasSolicitadas==null){
+			setCorridasSolicitadas(new ArrayList<CorridaSolicitada>());
+		}
 		return corridasSolicitadas;
 	}
 
@@ -89,6 +104,9 @@ public class Frota implements ObjetoChaveado{
 	}
 
 	public ArrayList<FrotaDadosCompartilhados> getFrotasParceirasForaDaRede() {
+		if(frotasParceirasForaDaRede==null){
+			setFrotasParceirasForaDaRede(new ArrayList<FrotaDadosCompartilhados>());
+		}
 		return frotasParceirasForaDaRede;
 	}
 
@@ -98,6 +116,9 @@ public class Frota implements ObjetoChaveado{
 	}
 
 	public ArrayList<String> getFrotasParceirasNaRede() {
+		if(frotasParceirasNaRede==null){
+			setFrotasParceirasNaRede(new ArrayList<String>());
+		}
 		return frotasParceirasNaRede;
 	}
 
@@ -106,6 +127,9 @@ public class Frota implements ObjetoChaveado{
 	}
 
 	public FrotaDadosCompartilhados getMeusDadosCompartilhados() {
+		if(meusDadosCompartilhados==null){
+			setMeusDadosCompartilhados(new FrotaDadosCompartilhados());
+		}
 		return meusDadosCompartilhados;
 	}
 
@@ -115,6 +139,9 @@ public class Frota implements ObjetoChaveado{
 	}
 
 	public ArrayList<Motorista> getMotoristas() {
+		if(motoristas==null){
+			setMotoristas(new ArrayList<Motorista>());
+		}
 		return motoristas;
 	}
 
@@ -123,6 +150,9 @@ public class Frota implements ObjetoChaveado{
 	}
 
 	public ArrayList<UsuarioAdministrativo> getUsuariosAdministrativos() {
+		if(usuariosAdministrativos==null){
+			setUsuariosAdministrativos(new ArrayList<UsuarioAdministrativo>());
+		}
 		return usuariosAdministrativos;
 	}
 
@@ -131,16 +161,22 @@ public class Frota implements ObjetoChaveado{
 		this.usuariosAdministrativos = usuariosAdministrativos;
 	}
 
-	public ArrayList<ConviteRecebido> getConvitesEnviadosPendentes() {
+	public ArrayList<ConviteEnviado> getConvitesEnviadosPendentes() {
+		if(convitesEnviadosPendentes==null){
+			setConvitesEnviadosPendentes(new ArrayList<ConviteEnviado>());
+		}
 		return convitesEnviadosPendentes;
 	}
 
 	public void setConvitesEnviadosPendentes(
-			ArrayList<ConviteRecebido> convitesEnviadosPendentes) {
+			ArrayList<ConviteEnviado> convitesEnviadosPendentes) {
 		this.convitesEnviadosPendentes = convitesEnviadosPendentes;
 	}
 
 	public ArrayList<ConviteRecebido> getConvitesRecebidosPendentes() {
+		if(convitesRecebidosPendentes==null){
+			setConvitesRecebidosPendentes(new ArrayList<ConviteRecebido>());
+		}
 		return convitesRecebidosPendentes;
 	}
 

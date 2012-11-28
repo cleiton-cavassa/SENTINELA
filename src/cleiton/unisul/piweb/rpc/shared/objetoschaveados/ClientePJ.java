@@ -1,6 +1,7 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.jdo.annotations.Extension;
@@ -40,6 +41,9 @@ public class ClientePJ implements ObjetoChaveado {
 	}
 
 	public DadosClientePJ getDadosClientePJ() {
+		if (dadosClientePJ==null){
+			setDadosClientePJ(new DadosClientePJ());
+		}
 		return dadosClientePJ;
 	}
 
@@ -48,6 +52,9 @@ public class ClientePJ implements ObjetoChaveado {
 	}
 
 	public List<ParChaveDescricao> getClientesPFVinculados() {
+		if (clientesPFVinculados==null){
+			setClientesPFVinculados(new ArrayList<ParChaveDescricao>());
+		}
 		return clientesPFVinculados;
 	}
 
@@ -56,6 +63,9 @@ public class ClientePJ implements ObjetoChaveado {
 	}
 
 	public PessoaJuridica getPessoaJuridica() {
+		if (pessoaJuridica==null){
+			setPessoaJuridica(new PessoaJuridica());
+		}
 		return pessoaJuridica;
 	}
 

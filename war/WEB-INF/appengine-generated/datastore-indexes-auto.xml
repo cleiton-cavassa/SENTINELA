@@ -1,4 +1,10 @@
-<!-- Indices written at Tue, 27 Nov 2012 01:04:05 BRST -->
+<!-- Indices written at Wed, 28 Nov 2012 02:16:08 BRST -->
 
-<datastore-indexes/>
+<datastore-indexes>
 
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="UsuarioAdministrativo" ancestor="true" source="auto">
+        <property name="usuariosAdministrativos_INTEGER_IDX" direction="asc"/>
+    </datastore-index>
+
+</datastore-indexes>

@@ -3,6 +3,7 @@ package cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl;
 import java.util.Date;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -47,6 +48,18 @@ public class InputViewForDate implements InputView<Date> {
 	@Override
 	public String validarDados() {
 		return null;
+	}
+
+	@Override
+	public boolean setFecharHandler(FecharPopUpEventHandler f) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void fechar() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

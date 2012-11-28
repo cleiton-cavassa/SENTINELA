@@ -16,7 +16,10 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("armazenamento")
 public interface Armazenamento extends RemoteService {
 	
-	<T extends ObjetoChaveado> RespostaPersistencia persistir(T obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);
+	<T extends ObjetoChaveado> RespostaPersistencia persistir
+	(T obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado)
+	throws Exception;
+	
 	<T extends ObjetoChaveado> List<T> recuperar(T exemplo) throws Exception;
 
 //	RespostaPersistencia persistir(ClientePF obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado);

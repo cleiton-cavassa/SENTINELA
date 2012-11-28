@@ -1,14 +1,11 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
-import java.io.Serializable;
-
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.FetchGroup;
 import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
-
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
@@ -20,7 +17,7 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 								@Persistent(name="preferencias"),
 								@Persistent(name="dadosClientePF")
 								})
-public class ClientePF implements ObjetoChaveado, Serializable {
+public class ClientePF implements ObjetoChaveado{
 	
 	/**
 	 * 
@@ -46,6 +43,9 @@ public class ClientePF implements ObjetoChaveado, Serializable {
 
 
 	public DadosPessoaFisica getDadosPessoaFisica() {
+		if (dadosPessoaFisica==null){
+			setDadosPessoaFisica(new DadosPessoaFisica());
+		}
 		return dadosPessoaFisica;
 	}
 
@@ -54,6 +54,9 @@ public class ClientePF implements ObjetoChaveado, Serializable {
 	}
 	
 	public DadosDeContato getDadosDeContato() {
+		if (dadosDeContato==null){
+			setDadosDeContato(new DadosDeContato());
+		}
 		return dadosDeContato;
 	}
 
@@ -63,9 +66,9 @@ public class ClientePF implements ObjetoChaveado, Serializable {
 
 
 	public DadosClientePF getDadosClientePF() {
-//		if(dadosClientePF==null){
-//			setDadosClientePF(new DadosClientePF());
-//		}
+		if(dadosClientePF==null){
+			setDadosClientePF(new DadosClientePF());
+		}
 		return dadosClientePF;
 	}
 
@@ -79,9 +82,9 @@ public class ClientePF implements ObjetoChaveado, Serializable {
 	
 
 	public Preferencias getPreferencias() {
-//		if(preferencias==null){
-//			setPreferencias(new Preferencias());
-//		}
+		if(preferencias==null){
+			setPreferencias(new Preferencias());
+		}
 		return preferencias;
 	}
 

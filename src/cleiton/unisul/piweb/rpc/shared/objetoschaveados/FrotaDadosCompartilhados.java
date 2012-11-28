@@ -1,8 +1,10 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.jdo.annotations.Extension;
+import javax.jdo.annotations.FetchGroup;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -13,6 +15,9 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 
 
 @PersistenceCapable(detachable="true")
+@FetchGroup(name="grupo",members={
+		@Persistent(name="dadosPessoaJuridica")
+		})
 public class FrotaDadosCompartilhados implements ObjetoChaveado {
 
 	/**
@@ -20,6 +25,8 @@ public class FrotaDadosCompartilhados implements ObjetoChaveado {
 	 */
 	private static final long serialVersionUID = -2567723009307417897L;
 
+	public FrotaDadosCompartilhados(){}
+	
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
@@ -43,6 +50,9 @@ public class FrotaDadosCompartilhados implements ObjetoChaveado {
 	}
 
 	public Collection<ClientePF> getClientesPF() {
+		if(clientesPF==null){
+			setClientesPF(new ArrayList<ClientePF>());
+		}
 		return clientesPF;
 	}
 
@@ -51,6 +61,9 @@ public class FrotaDadosCompartilhados implements ObjetoChaveado {
 	}
 
 	public Collection<ClientePJ> getClientesPJ() {
+		if(clientesPJ==null){
+			setClientesPJ(new ArrayList<ClientePJ>());
+		}
 		return clientesPJ;
 	}
 
@@ -59,6 +72,9 @@ public class FrotaDadosCompartilhados implements ObjetoChaveado {
 	}
 
 	public PessoaJuridica getDadosPessoaJuridica() {
+		if(dadosPessoaJuridica==null){
+			setDadosPessoaJuridica(new PessoaJuridica());
+		}
 		return dadosPessoaJuridica;
 	}
 

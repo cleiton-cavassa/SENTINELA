@@ -4,6 +4,7 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEvent;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -107,7 +108,7 @@ public class Mural <Input extends Object> extends Composite implements InputView
 		private final CaixaInput eu = this;
 
 		
-		private void fechar(){
+		public void fechar(){
 			try {
 				eu.fireEvent(new FecharPopUpEvent());
 			} catch (Exception e) {
@@ -157,7 +158,14 @@ public class Mural <Input extends Object> extends Composite implements InputView
 		@Override
 		public String getTitulo() {
 			return inputView.getTitulo();
-		}	
+		}
+
+		@Override
+		public boolean setFecharHandler(FecharPopUpEventHandler f) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
 	}
 	
 	@Override
@@ -167,6 +175,17 @@ public class Mural <Input extends Object> extends Composite implements InputView
 	
 	public interface InputParser <Input extends Object, Output extends Object> {
 		Output parse(Input input);
+	}
+
+	@Override
+	public boolean setFecharHandler(FecharPopUpEventHandler f) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public void fechar() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

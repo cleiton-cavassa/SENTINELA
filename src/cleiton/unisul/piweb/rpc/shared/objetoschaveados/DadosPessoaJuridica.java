@@ -1,5 +1,6 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.jdo.annotations.Extension;
@@ -23,8 +24,10 @@ public class DadosPessoaJuridica implements ObjetoChaveado {
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
 	
+	public DadosPessoaJuridica(){}
+	
 	@Persistent
-	private Long cnpj;
+	private long cnpj;
 	
 	@Persistent
 	private String razaoSocial;
@@ -43,12 +46,12 @@ public class DadosPessoaJuridica implements ObjetoChaveado {
 	}
 
 
-	public Long getCnpj() {
+	public long getCnpj() {
 		return cnpj;
 	}
 
 
-	public void setCnpj(Long cnpj) {
+	public void setCnpj(long cnpj) {
 		this.cnpj = cnpj;
 	}
 
@@ -64,6 +67,9 @@ public class DadosPessoaJuridica implements ObjetoChaveado {
 
 
 	public Collection<String> getRegioesDeAtuacao() {
+		if(regioesDeAtuacao==null){
+			setRegioesDeAtuacao(new ArrayList<String>());
+		}
 		return regioesDeAtuacao;
 	}
 

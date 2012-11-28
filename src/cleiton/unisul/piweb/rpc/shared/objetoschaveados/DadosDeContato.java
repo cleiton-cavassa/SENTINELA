@@ -1,6 +1,7 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.jdo.annotations.Extension;
@@ -21,6 +22,8 @@ public class DadosDeContato implements ObjetoChaveado, Serializable {
 	 */
 	private static final long serialVersionUID = 8294374056793000729L;
 
+	public DadosDeContato(){}
+	
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
@@ -45,6 +48,9 @@ public class DadosDeContato implements ObjetoChaveado, Serializable {
 	}
 
 	public Collection<String> getEmails() {
+		if(emails==null){
+			setEmails(new ArrayList<String>());
+		}
 		return emails;
 	}
 
@@ -65,6 +71,9 @@ public class DadosDeContato implements ObjetoChaveado, Serializable {
 
 
 	public Collection<String> getTelefones() {
+		if(telefones==null){
+			setTelefones(new ArrayList<String>());
+		}
 		return telefones;
 	}
 

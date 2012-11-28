@@ -21,7 +21,8 @@ public class TelaPopUp extends PopupPanel implements FecharPopUpEventHandler{
 	}
 	public void setTela(IsFormulario tela) {
 		this.tela = tela;
-		tela.asWidget().addHandler(this, FecharPopUpEventType.get());
+//		tela.asWidget().addHandler(this, FecharPopUpEventType.get());
+		tela.setFecharHandler(this);
 		String s = tela.getTitulo();
 		if(s!=null){
 			labelTitulo.setText(s);

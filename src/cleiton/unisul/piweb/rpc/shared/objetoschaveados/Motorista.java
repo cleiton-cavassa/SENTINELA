@@ -41,6 +41,9 @@ public class Motorista implements ObjetoChaveado {
 	}
 
 	public PessoaFisica getDadosPessoais() {
+		if(dadosPessoais==null){
+			setDadosPessoais(new PessoaFisica());
+		}
 		return dadosPessoais;
 	}
 
@@ -49,6 +52,9 @@ public class Motorista implements ObjetoChaveado {
 	}
 
 	public DadosProfissionais getDadosProfissionais() {
+		if(dadosProfissionais==null){
+			setDadosProfissionais(new DadosProfissionais());
+		}
 		return dadosProfissionais;
 	}
 
@@ -57,6 +63,9 @@ public class Motorista implements ObjetoChaveado {
 	}
 
 	public Preferencias getPreferencias() {
+		if(preferencias==null){
+			setPreferencias(new Preferencias());
+		}
 		return preferencias;
 	}
 

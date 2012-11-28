@@ -1,5 +1,7 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
+
 
 public class InputViewCNPJ extends InputViewMascara {
 	
@@ -46,6 +48,18 @@ public class InputViewCNPJ extends InputViewMascara {
 	@Override
 	public String nomeCampo() {
 		return "CNPJ";
+	}
+
+	@Override
+	public boolean setFecharHandler(FecharPopUpEventHandler f) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void fechar() {
+		// TODO Auto-generated method stub
+		
 	}
 
 		

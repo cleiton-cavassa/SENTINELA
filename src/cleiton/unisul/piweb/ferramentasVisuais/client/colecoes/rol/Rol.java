@@ -8,6 +8,7 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.E
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.ExcludeMePleaseHandler;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.HasExcludeMePleaseHandlers;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -141,5 +142,17 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extend
 		}else{
 			return null;
 		}
+	}
+
+	@Override
+	public boolean setFecharHandler(FecharPopUpEventHandler f) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void fechar() {
+		// TODO Auto-generated method stub
+		
 	}
 }

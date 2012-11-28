@@ -17,6 +17,8 @@ public class TabelasAtualizador<Ob extends ObjetoChaveado> {
 	}
 	
 	public boolean atualizar(Ob exemplo, ListDataProvider<Ob> dataProvider){
+		Window.alert("AAAAAA");
+		
 		if(exemplo==null){
 			return false;
 		}
@@ -28,7 +30,8 @@ public class TabelasAtualizador<Ob extends ObjetoChaveado> {
 		
 		@Override
 		public void onFailure(Throwable caught) {
-			Window.alert("Falha ao atualizar tabela. Tente novamente mais tarde.");
+			Window.alert("Falha ao atualizar tabela:\n"+caught.getLocalizedMessage()+"\n"+caught.getMessage());
+			caught.printStackTrace();			
 		}
 
 		@Override

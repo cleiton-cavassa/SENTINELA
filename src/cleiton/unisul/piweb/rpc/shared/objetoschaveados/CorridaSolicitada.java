@@ -52,6 +52,9 @@ public class CorridaSolicitada implements ObjetoChaveado {
 	}
 
 	public ParChaveDescricao getCliente() {
+		if(cliente==null){
+			setCliente(new ParChaveDescricao());
+		}
 		return cliente;
 	}
 
@@ -60,6 +63,9 @@ public class CorridaSolicitada implements ObjetoChaveado {
 	}
 
 	public ParChaveDescricao getMotorista() {
+		if(motorista==null){
+			setMotorista(new ParChaveDescricao());
+		}
 		return motorista;
 	}
 

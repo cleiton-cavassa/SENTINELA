@@ -2,7 +2,6 @@ package cleiton.unisul.piweb.rpc.server;
 
 import java.util.List;
 
-import javax.jdo.FetchPlan;
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
@@ -30,7 +29,7 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 		}
 	
 	@Override 
-	public <T extends ObjetoChaveado> RespostaPersistencia persistir(T obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
+	public <T extends ObjetoChaveado> RespostaPersistencia persistir(T obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado)throws Exception{return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 	@Override 
 	public <T extends ObjetoChaveado> List<T> recuperar(T exemplo) throws Exception{return recupera(exemplo);}
 	
@@ -65,7 +64,7 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 //		return resposta;
 //	}
 	
-	private <T extends ObjetoChaveado>RespostaPersistencia persiste(T objeto, Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado){
+	private <T extends ObjetoChaveado>RespostaPersistencia persiste(T objeto, Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado)throws Exception{
 		PersistenceManager pm=pm();
 		RespostaPersistencia resultado=new RespostaPersistencia();
 		
@@ -88,7 +87,7 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 				objetoJaExiste=false;
 				conformeEsperado=novoRegistro;
 			}catch(Throwable t){
-				throw new RuntimeException(t.getMessage());
+				throw new java.lang.Exception("BBBBB"+t.getMessage());
 			}
 		}
 		if((salvarMesmoSeNaoOcorrerOEsperado.booleanValue())||(conformeEsperado==null?false:conformeEsperado.booleanValue())){
@@ -97,7 +96,7 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 				salvoComSucesso=true;
 			}catch(Throwable t){
 				salvoComSucesso=false;
-				throw new RuntimeException(t.getMessage());
+				throw new java.lang.Exception("AAAAA"+t.getMessage());
 			}finally {
 				pm.close();
 			}
@@ -118,7 +117,7 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 		List<T> result;
 	    PersistenceManager pm = pm();
 		pm.getFetchPlan().addGroup("grupo");
-//		pm.getFetchPlan().setMaxFetchDepth(-1);
+		pm.getFetchPlan().setMaxFetchDepth(-1);
 //		pm.getFetchPlan().setFetchSize(FetchPlan.FETCH_SIZE_GREEDY);
 		
 		List<T> a=(List<T>)consulta(pm, "select from "+exemplo.getClass().getName());

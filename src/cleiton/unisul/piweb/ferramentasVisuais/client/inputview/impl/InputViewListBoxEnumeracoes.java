@@ -1,6 +1,7 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.ListBox;
@@ -76,5 +77,17 @@ public class InputViewListBoxEnumeracoes <T extends Enum<T>> extends ListBox imp
 	@Override
 	public String validarDados() {
 		return null;
+	}
+
+	@Override
+	public boolean setFecharHandler(FecharPopUpEventHandler f) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void fechar() {
+		// TODO Auto-generated method stub
+		
 	}
 }

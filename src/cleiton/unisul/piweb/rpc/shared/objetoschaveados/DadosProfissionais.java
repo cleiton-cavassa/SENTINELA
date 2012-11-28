@@ -1,5 +1,6 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.jdo.annotations.Extension;
@@ -47,6 +48,9 @@ public class DadosProfissionais implements ObjetoChaveado {
 	}
 
 	public Collection<Turno> getTurnos() {
+		if(turnos==null){
+			setTurnos(new ArrayList<Turno>());
+		}
 		return turnos;
 	}
 

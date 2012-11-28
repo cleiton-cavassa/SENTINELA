@@ -18,6 +18,16 @@ public class BotaoSalvar <Ob extends ObjetoChaveado>extends Button {
 	private boolean salvarMesmoSeNaoOcorrerOEsperado;
 	private AsyncCallback<RespostaPersistencia> callback;
 
+	
+	/**
+	 * Cria um botão especial com um ClickHandler preconfigurado, o qual aciona uma RPC de persistência de objeto a cada clique.
+	 * @param texto Texto que será exibido no botão
+	 * @param inputView O objeto InputView que armazena o objeto a ser salvo 
+	 * @param novoRegistro <i>true</i> Se o objetivo do botão é salvar um objeto preexistente no banco de dados. <i>false</i> caso contrário. 
+	 * @param salvarMesmoSeNaoOcorrerOEsperado Caso o objeto já exista, e se esperava que ele não existisse 
+	 * (ou vice-versa), o que fazer? Informe <i>true</i> para continuar em todo caso, e <i>false</i> para desistir caso as coisas não ocorram conforme esperado.
+	 * @param Objeto de callback AsyncCallback<> que deve ser acionada quando a persistência chegar ao fim.
+	 */
 	public BotaoSalvar(String texto, InputView<Ob> inputView, boolean novoRegistro,
 			boolean salvarMesmoSeNaoOcorrerOEsperado, AsyncCallback<RespostaPersistencia> callback) {
 		super(texto);

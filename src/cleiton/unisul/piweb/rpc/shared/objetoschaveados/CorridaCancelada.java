@@ -47,6 +47,9 @@ public class CorridaCancelada implements ObjetoChaveado {
 
 
 	public CorridaSolicitada getCorridaSolicitada() {
+		if(corridaSolicitada==null){
+			setCorridaSolicitada(corridaSolicitada);
+		}
 		return corridaSolicitada;
 	}
 

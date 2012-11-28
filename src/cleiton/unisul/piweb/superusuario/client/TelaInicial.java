@@ -7,6 +7,7 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormFrota;
 
 import com.google.gwt.cell.client.ButtonCell;
+import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.cellview.client.CellTable;
@@ -26,10 +27,14 @@ public class TelaInicial extends Composite{
 	private Frota exemplo = new Frota();
 	private ListDataProvider<Frota> dp=new ListDataProvider<Frota>();
 	
+	
+	
+	
+	
 	private ClickHandler hNovo = new ClickHandler() {
 		@Override
 		public void onClick(ClickEvent event) {
-			new CriadorTela(new FormFrota()).execute();
+			new CriadorTela(new FormFrota(atualizador, dp)).execute();
 		}
 	};
 	
@@ -67,6 +72,17 @@ public class TelaInicial extends Composite{
 		};
 		cellTable.addColumn(column);
 		
+		column.setFieldUpdater(new FieldUpdater<Frota, String>() {
+			
+			@Override
+			public void update(int index, Frota object, String value) {
+				FormFrota f =new FormFrota(atualizador, dp);
+				f.setInput(object);
+				new CriadorTela(f).execute();
+				
+			}
+		});
+		
 		TextColumn<Frota> textColumn = new TextColumn<Frota>() {
 			@Override
 			public String getValue(Frota object) {
@@ -99,6 +115,7 @@ public class TelaInicial extends Composite{
 				return object.
 						getUsuariosAdministrativos().
 						toString();
+//				return "";
 			}
 		};
 		cellTable.addColumn(textColumn_2, "Administradores");
