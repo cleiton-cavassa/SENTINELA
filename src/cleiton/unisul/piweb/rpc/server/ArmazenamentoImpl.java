@@ -10,21 +10,12 @@ import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.antigos.ClientesPFePJ;
-//import cleiton.unisul.piweb.shared.Corrida;
-//import cleiton.unisul.piweb.shared.CorridaAtendida;
-//import cleiton.unisul.piweb.shared.CorridaCancelada;
-//import cleiton.unisul.piweb.shared.CorridaMarcada;
-//import cleiton.unisul.piweb.shared.Expediente;
-//import cleiton.unisul.piweb.shared.Frota;
-//import cleiton.unisul.piweb.shared.Motorista;
-//import cleiton.unisul.piweb.shared.Usuario;
+
 
 @SuppressWarnings("serial")
 public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenamento{
 	PersistenceManager pm(){
-//		PersistenceManagerFactory p = PMF.get();
-//		p.setDetachAllOnCommit(true);
+
 		return PMF.get().getPersistenceManager();
 		}
 	
@@ -32,8 +23,33 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 	public <T extends ObjetoChaveado> RespostaPersistencia persistir(T obj,Boolean novoRegistro, Boolean salvarMesmoSeNaoOcorrerOEsperado)throws Exception{return persiste(obj, novoRegistro, salvarMesmoSeNaoOcorrerOEsperado);}
 	@Override 
 	public <T extends ObjetoChaveado> List<T> recuperar(T exemplo) throws Exception{return recupera(exemplo);}
-	
+	@Override
+	public <T extends ObjetoChaveado>RespostaPersistencia excluir(T obj){return exclui(obj);}
 
+	
+	private RespostaPersistencia exclui(ObjetoChaveado obj){
+		
+		
+		PersistenceManager pm=pm();
+		RespostaPersistencia resultado=new RespostaPersistencia();
+		
+		Boolean conformeEsperado=null;
+		Boolean objetoJaExiste=null;
+		Boolean salvoComSucesso=null;
+			try {
+				pm.deletePersistent(obj);
+				salvoComSucesso=true;
+			}catch(Throwable t){
+				salvoComSucesso=false;
+				throw new RuntimeException("AAAAA"+t.getMessage());
+			}finally {
+				pm.close();
+			}
+		resultado.setIdObjetoJaExistia(objetoJaExiste);
+		resultado.setObjetoConformeEsperado(conformeEsperado);
+		resultado.setOperacaoBemSucedida(salvoComSucesso);
+		return resultado;
+	}
 	
 //	@Override
 //	public List<ClientesPFePJ> montarLista(ClientesPFePJ exemplo) throws Exception{

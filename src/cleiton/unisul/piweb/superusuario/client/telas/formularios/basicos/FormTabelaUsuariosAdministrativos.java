@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputViewFactory;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
-import cleiton.unisul.piweb.rpc.client.TabelasAtualizador;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.ColumnEditar;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormUsuarioAdministrativo;
+import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormUsuarioAdministrativo.BotoesHandler;
 
 import com.google.gwt.cell.client.ButtonCell;
+import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.cellview.client.CellTable;
@@ -27,13 +30,26 @@ import com.google.gwt.view.client.ListDataProvider;
 public class FormTabelaUsuariosAdministrativos extends Composite implements
 		InputView<ArrayList<UsuarioAdministrativo>> {
 
-	
-	
-//	private TabelasAtualizador<UsuarioAdministrativo> atualizador;
-//	private UsuarioAdministrativo exemplo =new UsuarioAdministrativo();
 	private ListDataProvider<UsuarioAdministrativo> dp= new ListDataProvider<UsuarioAdministrativo>();
 
-
+	private FormUsuarioAdministrativo getFormUsuAdm(){
+		FormUsuarioAdministrativo f = new FormUsuarioAdministrativo();
+		f.addSalvarHandler(new BotoesHandler() {
+			
+			@Override
+			public void sucesso(UsuarioAdministrativo salvo) {
+				List<UsuarioAdministrativo> l = dp.getList();
+				UsuarioAdministrativo usu = salvo;
+				int ind = l.indexOf(usu);
+				if(ind!=-1){
+					l.set(ind, usu);
+				}else{
+					l.add(usu);
+				}
+			}
+		});
+		return f;
+	}
 	
 	public FormTabelaUsuariosAdministrativos(){
 		
@@ -43,9 +59,11 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 		ClickHandler hNovo = new ClickHandler() {
 			@Override
 			public void onClick(ClickEvent event) {
-				new CriadorTela(new FormUsuarioAdministrativo(dp)).execute();
+				new CriadorTela(getFormUsuAdm()).execute();
 			}
 		};
+		
+	
 		
 		FlowPanel flow = new FlowPanel();
 		initWidget(flow);
@@ -67,12 +85,13 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 		flow.add(cellTable);
 		cellTable.setWidth("100%");
 		
-		Column<UsuarioAdministrativo, String> column = new Column<UsuarioAdministrativo, String>(new ButtonCell()) {
+		
+		Column<UsuarioAdministrativo, String> column = new ColumnEditar<UsuarioAdministrativo>(null, new InputViewFactory<UsuarioAdministrativo>() {
 			@Override
-			public String getValue(UsuarioAdministrativo object) {
-				return "editar";
+			public InputView<UsuarioAdministrativo> getInputView() {
+				return getFormUsuAdm();
 			}
-		};
+		});
 		cellTable.addColumn(column);
 		
 		TextColumn<UsuarioAdministrativo> textColumn = new TextColumn<UsuarioAdministrativo>() {
@@ -103,6 +122,22 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 			}
 		};
 		cellTable.addColumn(textColumnNivel, "Nivel");
+		
+		Column<UsuarioAdministrativo, String> columnExcluir = new Column<UsuarioAdministrativo, String>(new ButtonCell()) {
+			@Override
+			public String getValue(UsuarioAdministrativo object) {
+				return "excluir";
+			}
+		};
+		cellTable.addColumn(columnExcluir);
+		
+		columnExcluir.setFieldUpdater(new FieldUpdater<UsuarioAdministrativo, String>() {
+			
+			@Override
+			public void update(int index, UsuarioAdministrativo object, String value) {
+				dp.getList().remove(object);
+			}
+		});
 				
 		dp.addDataDisplay(cellTable);
 //		atualizar();

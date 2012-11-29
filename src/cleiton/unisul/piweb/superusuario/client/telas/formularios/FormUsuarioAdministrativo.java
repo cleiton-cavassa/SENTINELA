@@ -1,24 +1,20 @@
 package cleiton.unisul.piweb.superusuario.client.telas.formularios;
 
+import java.util.ArrayList;
+
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaFisica;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
-import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEvent;
-import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.BotaoSalvar;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.basicos.FormDadosUsuarioAdministrativo;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.TabPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.view.client.ListDataProvider;
 
 public class FormUsuarioAdministrativo extends
 		Formulario<UsuarioAdministrativo> {	
@@ -29,7 +25,7 @@ public class FormUsuarioAdministrativo extends
 	private final FormDadosPessoaFisica dadosPessoaFisica = new FormDadosPessoaFisica(); 
 	
 	private final VerticalPanel raiz;
-	private final ListDataProvider<UsuarioAdministrativo> dataProv;
+//	private final ListDataProvider<UsuarioAdministrativo> dataProv;
 
 
 	@Override
@@ -58,9 +54,9 @@ public class FormUsuarioAdministrativo extends
 	}
 	
 	FormUsuarioAdministrativo eu;
-	public FormUsuarioAdministrativo(ListDataProvider<UsuarioAdministrativo> dataProvider){
+	public FormUsuarioAdministrativo(){//(ListDataProvider<UsuarioAdministrativo> dataProvider){
 		eu=this;
-		this.dataProv=dataProvider;
+//		this.dataProv=dataProvider;
 		
 		raiz = new VerticalPanel();
 		TabPanel tabPanel = new TabPanel();
@@ -83,16 +79,29 @@ public class FormUsuarioAdministrativo extends
 			button_1.addClickHandler(new ClickHandler() {
 				@Override
 				public void onClick(ClickEvent event) {
-					dataProv.getList().add(getInput());
-					eu.fireEvent(new FecharPopUpEvent());
+
+					for(BotoesHandler bh: salvarHandlers){
+						bh.sucesso(getInput());
+					}
+					fechar();
 				}
 			});
 		horizontalPanel_1.add(button_1);
 		
 		
 		
-		Button button_2 = new Button("New button");
-		button_2.setText("excluir");
+		Button button_2 = new Button("cancelar");
+			button_2.addClickHandler(new ClickHandler() {
+				@Override
+				public void onClick(ClickEvent event) {
+
+					for(BotoesHandler bh: excluirHandlers){
+						bh.sucesso(getInput());
+					}
+					fechar();
+				}
+			});
+		
 		horizontalPanel_1.add(button_2);
 		setStyleName("painelCadastro"); 
 		
@@ -100,20 +109,22 @@ public class FormUsuarioAdministrativo extends
 		tabPanel.selectTab(0);
 	} 
 			
-	private class CallbackPersistenciaUsuario implements AsyncCallback<RespostaPersistencia>{
-		
-		@Override
-		public void onFailure(Throwable caught) {
-			Window.alert("N‹o foi poss’vel salvar os dados do usuario administrativo.\nPor favor, tente novamente.");
-		}
-
-		@Override
-		public void onSuccess(RespostaPersistencia result) {
-			Window.alert("Dados salvos com sucesso:\n");
-			
-		}
-	};
+	public void addExcluirHandler(BotoesHandler handler){
+		excluirHandlers.add(handler);
+	}
 	
+	private ArrayList<BotoesHandler > excluirHandlers=new ArrayList<BotoesHandler >(); 
+	public interface BotoesHandler{
+		void sucesso(UsuarioAdministrativo salvo);
+	}
+	
+	
+	
+	public void addSalvarHandler(BotoesHandler handler){
+		salvarHandlers.add(handler);
+	}
+	
+	private ArrayList<BotoesHandler> salvarHandlers=new ArrayList<BotoesHandler>(); 
 	
 	@Override
 	protected UsuarioAdministrativo criarInputVazio() {

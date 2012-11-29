@@ -8,6 +8,7 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEvent;
 import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.BotaoSalvar;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.BotaoSalvar.Acionador;
 
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -28,24 +29,33 @@ public class FormClientePF extends Formulario<ClientePF>{
 	private FormDadosDeContato dadosDeContato= new FormDadosDeContato();
 	private FormPreferencias preferencias= new FormPreferencias();
 	private FormDadosClientePF dadosClientePF= new FormDadosClientePF();
-	private AsyncCallback<RespostaPersistencia> callback= new AsyncCallback<RespostaPersistencia>() {
-		
-		@Override
-		public void onFailure(Throwable caught) {
-			Window.alert("O procedimento falhou. Por favor, tente novamente.");
-		}
+	
+	private Acionador callback = new Acionador() {
 
 		@Override
-		public void onSuccess(RespostaPersistencia result) {
-			Window.alert("O procedimento foi bem-sucedido?\n"+(result.getOperacaoBemSucedida()?"Sim":"N‹o"));
-			Window.alert("O objeto ja existia?\n"+(result.getIdObjetoJaExistia()?"Sim":"N‹o"));
-			Window.alert("A existencia (ou nao) do objeto era esperada?\n"+(result.getObjetoConformeEsperado()?"Sim":"N‹o"));
-			
-			fireEvent(new FecharPopUpEvent());
-		}
-		
-	};
+		public void execute() {}
 
+		@Override
+		public AsyncCallback<RespostaPersistencia> getCallback() {
+			return new AsyncCallback<RespostaPersistencia>() {
+				
+				@Override
+				public void onFailure(Throwable caught) {
+					Window.alert("O procedimento falhou. Por favor, tente novamente.");
+				}
+
+				@Override
+				public void onSuccess(RespostaPersistencia result) {
+					Window.alert("O procedimento foi bem-sucedido?\n"+(result.getOperacaoBemSucedida()?"Sim":"N‹o"));
+					Window.alert("O objeto ja existia?\n"+(result.getIdObjetoJaExistia()?"Sim":"N‹o"));
+					Window.alert("A existencia (ou nao) do objeto era esperada?\n"+(result.getObjetoConformeEsperado()?"Sim":"N‹o"));
+					
+					fireEvent(new FecharPopUpEvent());
+				}
+				
+			};
+		}
+	}; 
 	/**
 	 * @wbp.parser.constructor
 	 */

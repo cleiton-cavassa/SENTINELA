@@ -17,7 +17,7 @@ public class TabelasAtualizador<Ob extends ObjetoChaveado> {
 	}
 	
 	public boolean atualizar(Ob exemplo, ListDataProvider<Ob> dataProvider){
-		Window.alert("AAAAAA");
+//		Window.alert("AAAAAA");
 		
 		if(exemplo==null){
 			return false;

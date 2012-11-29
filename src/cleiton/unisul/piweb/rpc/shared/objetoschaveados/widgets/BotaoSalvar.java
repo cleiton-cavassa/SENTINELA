@@ -7,7 +7,7 @@ import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 
@@ -17,6 +17,7 @@ public class BotaoSalvar <Ob extends ObjetoChaveado>extends Button {
 	private boolean novoRegistro;
 	private boolean salvarMesmoSeNaoOcorrerOEsperado;
 	private AsyncCallback<RespostaPersistencia> callback;
+	private Acionador acionador;
 
 	
 	/**
@@ -29,22 +30,26 @@ public class BotaoSalvar <Ob extends ObjetoChaveado>extends Button {
 	 * @param Objeto de callback AsyncCallback<> que deve ser acionada quando a persistência chegar ao fim.
 	 */
 	public BotaoSalvar(String texto, InputView<Ob> inputView, boolean novoRegistro,
-			boolean salvarMesmoSeNaoOcorrerOEsperado, AsyncCallback<RespostaPersistencia> callback) {
+			boolean salvarMesmoSeNaoOcorrerOEsperado, Acionador acionador) {
 		super(texto);
 		this.inputView = inputView;
 		this.novoRegistro = novoRegistro;
 		this.salvarMesmoSeNaoOcorrerOEsperado = salvarMesmoSeNaoOcorrerOEsperado;
-		this.callback=callback;
-		
+		this.callback=acionador.getCallback();
+		this.acionador=acionador;
 		this.addClickHandler(hSalvar);
 	}
 
 	private ClickHandler hSalvar=  new ClickHandler() {
 		@Override
 		public void onClick(ClickEvent event) {
-			Window.alert(inputView.getInput().getResumo());
+			acionador.execute();
 			ServicoArmazenamento.getArmazenamento().persistir(inputView.getInput(), novoRegistro, salvarMesmoSeNaoOcorrerOEsperado, callback);
 		}
 	};
+	
+	public interface Acionador extends Command{
+		AsyncCallback<RespostaPersistencia> getCallback();
+	}
 	
 }

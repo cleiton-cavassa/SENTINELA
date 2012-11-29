@@ -1,8 +1,11 @@
 package cleiton.unisul.piweb.superusuario.client.telas.formularios;
 
+import java.util.ArrayList;
+
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaJuridica;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.rpc.client.TabelasAtualizador;
 import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
@@ -18,22 +21,28 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.TabPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.ListDataProvider;
 
 public class FormFrota extends Formulario<Frota>{
 
+	@Override
+	public Widget asWidget(){
+		return this;
+	}
+
+	
 	private VerticalPanel raiz=new VerticalPanel();
 	private FormDadosPessoaJuridica dadosPessoaJuridica = new FormDadosPessoaJuridica();
 	private FormDadosDeContato dadosDeContato= new FormDadosDeContato();
 	private FormTabelaUsuariosAdministrativos usuariosAdministrativos = new FormTabelaUsuariosAdministrativos(); 
-	private TabelasAtualizador<Frota> vAtualizador;
-	private ListDataProvider<Frota> vDataProvider;
-	private final Frota exemplo=new Frota();
+//	private TabelasAtualizador<Frota> vAtualizador;
+//	private ListDataProvider<Frota> vDataProvider;
 	
 	public FormFrota(TabelasAtualizador<Frota> atualizador, ListDataProvider<Frota> dataProvider){
 		
-		this.vAtualizador=atualizador;
-		this.vDataProvider=dataProvider;
+//		this.vAtualizador=atualizador;
+//		this.vDataProvider=dataProvider;
 		
 		raiz = new VerticalPanel();
 		TabPanel tabPanel = new TabPanel();
@@ -52,45 +61,100 @@ public class FormFrota extends Formulario<Frota>{
 		raiz.add(horizontalPanel_1);
 		horizontalPanel_1.setWidth("211");
 		
-		Button button_1 = new BotaoSalvar<Frota>("salvar", this, true, false, new CallbackPersistenciaFrota());
+		Button button_1 = new BotaoSalvar<Frota>("salvar", this, true, false,new AcionadorSalvarFrota(this));
 		button_1.addClickHandler(new ClickHandler() {
 			
 			@Override
 			public void onClick(ClickEvent event) {
-				vAtualizador.atualizar(exemplo, vDataProvider);
+//				vAtualizador.atualizar(exemplo, vDataProvider);
+				for(BotoesHandler bh:salvarHandlers){
+					bh.sucesso(getInput(), new RespostaPersistencia());
+				}
 				fechar();
 			}
 		});
-		button_1.setText("salvar");
 		horizontalPanel_1.add(button_1);
 		
-		Button button_2 = new Button("New button");
-		button_2.setText("excluir");
+		Button button_2 = new Button("cancelar");
+		button_2.addClickHandler(new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				for(BotoesHandler bh:excluirHandlers){
+					bh.sucesso(getInput(), new RespostaPersistencia());
+				}
+				fechar();
+			}
+		});
+		
+		
 		horizontalPanel_1.add(button_2);
 		setStyleName("painelCadastro"); 
 		
 		tabPanel.selectTab(0);
 		
+	}
+	
+	
+	private class AcionadorSalvarFrota implements BotaoSalvar.Acionador{
+		
+		private InputView<Frota> f;
+		
+		public AcionadorSalvarFrota(InputView<Frota> iv){
+			f=iv;
+		}
+		@Override
+		public void execute() {}
+
+		@Override
+		public AsyncCallback<RespostaPersistencia> getCallback() {
+			return new CallbackPersistenciaFrota(f.getInput());
+		}
 		
 	}
 
 	private class CallbackPersistenciaFrota implements AsyncCallback<RespostaPersistencia>{
 		
+		private Frota f;
+		
+		public CallbackPersistenciaFrota(Frota frota ){
+			f=frota;
+		}
 		@Override
 		public void onFailure(Throwable caught) {
 			caught.printStackTrace();
 			Window.alert("N‹o foi poss’vel salvar os dados da frota.\nPor favor, tente novamente:\n"+caught.getLocalizedMessage()+"\n"+caught.getMessage());
+			for(BotoesHandler s: salvarHandlers){
+				s.falha(caught);
+			}
 		}
 
 		@Override
 		public void onSuccess(RespostaPersistencia result) {
 			Window.alert("Dados salvos com sucesso!");
-			
+			for(BotoesHandler s: salvarHandlers){
+				s.sucesso(f, result);
+			}
 		}
 	};
 	
 	
+	public void addExcluirHandler(BotoesHandler handler){
+		excluirHandlers.add(handler);
+	}
 	
+	private ArrayList<BotoesHandler > excluirHandlers=new ArrayList<BotoesHandler >(); 
+	public interface BotoesHandler{
+		void sucesso(Frota salva, RespostaPersistencia resposta);
+		void falha(Throwable caught);
+	}
+	
+	
+	
+	public void addSalvarHandler(BotoesHandler handler){
+		salvarHandlers.add(handler);
+	}
+	
+	private ArrayList<BotoesHandler> salvarHandlers=new ArrayList<BotoesHandler>(); 
 	
 	
 	@Override

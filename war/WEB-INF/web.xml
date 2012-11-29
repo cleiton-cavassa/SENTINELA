@@ -60,7 +60,11 @@
     <servlet-name>default</servlet-name>
     <url-pattern>/painelInicio.html</url-pattern>  
   </servlet-mapping>
-  
+
+  <servlet-mapping>   
+    <servlet-name>default</servlet-name>
+    <url-pattern>/superusuario.html</url-pattern>  
+  </servlet-mapping>
 
   <servlet>
     <servlet-name>SystemServiceServlet</servlet-name>
@@ -85,6 +89,15 @@
 			<role-name>*</role-name>
 		</auth-constraint>
 	</security-constraint>
+	
+	 <security-constraint>
+        <web-resource-collection>
+            <url-pattern>/superusuario.html</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
 
 
 

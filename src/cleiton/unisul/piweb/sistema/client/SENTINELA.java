@@ -48,6 +48,7 @@ public class SENTINELA implements EntryPoint {
 	//private Button clickMeButton;
 	public void onModuleLoad() {
 		
+		
 		RootPanel rootPanel = RootPanel.get();
 		rootPanel.setSize("100%", "100%");
 		
