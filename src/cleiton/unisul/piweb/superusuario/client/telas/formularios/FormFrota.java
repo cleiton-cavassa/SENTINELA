@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaJuridica;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.rpc.client.TabelasAtualizador;
 import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
@@ -61,14 +60,14 @@ public class FormFrota extends Formulario<Frota>{
 		raiz.add(horizontalPanel_1);
 		horizontalPanel_1.setWidth("211");
 		
-		Button button_1 = new BotaoSalvar<Frota>("salvar", this, true, false,new AcionadorSalvarFrota(this));
+		Button button_1 = new BotaoSalvar<Frota>("salvar", this, true, false,new AcionadorSalvarFrota());
 		button_1.addClickHandler(new ClickHandler() {
 			
 			@Override
 			public void onClick(ClickEvent event) {
 //				vAtualizador.atualizar(exemplo, vDataProvider);
 				for(BotoesHandler bh:salvarHandlers){
-					bh.sucesso(getInput(), new RespostaPersistencia());
+					bh.enviar(getInput());
 				}
 				fechar();
 			}
@@ -80,7 +79,7 @@ public class FormFrota extends Formulario<Frota>{
 			@Override
 			public void onClick(ClickEvent event) {
 				for(BotoesHandler bh:excluirHandlers){
-					bh.sucesso(getInput(), new RespostaPersistencia());
+					bh.enviar(getInput());
 				}
 				fechar();
 			}
@@ -97,28 +96,18 @@ public class FormFrota extends Formulario<Frota>{
 	
 	private class AcionadorSalvarFrota implements BotaoSalvar.Acionador{
 		
-		private InputView<Frota> f;
-		
-		public AcionadorSalvarFrota(InputView<Frota> iv){
-			f=iv;
-		}
 		@Override
 		public void execute() {}
 
 		@Override
 		public AsyncCallback<RespostaPersistencia> getCallback() {
-			return new CallbackPersistenciaFrota(f.getInput());
+			return new CallbackPersistenciaFrota();
 		}
 		
 	}
 
 	private class CallbackPersistenciaFrota implements AsyncCallback<RespostaPersistencia>{
 		
-		private Frota f;
-		
-		public CallbackPersistenciaFrota(Frota frota ){
-			f=frota;
-		}
 		@Override
 		public void onFailure(Throwable caught) {
 			caught.printStackTrace();
@@ -132,7 +121,7 @@ public class FormFrota extends Formulario<Frota>{
 		public void onSuccess(RespostaPersistencia result) {
 			Window.alert("Dados salvos com sucesso!");
 			for(BotoesHandler s: salvarHandlers){
-				s.sucesso(f, result);
+				s.sucesso(result);
 			}
 		}
 	};
@@ -144,7 +133,8 @@ public class FormFrota extends Formulario<Frota>{
 	
 	private ArrayList<BotoesHandler > excluirHandlers=new ArrayList<BotoesHandler >(); 
 	public interface BotoesHandler{
-		void sucesso(Frota salva, RespostaPersistencia resposta);
+		void enviar(Frota aSalvar);
+		void sucesso(RespostaPersistencia resposta);
 		void falha(Throwable caught);
 	}
 	

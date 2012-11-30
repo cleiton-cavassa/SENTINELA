@@ -7,6 +7,7 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputViewFactory;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
+import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.ColumnEditar;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormUsuarioAdministrativo;
@@ -31,40 +32,50 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 		InputView<ArrayList<UsuarioAdministrativo>> {
 
 	private ListDataProvider<UsuarioAdministrativo> dp= new ListDataProvider<UsuarioAdministrativo>();
+	
+	private int posUsu=-1;
+//	private boolean novoRegistro;
+	
+	private BotoesHandler b=new BotoesHandler() {
+		@Override
+		public void enviar(UsuarioAdministrativo aSalvar) {
+			List<UsuarioAdministrativo> l =dp.getList(); 
+//			if (novoRegistro){
+//			}else{
+//			}
+			if(posUsu==-1){
+				l.add(aSalvar);
+				l.set(l.size()-1, aSalvar);				
+			}else{
+				l.set(posUsu, aSalvar);
+			}
 
+		}
+		@Override
+		public void sucesso(RespostaPersistencia salvo) {}
+		@Override
+		public void falha(Throwable caught) {}
+	};
+	
+	private BotoesHandler c=new BotoesHandler() {
+		@Override
+		public void enviar(UsuarioAdministrativo aSalvar) {
+		}
+		@Override
+		public void sucesso(RespostaPersistencia salvo) {}
+		@Override
+		public void falha(Throwable caught) {}
+	};
+	
 	private FormUsuarioAdministrativo getFormUsuAdm(){
 		FormUsuarioAdministrativo f = new FormUsuarioAdministrativo();
-		f.addSalvarHandler(new BotoesHandler() {
-			
-			@Override
-			public void sucesso(UsuarioAdministrativo salvo) {
-				List<UsuarioAdministrativo> l = dp.getList();
-				UsuarioAdministrativo usu = salvo;
-				int ind = l.indexOf(usu);
-				if(ind!=-1){
-					l.set(ind, usu);
-				}else{
-					l.add(usu);
-				}
-			}
-		});
+		f.addSalvarHandler(b);
+		f.addExcluirHandler(c);
 		return f;
 	}
 	
 	public FormTabelaUsuariosAdministrativos(){
-		
-//		atualizador=new TabelasAtualizador<UsuarioAdministrativo>(dp);
-		
-		
-		ClickHandler hNovo = new ClickHandler() {
-			@Override
-			public void onClick(ClickEvent event) {
-				new CriadorTela(getFormUsuAdm()).execute();
-			}
-		};
-		
 	
-		
 		FlowPanel flow = new FlowPanel();
 		initWidget(flow);
 		DockPanel dockPanel = new DockPanel();
@@ -75,6 +86,18 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 		dockPanel.add(lblFrotasExistentesNo, DockPanel.WEST);
 		
 		Button btnCriarNovaFrota = new Button("cadastrar novo usu\u00E1rio");
+		ClickHandler hNovo = new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				UsuarioAdministrativo usu=new UsuarioAdministrativo(); 
+//				novoRegistro=true;
+				posUsu=-1;
+				FormUsuarioAdministrativo f = getFormUsuAdm();
+				f.setInput(usu);
+				new CriadorTela(f).execute();
+			}
+		};
+		
 		btnCriarNovaFrota.addClickHandler(hNovo);
 		
 		
@@ -86,7 +109,17 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 		cellTable.setWidth("100%");
 		
 		
-		Column<UsuarioAdministrativo, String> column = new ColumnEditar<UsuarioAdministrativo>(null, new InputViewFactory<UsuarioAdministrativo>() {
+		Column<UsuarioAdministrativo, String> column 
+			= new ColumnEditar<UsuarioAdministrativo>
+				(null,
+				new FieldUpdater<UsuarioAdministrativo, String>(){
+					@Override 
+					public void update(int index, UsuarioAdministrativo object, String value) {
+						posUsu=index;
+//						novoRegistro=false;
+					}
+				}
+				,new InputViewFactory<UsuarioAdministrativo>() {
 			@Override
 			public InputView<UsuarioAdministrativo> getInputView() {
 				return getFormUsuAdm();
@@ -94,19 +127,7 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 		});
 		cellTable.addColumn(column);
 		
-		TextColumn<UsuarioAdministrativo> textColumn = new TextColumn<UsuarioAdministrativo>() {
-			@Override
-			public String getValue(UsuarioAdministrativo object) {
-				try{
-					return object.
-						getDadosUsuarioAdministrativo().
-						getEmail();
-				}catch(NullPointerException nEx){
-					return "vazio";
-				}
-			}
-		};
-		cellTable.addColumn(textColumn, "email");
+
 		
 		TextColumn<UsuarioAdministrativo> textColumnNivel = new TextColumn<UsuarioAdministrativo>() {
 			@Override
@@ -122,6 +143,20 @@ public class FormTabelaUsuariosAdministrativos extends Composite implements
 			}
 		};
 		cellTable.addColumn(textColumnNivel, "Nivel");
+		
+		TextColumn<UsuarioAdministrativo> textColumn = new TextColumn<UsuarioAdministrativo>() {
+			@Override
+			public String getValue(UsuarioAdministrativo object) {
+				try{
+					return object.
+						getDadosUsuarioAdministrativo().
+						getEmail().toString();
+				}catch(NullPointerException nEx){
+					return "vazio";
+				}
+			}
+		};
+		cellTable.addColumn(textColumn, "email");
 		
 		Column<UsuarioAdministrativo, String> columnExcluir = new Column<UsuarioAdministrativo, String>(new ButtonCell()) {
 			@Override

@@ -23529,3 +23529,78 @@ Compiling...
    Compilation completed in 0.00 seconds
 Removing invalidated units
 Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2757 units from cache.
+Compiling...
+   20% complete (ETR: 15 seconds)
+   20% complete (ETR: 15 seconds)
+   20% complete (ETR: 15 seconds)
+   30% complete (ETR: 13 seconds)
+   40% complete (ETR: 9 seconds)
+   50% complete (ETR: 7 seconds)
+   60% complete (ETR: 6 seconds)
+   70% complete (ETR: 4 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 19.28 seconds
+Validating units:
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/colecoes/rol/impl/RolTurnos.java'
+      [ERROR] Line 18: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/formularios/FormDadosDeContato.java'
+      [ERROR] Line 18: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/formularios/FormDadosPessoaFisica.java'
+      [ERROR] Line 17: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/formularios/FormDadosPessoaJuridica.java'
+      [ERROR] Line 15: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/formularios/FormDadosProfissionais.java'
+      [ERROR] Line 15: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosProfissionais; did you forget to inherit a required module?
+      [ERROR] Line 23: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/formularios/FormFrota.java'
+      [ERROR] Line 10: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/formularios/FormPesquisar.java'
+      [ERROR] Line 18: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/formularios/FormPreferencias.java'
+      [ERROR] Line 10: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias; did you forget to inherit a required module?
+      [ERROR] Line 18: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.MotoristaFumante; did you forget to inherit a required module?
+      [ERROR] Line 19: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias.TransportaAnimais; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/formularios/Formulario.java'
+      [ERROR] Line 8: No source code is available for type cleiton.unisul.piweb.rpc.shared.ObjetoChaveado; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/inputview/impl/InputViewCorridaSolicitada.java'
+      [ERROR] Line 11: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada; did you forget to inherit a required module?
+      [ERROR] Line 38: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/inputview/impl/InputViewParChaveDescricao.java'
+      [ERROR] Line 17: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/inputview/impl/InputViewTurno.java'
+      [ERROR] Line 13: No source code is available for type cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno; did you forget to inherit a required module?
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.09 seconds
+      Removing invalidated units
+[ERROR] Errors in 'file:/Users/servidor/Desktop/Cleiton/UNISUL/2012-2/Projeto%20Integrador%20Web%20II/Google%20App%20Engine/ADSENTINELA/SENTINELA/src/cleiton/unisul/piweb/ferramentasVisuais/client/formularios/Formulario.java'
+   [ERROR] Line 8: No source code is available for type cleiton.unisul.piweb.rpc.shared.ObjetoChaveado; did you forget to inherit a required module?

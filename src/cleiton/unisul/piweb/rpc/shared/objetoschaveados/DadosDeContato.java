@@ -1,6 +1,5 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -15,15 +14,13 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 
 
 @PersistenceCapable(detachable="true")
-public class DadosDeContato implements ObjetoChaveado, Serializable {
+public class DadosDeContato implements ObjetoChaveado {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 8294374056793000729L;
 
-	public DadosDeContato(){}
-	
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")

@@ -1,7 +1,5 @@
 package cleiton.unisul.piweb.superusuario.client;
 
-import java.util.List;
-
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputViewFactory;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewCNPJ;
@@ -14,6 +12,7 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.ColumnExcluir;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormFrota;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormFrota.BotoesHandler;
 
+import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.cellview.client.CellTable;
@@ -36,34 +35,65 @@ public class TelaInicial extends Composite implements BotoesHandler{
 	private ListDataProvider<Frota> dp=new ListDataProvider<Frota>();
 	
 	private final TelaInicial eu;
+	private Frota frotaEmAmazenamento=null;
+	private int posFrota;
 	
+	public void acionarEstadoArmazenando(Frota aArmazenar){
+		frotaEmAmazenamento=aArmazenar;
+	}
 	
+	public void liberarEstadoArmazenando(RespostaPersistencia resposta){
+		if(resposta.getOperacaoBemSucedida()){
+			
+		}else{
+			
+		}
+		frotaEmAmazenamento=null;
+	}
 	
 	private ClickHandler hNovo = new ClickHandler() {
 		@Override
 		public void onClick(ClickEvent event) {
 			FormFrota f =new FormFrota(atualizador, dp);
 			f.addSalvarHandler(eu);
+			posFrota=-1;
 			new CriadorTela(f).execute();
 		}
 	};
 	
 	@Override
-	public void sucesso(Frota salva, RespostaPersistencia resposta) {
-		List<Frota> l = dp.getList();
-		Frota f = salva;
-		int ind = l.indexOf(f);
-		if(ind!=-1){
-//			dp.getList().set(ind, null);
-			dp.getList().set(ind, f);
-//			dp.refresh();
-		}else{
-			dp.getList().add(f);
+	public void enviar(Frota aSalvar){
+		frotaEmAmazenamento = aSalvar;
+	}
+	
+	
+	
+	@Override
+	public void sucesso(RespostaPersistencia resposta) {
+		if (resposta.getOperacaoBemSucedida()){
+			if(posFrota==-1){
+				dp.getList().add(frotaEmAmazenamento);
+			}else{
+				dp.getList().set(posFrota, frotaEmAmazenamento);
+			}
 		}
+		posFrota=-1;
+//		List<Frota> l = dp.getList();
+//		Frota f = frotaEmAmazenamento;
+//		int ind = l.indexOf(f);
+//		if(ind!=-1){
+////			dp.getList().set(ind, null);
+//			dp.getList().set(ind, f);
+////			dp.refresh();
+//		}else{
+//			dp.getList().add(f);
+//		}
 	}
 
 	@Override
-	public void falha(Throwable caught) {}
+	public void falha(Throwable caught) {
+		posFrota=-1;
+	}
 	
 	
 	public TelaInicial(){
@@ -92,7 +122,12 @@ public class TelaInicial extends Composite implements BotoesHandler{
 		flow.add(cellTable);
 		cellTable.setWidth("100%");
 		
-		Column<Frota, String> ColumnEditar=new ColumnEditar<Frota>(null, new InputViewFactory<Frota>() {
+		Column<Frota, String> columnEditar=new ColumnEditar<Frota>(null, new FieldUpdater<Frota, String>() {
+			@Override
+			public void update(int index, Frota object, String value) {
+				posFrota=index;
+			}
+		},new InputViewFactory<Frota>() {
 			@Override
 			public InputView<Frota> getInputView() {
 				FormFrota f = new FormFrota(atualizador, dp);
@@ -101,7 +136,7 @@ public class TelaInicial extends Composite implements BotoesHandler{
 			}
 		});
 				
-		cellTable.addColumn(ColumnEditar);
+		cellTable.addColumn(columnEditar);
 		
 		TextColumn<Frota> textColumn = new TextColumn<Frota>() {
 			@Override

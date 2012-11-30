@@ -36,13 +36,13 @@ public class InputViewListBoxEnumeracoes <T extends Enum<T>> extends ListBox imp
 	
 	@SuppressWarnings("unchecked")
 	public T getEnumSelecionada(){
-		if(exemplo.getClass()==null){
-			Window.alert("classe nula");
-		}
-		if(		this.getItemText(
-				this.getSelectedIndex())==null){
-			Window.alert("Item nulo:\n"+this.getSelectedIndex());
-		}
+//		if(exemplo.getClass()==null){
+//			Window.alert("classe nula");
+//		}
+//		if(		this.getItemText(
+//				this.getSelectedIndex())==null){
+//			Window.alert("Item nulo:\n"+this.getSelectedIndex());
+//		}
 		return (T) Enum.valueOf(
 				exemplo.getClass(), 
 				this.getItemText(

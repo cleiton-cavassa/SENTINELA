@@ -15,8 +15,8 @@ public class FormPreferencias extends Formulario<Preferencias>{
 	}
 	
 	private VerticalPanel verticalPanel=new VerticalPanel();
-	private InputViewForEnums<MotoristaFumante>motFum= new InputViewForEnums<MotoristaFumante>(MotoristaFumante.Sim,"Motorista fumante ?",false); 
-	private InputViewForEnums<TransportaAnimais>animais= new InputViewForEnums<TransportaAnimais>(TransportaAnimais.Sim,"Transporta animais?",false);
+	private InputViewForEnums<MotoristaFumante>motFum= new InputViewForEnums<MotoristaFumante>(MotoristaFumante.Sim,"Motorista fumante ?"); 
+	private InputViewForEnums<TransportaAnimais>animais= new InputViewForEnums<TransportaAnimais>(TransportaAnimais.Sim,"Transporta animais?");
 	
 	public FormPreferencias(){
 		this.initWidget(verticalPanel);
@@ -35,7 +35,10 @@ public class FormPreferencias extends Formulario<Preferencias>{
 	@Override
 	public Preferencias getInput() {
 		Preferencias input= super.getInput();
-			input.setMotoristaFumante(motFum.getInput());
+			input.
+				setMotoristaFumante
+				(motFum.
+						getInput());
 			input.setTransportaAnimais(animais.getInput());
 		return input;
 	}

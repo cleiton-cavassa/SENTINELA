@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaFisica;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
+import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.basicos.FormDadosUsuarioAdministrativo;
@@ -34,10 +35,12 @@ public class FormUsuarioAdministrativo extends
 		
 		input.setDadosUsuarioAdministrativo(dadosUsuarioAdministrativo.getInput());
 		
-		PessoaFisica p= new PessoaFisica();
-			p.setDadosDeContato(dadosDeContato.getInput());
-			p.setDadosPessoaFisica(dadosPessoaFisica.getInput());
-		input.setPessoaFisica(p);
+//		PessoaFisica p= new PessoaFisica();
+//			p.setDadosDeContato(dadosDeContato.getInput());
+//			p.setDadosPessoaFisica(dadosPessoaFisica.getInput());
+		input.getPessoaFisica().setDadosDeContato(dadosDeContato.getInput());
+		input.getPessoaFisica().setDadosPessoaFisica(dadosPessoaFisica.getInput());
+//		input.setPessoaFisica(p);
 		
 		return input;
 	}
@@ -81,7 +84,7 @@ public class FormUsuarioAdministrativo extends
 				public void onClick(ClickEvent event) {
 
 					for(BotoesHandler bh: salvarHandlers){
-						bh.sucesso(getInput());
+						bh.enviar(getInput());
 					}
 					fechar();
 				}
@@ -96,7 +99,7 @@ public class FormUsuarioAdministrativo extends
 				public void onClick(ClickEvent event) {
 
 					for(BotoesHandler bh: excluirHandlers){
-						bh.sucesso(getInput());
+						bh.enviar(getInput());
 					}
 					fechar();
 				}
@@ -115,7 +118,9 @@ public class FormUsuarioAdministrativo extends
 	
 	private ArrayList<BotoesHandler > excluirHandlers=new ArrayList<BotoesHandler >(); 
 	public interface BotoesHandler{
-		void sucesso(UsuarioAdministrativo salvo);
+		void enviar(UsuarioAdministrativo aSalvar);
+		void sucesso(RespostaPersistencia resposta);
+		void falha(Throwable caught);
 	}
 	
 	

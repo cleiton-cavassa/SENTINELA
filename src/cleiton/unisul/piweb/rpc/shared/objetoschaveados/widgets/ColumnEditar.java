@@ -13,12 +13,21 @@ public class ColumnEditar <T extends ObjetoChaveado>extends Column<T, String>{
 	
 	private final String texto;
 	private final InputViewFactory<T> ivFactory;
+	private FieldUpdater<T,String> preExecutor;
 	
-	public ColumnEditar(String texto, InputViewFactory<T> criadorInputView){
+	/**
+	 * 
+	 * @param texto String que será exibida sobre o botão
+	 * @param preExecutor O método update(int, T, String) deste objeto será executado antes de qualquer coisa quando o botão for apertado
+	 * @param criadorInputView Fábrica de objetos da classe InputView. É utilizada para se obter um Widget que será preenchido com os 
+	 * dados do objeto de classe T da linha correspondente ao botão acionado.
+	 */
+	public ColumnEditar(String texto, FieldUpdater<T,String> preExecutor, InputViewFactory<T> criadorInputView){
 		super(new ButtonCell());
 		this.texto = (texto==null?"editar":texto);
 		this.ivFactory=criadorInputView;
 		this.setFieldUpdater(new  FieldUpdt());
+		this.preExecutor=preExecutor;
 	}
 	
 	@Override
@@ -29,6 +38,7 @@ public class ColumnEditar <T extends ObjetoChaveado>extends Column<T, String>{
 	private class FieldUpdt implements FieldUpdater<T, String>{
 		@Override
 		public void update(int index, T object, String value) {
+			preExecutor.update(index, object, value);
 			InputView<T> iv = ivFactory.getInputView();
 			iv.setInput(object);
 			new CriadorTela(iv).execute();

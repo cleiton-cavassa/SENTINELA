@@ -62,8 +62,9 @@ public class FormDadosDeContato extends Formulario<DadosDeContato>  {
 	public boolean setInput(DadosDeContato input) {
 		super.setInput(input);
 		
-		Boolean result;
-		result = painelTelefones.setInput(input.getTelefones());
+		boolean result=true;
+		result &= endereco.setInput(input.getEndereco());
+		result &= painelTelefones.setInput(input.getTelefones());
 		result &= painelEmails.setInput(input.getEmails());
 		return result;
 	}
