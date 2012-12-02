@@ -35,14 +35,9 @@ public class FormFrota extends Formulario<Frota>{
 	private FormDadosPessoaJuridica dadosPessoaJuridica = new FormDadosPessoaJuridica();
 	private FormDadosDeContato dadosDeContato= new FormDadosDeContato();
 	private FormTabelaUsuariosAdministrativos usuariosAdministrativos = new FormTabelaUsuariosAdministrativos(); 
-//	private TabelasAtualizador<Frota> vAtualizador;
-//	private ListDataProvider<Frota> vDataProvider;
 	
 	public FormFrota(TabelasAtualizador<Frota> atualizador, ListDataProvider<Frota> dataProvider){
-		
-//		this.vAtualizador=atualizador;
-//		this.vDataProvider=dataProvider;
-		
+		setInput(new Frota());
 		raiz = new VerticalPanel();
 		TabPanel tabPanel = new TabPanel();
 		tabPanel.setStyleName("painelCadastro");
@@ -65,7 +60,6 @@ public class FormFrota extends Formulario<Frota>{
 			
 			@Override
 			public void onClick(ClickEvent event) {
-//				vAtualizador.atualizar(exemplo, vDataProvider);
 				for(BotoesHandler bh:salvarHandlers){
 					bh.enviar(getInput());
 				}

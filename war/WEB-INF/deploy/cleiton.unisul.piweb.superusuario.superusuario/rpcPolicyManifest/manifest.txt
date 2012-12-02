@@ -1,3 +1,2 @@
 # Module cleiton.unisul.piweb.superusuario.superusuario
 # RPC service class, partial path of RPC policy file
-cleiton.unisul.piweb.rpc.client.Armazenamento, EF8A8CA88FBF00F72A4DADAAA62B7F41.gwt.rpc

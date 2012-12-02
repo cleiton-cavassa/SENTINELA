@@ -1,11 +1,7 @@
 package cleiton.unisul.piweb.rpc.client;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 import cleiton.unisul.piweb.rpc.shared.Usuario;
-import cleiton.unisul.piweb.sistema.shared.*;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
@@ -17,5 +13,7 @@ public interface GreetingServiceAsync {
 			throws IllegalArgumentException;
 	void urlLogout(String qualquer, AsyncCallback<String> callback);
 	void getUsuario(String qualquer, AsyncCallback<Usuario> callback);
+	
+	void definirFrota(Frota frota, AsyncCallback<Boolean> callback);
 	
 }

@@ -95,8 +95,8 @@ implements TelaComBloqueio, TelaPersistencia<T>, TelaLimpavel{
 		if(compositeTelaBloqueada.isReabrirTelaAutomaticamente()){
 			StringBuilder b = new StringBuilder();
 			b.append("Uma tentativa de criação de registro chegou ao fim.\n");
-			b.append("Foi solicitada abertura automática da tela correspondente, assim que ela estivesse disponível.\n\n");
-			b.append("Você ainda deseja abrir a tela?");
+			b.append("Foi solicitada abertura automática da telaFactory correspondente, assim que ela estivesse disponível.\n\n");
+			b.append("Você ainda deseja abrir a telaFactory?");
 			b.append("Mensagem de lembrete:\n");
 			b.append(compositeTelaBloqueada.getMensagem());
 			if ( Window.confirm(b.toString()) ){

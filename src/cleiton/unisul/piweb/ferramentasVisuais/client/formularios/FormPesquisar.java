@@ -8,6 +8,8 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
+import com.google.gwt.event.dom.client.KeyDownEvent;
+import com.google.gwt.event.dom.client.KeyDownHandler;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.HasKeyboardSelectionPolicy;
@@ -25,7 +27,9 @@ public class FormPesquisar extends Formulario<ParChaveDescricao>{
 	private CellTable<ParChaveDescricao> cellTable = new CellTable<ParChaveDescricao>();
 	
 	private FlowPanel flow = new FlowPanel();
-	private InputViewWithTitle<String> palavraChave= new InputViewWithTitle<String>("Digite nome ou CPF/CNPJ(somente algarismos) e aperte a tecla enter", new InputViewTextBox(50, 500));
+	private String explic = "Digite nome ou CPF/CNPJ(somente algarismos) e aperte a tecla enter";
+	private InputViewTextBox texto= new InputViewTextBox(50, 500);
+	private InputViewWithTitle<String> palavraChave;
 
 	final private PesquisaCallBack callback; 
 	
@@ -36,6 +40,16 @@ public class FormPesquisar extends Formulario<ParChaveDescricao>{
 	
 	public  FormPesquisar (String categoria, PesquisaCallBack resposta){
 		initWidget(flow);
+		
+		palavraChave= new InputViewWithTitle<String>(explic, texto);
+		
+		texto.addKeyDownHandler(new KeyDownHandler() {
+			@Override
+			public void onKeyDown(KeyDownEvent event) {
+				texto.getInput();
+				
+			}
+		});
 		
 		this.categoria=categoria;
 		this.callback=resposta;

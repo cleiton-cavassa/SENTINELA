@@ -4,9 +4,11 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputViewFactory;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewCNPJ;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
+import cleiton.unisul.piweb.rpc.client.BotaoLogout;
 import cleiton.unisul.piweb.rpc.client.TabelasAtualizador;
 import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.ColumnEditar;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.ColumnExcluir;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormFrota;
@@ -26,6 +28,7 @@ import com.google.gwt.user.client.ui.DockPanel;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.view.client.ListDataProvider;
 
 public class TelaInicial extends Composite implements BotoesHandler{
@@ -103,23 +106,41 @@ public class TelaInicial extends Composite implements BotoesHandler{
 		FlowPanel flow = new FlowPanel();
 		
 		initWidget(flow);
+		flow.setWidth("100%");
+		
+		Label lblSentinelaMdulo = new Label("SENTINELA - m\u00F3dulo de superusu\u00E1rio");
+		lblSentinelaMdulo.setStyleName("h1");
+		lblSentinelaMdulo.addStyleName("padding10");
+		flow.add(lblSentinelaMdulo);
+		lblSentinelaMdulo.setWidth("100%");
 		
 		DockPanel dockPanel = new DockPanel();
 		dockPanel.setWidth("100%");
+		BotaoLogout botaoLogout = new BotaoLogout("logout");
+		dockPanel.add(botaoLogout, DockPanel.EAST);
+		dockPanel.setCellHorizontalAlignment(botaoLogout, HasHorizontalAlignment.ALIGN_RIGHT);
+		
+		
+		
 		flow.add(dockPanel);
 		
+		VerticalPanel verticalPanel = new VerticalPanel();
+		flow.add(verticalPanel);
+		verticalPanel.setWidth("100%");
+		
 		Label lblFrotasExistentesNo = new Label("Frotas existentes no sistema");
-		dockPanel.add(lblFrotasExistentesNo, DockPanel.WEST);
+		lblFrotasExistentesNo.setStyleName("TituloTabela");
+		verticalPanel.add(lblFrotasExistentesNo);
+		verticalPanel.setCellHorizontalAlignment(lblFrotasExistentesNo, HasHorizontalAlignment.ALIGN_CENTER);
+		lblFrotasExistentesNo.setWidth("100%");
 		
 		Button btnCriarNovaFrota = new Button("Criar nova frota");
+		btnCriarNovaFrota.setStyleName("botaoLogout");
+		verticalPanel.add(btnCriarNovaFrota);
 		btnCriarNovaFrota.addClickHandler(hNovo);
 		
-		
-		dockPanel.add(btnCriarNovaFrota, DockPanel.EAST);
-		dockPanel.setCellHorizontalAlignment(btnCriarNovaFrota, HasHorizontalAlignment.ALIGN_RIGHT);
-		
 		CellTable<Frota> cellTable = new CellTable<Frota>();
-		flow.add(cellTable);
+		verticalPanel.add(cellTable);
 		cellTable.setWidth("100%");
 		
 		Column<Frota, String> columnEditar=new ColumnEditar<Frota>(null, new FieldUpdater<Frota, String>() {
@@ -135,7 +156,7 @@ public class TelaInicial extends Composite implements BotoesHandler{
 				return f;
 			}
 		});
-				
+		
 		cellTable.addColumn(columnEditar);
 		
 		TextColumn<Frota> textColumn = new TextColumn<Frota>() {
@@ -167,9 +188,14 @@ public class TelaInicial extends Composite implements BotoesHandler{
 		TextColumn<Frota> textColumn_2 = new TextColumn<Frota>() {
 			@Override
 			public String getValue(Frota object) {
-				return object.
-						getUsuariosAdministrativos().
-						toString();
+				StringBuilder b = new StringBuilder();
+				for(UsuarioAdministrativo s: object.
+						getUsuariosAdministrativos()){
+					b.append(s);
+					b.append("\n");
+				}
+				return b.toString(); 
+					
 			}
 		};
 		cellTable.addColumn(textColumn_2, "Administradores");
@@ -184,7 +210,7 @@ public class TelaInicial extends Composite implements BotoesHandler{
 				return new ExcluirFrotaCallback(aExcluir);
 			}
 		});
-		  
+		
 		cellTable.addColumn(columnExcluir);
 		
 		

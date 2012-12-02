@@ -25,7 +25,7 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
 
 	public UsuarioAdministrativo() {}
 	
-	public enum NivelDeAcesso{Administrador1,Administrador2}
+//	public enum NivelDeAcesso{Administrador1,Administrador2}
 	
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)

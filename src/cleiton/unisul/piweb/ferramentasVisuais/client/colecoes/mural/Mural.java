@@ -1,9 +1,7 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural;
 
-import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
-import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEvent;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -95,26 +93,20 @@ public class Mural <Input extends Object> extends Composite implements InputView
 		@Override
 		public void onClick(ClickEvent event) {
 			caixaInput.inputView.setInput(inputProperty.getInput());
-			new CriadorTela(caixaInput).execute();
+			new CriadorTela<Input>(caixaInput).execute();
 		}
 	}
 	
-	private class CaixaInput extends Composite implements IsFormulario{
+	private class CaixaInput extends Composite implements InputView<Input>{//IsFormulario{
 		private final VerticalPanel pa=new VerticalPanel();
 		private final HorizontalPanel botoes=new HorizontalPanel();
 		private final Button ok=new Button("OK");
 		private final Button cancelar=new Button("Cancelar");
 		private final InputView<Input> inputView;
-		private final CaixaInput eu = this;
 
 		
 		public void fechar(){
-			try {
-				eu.fireEvent(new FecharPopUpEvent());
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			Mural.this.fechar();
 		}
 		
 		private final ClickHandler hOk=new ClickHandler() {
@@ -162,8 +154,17 @@ public class Mural <Input extends Object> extends Composite implements InputView
 
 		@Override
 		public boolean setFecharHandler(FecharPopUpEventHandler f) {
-			// TODO Auto-generated method stub
-			return false;
+			return Mural.this.setFecharHandler(f);
+		}
+
+		@Override
+		public boolean setInput(Input input) {
+			return inputView.setInput(input);
+		}
+
+		@Override
+		public Input getInput() {
+			return inputView.getInput();
 		}
 
 	}
@@ -177,15 +178,16 @@ public class Mural <Input extends Object> extends Composite implements InputView
 		Output parse(Input input);
 	}
 
+	
+	private FecharPopUpEventHandler f;
 	@Override
 	public boolean setFecharHandler(FecharPopUpEventHandler f) {
-		// TODO Auto-generated method stub
-		return false;
+		this.f=f;
+		return true;
 	}
 	@Override
 	public void fechar() {
-		// TODO Auto-generated method stub
-		
+		f.fecharPopUp();
 	}
 
 }

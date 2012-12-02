@@ -2,11 +2,11 @@ package cleiton.unisul.piweb.rpc.client;
 
 import java.util.List;
 
-
-
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
-//import cleiton.unisul.piweb.rpc.shared.objetoschaveados.antigos.ClientesPFePJ;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaECredenciais;
+
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
@@ -21,7 +21,12 @@ public interface Armazenamento extends RemoteService {
 	throws Exception;
 	
 	<T extends ObjetoChaveado> List<T> recuperar(T exemplo) throws Exception;
+	<T extends ObjetoChaveado> List<T> recuperar(T exemplo, String nomeOuNroDocumento) throws Exception;
 
 	<T extends ObjetoChaveado> RespostaPersistencia excluir(T obj);
+	
+	List<FrotaECredenciais> acharFrotas();
+	
+
 
 }

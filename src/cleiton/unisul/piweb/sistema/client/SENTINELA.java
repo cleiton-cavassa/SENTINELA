@@ -3,26 +3,34 @@ package cleiton.unisul.piweb.sistema.client;
 
 
 
+import java.util.List;
+
+import org.eclipse.jdt.internal.compiler.flow.LabelFlowContext;
+
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputViewFactory;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
+import cleiton.unisul.piweb.rpc.client.BotaoLogout;
 import cleiton.unisul.piweb.rpc.client.ServicoUsuario;
 import cleiton.unisul.piweb.rpc.shared.Usuario;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaECredenciais;
 import cleiton.unisul.piweb.sistema.client.formularios.FormClientePF;
 import cleiton.unisul.piweb.sistema.client.formularios.FormClientePJ;
 import cleiton.unisul.piweb.sistema.client.formularios.FormCorridaSolicitada;
 import cleiton.unisul.piweb.sistema.client.formularios.FormMotorista;
-import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespf.RelacaoClientesPF;
-import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasSolicitadas;
+import cleiton.unisul.piweb.sistema.client.formularios.FormRelacaoClientesPF;
+import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.RelacaoClientesPJ;
 import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasCanceladas;
 import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasFinalizadas;
+import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasSolicitadas;
 import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.CadastroEstaFrota;
 import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.CadastroFrotasParceiras;
 import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.FrotasQueEmitemVouchers;
 import cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios.FuncionariosEmAtividade;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.FlowPanel;
@@ -34,20 +42,17 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.MenuBar;
 import com.google.gwt.user.client.ui.MenuItem;
 import com.google.gwt.user.client.ui.RootPanel;
-//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.RelacaoClientesPFePJ;
-//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.CriarNovoClientePJ;
-//import cleiton.unisul.piweb.sistema.client.telaspopup.clientes.clientespj.RelacaoClientesPJ;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
 public class SENTINELA implements EntryPoint {
 
-	private Usuario usuario; 
+	private Usuario usuario;
+	private Label lblFrota = new Label();
 	
 	//private Button clickMeButton;
 	public void onModuleLoad() {
-		
 		
 		RootPanel rootPanel = RootPanel.get();
 		rootPanel.setSize("100%", "100%");
@@ -57,7 +62,6 @@ public class SENTINELA implements EntryPoint {
 		rootPanel.add(verticalPanel, 0, 10);
 		
 		Grid gridPanel = new Grid(1,2);
-		//horizontalSplitPanel.setSplitPosition("50%");
 		verticalPanel.add(gridPanel);
 		gridPanel.setSize("100%", "30px");
 		
@@ -66,23 +70,27 @@ public class SENTINELA implements EntryPoint {
 				gridPanel.setWidget(0, 1,horizontalPanel);
 				
 				
-				Button btnNewButton = new Button("Logout");
-				btnNewButton.addClickHandler(new SairClickHandler());
+//				Button btnNewButton = new Button("Logout");
+				Button btnNewButton = new BotaoLogout("Logout");
+//				btnNewButton.addClickHandler(new SairClickHandler());
 				final Label label2= new Label();
 				horizontalPanel.add(label2);
-				btnNewButton.setStyleName("botaoLogout");
+//				btnNewButton.setStyleName("botaoLogout");
 				horizontalPanel.add(btnNewButton);
 			
 				
-				FlowPanel horizontalPanel_1 = new FlowPanel();
-				gridPanel.setWidget(0, 0,horizontalPanel_1);
+				FlowPanel flowPanel_1 = new FlowPanel();
+				gridPanel.setWidget(0, 0,flowPanel_1);
 				//gridPanel.add(horizontalPanel_1);
 				//horizontalSplitPanel.setLeftWidget(horizontalPanel_1);
-				horizontalPanel_1.setSize("100%", "100%");
+				flowPanel_1.setSize("100%", "100%");
 				
 				final Label label = new Label();
 				label.setStyleName("boasvindas");
-				horizontalPanel_1.add(label);
+				flowPanel_1.add(label);
+				
+
+				flowPanel_1.add(lblFrota);
 				gridPanel.getCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_BOTTOM);
 				gridPanel.getCellFormatter().setHorizontalAlignment(0, 1, HasHorizontalAlignment.ALIGN_RIGHT);
 				ServicoUsuario.getGreetingService().getUsuario("", new AsyncCallback<Usuario>() {
@@ -100,11 +108,20 @@ public class SENTINELA implements EntryPoint {
 								id+=usuario.getIdUsuario();
 						label.setText(boasvindas);
 						label2.setText(id);
+						if(usuario.getFrota()==null){
+							lblFrota.setText("Sem registro de frota");
+						}else{
+							lblFrota.setText("Frota: " + result.getFrota().getMeusDadosCompartilhados().getDadosPessoaJuridica().getDadosPessoaJuridica().getRazaoSocial());
+						}
+							
 					}
 				});
+				
+				
 		
-	
 		criaMenus(verticalPanel);
+		
+		new CriadorTela<List<FrotaECredenciais>>(new InputViewInicio()).execute();
 	
 	}
 	
@@ -119,18 +136,34 @@ public class SENTINELA implements EntryPoint {
 		
 		MenuBar menuBar_PJ = new MenuBar(true);
 		MenuItem menuItemPJ = new MenuItem("Pessoas Jur\u00EDdicas",false, menuBar_PJ);
-//			MenuItem menuItemRelaPJ = new MenuItem("listagem de Pessoas Jur\u00EDdicas", false, new CriadorTela(RelacaoClientesPJ.get()));
-//			menuBar_PJ.addItem(menuItemRelaPJ);
-			MenuItem menuItemNovaPJ = new MenuItem("nova Pessoa Jur\u00EDdica", false, new CriadorTela(new FormClientePJ()));
+			MenuItem menuItemRelaPJ = new MenuItem("listagem de Pessoas Jur\u00EDdicas", false, new CriadorTela<List<ClientePJ>>(new InputViewFactory<List<ClientePJ>>() {
+
+				@Override
+				public InputView<List<ClientePJ>> getInputView() {
+					return new RelacaoClientesPJ();
+				}
+			}));
+			
+			menuBar_PJ.addItem(menuItemRelaPJ);
+			MenuItem menuItemNovaPJ = new MenuItem("nova Pessoa Jur\u00EDdica", false, new CriadorTela<ClientePJ>(new FormClientePJ()));
 			menuBar_PJ.addItem(menuItemNovaPJ);
 		menuBar_1.addItem(menuItemPJ);
 
 		
 		MenuBar menuBar_PF = new MenuBar(true);
 		MenuItem menuItemPF = new MenuItem("Pessoas F\u00EDsicas",false, menuBar_PF);
-			MenuItem menuItemRelaPF = new MenuItem("listagem de Pessoas F\u00EDsicas", false, new CriadorTela(RelacaoClientesPF.get()));
+//			MenuItem menuItemRelaPF = new MenuItem("listagem de Pessoas F\u00EDsicas", false,new CriadorTela(new FormRelacaoClientesPF()));
+			MenuItem menuItemRelaPF = new MenuItem("listagem de Pessoas F\u00EDsicas", false,new CriadorTela<List<ClientePF>>(new InputViewFactory<List<ClientePF>>() {
+
+				@Override
+				public InputView<List<ClientePF>> getInputView() {
+					return new FormRelacaoClientesPF();
+				}
+			}));
+
+
 			menuBar_PF.addItem(menuItemRelaPF);
-			MenuItem menuItemNovaPF = new MenuItem("nova Pessoa F\u00EDsica", false, new CriadorTela(new FormClientePF() ));
+			MenuItem menuItemNovaPF = new MenuItem("nova Pessoa F\u00EDsica", false, new CriadorTela<ClientePF>(new FormClientePF() ));
 			menuBar_PF.addItem(menuItemNovaPF);
 		menuBar_1.addItem(menuItemPF);
 		menuBar.addItem(mntmNewMenu);
@@ -192,20 +225,20 @@ public class SENTINELA implements EntryPoint {
 		menuBar.addItem(mntmNewMenu_3);
 	}
 	
-	public class SairClickHandler implements ClickHandler {
-
-		@Override
-		public void onClick(ClickEvent event) {
-			ServicoUsuario.getGreetingService().urlLogout("/SENTINELA.html", new AsyncCallback<String>() {
-				@Override
-				public void onFailure(Throwable caught) {}
-				@Override
-				public void onSuccess(String result) {
-					Window.Location.assign(result);
-				}
-			});
-		}
-	}
+//	public class SairClickHandler implements ClickHandler {
+//
+//		@Override
+//		public void onClick(ClickEvent event) {
+//			ServicoUsuario.getGreetingService().urlLogout("/SENTINELA.html", new AsyncCallback<String>() {
+//				@Override
+//				public void onFailure(Throwable caught) {}
+//				@Override
+//				public void onSuccess(String result) {
+//					Window.Location.assign(result);
+//				}
+//			});
+//		}
+//	}
 }	
 
 	

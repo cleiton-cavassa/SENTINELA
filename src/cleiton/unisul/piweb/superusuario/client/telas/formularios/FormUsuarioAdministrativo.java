@@ -6,7 +6,6 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeCon
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaFisica;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.basicos.FormDadosUsuarioAdministrativo;
 

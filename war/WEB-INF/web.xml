@@ -6,20 +6,26 @@
     <servlet-class>cleiton.unisul.piweb.rpc.server.GreetingServiceImpl</servlet-class>
   </servlet>
 
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/sentinela/greet</url-pattern>
-  </servlet-mapping>
-  
-      <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/cleiton.unisul.piweb.superusuario.superusuario/greet</url-pattern>
-  </servlet-mapping>
-  
-	<servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/cleiton.unisul.piweb.Painel.Painel/greet</url-pattern>
-  </servlet-mapping>
+		  <servlet-mapping>
+		    <servlet-name>greetServlet</servlet-name>
+		    <url-pattern>/sentinela/greet</url-pattern>
+		  </servlet-mapping>
+		  
+		      <servlet-mapping>
+		    <servlet-name>greetServlet</servlet-name>
+		    <url-pattern>/cleiton.unisul.piweb.superusuario.superusuario/greet</url-pattern>
+		  </servlet-mapping>
+		  
+			<servlet-mapping>
+		    <servlet-name>greetServlet</servlet-name>
+		    <url-pattern>/cleiton.unisul.piweb.Painel.Painel/greet</url-pattern>
+		  </servlet-mapping>
+		
+			<servlet-mapping>
+		    <servlet-name>greetServlet</servlet-name>
+		    <url-pattern>/cleiton.unisul.piweb.telainicial.TelaInicial/greet</url-pattern>
+		  </servlet-mapping>  
+
   
   	
     <servlet>
@@ -27,21 +33,26 @@
     <servlet-class>cleiton.unisul.piweb.rpc.server.ArmazenamentoImpl</servlet-class>
   </servlet>
   
-    <servlet-mapping>
-    <servlet-name>armazenamento</servlet-name>
-    <url-pattern>/sentinela/armazenamento</url-pattern>
-  </servlet-mapping>
-  
-      <servlet-mapping>
-    <servlet-name>armazenamento</servlet-name>
-    <url-pattern>/cleiton.unisul.piweb.superusuario.superusuario/armazenamento</url-pattern>
-  </servlet-mapping>
-  
-	<servlet-mapping>
-    <servlet-name>armazenamento</servlet-name>
-    <url-pattern>/cleiton.unisul.piweb.Painel.Painel/armazenamento</url-pattern>
-  </servlet-mapping>
-  
+		    <servlet-mapping>
+		    <servlet-name>armazenamento</servlet-name>
+		    <url-pattern>/sentinela/armazenamento</url-pattern>
+		  </servlet-mapping>
+		  
+		      <servlet-mapping>
+		    <servlet-name>armazenamento</servlet-name>
+		    <url-pattern>/cleiton.unisul.piweb.superusuario.superusuario/armazenamento</url-pattern>
+		  </servlet-mapping>
+		  
+			<servlet-mapping>
+		    <servlet-name>armazenamento</servlet-name>
+		    <url-pattern>/cleiton.unisul.piweb.Painel.Painel/armazenamento</url-pattern>
+		  </servlet-mapping>
+		  
+		  	<servlet-mapping>
+		    <servlet-name>armazenamento</servlet-name>
+		    <url-pattern>/cleiton.unisul.piweb.telainicial.TelaInicial/armazenamento</url-pattern>
+		  </servlet-mapping>
+		  
 
   
   <!-- Default page to serve -->

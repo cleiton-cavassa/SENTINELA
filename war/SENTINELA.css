@@ -103,4 +103,11 @@ pager {
 .tituloDadosRegistro {
 	font-style: italic;
 }
+.padding0 {
+	padding: 0px;
+}
+.TituloTabela {
+	color: dimgray;
+	font-weight: bolder;
+}
 

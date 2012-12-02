@@ -41,7 +41,9 @@ public class ColumnEditar <T extends ObjetoChaveado>extends Column<T, String>{
 			preExecutor.update(index, object, value);
 			InputView<T> iv = ivFactory.getInputView();
 			iv.setInput(object);
-			new CriadorTela(iv).execute();
+			
+//			new CriadorTela(iv).execute();
+			new CriadorTela<T>(iv).execute();
 		}
 	}
 	

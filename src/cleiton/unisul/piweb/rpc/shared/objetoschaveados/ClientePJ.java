@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.jdo.annotations.Extension;
+import javax.jdo.annotations.FetchGroup;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -15,12 +16,18 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 
 
 @PersistenceCapable(detachable="true")
+@FetchGroup(name="grupo", members={
+		@Persistent(name="dadosClientePJ"),
+		@Persistent(name="clientesPFVinculados"),
+		@Persistent(name="pessoaJuridica")
+		})
 public class ClientePJ implements ObjetoChaveado {
     
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 2244823849227873688L;
+	
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
@@ -28,7 +35,7 @@ public class ClientePJ implements ObjetoChaveado {
 	@Persistent
 	private DadosClientePJ dadosClientePJ;
     @Persistent
-    private List<ParChaveDescricao> clientesPFVinculados;
+    private ArrayList<ParChaveDescricao> clientesPFVinculados;
     @Persistent
     private PessoaJuridica pessoaJuridica;
 	
@@ -51,14 +58,14 @@ public class ClientePJ implements ObjetoChaveado {
 		this.dadosClientePJ = dadosClientePJ;
 	}
 
-	public List<ParChaveDescricao> getClientesPFVinculados() {
+	public ArrayList<ParChaveDescricao> getClientesPFVinculados() {
 		if (clientesPFVinculados==null){
 			setClientesPFVinculados(new ArrayList<ParChaveDescricao>());
 		}
 		return clientesPFVinculados;
 	}
 
-	public void setClientesPFVinculados(List<ParChaveDescricao> clientesPFVinculados) {
+	public void setClientesPFVinculados(ArrayList<ParChaveDescricao> clientesPFVinculados) {
 		this.clientesPFVinculados = clientesPFVinculados;
 	}
 

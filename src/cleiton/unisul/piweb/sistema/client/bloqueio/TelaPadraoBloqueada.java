@@ -59,7 +59,7 @@ public class TelaPadraoBloqueada extends Composite {
 		verticalPanel.add(txtrDadosNoInformados);
 		txtrDadosNoInformados.setSize("592px", "152px");
 		
-		chckbxAbrirEstaTela = new CheckBox("abrir tela automaticamente assim que a tentativa de cria\u00E7\u00E3o de registro cessar");
+		chckbxAbrirEstaTela = new CheckBox("abrir telaFactory automaticamente assim que a tentativa de cria\u00E7\u00E3o de registro cessar");
 		verticalPanel.add(chckbxAbrirEstaTela);
 		
  

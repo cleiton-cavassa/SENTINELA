@@ -28,7 +28,8 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extend
 	private final ArrayList<T> formularios;
 	private final Button botaoMais;
 	private final VerticalPanel painelWidgets;
-	private final Parser<Ob, T>parser; 
+	private final Parser<Ob, T>parser;
+	private FecharPopUpEventHandler f; 
 	
 
 //	public Rol(CriadorWidgets<T> criador, Parser<Ob, T> parser){
@@ -145,14 +146,15 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extend
 	}
 
 	@Override
-	public boolean setFecharHandler(FecharPopUpEventHandler f) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean setFecharHandler(FecharPopUpEventHandler f){
+		this.f=f;
+		return true;
+	}
+	@Override
+	public void fechar(){
+		try{
+			f.fecharPopUp();
+		}catch(Throwable t){}
 	}
 
-	@Override
-	public void fechar() {
-		// TODO Auto-generated method stub
-		
-	}
 }

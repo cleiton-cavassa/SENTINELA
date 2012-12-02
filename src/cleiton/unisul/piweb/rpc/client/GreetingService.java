@@ -1,11 +1,7 @@
 package cleiton.unisul.piweb.rpc.client;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 import cleiton.unisul.piweb.rpc.shared.Usuario;
-import cleiton.unisul.piweb.sistema.shared.*;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
 
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
@@ -19,4 +15,5 @@ public interface GreetingService extends RemoteService {
 	String urlLogout(String qualquer);
 	Usuario getUsuario(String qualquer);
 
+	boolean definirFrota(Frota frota);
 }

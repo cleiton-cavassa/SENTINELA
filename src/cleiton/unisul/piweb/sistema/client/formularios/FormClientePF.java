@@ -4,14 +4,11 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeCon
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaFisica;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPreferencias;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
-import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEvent;
-import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.BotaoSalvar;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.BotaoSalvar.Acionador;
 
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.TabPanel;
@@ -30,36 +27,13 @@ public class FormClientePF extends Formulario<ClientePF>{
 	private FormPreferencias preferencias= new FormPreferencias();
 	private FormDadosClientePF dadosClientePF= new FormDadosClientePF();
 	
-	private Acionador callback = new Acionador() {
 
-		@Override
-		public void execute() {}
-
-		@Override
-		public AsyncCallback<RespostaPersistencia> getCallback() {
-			return new AsyncCallback<RespostaPersistencia>() {
-				
-				@Override
-				public void onFailure(Throwable caught) {
-					Window.alert("O procedimento falhou. Por favor, tente novamente.");
-				}
-
-				@Override
-				public void onSuccess(RespostaPersistencia result) {
-					Window.alert("O procedimento foi bem-sucedido?\n"+(result.getOperacaoBemSucedida()?"Sim":"N‹o"));
-					Window.alert("O objeto ja existia?\n"+(result.getIdObjetoJaExistia()?"Sim":"N‹o"));
-					Window.alert("A existencia (ou nao) do objeto era esperada?\n"+(result.getObjetoConformeEsperado()?"Sim":"N‹o"));
-					
-					fireEvent(new FecharPopUpEvent());
-				}
-				
-			};
-		}
-	}; 
 	/**
 	 * @wbp.parser.constructor
 	 */
 	public FormClientePF() {
+		
+		this.setInput(new ClientePF());
 		
 		raiz = new VerticalPanel();
 		TabPanel tabPanel = new TabPanel();
@@ -79,17 +53,25 @@ public class FormClientePF extends Formulario<ClientePF>{
 		raiz.add(horizontalPanel_1);
 		horizontalPanel_1.setWidth("211");
 		
-		Button button_1 = new BotaoSalvar<ClientePF>("salvar",this, true,false, callback);
+		Button button_1 = new BotaoSalvar<ClientePF>(
+							"salvar",this, true,true,
+							new cleiton.unisul.piweb.sistema.client.formularios.Acionador<ClientePF>(this));
+		
 		horizontalPanel_1.add(button_1);
 		
-		Button button_2 = new Button("New button");
-		button_2.setText("excluir");
-		horizontalPanel_1.add(button_2);
-		setStyleName("painelCadastro"); 
+		Button button_2 = new Button("excluir");
 		
+		button_2.addClickHandler(new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				fechar();
+			}
+		});
+		
+		horizontalPanel_1.add(button_2);
+		setStyleName("painelCadastro");
 		tabPanel.selectTab(0);
 	}
-
 	@Override
 	public boolean setInput(ClientePF input) {
 		super.setInput(input);

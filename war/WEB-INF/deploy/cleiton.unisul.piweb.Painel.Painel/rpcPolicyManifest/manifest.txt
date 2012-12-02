@@ -1,3 +1,2 @@
 # Module cleiton.unisul.piweb.Painel.Painel
 # RPC service class, partial path of RPC policy file
-cleiton.unisul.piweb.rpc.client.GreetingService, E259314A2E57FCF7617280C17E739D5C.gwt.rpc

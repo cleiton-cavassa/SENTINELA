@@ -1,11 +1,14 @@
 package cleiton.unisul.piweb.sistema.client.formularios;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar.PesquisaCallBack;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
 
@@ -17,12 +20,13 @@ import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.TextColumn;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DockPanel;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.view.client.ListDataProvider;
 
-public class FormClientesPFVinculados extends Formulario<DadosPessoaFisica>{
+public class FormClientesPFVinculados extends Composite implements InputView<ArrayList<ParChaveDescricao>>{//extends Formulario<DadosPessoaFisica>{
 	
 	private ListDataProvider<ParChaveDescricao> d = new ListDataProvider<ParChaveDescricao>();
 	
@@ -117,14 +121,14 @@ public class FormClientesPFVinculados extends Formulario<DadosPessoaFisica>{
 		
 	}
 
-	public boolean setList(List<ParChaveDescricao> input) {
-		d.setList(input);
-		return true;
-	}
-
-	public List<ParChaveDescricao> getList() {
-		return d.getList();
-	}
+//	public boolean setList(List<ParChaveDescricao> input) {
+//		d.setList(input);
+//		return true;
+//	}
+//
+//	public List<ParChaveDescricao> getList() {
+//		return d.getList();
+//	}
 	
 	private final PesquisaCallBack callback= new PesquisaCallBack(){
 		@Override
@@ -136,9 +140,50 @@ public class FormClientesPFVinculados extends Formulario<DadosPessoaFisica>{
 	};
 
 
+//	@Override
+//	protected DadosPessoaFisica criarInputVazio() {
+//		return new DadosPessoaFisica();
+//	}
+
+
 	@Override
-	protected DadosPessoaFisica criarInputVazio() {
-		return new DadosPessoaFisica();
+	public String validarDados() {
+		return null;
+	}
+
+
+	@Override
+	public String getTitulo() {
+		return null;
+	}
+
+
+	private FecharPopUpEventHandler f;
+	@Override
+	public boolean setFecharHandler(FecharPopUpEventHandler f) {
+		this.f=f;
+		return true;
+	}
+
+
+	@Override
+	public void fechar() {
+		f.fecharPopUp();
+	}
+
+
+	@Override
+	public boolean setInput(ArrayList<ParChaveDescricao> input) {
+		d.setList(input);
+		return true;
+	}
+
+
+	@Override
+	public ArrayList<ParChaveDescricao> getInput() {
+		ArrayList<ParChaveDescricao> result = new ArrayList<ParChaveDescricao>();
+		result.addAll(d.getList());
+		return result;
 	}
 
 }

@@ -8,6 +8,9 @@ import com.google.gwt.user.client.ui.TextBox;
 
 public class InputViewTextBox extends TextBox implements InputView<String>{
 	
+	private FecharPopUpEventHandler f;   
+	
+	
 	@Override
 	public String getTitulo(){
 		return "Campo para digitar texto";
@@ -43,14 +46,13 @@ public class InputViewTextBox extends TextBox implements InputView<String>{
 
 	@Override
 	public boolean setFecharHandler(FecharPopUpEventHandler f) {
-		// TODO Auto-generated method stub
-		return false;
+		this.f=f;
+		return true;
 	}
 
 	@Override
 	public void fechar() {
-		// TODO Auto-generated method stub
-		
+		f.fecharPopUp();
 	}
 
 }

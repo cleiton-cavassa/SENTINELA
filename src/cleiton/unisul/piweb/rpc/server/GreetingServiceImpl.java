@@ -4,7 +4,7 @@ import javax.jdo.PersistenceManager;
 
 import cleiton.unisul.piweb.rpc.client.GreetingService;
 import cleiton.unisul.piweb.rpc.shared.Usuario;
-import cleiton.unisul.piweb.sistema.shared.*;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
 
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
@@ -31,16 +31,14 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
     	}else{
     		return user.getEmail();
     	}
-
 	}
 
-	/**
-	 * Escape an html string. Escaping data received from the client helps to
-	 * prevent cross-site script vulnerabilities.
-	 * 
-	 * @param html the html string to escape
-	 * @return the escaped string
-	 */
+	@Override
+	public boolean definirFrota(Frota frota) {
+		this.getThreadLocalRequest().setAttribute("frota", frota);
+		return true;
+	}
+	
 	@Override
 	public String urlLogout(String destino) {
 		return userService.createLogoutURL(destino);
@@ -48,8 +46,21 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
 
 	@Override
 	public Usuario getUsuario(String qualquer) {
-		return new Usuario(user.getEmail(),user.getUserId(),user.getNickname(),user.getAuthDomain());
-	}
+		Frota result=null;
+		try {
+			result = (Frota)(getThreadLocalRequest().getAttribute("frota"));
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
 
+		return new Usuario(
+				user.getEmail(),
+				user.getUserId(),
+				user.getNickname(),
+				user.getAuthDomain()
+				,userService.isUserAdmin()
+				,result
+				);
+	}
 
 }

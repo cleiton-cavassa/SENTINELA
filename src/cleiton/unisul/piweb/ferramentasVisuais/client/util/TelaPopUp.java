@@ -21,7 +21,7 @@ public class TelaPopUp extends PopupPanel implements FecharPopUpEventHandler{
 	}
 	public void setTela(IsFormulario tela) {
 		this.tela = tela;
-//		tela.asWidget().addHandler(this, FecharPopUpEventType.get());
+//		telaFactory.asWidget().addHandler(this, FecharPopUpEventType.get());
 		tela.setFecharHandler(this);
 		String s = tela.getTitulo();
 		if(s!=null){
@@ -83,7 +83,7 @@ public class TelaPopUp extends PopupPanel implements FecharPopUpEventHandler{
 	}
 
 	
-	/*public TelaPopUp(Widget tela) {
+	/*public TelaPopUp(Widget telaFactory) {
 		super(true);
 		setAutoHideOnHistoryEventsEnabled(false);
 		setAutoHideEnabled(false);
@@ -95,7 +95,7 @@ public class TelaPopUp extends PopupPanel implements FecharPopUpEventHandler{
 		setWidget(verticalPanel);
 		verticalPanel.setSize("100%", "100%");
 		
-		verticalPanel.add(tela);
+		verticalPanel.add(telaFactory);
 		
 		Button button = new Button("New button");
 		button.setText("excluir");

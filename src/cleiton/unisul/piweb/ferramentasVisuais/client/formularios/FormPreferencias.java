@@ -34,7 +34,12 @@ public class FormPreferencias extends Formulario<Preferencias>{
 
 	@Override
 	public Preferencias getInput() {
-		Preferencias input= super.getInput();
+		Preferencias input;
+		if(super.getInput()==null){
+			input=new Preferencias();
+		}else{
+			input=super.getInput();
+		}
 			input.
 				setMotoristaFumante
 				(motFum.

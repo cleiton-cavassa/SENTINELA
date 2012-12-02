@@ -2,9 +2,11 @@ package cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.CaptionPanel;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar;
@@ -19,8 +21,21 @@ public class InputViewParChaveDescricao implements InputView<ParChaveDescricao>{
 	private String vCategoria;
 	private InputProperty inputProperty = new InputProperty();
 	private FlowPanel flow= new FlowPanel();
-	private HTML conteudo = new HTML(); 
+	private HTML conteudo = new HTML();
+	private boolean botaoHabilitado;
+	private Button botao=new Button();
 	
+	public boolean isBotaoHabilitado() {
+		return botaoHabilitado;
+	}
+
+	public void setBotaoHabilitado(boolean botaoHabilitado) {
+		this.botaoHabilitado= botaoHabilitado;
+		botao.setEnabled(botaoHabilitado);
+		
+	}
+
+
 	public InputViewParChaveDescricao(String categoria, String titulo){
 		this(categoria, titulo, true);
 	}
@@ -29,21 +44,24 @@ public class InputViewParChaveDescricao implements InputView<ParChaveDescricao>{
 		this.vCategoria=categoria;
 		
 		CaptionPanel c = new CaptionPanel(titulo);
+		VerticalPanel v= new VerticalPanel();
+		c.add(v);
 		flow.add(c);
 		
-		c.add(conteudo);
+		v.add(conteudo);
+		v.add(botao);
 		
-		conteudo.setHTML("clique aqui para escolher o "+titulo);
+		botao.setText("clique aqui para escolher o "+titulo);
 		
-		if(alterarComCliqueNoConteudo){
-			conteudo.addClickHandler(new ClickHandler() {
+//		if(alterarComCliqueNoConteudo){
+			botao.addClickHandler(new ClickHandler() {
 			
 				@Override
 				public void onClick(ClickEvent event) {
 					new CriadorTela(new FormPesquisar(vCategoria, callback)).execute();	
 				}
 			});
-		}
+//		}
 	}
 	
 	private PesquisaCallBack callback = new PesquisaCallBack() {
