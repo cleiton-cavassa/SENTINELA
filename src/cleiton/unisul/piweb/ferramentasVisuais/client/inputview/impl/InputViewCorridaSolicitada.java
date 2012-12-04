@@ -1,21 +1,35 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar.PesquisaCallBack;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisarFactory;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
+import cleiton.unisul.piweb.sistema.client.formularios.pesquisa.FormPesquisarCorridaSolicitada;
 
 import com.google.gwt.user.client.ui.Widget;
 
 
 public class InputViewCorridaSolicitada implements InputView<CorridaSolicitada>{
-	private CorridaSolicitada corr;
 
 	
-	private InputViewParChaveDescricao iv; 
+	private CorridaSolicitada corridaSolicitada;
+	private InputViewParChaveDescricao<CorridaSolicitada> iv; 
 	
-	public InputViewCorridaSolicitada (String categoria, String titulo){
-		iv = new InputViewParChaveDescricao(categoria, titulo, false);
+	public InputViewCorridaSolicitada (final String chavePai){
+		
+		iv = new InputViewParChaveDescricao<CorridaSolicitada>("CorridaSolicitada", "Corrida Solicitada", new FormPesquisarFactory<CorridaSolicitada>() {
+
+			@Override
+			public FormPesquisar<CorridaSolicitada> getFormPesquisar(
+					PesquisaCallBack<CorridaSolicitada> callback) {
+				return new FormPesquisarCorridaSolicitada("CorridaSolicitada", chavePai, callback);
+			}
+		}, false);
+		iv.setHabilitado(false);
+		
 	}
 
 	@Override
@@ -25,7 +39,7 @@ public class InputViewCorridaSolicitada implements InputView<CorridaSolicitada>{
 
 	@Override
 	public String getTitulo() {
-		return null;
+		return "escolher corrida solicitada";
 	}
 
 	@Override
@@ -35,8 +49,12 @@ public class InputViewCorridaSolicitada implements InputView<CorridaSolicitada>{
 
 	@Override
 	public boolean setInput(CorridaSolicitada input) {
+		corridaSolicitada= input;
 		ParChaveDescricao par = new ParChaveDescricao();
-		par.setChaveObjeto(input.getChave());
+		par.setChaveObjeto(
+				input
+				.
+				getChave());
 		par.setDescricao(input.toString());
 		
 		return iv.setInput(par);
@@ -44,19 +62,19 @@ public class InputViewCorridaSolicitada implements InputView<CorridaSolicitada>{
 
 	@Override
 	public CorridaSolicitada getInput() {
-		return corr;
+		return corridaSolicitada;
 	}
 
+	private FecharPopUpEventHandler f;
 	@Override
 	public boolean setFecharHandler(FecharPopUpEventHandler f) {
-		// TODO Auto-generated method stub
-		return false;
+		this.f=f;
+		return true;
 	}
 
 	@Override
 	public void fechar() {
-		// TODO Auto-generated method stub
-		
+		f.fecharPopUp();
 	}
 	
 }

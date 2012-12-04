@@ -1,16 +1,15 @@
 package cleiton.unisul.piweb.sistema.client.formularios;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar;
-import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar.PesquisaCallBack;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
+import cleiton.unisul.piweb.sistema.client.SENTINELA;
+import cleiton.unisul.piweb.sistema.client.formularios.pesquisa.FormPesquisarClientesPF;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
@@ -33,16 +32,26 @@ public class FormClientesPFVinculados extends Composite implements InputView<Arr
 	private Button atualiz = new Button("atualizar tabela");
 	private Button novo = new Button("vincular novo cliente PF");
 	
+	private final PesquisaCallBack<ClientePF> callback= new PesquisaCallBack<ClientePF>(){
+		@Override
+		public void sucesso(ClientePF resposta) {
+			criarVinculo(resposta);
+		}
+		@Override
+		public void semResposta() {}	
+	};
 	
-	private boolean criarVinculo(ParChaveDescricao resposta){
-		//IMPLEMENTAR!!!
-		return false;
+	private boolean criarVinculo(ClientePF resposta){
+		ParChaveDescricao p = new ParChaveDescricao();
+			p.setChaveObjeto(resposta.getChave());
+			p.setDescricao(resposta.getResumo());
+			
+		return d.getList().add(p);
 	}
 	
 	
-	private boolean excluirVinculo(String chave){
-		//IMPLEMENTAR!!!
-		return false;
+	private boolean excluirVinculo(ParChaveDescricao object){
+		return d.getList().remove(object);
 	}
 	
 
@@ -52,7 +61,7 @@ public class FormClientesPFVinculados extends Composite implements InputView<Arr
 		novo.addClickHandler(new ClickHandler(){
 			@Override
 			public void onClick(ClickEvent event) {
-				new CriadorTela(new FormPesquisar("ClientePF", callback)).execute();
+				new CriadorTela<ClientePF>(new FormPesquisarClientesPF("ClientePF", SENTINELA.getFrota().getChave(), callback)).execute();
 			}
 			
 		});
@@ -99,7 +108,7 @@ public class FormClientesPFVinculados extends Composite implements InputView<Arr
 		column.setFieldUpdater(new FieldUpdater<ParChaveDescricao, String>(){
 			@Override
 			public void update(int index, ParChaveDescricao object, String value) {
-				excluirVinculo(object.getChave());
+				excluirVinculo(object);
 			}
 		});
 		
@@ -130,14 +139,7 @@ public class FormClientesPFVinculados extends Composite implements InputView<Arr
 //		return d.getList();
 //	}
 	
-	private final PesquisaCallBack callback= new PesquisaCallBack(){
-		@Override
-		public void sucesso(ParChaveDescricao resposta) {
-			criarVinculo(resposta);
-		}
-		@Override
-		public void semResposta() {}	
-	};
+
 
 
 //	@Override

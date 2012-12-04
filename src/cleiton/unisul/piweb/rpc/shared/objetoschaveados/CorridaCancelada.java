@@ -3,6 +3,8 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 import java.util.Date;
 
 import javax.jdo.annotations.Extension;
+import javax.jdo.annotations.FetchGroup;
+import javax.jdo.annotations.FetchGroups;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -12,6 +14,12 @@ import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 @PersistenceCapable(detachable="true")
+@FetchGroups({
+@FetchGroup(name="grupo", members={@Persistent(name="corridaSolicitada")})
+,
+@FetchGroup(name="corridasCanceladas", members={@Persistent(name="corridaSolicitada")})
+})
+
 public class CorridaCancelada implements ObjetoChaveado {
 	
 	
@@ -26,8 +34,19 @@ public class CorridaCancelada implements ObjetoChaveado {
 	private String chave;
 
 	@Persistent
-	private CorridaSolicitada corridaSolicitada;
+	private CorridaSolicitada corridaSolicitada=null;
 
+	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
 
 
 	@Persistent
@@ -48,7 +67,7 @@ public class CorridaCancelada implements ObjetoChaveado {
 
 	public CorridaSolicitada getCorridaSolicitada() {
 		if(corridaSolicitada==null){
-			setCorridaSolicitada(corridaSolicitada);
+			setCorridaSolicitada(new CorridaSolicitada());
 		}
 		return corridaSolicitada;
 	}
@@ -72,9 +91,9 @@ public class CorridaCancelada implements ObjetoChaveado {
      	StringBuilder b=new StringBuilder();
      	PadraoItemResumo p = PadraoItemResumo.get();
      	
-     	p.gerarItem(b, "Dados da corrida solicitada", corridaSolicitada);
+     	p.gerarItem(b, "Dados da corrida solicitada", corridaSolicitada.getResumo());
      	p.gerarItem(b, "Motivo do cancelamento", motivo);
-     	p.gerarItem(b, "Data e Hora do registro do cancelamento", dataHoraCancelamento);
+     	p.gerarItem(b, "Data e Hora do registro do cancelamento", dataHoraCancelamento.toLocaleString());
   	
  		return b.toString();
  	}

@@ -3,14 +3,21 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 import javax.jdo.annotations.IdGeneratorStrategy;
 
 import javax.jdo.annotations.Extension;
+import javax.jdo.annotations.FetchGroup;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewCPF;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 @PersistenceCapable(detachable="true")
+@FetchGroup(name="grupo", members={
+		@Persistent(name="dadosPessoais"),
+		@Persistent(name="dadosProfissionais"),
+		@Persistent(name="preferencias")
+		})
 public class Motorista implements ObjetoChaveado {
 	
 	/**
@@ -24,6 +31,10 @@ public class Motorista implements ObjetoChaveado {
 	private String chave;
 	
 	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	@Persistent
 	private PessoaFisica dadosPessoais;
 	
 	@Persistent
@@ -31,6 +42,16 @@ public class Motorista implements ObjetoChaveado {
 	
 	@Persistent
 	private Preferencias preferencias;
+	
+	
+
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
 
 	public String getChave() {
 		return chave;
@@ -78,9 +99,11 @@ public class Motorista implements ObjetoChaveado {
      	StringBuilder b=new StringBuilder();
      	
      	PadraoItemResumo p = PadraoItemResumo.get();
-     	p.gerarItem(b, "Dados Pessoais", dadosPessoais);
-     	p.gerarItem(b, "Dados Profissionais", dadosProfissionais);
-     	p.gerarItem(b, "Preferencias", preferencias);
+     	p.gerarItem(b, "Nome", dadosPessoais.getDadosPessoaFisica().getNome());
+     	p.gerarItem(b, "CPF", InputViewCPF.mascaraCPF(dadosPessoais.getDadosPessoaFisica().getCpf()));
+//     	p.gerarItem(b, "Dados Pessoais", dadosPessoais.getResumo());
+//     	p.gerarItem(b, "Dados Profissionais", dadosProfissionais.getResumo());
+//     	p.gerarItem(b, "Preferencias", preferencias.getResumo());
  		
      	
  		return b.toString();

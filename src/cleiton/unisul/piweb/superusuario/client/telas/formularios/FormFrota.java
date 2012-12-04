@@ -6,10 +6,10 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeCon
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaJuridica;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
 import cleiton.unisul.piweb.rpc.client.TabelasAtualizador;
-import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaJuridica;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.BotaoSalvar;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.basicos.FormTabelaUsuariosAdministrativos;
 
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -55,7 +55,7 @@ public class FormFrota extends Formulario<Frota>{
 		raiz.add(horizontalPanel_1);
 		horizontalPanel_1.setWidth("211");
 		
-		Button button_1 = new BotaoSalvar<Frota>("salvar", this, true, false,new AcionadorSalvarFrota());
+		Button button_1 = new BotaoSalvar<Frota>("salvar", this, true, false, null, new AcionadorSalvarFrota());
 		button_1.addClickHandler(new ClickHandler() {
 			
 			@Override

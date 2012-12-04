@@ -21,10 +21,6 @@
 		    <url-pattern>/cleiton.unisul.piweb.Painel.Painel/greet</url-pattern>
 		  </servlet-mapping>
 		
-			<servlet-mapping>
-		    <servlet-name>greetServlet</servlet-name>
-		    <url-pattern>/cleiton.unisul.piweb.telainicial.TelaInicial/greet</url-pattern>
-		  </servlet-mapping>  
 
   
   	
@@ -46,11 +42,6 @@
 			<servlet-mapping>
 		    <servlet-name>armazenamento</servlet-name>
 		    <url-pattern>/cleiton.unisul.piweb.Painel.Painel/armazenamento</url-pattern>
-		  </servlet-mapping>
-		  
-		  	<servlet-mapping>
-		    <servlet-name>armazenamento</servlet-name>
-		    <url-pattern>/cleiton.unisul.piweb.telainicial.TelaInicial/armazenamento</url-pattern>
 		  </servlet-mapping>
 		  
 

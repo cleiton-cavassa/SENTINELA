@@ -22,8 +22,18 @@ public class UsuarioAdministrativo implements ObjetoChaveado{
 	 * 
 	 */
 	private static final long serialVersionUID = 7694901771463034009L;
+	
+	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
 
-	public UsuarioAdministrativo() {}
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
 	
 //	public enum NivelDeAcesso{Administrador1,Administrador2}
 	

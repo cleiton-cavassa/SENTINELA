@@ -19,7 +19,7 @@ public class BotaoLogout extends Button {
 
 		@Override
 		public void onClick(ClickEvent event) {
-			ServicoUsuario.getGreetingService().urlLogout("/entrada.html", new AsyncCallback<String>() {
+			ServicoUsuario.getGreetingService().urlLogout("", new AsyncCallback<String>() {
 				@Override
 				public void onFailure(Throwable caught) {
 					caught.printStackTrace();

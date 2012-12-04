@@ -11,9 +11,11 @@ import com.google.gwt.view.client.ListDataProvider;
 public class TabelasAtualizador<Ob extends ObjetoChaveado> {
 	
 	private ListDataProvider<Ob> dataProvider;
-
-	public TabelasAtualizador(ListDataProvider<Ob> dataProvider){
+	private String chaveFrota;
+	
+	public TabelasAtualizador(ListDataProvider<Ob> dataProvider, String chaveFrota){
 		this.dataProvider = dataProvider;
+		this.chaveFrota= chaveFrota;
 	}
 	
 	public boolean atualizar(Ob exemplo, ListDataProvider<Ob> dataProvider){
@@ -22,7 +24,7 @@ public class TabelasAtualizador<Ob extends ObjetoChaveado> {
 		if(exemplo==null){
 			return false;
 		}
-		ServicoArmazenamento.getArmazenamento().recuperar(exemplo, new CallbackAtualizarTabela());
+		ServicoArmazenamento.getArmazenamento().recuperar(exemplo, chaveFrota, new CallbackAtualizarTabela());
 		return true;
 	}
 	

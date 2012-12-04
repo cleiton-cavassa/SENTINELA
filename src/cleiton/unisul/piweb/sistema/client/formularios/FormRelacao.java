@@ -3,11 +3,18 @@ package cleiton.unisul.piweb.sistema.client.formularios;
 import java.util.List;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputViewFactory;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia;
+import cleiton.unisul.piweb.sistema.client.SENTINELA;
 
+import com.google.gwt.cell.client.ButtonCell;
+import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.user.cellview.client.CellTable;
+import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Composite;
@@ -18,7 +25,7 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.ListDataProvider;
 
 public abstract class FormRelacao <Ob extends ObjetoChaveado>extends Composite implements InputView<List<Ob>>{
-	
+
 	abstract protected CellTable<Ob> criarTabela();
 	abstract protected Ob novoOb();
 	
@@ -52,17 +59,17 @@ public abstract class FormRelacao <Ob extends ObjetoChaveado>extends Composite i
 	
 	public void atualizar(){
 		AsyncCallback<List<Ob>> a= new CallbackArmazenamento();
-		ServicoArmazenamento.getArmazenamento().recuperar(novoOb(), a);		
+		ServicoArmazenamento.getArmazenamento().recuperar(novoOb(), SENTINELA.getFrota().getChave(), a);		
 	}
 	
 	private class CallbackArmazenamento implements AsyncCallback<List<Ob>>{
 		@Override
 		public void onSuccess(List<Ob> result) {
-			dataProvider.setList(result);
+			setInput(result);
 		}
 		@Override
 		public void onFailure(Throwable caught) {
-			Window.alert("Problemas ao recuperar listagem:\n"+caught.getMessage());
+			Window.alert("Problemas ao recuperar listagem. A listagem correta pode ser exibida recarregando o sistema no navegador.\n\n\n"+caught.getMessage());
 		}
 	}
 	
@@ -93,5 +100,71 @@ public abstract class FormRelacao <Ob extends ObjetoChaveado>extends Composite i
 		return dataProvider.getList();
 	}
 
+	
+	
+	protected Column<Ob, String> colunaEditar(InputViewFactory<Ob> fabrica){
+		Column<Ob, String> column_Editar = new Column<Ob, String>(new ButtonCell()) {
+			@Override
+			public String getValue(Ob object) {
+				return "editar";
+			}
+		};
+		
+		column_Editar.setFieldUpdater(new EditarFieldUpdater(fabrica));
+		return column_Editar;
+	}
+	private class EditarFieldUpdater implements FieldUpdater<Ob, String> {
+		private InputViewFactory<Ob> fabrica;
+		
+		public EditarFieldUpdater(InputViewFactory<Ob> fabrica){
+			this.fabrica=fabrica;
+		}
+
+		@Override
+		public void update(int index, Ob object, String value) {
+			InputView<Ob> c =fabrica.getInputView();
+			c.setInput(object);
+			new CriadorTela<Ob>(c).execute();				
+		}
+	}
+	
+	
+	protected Column<Ob, String> colunaExcluir(){
+		return colunaExcluir("excluir");
+	}
+	
+	protected Column<Ob, String> colunaExcluir(final String txtBotao){
+		Column<Ob, String> column_Excluir = new Column<Ob, String>(new ButtonCell()) {
+			@Override
+			public String getValue(Ob object) {
+				return txtBotao;
+			}
+		};
+		
+				column_Excluir.setFieldUpdater(new FieldUpdater<Ob, String>(){
+					@Override
+					public void update(int index, Ob object, String value) {
+						if ( !(Window.confirm("Tem certeza de que deseja excluir esses dados?")) ){
+							return;
+						}
+						ServicoArmazenamento.getArmazenamento().excluir(object, new AsyncCallback<RespostaPersistencia>() {
+
+							@Override
+							public void onFailure(Throwable caught) {
+								Window.alert("Uma falha impossibilitou o sistema de excluir os dados. Tente novamente mais tarde." );
+							}
+
+							@Override
+							public void onSuccess(RespostaPersistencia result) {
+								Window.alert("Dados eliminados com sucesso.");
+								atualizar();
+							}
+						});				
+					}
+					
+				});
+				
+		return column_Excluir;
+	}
 
 }

@@ -3,6 +3,8 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 import java.util.Date;
 
 import javax.jdo.annotations.Extension;
+import javax.jdo.annotations.FetchGroup;
+import javax.jdo.annotations.FetchGroups;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -12,6 +14,12 @@ import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 @PersistenceCapable(detachable="true")
+@FetchGroups({
+@FetchGroup(name="grupo", members={@Persistent(name="corridaSolicitada")})
+,
+@FetchGroup(name="corridasFinalizadas", members={@Persistent(name="corridaSolicitada")})
+})
+
 public class CorridaFinalizada implements ObjetoChaveado {
 	
 	/**
@@ -23,6 +31,20 @@ public class CorridaFinalizada implements ObjetoChaveado {
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
+	
+	
+	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
 	
 	@Persistent
 	private CorridaSolicitada corridaSolicitada;
@@ -43,7 +65,7 @@ public class CorridaFinalizada implements ObjetoChaveado {
 
 	public CorridaSolicitada getCorridaSolicitada() {
 		if(corridaSolicitada==null){
-			setCorridaSolicitada(corridaSolicitada);
+			setCorridaSolicitada(new CorridaSolicitada());
 		}
 		return corridaSolicitada;
 	}

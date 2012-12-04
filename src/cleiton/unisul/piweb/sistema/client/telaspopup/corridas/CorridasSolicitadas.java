@@ -56,7 +56,7 @@ public class CorridasSolicitadas extends Formulario<CorridaSolicitada> {
 			columnEditar.setFieldUpdater(new FieldUpdater<CorridaSolicitada, String>() {
 				@Override
 				public void update(int index, CorridaSolicitada object, String value) {
-					FormCorridaSolicitada f = new FormCorridaSolicitada();
+					FormCorridaSolicitada f = new FormCorridaSolicitada(false);
 					f.setInput(object);
 					new CriadorTela(f).execute();
 				}

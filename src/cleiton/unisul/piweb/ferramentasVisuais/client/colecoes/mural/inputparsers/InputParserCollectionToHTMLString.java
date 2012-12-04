@@ -1,17 +1,19 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.inputparsers;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.Mural;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.Mural.InputParser;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno;
 
 
-public class InputParserCollectionToHTMLString <T extends Object> implements InputParser<Collection<T>, String>{
+public class InputParserCollectionToHTMLString <T extends Object> implements InputParser<ArrayList<T>, String>{
 	
 	private static final String divisor="<br/>";
 
 	@Override
-	public String parse(Collection<T> input) {
+	public String parse(ArrayList<T> input) {
 		if (input==null){
 			return "";
 		}else{

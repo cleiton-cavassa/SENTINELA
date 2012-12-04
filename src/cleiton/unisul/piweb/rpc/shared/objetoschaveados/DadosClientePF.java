@@ -28,6 +28,21 @@ public class DadosClientePF implements ObjetoChaveado, Serializable  {
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
 	
+	
+	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
+	
+	
 	@Persistent
 	private Status status;
 	

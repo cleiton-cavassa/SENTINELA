@@ -19,6 +19,14 @@ public class InputViewForDate implements InputView<Date> {
 		return "Campo para digitar data";
 	}
 	
+	public boolean isHabilitado(){
+		return dateBox.isEnabled();
+	}
+	
+	public void setHabilitado(boolean habilitado){
+		dateBox.setEnabled(habilitado);
+	}
+	
 	private final VerticalPanel vp=new VerticalPanel();
 	private final DateBox dateBox= new DateBox();
 	private final HTML labelTitulo=new HTML();

@@ -1,7 +1,6 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
@@ -24,6 +23,21 @@ public class DadosPessoaJuridica implements ObjetoChaveado {
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
 	
+	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
+	
+	
+	
 	public DadosPessoaJuridica(){}
 	
 	@Persistent
@@ -33,7 +47,7 @@ public class DadosPessoaJuridica implements ObjetoChaveado {
 	private String razaoSocial;
 	
 	@Persistent
-	private Collection<String> regioesDeAtuacao;
+	private ArrayList<String> regioesDeAtuacao;
 	
 	
 	public String getChave() {
@@ -66,7 +80,7 @@ public class DadosPessoaJuridica implements ObjetoChaveado {
 	}
 
 
-	public Collection<String> getRegioesDeAtuacao() {
+	public ArrayList<String> getRegioesDeAtuacao() {
 		if(regioesDeAtuacao==null){
 			setRegioesDeAtuacao(new ArrayList<String>());
 		}
@@ -74,7 +88,7 @@ public class DadosPessoaJuridica implements ObjetoChaveado {
 	}
 
 
-	public void setRegioesDeAtuacao(Collection<String> regioesDeAtuacao) {
+	public void setRegioesDeAtuacao(ArrayList<String> regioesDeAtuacao) {
 		this.regioesDeAtuacao = regioesDeAtuacao;
 	}
 

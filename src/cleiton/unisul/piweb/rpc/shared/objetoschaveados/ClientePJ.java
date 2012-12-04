@@ -2,10 +2,10 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.FetchGroup;
+import javax.jdo.annotations.FetchGroups;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -16,11 +16,13 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 
 
 @PersistenceCapable(detachable="true")
-@FetchGroup(name="grupo", members={
-		@Persistent(name="dadosClientePJ"),
-		@Persistent(name="clientesPFVinculados"),
-		@Persistent(name="pessoaJuridica")
-		})
+
+
+@FetchGroups({
+@FetchGroup(name="grupo", members={@Persistent(name="dadosClientePJ"),@Persistent(name="clientesPFVinculados"),@Persistent(name="pessoaJuridica")})
+,
+@FetchGroup(name="dadosCompartilhados", members={@Persistent(name="dadosClientePJ"),@Persistent(name="clientesPFVinculados"),@Persistent(name="pessoaJuridica")})
+})
 public class ClientePJ implements ObjetoChaveado {
     
 	/**
@@ -32,6 +34,20 @@ public class ClientePJ implements ObjetoChaveado {
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
+	
+	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
+	
 	@Persistent
 	private DadosClientePJ dadosClientePJ;
     @Persistent

@@ -1,7 +1,6 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
@@ -26,14 +25,29 @@ public class DadosDeContato implements ObjetoChaveado {
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
 	
+	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
+	
+	
+	
 	@Persistent(defaultFetchGroup="true")
-    private Collection<String> emails;
+    private ArrayList<String> emails;
 
 	@Persistent
     private String endereco;
 
 	@Persistent(defaultFetchGroup="true")
-    private Collection<String> telefones;   
+    private ArrayList<String> telefones;   
 	
 	public String getChave() {
 		return chave;
@@ -44,7 +58,7 @@ public class DadosDeContato implements ObjetoChaveado {
 		this.chave = chave;
 	}
 
-	public Collection<String> getEmails() {
+	public ArrayList<String> getEmails() {
 		if(emails==null){
 			setEmails(new ArrayList<String>());
 		}
@@ -52,7 +66,7 @@ public class DadosDeContato implements ObjetoChaveado {
 	}
 
 
-	public void setEmails(Collection<String> emails) {
+	public void setEmails(ArrayList<String> emails) {
 		this.emails = emails;
 	}
 
@@ -67,7 +81,7 @@ public class DadosDeContato implements ObjetoChaveado {
 	}
 
 
-	public Collection<String> getTelefones() {
+	public ArrayList<String> getTelefones() {
 		if(telefones==null){
 			setTelefones(new ArrayList<String>());
 		}
@@ -75,7 +89,7 @@ public class DadosDeContato implements ObjetoChaveado {
 	}
 
 
-	public void setTelefones(Collection<String> telefones) {
+	public void setTelefones(ArrayList<String> telefones) {
 		this.telefones = telefones;
 	}
 

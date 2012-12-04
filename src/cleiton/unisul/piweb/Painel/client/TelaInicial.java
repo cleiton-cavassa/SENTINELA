@@ -1,7 +1,7 @@
 package cleiton.unisul.piweb.Painel.client;
 
 import cleiton.unisul.piweb.rpc.client.ServicoUsuario;
-import cleiton.unisul.piweb.rpc.shared.Usuario;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.Usuario;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.Window;

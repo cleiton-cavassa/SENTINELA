@@ -1,5 +1,6 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.formularios;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.Mural;
@@ -20,7 +21,7 @@ public class FormDadosProfissionais  extends Formulario<DadosProfissionais>{
 	}
 	
 	private InputViewWithTitle<String> carro=new InputViewWithTitle <String>("Carro", new InputViewTextBox(50,100));
-	private Mural<Collection<Turno>>turnos = new Mural<Collection<Turno>>("Turnos",new RolTurnos(), new InputParserCollectionToHTMLString<Turno>());
+	private Mural<ArrayList<Turno>>turnos = new Mural<ArrayList<Turno>>("Turnos",new RolTurnos(), new InputParserCollectionToHTMLString<Turno>());
 	private FlowPanel f= new FlowPanel();
 	
 	public FormDadosProfissionais(){

@@ -2,7 +2,6 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 
 import javax.jdo.annotations.Extension;
@@ -18,8 +17,6 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 @PersistenceCapable(detachable="true")
 public class DadosPessoaFisica implements ObjetoChaveado, Serializable  {
 
-
-
 	/**
 	 * 
 	 */
@@ -31,6 +28,21 @@ public class DadosPessoaFisica implements ObjetoChaveado, Serializable  {
 	private String chave;
 	
 	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
+	
+	
+	
+	@Persistent
 	private long cpf;
 
 	@Persistent
@@ -38,7 +50,7 @@ public class DadosPessoaFisica implements ObjetoChaveado, Serializable  {
 
 //	@Persistent(defaultFetchGroup="true")
 	@Persistent
-	private Collection<String> idiomasFalados;
+	private ArrayList<String> idiomasFalados;
 
 	@Persistent
 	private String nome;
@@ -55,7 +67,7 @@ public class DadosPessoaFisica implements ObjetoChaveado, Serializable  {
 		return dataNascimento;
 	}
 	
-	public Collection<String> getIdiomasFalados() {
+	public ArrayList<String> getIdiomasFalados() {
 		if(idiomasFalados==null){
 			setIdiomasFalados(new ArrayList<String>());
 		}
@@ -89,7 +101,7 @@ public class DadosPessoaFisica implements ObjetoChaveado, Serializable  {
 		this.dataNascimento = dataNascimento;
 	}
 	
-	public void setIdiomasFalados(Collection<String> idiomasFalados) {
+	public void setIdiomasFalados(ArrayList<String> idiomasFalados) {
 		this.idiomasFalados = idiomasFalados;
 	}
 		

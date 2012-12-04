@@ -3,8 +3,8 @@ package cleiton.unisul.piweb.rpc.server;
 import javax.jdo.PersistenceManager;
 
 import cleiton.unisul.piweb.rpc.client.GreetingService;
-import cleiton.unisul.piweb.rpc.shared.Usuario;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.Usuario;
 
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
@@ -46,12 +46,6 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
 
 	@Override
 	public Usuario getUsuario(String qualquer) {
-		Frota result=null;
-		try {
-			result = (Frota)(getThreadLocalRequest().getAttribute("frota"));
-		} catch (Throwable e) {
-			e.printStackTrace();
-		}
 
 		return new Usuario(
 				user.getEmail(),
@@ -59,7 +53,6 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
 				user.getNickname(),
 				user.getAuthDomain()
 				,userService.isUserAdmin()
-				,result
 				);
 	}
 

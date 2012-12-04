@@ -1,10 +1,10 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.FetchGroup;
+import javax.jdo.annotations.FetchGroups;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -15,9 +15,12 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemRes
 
 
 @PersistenceCapable(detachable="true")
-@FetchGroup(name="grupo",members={
-		@Persistent(name="dadosPessoaJuridica")
-		})
+
+@FetchGroups({
+@FetchGroup(name="grupo",members={@Persistent(name="dadosPessoaJuridica")})
+,
+@FetchGroup(name="dadosCompartilhados",members={@Persistent(name="clientesPF"), @Persistent(name="clientesPJ"), @Persistent(name="dadosPessoaJuridica")})
+})
 public class FrotaDadosCompartilhados implements ObjetoChaveado {
 
 	/**
@@ -33,10 +36,24 @@ public class FrotaDadosCompartilhados implements ObjetoChaveado {
 	private String chave;
 	
 	@Persistent
-	Collection<ClientePF> clientesPF;
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
+	
 	
 	@Persistent
-	Collection<ClientePJ> clientesPJ;
+	ArrayList<ClientePF> clientesPF;
+	
+	@Persistent
+	ArrayList<ClientePJ> clientesPJ;
 	
 	@Persistent
 	PessoaJuridica dadosPessoaJuridica;
@@ -49,25 +66,25 @@ public class FrotaDadosCompartilhados implements ObjetoChaveado {
 		this.chave = chave;
 	}
 
-	public Collection<ClientePF> getClientesPF() {
+	public ArrayList<ClientePF> getClientesPF() {
 		if(clientesPF==null){
 			setClientesPF(new ArrayList<ClientePF>());
 		}
 		return clientesPF;
 	}
 
-	public void setClientesPF(Collection<ClientePF> clientesPF) {
+	public void setClientesPF(ArrayList<ClientePF> clientesPF) {
 		this.clientesPF = clientesPF;
 	}
 
-	public Collection<ClientePJ> getClientesPJ() {
+	public ArrayList<ClientePJ> getClientesPJ() {
 		if(clientesPJ==null){
 			setClientesPJ(new ArrayList<ClientePJ>());
 		}
 		return clientesPJ;
 	}
 
-	public void setClientesPJ(Collection<ClientePJ> clientesPJ) {
+	public void setClientesPJ(ArrayList<ClientePJ> clientesPJ) {
 		this.clientesPJ = clientesPJ;
 	}
 

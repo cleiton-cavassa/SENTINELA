@@ -1,5 +1,6 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.formularios;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.Mural;
@@ -29,7 +30,7 @@ public class FormDadosPessoaFisica extends Formulario<DadosPessoaFisica>{
 	private final InputViewWithTitle<Long> cpf = new InputViewWithTitle<Long>("CPF",new InputViewCPF()); 
 	private final InputViewWithTitle<String> nome=new InputViewWithTitle<String>("Nome", new InputViewTextBox(70,500));
 	private final InputViewForDate dataNascimento = new InputViewForDate("Data de Nascimento");
-	private final Mural<Collection<String>> idiomasFalados= new Mural<Collection<String>>("Idiomas Falados",new RolTextBox(500,40), new InputParserCollectionToHTMLString<String>()); 
+	private final Mural<ArrayList<String>> idiomasFalados= new Mural<ArrayList<String>>("Idiomas Falados",new RolTextBox(500,40), new InputParserCollectionToHTMLString<String>()); 
 	public FormDadosPessoaFisica(){
 		
 		nomeEcPF.add(nome);

@@ -3,6 +3,7 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 import java.io.Serializable;
 
 import javax.jdo.annotations.Extension;
+import javax.jdo.annotations.FetchGroup;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -12,6 +13,9 @@ import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 @PersistenceCapable(detachable="true")
+@FetchGroup(name="grupo", members={@Persistent(name="dadosPessoaFisica"),
+		@Persistent(name="dadosDeContato"),
+		})
 public class PessoaFisica implements ObjetoChaveado, Serializable  {
     
 	/**
@@ -23,6 +27,21 @@ public class PessoaFisica implements ObjetoChaveado, Serializable  {
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
+	
+	
+	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
+	
 	
 	@Persistent
 	private DadosPessoaFisica dadosPessoaFisica;

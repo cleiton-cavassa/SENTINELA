@@ -5,11 +5,11 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
-import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia;
 import cleiton.unisul.piweb.sistema.client.bloqueio.TelaComBloqueio;
 import cleiton.unisul.piweb.sistema.client.persistencia.TelaPersistencia;
 
-public class CallbackArmazenamentoNovoRegistro<T extends ObjetoChaveado>  implements AsyncCallback<cleiton.unisul.piweb.rpc.shared.RespostaPersistencia>{
+public class CallbackArmazenamentoNovoRegistro<T extends ObjetoChaveado>  implements AsyncCallback<cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia>{
 		
 	public CallbackArmazenamentoNovoRegistro(T objeto, TelaComBloqueio tela, TelaLimpavel cadastro){
 		this.objeto=objeto;

@@ -3,7 +3,7 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
-import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -18,6 +18,7 @@ public class BotaoSalvar <Ob extends ObjetoChaveado>extends Button {
 	private boolean salvarMesmoSeNaoOcorrerOEsperado;
 	private AsyncCallback<RespostaPersistencia> callback;
 	private Acionador acionador;
+	private String chaveFrota;
 
 	
 	/**
@@ -30,7 +31,7 @@ public class BotaoSalvar <Ob extends ObjetoChaveado>extends Button {
 	 * @param Objeto de callback AsyncCallback<> que deve ser acionada quando a persistência chegar ao fim.
 	 */
 	public BotaoSalvar(String texto, InputView<Ob> inputView, boolean novoRegistro,
-			boolean salvarMesmoSeNaoOcorrerOEsperado, Acionador acionador) {
+			boolean salvarMesmoSeNaoOcorrerOEsperado, String chaveFrota, Acionador acionador) {
 		super(texto);
 		this.inputView = inputView;
 		this.novoRegistro = novoRegistro;
@@ -38,13 +39,19 @@ public class BotaoSalvar <Ob extends ObjetoChaveado>extends Button {
 		this.callback=acionador.getCallback();
 		this.acionador=acionador;
 		this.addClickHandler(hSalvar);
+		this.chaveFrota = chaveFrota;
 	}
 
 	private ClickHandler hSalvar=  new ClickHandler() {
 		@Override
 		public void onClick(ClickEvent event) {
 			acionador.execute();
-			ServicoArmazenamento.getArmazenamento().persistir(inputView.getInput(), novoRegistro, salvarMesmoSeNaoOcorrerOEsperado, callback);
+			if (novoRegistro & chaveFrota != null){
+				ServicoArmazenamento.getArmazenamento().criar(inputView.getInput(), chaveFrota, callback);
+			}else{
+				ServicoArmazenamento.getArmazenamento().persistir(inputView.getInput(), novoRegistro, salvarMesmoSeNaoOcorrerOEsperado, chaveFrota, callback);
+			}
+
 		}
 	};
 	

@@ -1,5 +1,13 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar.PesquisaCallBack;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisarFactory;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
+import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
+import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
+
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
@@ -9,39 +17,35 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
-import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar;
-import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormPesquisar.PesquisaCallBack;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
-import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
-import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;
-
-public class InputViewParChaveDescricao implements InputView<ParChaveDescricao>{
+public class InputViewParChaveDescricao <Ob extends ObjetoChaveado> implements InputView<ParChaveDescricao<Ob>>{
 	
 	private String vCategoria;
 	private InputProperty inputProperty = new InputProperty();
 	private FlowPanel flow= new FlowPanel();
 	private HTML conteudo = new HTML();
-	private boolean botaoHabilitado;
+	private boolean habilitado;
+	public boolean isHabilitado() {
+		return habilitado;
+	}
+
+	public void setHabilitado(boolean habilitado) {
+		botao.setEnabled(habilitado);
+		this.habilitado = habilitado;
+	}
+
 	private Button botao=new Button();
+//	private final FormPesquisarFactory<Ob>fabricaFormularios;
 	
-	public boolean isBotaoHabilitado() {
-		return botaoHabilitado;
-	}
-
-	public void setBotaoHabilitado(boolean botaoHabilitado) {
-		this.botaoHabilitado= botaoHabilitado;
-		botao.setEnabled(botaoHabilitado);
-		
-	}
 
 
-	public InputViewParChaveDescricao(String categoria, String titulo){
-		this(categoria, titulo, true);
+
+	public InputViewParChaveDescricao(String categoria, String titulo, FormPesquisarFactory<Ob> fabricaFormularios){
+		this(categoria, titulo, fabricaFormularios, true);
 	}
 	
-	public InputViewParChaveDescricao(String categoria, String titulo, boolean alterarComCliqueNoConteudo){
+	public InputViewParChaveDescricao(String categoria, String titulo, final FormPesquisarFactory<Ob> fabricaFormularios, boolean alterarComCliqueNoBotao){
 		this.vCategoria=categoria;
+//		this.fabricaFormularios=fabricaFormularios;
 		
 		CaptionPanel c = new CaptionPanel(titulo);
 		VerticalPanel v= new VerticalPanel();
@@ -51,42 +55,50 @@ public class InputViewParChaveDescricao implements InputView<ParChaveDescricao>{
 		v.add(conteudo);
 		v.add(botao);
 		
-		botao.setText("clique aqui para escolher o "+titulo);
+		botao.setText("escolher");
+		botao.addStyleName("botaoLogout");
+		setHabilitado(alterarComCliqueNoBotao);
 		
 //		if(alterarComCliqueNoConteudo){
 			botao.addClickHandler(new ClickHandler() {
 			
 				@Override
 				public void onClick(ClickEvent event) {
-					new CriadorTela(new FormPesquisar(vCategoria, callback)).execute();	
+					if (fabricaFormularios == null ){
+						return;
+					}
+					new CriadorTela<Ob>(fabricaFormularios.getFormPesquisar(callback)).execute();	
 				}
 			});
 //		}
 	}
 	
-	private PesquisaCallBack callback = new PesquisaCallBack() {
+	private PesquisaCallBack<Ob> callback = new PesquisaCallBack<Ob>() {
 		@Override
-		public void sucesso(ParChaveDescricao resposta) {
-			inputProperty.setInput(resposta);
+		public void sucesso(Ob resposta) {
+			ParChaveDescricao<Ob> p = new ParChaveDescricao<Ob>();
+				p.setChaveObjeto(resposta.getChave());
+				p.setDescricao(resposta.getResumo());
+			inputProperty.setInput(p);
 		}
 		@Override
 		public void semResposta() {}
 	};
 	
-	private void atualizaDados() {
-		conteudo.setHTML(inputProperty.getInput().getDescricao());
-	}
-	
 	private class InputProperty {
-		private ParChaveDescricao input=null; 
-		public boolean setInput(ParChaveDescricao input){
+		private ParChaveDescricao<Ob> input=null; 
+		public boolean setInput(ParChaveDescricao<Ob> input){
 			this.input= input;
 			atualizaDados();
 			return true;
 		}
-		public ParChaveDescricao getInput(){
+		public ParChaveDescricao<Ob> getInput(){
 			return this.input;
 		}
+	}
+	
+	private void atualizaDados() {
+		conteudo.setHTML(inputProperty.getInput().getDescricao());
 	}
 	
 	@Override
@@ -106,12 +118,12 @@ public class InputViewParChaveDescricao implements InputView<ParChaveDescricao>{
 	}
 
 	@Override
-	public boolean setInput(ParChaveDescricao input) {
+	public boolean setInput(ParChaveDescricao<Ob> input) {
 		return inputProperty.setInput(input);
 	}
 
 	@Override
-	public ParChaveDescricao getInput() {
+	public ParChaveDescricao<Ob> getInput() {
 		return inputProperty.getInput();
 	}
 

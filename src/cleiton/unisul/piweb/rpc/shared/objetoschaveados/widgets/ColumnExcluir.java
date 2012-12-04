@@ -2,12 +2,13 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets;
 
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
-import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.client.Command;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public class ColumnExcluir <T extends ObjetoChaveado>extends Column<T, String>{
@@ -19,7 +20,7 @@ public class ColumnExcluir <T extends ObjetoChaveado>extends Column<T, String>{
 		super(new ButtonCell());
 		this.texto = (texto==null?"excluir":texto);
 		this.acionador=acionadorCallback;
-		this.setFieldUpdater(new  FieldUpdt());
+		this.setFieldUpdater(new FieldUpdt());
 	}
 	
 	@Override
@@ -31,6 +32,9 @@ public class ColumnExcluir <T extends ObjetoChaveado>extends Column<T, String>{
 		@Override
 		public void update(int index, T object, String value) {
 			acionador.execute();
+			if(! (Window.confirm( "Tem certeza que deseja excluir esses dados?" )) ){
+				return;
+			}
 			ServicoArmazenamento.getArmazenamento().excluir(object, acionador.getCallback(object));
 		}
 	}

@@ -1,5 +1,6 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.formularios;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.Mural;
@@ -8,6 +9,7 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.impl.RolTextB
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewTextBox;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewWithTitle;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno;
 
 import com.google.gwt.user.client.ui.DockPanel;
 import com.google.gwt.user.client.ui.FlowPanel;
@@ -24,8 +26,8 @@ public class FormDadosDeContato extends Formulario<DadosDeContato>  {
 	}
 	
 	final private InputViewWithTitle<String> endereco=new InputViewWithTitle<String>("Endere\u00E7o", new InputViewTextBox(100,500)); 
-	final private Mural<Collection<String>> painelTelefones = new Mural<Collection<String>> ("Telefones", new RolTextBox(50,50), new InputParserCollectionToHTMLString<String>());
-	final private Mural<Collection<String>> painelEmails = new Mural<Collection<String>> ("Emails", new RolTextBox(500,50), new InputParserCollectionToHTMLString<String>());
+	final private Mural<ArrayList<String>> painelTelefones = new Mural<ArrayList<String>> ("Telefones", new RolTextBox(50,50), new InputParserCollectionToHTMLString<String>());
+	final private Mural<ArrayList<String>> painelEmails = new Mural<ArrayList<String>> ("Emails", new RolTextBox(500,50), new InputParserCollectionToHTMLString<String>());
 	
 	
 	public FormDadosDeContato() {	

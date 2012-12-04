@@ -6,6 +6,7 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewFo
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewTextBox;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewWithTitle;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada;
+import cleiton.unisul.piweb.sistema.client.SENTINELA;
 
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.FlowPanel;
@@ -17,7 +18,7 @@ public class FormCorridaFinalizada extends Formulario<CorridaFinalizada> {
 	
 	private VerticalPanel raiz=new VerticalPanel();
 
-	private InputViewCorridaSolicitada corridaSolicitada = new InputViewCorridaSolicitada("ClientePF", "Corrida Solicitada");
+	private InputViewCorridaSolicitada corridaSolicitada = new InputViewCorridaSolicitada(SENTINELA.getFrota().getChave());
 	private InputViewForDate dataHoraDesembarque= new InputViewForDate("data e hora de chegada ao destino"); 
 	private InputViewWithTitle<String> localDesembarque= new InputViewWithTitle<String>("local do desembarque",new InputViewTextBox(50,500));
 	

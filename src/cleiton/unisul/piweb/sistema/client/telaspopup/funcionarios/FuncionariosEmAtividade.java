@@ -2,7 +2,11 @@ package cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios;
 
 
 
+import java.util.List;
+
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputViewFactory;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista;
 
 import com.google.gwt.user.cellview.client.CellTable;
@@ -12,7 +16,7 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.view.client.ListDataProvider;
 
-public class FuncionariosEmAtividade extends Formulario<Motorista> {
+public class FuncionariosEmAtividade extends Formulario<Motorista> implements InputViewFactory<List<Motorista>> {
 	
 	private class DadosFuncionarioEmAtividade{
 		public String getNome() {
@@ -110,6 +114,12 @@ public class FuncionariosEmAtividade extends Formulario<Motorista> {
 	@Override
 	protected Motorista criarInputVazio() {
 		return new Motorista();
+	}
+
+	@Override
+	public InputView<List<Motorista>> getInputView() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

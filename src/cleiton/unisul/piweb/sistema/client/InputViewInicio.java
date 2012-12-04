@@ -1,22 +1,17 @@
 package cleiton.unisul.piweb.sistema.client;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewCNPJ;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.widgets.InputViewBotoes;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.widgets.InputViewBotoes.ObEevento;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.widgets.InputViewBotoes.PersonalClickHandler;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 import cleiton.unisul.piweb.rpc.client.BotaoLogout;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
-import cleiton.unisul.piweb.rpc.client.ServicoUsuario;
-import cleiton.unisul.piweb.rpc.shared.Usuario;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo.NivelAcesso;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaECredenciais;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.FrotaECredenciais;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaLoginUsuarioAdministrativo;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.Usuario;
 
 import com.google.gwt.cell.client.ButtonCell;
 import com.google.gwt.cell.client.FieldUpdater;
@@ -39,46 +34,28 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.ListDataProvider;
 
-
-
-// TODO Auto-generated method stub
 public class InputViewInicio implements InputView<List<FrotaECredenciais>> {
 
-	@Override
-	public String validarDados() {
-		return null;
-	}
-
+	private ArrayList<AcessarHandler> acessarHandlers = new ArrayList<AcessarHandler>();
+	private FecharPopUpEventHandler f;
+	private DockPanel raiz = new DockPanel();
+	private FlowPanel painelSuperusuario = new FlowPanel();
+	private ListDataProvider<FrotaECredenciais> dataProvider = new ListDataProvider<FrotaECredenciais>();
+	private Label labelEmail=new Label();
+	private Usuario usuario=null;
+	private final InputViewInicio eu;
 	@Override
 	public String getTitulo() {
 		return "SENTINELA - login";
 	}
 
-	FecharPopUpEventHandler f;
-	@Override
-	public boolean setFecharHandler(FecharPopUpEventHandler f) {
-		this.f=f;
-		return true;
-	}
-
-	@Override
-	public void fechar() {
-		f.fecharPopUp();
-	}
-
 	@Override
 	public Widget asWidget() {
 		return raiz;
-	}
-	
-
-	private DockPanel raiz = new DockPanel();
-	private FlowPanel painelSuperusuario = new FlowPanel();
-	private ListDataProvider<FrotaECredenciais> dataProvider = new ListDataProvider<FrotaECredenciais>();
-	private Label labelEmail=new Label(); 
+	}	 
 	
 	public InputViewInicio(){
-
+		eu=this;
 		raiz.setStyleName("padding0");
 		raiz.addStyleName("padding5");
 		raiz.setSize("100%", "100%");
@@ -86,11 +63,6 @@ public class InputViewInicio implements InputView<List<FrotaECredenciais>> {
 		VerticalPanel verticalPanel_1 = new VerticalPanel();
 		raiz.add(verticalPanel_1, DockPanel.NORTH);
 		verticalPanel_1.setWidth("100%");
-		
-		Label lblSentinelaSistema = new Label("SENTINELA - SISTEMA DE GERENCIAMENTO E INTEGRA\u00C7\u00C3O DE FROTAS DE T\u00C1XIS");
-		verticalPanel_1.add(lblSentinelaSistema);
-		lblSentinelaSistema.setStyleName("h1");
-		lblSentinelaSistema.addStyleName("padding5");
 		
 		DockPanel dockPanel = new DockPanel();
 		verticalPanel_1.add(dockPanel);
@@ -101,9 +73,6 @@ public class InputViewInicio implements InputView<List<FrotaECredenciais>> {
 		painelSuperusuario.setVisible(false);
 		painelSuperusuario.setWidth("100%");
 		raiz.setCellVerticalAlignment(painelSuperusuario, HasVerticalAlignment.ALIGN_BOTTOM);
-		
-		Label lblOSeuEmail = new Label("O seu email possui credenciais de superusu\u00E1rio! Isso significa que voc\u00EA pode criar novas frotas!");
-		painelSuperusuario.add(lblOSeuEmail);
 		
 		Button btnAcessarComoSuperusurio = new Button("acessar como superusu\u00E1rio");
 		btnAcessarComoSuperusurio.setStyleName("botaoLogout");
@@ -126,6 +95,7 @@ public class InputViewInicio implements InputView<List<FrotaECredenciais>> {
 		
 		VerticalPanel verticalPanel = new VerticalPanel();
 		raiz.add(verticalPanel,DockPanel.CENTER);
+		verticalPanel.setWidth("100%");
 		raiz.setCellVerticalAlignment(verticalPanel, HasVerticalAlignment.ALIGN_MIDDLE);
 		raiz.setCellHorizontalAlignment(verticalPanel, HasHorizontalAlignment.ALIGN_CENTER);
 		
@@ -203,48 +173,53 @@ public class InputViewInicio implements InputView<List<FrotaECredenciais>> {
 
 	}
 	
-	private Usuario usuario;	
-	private void verificarUsuario(){
-		ServicoUsuario.getGreetingService().getUsuario(null, new AsyncCallback<Usuario>() {
-
-			@Override
-			public void onFailure(Throwable caught) {
-				caught.printStackTrace();
-				Window.alert("Falha na busca de usuario:\n"+caught.getMessage());
-			}
-
-			@Override
-			public void onSuccess(Usuario result) {
-				usuario=result;
-				painelSuperusuario.setVisible(
-						usuario.isUserAdmin()
-						);
-				labelEmail.setText("email: "+usuario.getEmail());
-			}
-		});
-	}
-	
-
-	
-	public class CallbackBuscaFrota implements AsyncCallback<List<FrotaECredenciais>> {
+	public class CallbackBuscaFrota implements AsyncCallback<RespostaLoginUsuarioAdministrativo> {
 
 		@Override
 		public void onFailure(Throwable caught) {
-			Window.alert("Houve problemas durante a busca por suas credenciais de acesso.\n\n"+caught.getMessage());
-			verificarUsuario();
+			Window.alert("Houve problemas durante a busca por suas credenciais.\n\nO acesso ao sistema foi negado"+caught.getMessage());
 		}
 
 		@Override
-		public void onSuccess(List<FrotaECredenciais> result) {
+		public void onSuccess(RespostaLoginUsuarioAdministrativo result) {
 			if(result==null){
-				Window.alert("Não foi encontrada frota para o seu email, ou você não possui acesso aos dados dessa frota:\n");
+				Window.alert("Não foi encontrada qualquer frota para o seu email.");
 			}else{
-				Window.alert("Suas credenciais de acesso foram confirmadas.\n" + result.toString());
-				setInput(result);
+//				Window.alert("Suas credenciais de acesso foram confirmadas.\n" + result.toString());
+				usuario=result.getUsuario();
+				setInput(result.getFrotasEcredenciais());
 			}
-			verificarUsuario();
+			preencherUsuario(result.getUsuario());
+			new CriadorTela<List<FrotaECredenciais>>(eu).execute();
 		}
 
+	}
+	
+	private void preencherUsuario(Usuario usuario){
+		
+		painelSuperusuario.setVisible( usuario.isUserAdmin() );
+		
+		labelEmail.setText("email: "+usuario.getEmail());
+	}
+	
+
+
+	void acessarFrota(FrotaECredenciais frotaEcredenciais){
+		for (AcessarHandler a: acessarHandlers ){
+			a.onAcessar(frotaEcredenciais, usuario);
+		}
+		fechar();
+	}
+	
+	
+
+	public boolean addAcessarHandler(AcessarHandler h){
+		acessarHandlers.add(h);
+		return true;
+	}
+	
+	public interface AcessarHandler {
+		void onAcessar(FrotaECredenciais frotaEcredenciais, Usuario usuario);
 	}
 	
 	@Override
@@ -256,73 +231,22 @@ public class InputViewInicio implements InputView<List<FrotaECredenciais>> {
 	public List<FrotaECredenciais> getInput() {
 		return dataProvider.getList();
 	}
-	
-	private InputViewBotoes<DadosUsuarioAdministrativo.NivelAcesso> ib;
-	
-	void acessarFrota(FrotaECredenciais frotaEcredenciais){
 
-			ib = new InputViewBotoes<DadosUsuarioAdministrativo.NivelAcesso>();
-			ib.setInput(frotaEcredenciais.getCredenciais());
-			ib.addButtonClickHandler(new PCHandler(frotaEcredenciais));
-		new CriadorTela<List<DadosUsuarioAdministrativo.NivelAcesso>>(ib).execute();
+	@Override
+	public boolean setFecharHandler(FecharPopUpEventHandler f) {
+		this.f=f;
+		return true;
+	}
+
+	@Override
+	public void fechar() {
+		f.fecharPopUp();
 	}
 	
-	
-	
-	private class PCHandler implements PersonalClickHandler<DadosUsuarioAdministrativo.NivelAcesso> {
-		private FrotaECredenciais f;
-		public PCHandler(FrotaECredenciais f){
-			this.f=f;
-		}
-		@Override
-		public void onClick(ObEevento<NivelAcesso> origem) {
-			ib.fechar();
-			acessarModulo(f.getFrota(), origem.getObjeto());
-		}
+	@Override
+	public String validarDados() {
+		return null;
 	}
 	
-
-	void acessarModulo(Frota f, DadosUsuarioAdministrativo.NivelAcesso n){
-		String urlModuloNivel;
-		
-		if (n.equals(DadosUsuarioAdministrativo.NivelAcesso.Administrador1)){
-			urlModuloNivel=GWT.getHostPageBaseURL()+"SENTINELA.html";
-		}else{
-			urlModuloNivel=GWT.getHostPageBaseURL()+"painelInicio.html";
-		}
-		ServicoUsuario.getGreetingService().definirFrota(f, new CallbackDefinirFrota(1, f, urlModuloNivel));
-	}
-	
-	private class CallbackDefinirFrota implements AsyncCallback<Boolean>{
-
-		private final int maximoTentativas=3;
-		private int nroTentativa;
-		private Frota frota;
-		private String urlModuloNivel;
-		
-		public CallbackDefinirFrota(int nroTentativa, Frota frota, String urlModuloNivel){
-			this.nroTentativa=nroTentativa;
-			this.frota = frota;
-			this.urlModuloNivel=urlModuloNivel;
-		}
-		
-		
-		@Override
-		public void onFailure(Throwable caught) {
-			if(nroTentativa<=maximoTentativas){
-				ServicoUsuario.getGreetingService().definirFrota(frota, new CallbackDefinirFrota(nroTentativa+1, frota, urlModuloNivel));
-			}else{
-				Window.alert("Foram feitas "+maximoTentativas + "de acesso, sem sucesso. Por favor, tente novamente a posteriori.");
-			}
-		}
-
-		@Override
-		public void onSuccess(Boolean result) {
-			Window.alert("Frota armazenada?\n" + result);
-//			Window.Location.assign(urlModuloNivel);
-			Window.open(urlModuloNivel, "_self", "");
-		}
-		
-	}
 }
 

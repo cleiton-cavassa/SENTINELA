@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.FetchGroup;
+import javax.jdo.annotations.FetchGroups;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -13,10 +14,16 @@ import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 @PersistenceCapable(detachable="true")
-@FetchGroup(name="grupo",members={
-		@Persistent(name="usuariosAdministrativos"),
-		@Persistent(name="meusDadosCompartilhados")
-		})
+@FetchGroups({
+@FetchGroup(name="grupo",members={@Persistent(name="usuariosAdministrativos"),@Persistent(name="meusDadosCompartilhados")})
+,
+@FetchGroup(name="dadosCompartilhados",members={@Persistent(name="meusDadosCompartilhados")})
+,
+//@FetchGroup(name="corridasCanceladas",members={@Persistent(name="corridasCanceladas"),@Persistent(name="corridasSolicitadas")})
+@FetchGroup(name="corridasCanceladas",members={@Persistent(name="corridasCanceladas"),@Persistent(name="corridasSolicitadas")})
+,
+@FetchGroup(name="corridasFinalizadas",members={@Persistent(name="corridasFinalizadas"),@Persistent(name="corridasSolicitadas")})
+})
 public class Frota implements ObjetoChaveado{
 	
 	/**

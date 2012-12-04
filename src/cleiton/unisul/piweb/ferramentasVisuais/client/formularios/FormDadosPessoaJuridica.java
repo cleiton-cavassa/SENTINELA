@@ -1,5 +1,6 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.formularios;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.mural.Mural;
@@ -23,7 +24,7 @@ public class FormDadosPessoaJuridica extends Formulario<DadosPessoaJuridica>{
 //	private final HorizontalPanel cnpjErazaoSocial=new HorizontalPanel();
 	private final InputViewWithTitle<Long> cnpj = new InputViewWithTitle<Long>("CNPJ",new InputViewCNPJ()); 
 	private final InputViewWithTitle<String> razaoSocial=new InputViewWithTitle<String>("Raz\u00E3o Social", new InputViewTextBox(100,500));
-	private final Mural<Collection<String>> regioesDeAtuacao= new Mural<Collection<String>>("Regi\u00F5es de Atua\u00E7\u00E3o",new RolTextBox(500,100), new InputParserCollectionToHTMLString<String>());
+	private final Mural<ArrayList<String>> regioesDeAtuacao= new Mural<ArrayList<String>>("Regi\u00F5es de Atua\u00E7\u00E3o",new RolTextBox(500,100), new InputParserCollectionToHTMLString<String>());
 	
 	public FormDadosPessoaJuridica(){
 		initWidget(vp);

@@ -7,9 +7,9 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputViewFactory;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
-import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.ColumnEditar;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormUsuarioAdministrativo;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormUsuarioAdministrativo.BotoesHandler;
 

@@ -10,6 +10,13 @@ public class InputViewTextBox extends TextBox implements InputView<String>{
 	
 	private FecharPopUpEventHandler f;   
 	
+	public boolean isHabilitado(){
+		return this.isReadOnly();
+	}
+	
+	public void setHabilitado(boolean habilitado){
+		this.setReadOnly(true);
+	}
 	
 	@Override
 	public String getTitulo(){

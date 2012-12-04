@@ -5,7 +5,6 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputViewFactory;
 
 import com.google.gwt.user.client.Command;
-import com.google.gwt.user.client.Window;
 
 public class CriadorTela <T extends Object> implements Command{
 		

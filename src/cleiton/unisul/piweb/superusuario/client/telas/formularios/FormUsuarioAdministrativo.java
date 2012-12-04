@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosDeContato;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.FormDadosPessoaFisica;
 import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.Formulario;
-import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.basicos.FormDadosUsuarioAdministrativo;
 
 import com.google.gwt.event.dom.client.ClickEvent;

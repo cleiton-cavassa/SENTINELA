@@ -1,7 +1,7 @@
 package cleiton.unisul.piweb.rpc.client;
 
-import cleiton.unisul.piweb.rpc.shared.Usuario;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.Usuario;
 
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;

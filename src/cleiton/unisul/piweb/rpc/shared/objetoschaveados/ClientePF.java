@@ -2,21 +2,24 @@ package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.FetchGroup;
+import javax.jdo.annotations.FetchGroups;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewCPF;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 
 @PersistenceCapable(detachable="true")
-@FetchGroup(name="grupo", members={@Persistent(name="dadosPessoaFisica"),
-								@Persistent(name="dadosDeContato"),
-								@Persistent(name="preferencias"),
-								@Persistent(name="dadosClientePF")
-								})
+
+@FetchGroups({
+@FetchGroup(name="grupo", members={@Persistent(name="dadosPessoaFisica"),@Persistent(name="dadosDeContato"),@Persistent(name="preferencias"),@Persistent(name="dadosClientePF")})
+,
+@FetchGroup(name="dadosCompartilhados",members={@Persistent(name="dadosPessoaFisica"),@Persistent(name="dadosDeContato"),@Persistent(name="preferencias"),@Persistent(name="dadosClientePF")})
+})
 public class ClientePF implements ObjetoChaveado{
 	
 	/**
@@ -30,6 +33,19 @@ public class ClientePF implements ObjetoChaveado{
 	private String chave;
 	
 	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
+
+	@Persistent
 	private DadosPessoaFisica dadosPessoaFisica;
 	
 	@Persistent
@@ -40,7 +56,6 @@ public class ClientePF implements ObjetoChaveado{
 
 	@Persistent
 	private DadosClientePF dadosClientePF;
-
 
 	public DadosPessoaFisica getDadosPessoaFisica() {
 		if (dadosPessoaFisica==null){
@@ -94,9 +109,11 @@ public class ClientePF implements ObjetoChaveado{
      	StringBuilder b=new StringBuilder();
      	
      	PadraoItemResumo p = PadraoItemResumo.get();
-     	p.gerarItem(b, "Dados Pessoa Fisica", dadosPessoaFisica.getResumo());
-     	p.gerarItem(b, "Dados de Contato", dadosDeContato.getResumo());
-     	p.gerarItem(b, "Preferencias", preferencias.getResumo());
+     	p.gerarItem(b, "Nome", dadosPessoaFisica.getNome());
+     	p.gerarItem(b, "CPF", InputViewCPF.mascaraCPF(dadosPessoaFisica.getCpf()));
+//     	p.gerarItem(b, "Dados Pessoa Fisica", dadosPessoaFisica.getResumo());
+//     	p.gerarItem(b, "Dados de Contato", dadosDeContato.getResumo());
+//     	p.gerarItem(b, "Preferencias", preferencias.getResumo());
  		
  		return b.toString();
  	}

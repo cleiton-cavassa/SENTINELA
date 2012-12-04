@@ -2,8 +2,6 @@ package cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol;
 
 import java.util.ArrayList;
 
-import java.util.Collection;
-
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.ExcludeMePleaseEvent;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.ExcludeMePleaseHandler;
 import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.HasExcludeMePleaseHandlers;
@@ -18,7 +16,7 @@ import com.google.gwt.user.client.ui.DecoratorPanel;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extends Composite implements InputView<Collection<Ob>> {
+public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extends Composite implements InputView<ArrayList<Ob>> {
 	
 	@Override
 	public String getTitulo(){
@@ -54,7 +52,7 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extend
 
 	}
 	
-	public Collection<Ob> getInput(){
+	public ArrayList<Ob> getInput(){
 		if(parser==null){
 			return null;
 		}
@@ -67,7 +65,7 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extend
 		return result;
 	}
 	
-	public boolean setInput(Collection<Ob> objetos){
+	public boolean setInput(ArrayList<Ob> objetos){
 		if ((objetos==null)||(parser==null)){
 			return false;
 		}

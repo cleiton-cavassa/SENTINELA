@@ -6,11 +6,11 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewCN
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.rpc.client.BotaoLogout;
 import cleiton.unisul.piweb.rpc.client.TabelasAtualizador;
-import cleiton.unisul.piweb.rpc.shared.RespostaPersistencia;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.ColumnEditar;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.ColumnExcluir;
+import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormFrota;
 import cleiton.unisul.piweb.superusuario.client.telas.formularios.FormFrota.BotoesHandler;
 
@@ -101,7 +101,7 @@ public class TelaInicial extends Composite implements BotoesHandler{
 	
 	public TelaInicial(){
 		eu=this;
-		atualizador=new TabelasAtualizador<Frota>(dp);
+		atualizador=new TabelasAtualizador<Frota>(dp, null);
 		
 		FlowPanel flow = new FlowPanel();
 		

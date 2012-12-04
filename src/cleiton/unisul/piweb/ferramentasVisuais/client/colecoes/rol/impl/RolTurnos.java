@@ -1,19 +1,17 @@
 package cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.impl;
 
+import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.impl.WidgetComBotaoMenos;
+import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.Rol;
+import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario;
+import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewTurno;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno;
+
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
-
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.excludeMePlease.impl.WidgetComBotaoMenos;
-
-import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.Rol;
-import cleiton.unisul.piweb.ferramentasVisuais.client.formularios.IsFormulario;
 //import cleiton.unisul.piweb.ferramentasVisuais.client.colecoes.rol.parser.Parser;
-import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.impl.InputViewTurno;
-import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno;
 
 public class RolTurnos extends Rol<WidgetComBotaoMenos<InputViewTurno>, Turno> {
 

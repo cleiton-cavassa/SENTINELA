@@ -1,9 +1,9 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 import javax.jdo.annotations.Extension;
+import javax.jdo.annotations.FetchGroup;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -13,6 +13,8 @@ import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.acessorios.PadraoItemResumo;
 
 @PersistenceCapable(detachable="true")
+@FetchGroup(name="grupo", members={@Persistent(name="turnos")
+		})
 public class DadosProfissionais implements ObjetoChaveado {
 	
 	/**
@@ -26,10 +28,24 @@ public class DadosProfissionais implements ObjetoChaveado {
 	private String chave;
 	
 	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
+	
+	
+	@Persistent
 	private String carro;
 	
 	@Persistent
-	private Collection<Turno> turnos;
+	private ArrayList<Turno> turnos;
 	
 	public String getChave() {
 		return chave;
@@ -47,14 +63,14 @@ public class DadosProfissionais implements ObjetoChaveado {
 		this.carro = carro;
 	}
 
-	public Collection<Turno> getTurnos() {
+	public ArrayList<Turno> getTurnos() {
 		if(turnos==null){
 			setTurnos(new ArrayList<Turno>());
 		}
 		return turnos;
 	}
 
-	public void setTurnos(Collection<Turno> turnos) {
+	public void setTurnos(ArrayList<Turno> turnos) {
 		this.turnos = turnos;
 	}
 

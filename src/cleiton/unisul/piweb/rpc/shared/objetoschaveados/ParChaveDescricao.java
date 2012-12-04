@@ -9,7 +9,7 @@ import javax.jdo.annotations.PrimaryKey;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
 
 @PersistenceCapable(detachable="true")
-public class ParChaveDescricao implements ObjetoChaveado{
+public class ParChaveDescricao<Ob extends ObjetoChaveado> implements ObjetoChaveado{
 	
 	/**
 	 * 
@@ -21,13 +21,34 @@ public class ParChaveDescricao implements ObjetoChaveado{
 	@Extension(vendorName="datanucleus", key="gae.encoded-pk", value="true")
 	private String chave;
 	
+	
+	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	@Persistent
+	private Ob copiaObjeto;
+	
 	@Persistent
 	private String chaveObjeto;
 	
 	@Persistent
 	private String descricao;
+	
+	public Ob getCopiaObjeto() {
+		return copiaObjeto;
+	}
 
-	public ParChaveDescricao() {
+	public void setCopiaObjeto(Ob copiaObjeto) {
+		this.copiaObjeto = copiaObjeto;
+	}
+
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
 	}
 
 	public String getChaveObjeto() {

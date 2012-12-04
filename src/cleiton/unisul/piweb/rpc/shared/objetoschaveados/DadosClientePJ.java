@@ -27,6 +27,22 @@ public class DadosClientePJ implements ObjetoChaveado {
 	private String chave;
     
 	@Persistent
+	@Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+	private String chavePai;
+	
+	public String getChavePai() {
+		return chavePai;
+	}
+
+	public void setChavePai(String chavePai) {
+		this.chavePai = chavePai;
+	}
+
+    
+    
+    
+    
+	@Persistent
 	private Status status;
 	
 	@Persistent
