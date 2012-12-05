@@ -1,0 +1,164 @@
+cleiton.unisul.piweb.rpc.client.Armazenamento, false, false, false, false, _, 766123299
+[Lcleiton.unisul.piweb.rpc.shared.ObjetoChaveado;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.ObjetoChaveado;/3864313071, 3864313071
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF/2214763705, 2214763705
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF,chave,chavePai,dadosPessoaFisica,dadosDeContato,preferencias,dadosClientePF
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;/4010517182, 4010517182
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ/3821741419, 3821741419
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ,chave,chavePai,dadosClientePJ,clientesPFVinculados,pessoaJuridica
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ;/1332357600, 1332357600
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteEnviado, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteEnviado/1332018839, 1332018839
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteEnviado,chave,chavePai,cnpj,dataConvite,razaoSocial
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteEnviado;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteEnviado;/2405431855, 2405431855
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteRecebido, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteRecebido/1968276849, 1968276849
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteRecebido,chave,chavePai,cnpj,dataConvite,frotaRemetente,razaoSocial
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteRecebido;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteRecebido;/884367491, 884367491
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaCancelada, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaCancelada/646548225, 646548225
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaCancelada,chave,corridaSolicitada,chavePai,dataHoraCancelamento,motivo
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaCancelada;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaCancelada;/2427704663, 2427704663
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada/3011301684, 3011301684
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada,chave,chavePai,corridaSolicitada,dataHoraDesembarque,localDesembarque
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada;/1336138565, 1336138565
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada/2644197538, 2644197538
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada,chave,chavePai,cliente,motorista,dataHoraEmbarque,localEmbarque,localPrevisaoDesembarque,observacao
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada;/1061819504, 1061819504
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF/2978830547, 2978830547
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF,chave,chavePai,status,tipoNacionalidade
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF$Status, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF$Status/2743291946, 2743291946
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF$TipoNacionalidade, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF$TipoNacionalidade/2693136070, 2693136070
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF;/3055616005, 3055616005
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ/19517715, 19517715
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ,chave,chavePai,status,voucher
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ$Status, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ$Status/1330796535, 1330796535
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ$Voucher, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ$Voucher/87429545, 87429545
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ;/1324321155, 1324321155
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato/4003024345, 4003024345
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato,chave,chavePai,emails,endereco,telefones
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato;/4256792346, 4256792346
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica/821363598, 821363598
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica,chave,chavePai,cpf,dataNascimento,idiomasFalados,nome
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica;/2197535514, 2197535514
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica/2422239881, 2422239881
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica,chave,chavePai,cnpj,razaoSocial,regioesDeAtuacao
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica;/2909443365, 2909443365
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosProfissionais, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosProfissionais/933788987, 933788987
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosProfissionais,chave,chavePai,carro,turnos
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosProfissionais;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosProfissionais;/3203746282, 3203746282
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo/1958639084, 1958639084
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo,chave,chavePai,email,nivelAcesso
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo$NivelAcesso, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo$NivelAcesso/3138775793, 3138775793
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo;/242455132, 242455132
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota/77565070, 77565070
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota,chave,corridasCanceladas,corridasFinalizadas,corridasSolicitadas,frotasParceirasForaDaRede,frotasParceirasNaRede,meusDadosCompartilhados,motoristas,usuariosAdministrativos,convitesEnviadosPendentes,convitesRecebidosPendentes
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados/3297078584, 3297078584
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados,chave,chavePai,clientesPF,clientesPJ,dadosPessoaJuridica
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados;/2216530960, 2216530960
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;/1997507923, 1997507923
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista/1344378846, 1344378846
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista,chave,chavePai,dadosPessoais,dadosProfissionais,preferencias
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista;/420458963, 420458963
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao/564483618, 564483618
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao,chave,chavePai,copiaObjeto,chaveObjeto,descricao
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao;/3676093018, 3676093018
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica/4252898094, 4252898094
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica,chave,chavePai,dadosPessoaFisica,dadosDeContato
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica;/1714906430, 1714906430
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaJuridica, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaJuridica/2580743515, 2580743515
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaJuridica,chave,chavePai,dadosPessoaJuridica,dadosDeContato
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaJuridica;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaJuridica;/2753475002, 2753475002
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias/4283066540, 4283066540
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias,chave,chavePai,motoristaFumante,transportaAnimais
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias$MotoristaFumante, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias$MotoristaFumante/624641331, 624641331
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias$TransportaAnimais, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias$TransportaAnimais/2791297365, 2791297365
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias;/1174176223, 1174176223
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno/841125981, 841125981
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno,chave,chavePai,fim,inicio
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno;/3742878047, 3742878047
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo, true, true, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo/854581132, 854581132
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo,chavePai,chave,dadosUsuarioAdministrativo,pessoaFisica
+[Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;/1322539598, 1322539598
+cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.FrotaECredenciais, true, true, false, false, cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.FrotaECredenciais/2583393234, 2583393234
+@ClientFields,cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.FrotaECredenciais,chave,frota,credenciais
+[Lcleiton.unisul.piweb.rpc.shared.respostasdeconsulta.FrotaECredenciais;, true, true, false, false, [Lcleiton.unisul.piweb.rpc.shared.respostasdeconsulta.FrotaECredenciais;/2744592823, 2744592823
+cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaLoginUsuarioAdministrativo, true, true, false, false, cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaLoginUsuarioAdministrativo/1251386727, 1251386727
+@ClientFields,cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaLoginUsuarioAdministrativo,chave,usuario,frotasEcredenciais
+cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia, true, true, false, false, cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia/2237107158, 2237107158
+cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.Usuario, true, true, false, false, cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.Usuario/1951789892, 1951789892
+com.google.gwt.event.shared.UmbrellaException, true, true, false, false, com.google.gwt.event.shared.UmbrellaException/3104463596, 3104463596
+com.google.gwt.http.client.RequestException, true, true, false, false, com.google.gwt.http.client.RequestException/190587325, 190587325
+com.google.gwt.i18n.shared.impl.DateRecord, true, true, true, true, com.google.gwt.i18n.shared.impl.DateRecord/3375188634, 3375188634
+com.google.gwt.jsonp.client.TimeoutException, true, true, false, false, com.google.gwt.jsonp.client.TimeoutException/1112787596, 1112787596
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true, true, true, true, com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533, 3936916533
+com.google.gwt.user.client.rpc.InvocationException, true, false, false, false, com.google.gwt.user.client.rpc.InvocationException/1510557512, 1510557512
+com.google.gwt.user.client.rpc.RpcTokenException, true, true, false, false, com.google.gwt.user.client.rpc.RpcTokenException/2345075298, 2345075298
+com.google.gwt.user.client.rpc.SerializableException, true, true, false, false, com.google.gwt.user.client.rpc.SerializableException/3047383460, 3047383460
+com.google.gwt.user.client.rpc.SerializationException, true, true, false, false, com.google.gwt.user.client.rpc.SerializationException/2836333220, 2836333220
+com.google.gwt.user.client.rpc.SerializedTypeViolationException, true, true, false, false, com.google.gwt.user.client.rpc.SerializedTypeViolationException/914601580, 914601580
+com.google.gwt.user.client.rpc.ServiceDefTarget$NoServiceEntryPointSpecifiedException, true, true, false, false, com.google.gwt.user.client.rpc.ServiceDefTarget$NoServiceEntryPointSpecifiedException/3408313447, 3408313447
+com.google.gwt.user.client.rpc.XsrfToken, false, false, true, true, com.google.gwt.user.client.rpc.XsrfToken/4254043109, 4254043109
+com.google.gwt.user.client.ui.ChangeListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.ChangeListenerCollection/287642957, 287642957
+com.google.gwt.user.client.ui.ClickListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.ClickListenerCollection/2152455986, 2152455986
+com.google.gwt.user.client.ui.FocusListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.FocusListenerCollection/119490835, 119490835
+com.google.gwt.user.client.ui.FormHandlerCollection, true, true, false, false, com.google.gwt.user.client.ui.FormHandlerCollection/3088681894, 3088681894
+com.google.gwt.user.client.ui.KeyboardListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.KeyboardListenerCollection/1040442242, 1040442242
+com.google.gwt.user.client.ui.LoadListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.LoadListenerCollection/3174178888, 3174178888
+com.google.gwt.user.client.ui.MouseListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.MouseListenerCollection/465158911, 465158911
+com.google.gwt.user.client.ui.MouseWheelListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.MouseWheelListenerCollection/370304552, 370304552
+com.google.gwt.user.client.ui.PopupListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.PopupListenerCollection/1920131050, 1920131050
+com.google.gwt.user.client.ui.ScrollListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.ScrollListenerCollection/210686268, 210686268
+com.google.gwt.user.client.ui.TabListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.TabListenerCollection/3768293299, 3768293299
+com.google.gwt.user.client.ui.TableListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.TableListenerCollection/2254740473, 2254740473
+com.google.gwt.user.client.ui.TreeListenerCollection, true, true, false, false, com.google.gwt.user.client.ui.TreeListenerCollection/3716243734, 3716243734
+com.google.web.bindery.event.shared.UmbrellaException, true, true, false, false, com.google.web.bindery.event.shared.UmbrellaException/1025846929, 1025846929
+java.io.IOException, true, true, false, false, java.io.IOException/1159940531, 1159940531
+java.io.UnsupportedEncodingException, true, true, false, false, java.io.UnsupportedEncodingException/1526756933, 1526756933
+java.lang.ArithmeticException, true, true, false, false, java.lang.ArithmeticException/1539622151, 1539622151
+java.lang.ArrayIndexOutOfBoundsException, true, true, false, false, java.lang.ArrayIndexOutOfBoundsException/600550433, 600550433
+java.lang.ArrayStoreException, true, true, false, false, java.lang.ArrayStoreException/3540507190, 3540507190
+java.lang.AssertionError, true, true, false, false, java.lang.AssertionError/3490171458, 3490171458
+java.lang.Boolean, true, true, true, true, java.lang.Boolean/476441737, 476441737
+java.lang.ClassCastException, true, true, false, false, java.lang.ClassCastException/702295179, 702295179
+java.lang.Error, true, true, false, false, java.lang.Error/1331973429, 1331973429
+java.lang.Exception, true, true, true, false, java.lang.Exception/1920171873, 1920171873
+java.lang.IllegalArgumentException, true, true, false, false, java.lang.IllegalArgumentException/1755012560, 1755012560
+java.lang.IllegalStateException, true, true, false, false, java.lang.IllegalStateException/1972187323, 1972187323
+java.lang.IndexOutOfBoundsException, true, true, false, false, java.lang.IndexOutOfBoundsException/2489527753, 2489527753
+java.lang.NegativeArraySizeException, true, true, false, false, java.lang.NegativeArraySizeException/3846860241, 3846860241
+java.lang.NoSuchMethodException, true, true, false, false, java.lang.NoSuchMethodException/260969707, 260969707
+java.lang.NullPointerException, true, true, false, false, java.lang.NullPointerException/1463492344, 1463492344
+java.lang.NumberFormatException, true, true, false, false, java.lang.NumberFormatException/3305228476, 3305228476
+java.lang.RuntimeException, true, true, true, false, java.lang.RuntimeException/515124647, 515124647
+java.lang.String, true, true, true, true, java.lang.String/2004016611, 2004016611
+java.lang.StringIndexOutOfBoundsException, true, true, false, false, java.lang.StringIndexOutOfBoundsException/500777603, 500777603
+java.lang.Throwable, true, true, true, false, java.lang.Throwable/2953622131, 2953622131
+java.lang.UnsupportedOperationException, true, true, false, false, java.lang.UnsupportedOperationException/3744010015, 3744010015
+java.lang.annotation.AnnotationFormatError, true, true, false, false, java.lang.annotation.AnnotationFormatError/2257184627, 2257184627
+java.lang.annotation.AnnotationTypeMismatchException, true, true, false, false, java.lang.annotation.AnnotationTypeMismatchException/976205828, 976205828
+java.security.DigestException, true, true, false, false, java.security.DigestException/629316798, 629316798
+java.security.GeneralSecurityException, true, true, false, false, java.security.GeneralSecurityException/2669239907, 2669239907
+java.security.NoSuchAlgorithmException, true, true, false, false, java.security.NoSuchAlgorithmException/2892037213, 2892037213
+java.sql.Date, true, true, true, true, java.sql.Date/730999118, 730999118
+java.sql.Time, true, true, true, true, java.sql.Time/1816797103, 1816797103
+java.sql.Timestamp, true, true, true, true, java.sql.Timestamp/3040052672, 3040052672
+java.util.ArrayList, true, true, true, true, java.util.ArrayList/4159755760, 4159755760
+java.util.Arrays$ArrayList, true, true, false, false, java.util.Arrays$ArrayList/2507071751, 2507071751
+java.util.Collections$EmptyList, true, true, false, false, java.util.Collections$EmptyList/4157118744, 4157118744
+java.util.Collections$EmptySet, true, true, false, false, java.util.Collections$EmptySet/3523698179, 3523698179
+java.util.Collections$SingletonList, true, true, false, false, java.util.Collections$SingletonList/1586180994, 1586180994
+java.util.ConcurrentModificationException, true, true, false, false, java.util.ConcurrentModificationException/2717383897, 2717383897
+java.util.Date, true, true, true, true, java.util.Date/3385151746, 3385151746
+java.util.EmptyStackException, true, true, false, false, java.util.EmptyStackException/89438517, 89438517
+java.util.HashSet, true, true, false, false, java.util.HashSet/3273092938, 3273092938
+java.util.LinkedHashSet, true, true, false, false, java.util.LinkedHashSet/1826081506, 1826081506
+java.util.LinkedList, true, true, false, false, java.util.LinkedList/3953877921, 3953877921
+java.util.NoSuchElementException, true, true, false, false, java.util.NoSuchElementException/1559248883, 1559248883
+java.util.Stack, true, true, false, false, java.util.Stack/1346942793, 1346942793
+java.util.TooManyListenersException, true, true, false, false, java.util.TooManyListenersException/2023078032, 2023078032
+java.util.TreeMap, true, true, false, false, java.util.TreeMap/1493889780, 1493889780
+java.util.TreeSet, true, true, false, false, java.util.TreeSet/4043497002, 4043497002
+java.util.Vector, true, true, false, false, java.util.Vector/3057315478, 3057315478
+javax.validation.ConstraintDeclarationException, true, true, false, false, javax.validation.ConstraintDeclarationException/3610544007, 3610544007
+javax.validation.ConstraintDefinitionException, true, true, false, false, javax.validation.ConstraintDefinitionException/3732439488, 3732439488
+javax.validation.ConstraintViolationException, true, true, false, false, javax.validation.ConstraintViolationException/1185386591, 1185386591
+javax.validation.GroupDefinitionException, true, true, false, false, javax.validation.GroupDefinitionException/4024780846, 4024780846
+javax.validation.UnexpectedTypeException, true, true, false, false, javax.validation.UnexpectedTypeException/593026390, 593026390
+javax.validation.ValidationException, true, true, false, false, javax.validation.ValidationException/1570221831, 1570221831

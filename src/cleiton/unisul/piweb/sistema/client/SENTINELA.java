@@ -13,6 +13,7 @@ import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaCancelada;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados;
@@ -20,25 +21,19 @@ import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista;
 import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.FrotaECredenciais;
 import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.Usuario;
 import cleiton.unisul.piweb.sistema.client.InputViewInicio.AcessarHandler;
-import cleiton.unisul.piweb.sistema.client.formularios.FormCorridaCancelada;
-import cleiton.unisul.piweb.sistema.client.formularios.FormCorridaSolicitada;
 import cleiton.unisul.piweb.sistema.client.formularios.FormRelacaoClientesPF;
 import cleiton.unisul.piweb.sistema.client.formularios.FormRelacaoClientesPJ;
 import cleiton.unisul.piweb.sistema.client.formularios.FormRelacaoCorridasCanceladas;
+import cleiton.unisul.piweb.sistema.client.formularios.FormRelacaoCorridasFinalizadas;
 import cleiton.unisul.piweb.sistema.client.formularios.FormRelacaoCorridasSolicitadas;
 import cleiton.unisul.piweb.sistema.client.formularios.FormRelacaoFrotasDadosCompartilhados;
 import cleiton.unisul.piweb.sistema.client.formularios.FormRelacaoMotoristas;
 import cleiton.unisul.piweb.sistema.client.formularios.individuais.FormClientePF;
 import cleiton.unisul.piweb.sistema.client.formularios.individuais.FormClientePJ;
+import cleiton.unisul.piweb.sistema.client.formularios.individuais.FormCorridaSolicitada;
 import cleiton.unisul.piweb.sistema.client.formularios.individuais.FormFrotaDadosCompartilhados;
 import cleiton.unisul.piweb.sistema.client.formularios.individuais.FormMotorista;
-import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasCanceladas;
 import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasFinalizadas;
-import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasSolicitadas;
-import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.CadastroEstaFrota;
-import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.CadastroFrotasParceiras;
-import cleiton.unisul.piweb.sistema.client.telaspopup.frotas.FrotasQueEmitemVouchers;
-import cleiton.unisul.piweb.sistema.client.telaspopup.funcionarios.FuncionariosEmAtividade;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.Window;
@@ -302,14 +297,6 @@ public class SENTINELA implements EntryPoint, AcessarHandler {
 		MenuBar menuBar_corridasCanceladas = new MenuBar(true);
 		MenuItem mntmNewItem_3 = new MenuItem("Corridas canceladas", false, menuBar_corridasCanceladas);
 		
-//		menuBar_corridasCanceladas.addItem(
-//				new MenuItem("nova corrida cancelada", false, new CriadorTela<CorridaCancelada>(new InputViewFactory<CorridaCancelada>() {
-//					@Override
-//					public InputView<CorridaCancelada> getInputView() {
-//						return new FormCorridaCancelada(true);
-//					}
-//				})));
-		
 		menuBar_corridasCanceladas.addItem(
 				new MenuItem("todas as corridas", false, new CriadorTela<List<CorridaCancelada>>(new InputViewFactory<List<CorridaCancelada>>() {
 					@Override
@@ -322,7 +309,15 @@ public class SENTINELA implements EntryPoint, AcessarHandler {
 		menuBar_4.addItem(mntmNewItem_3);
 		
 		MenuBar menuBar_corridasFinalizadas = new MenuBar(true);
-		MenuItem mntmNewItem = new MenuItem("Corridas finalizadas", false,  new CriadorTela(new CorridasFinalizadas()));
+		MenuItem mntmNewItem = new MenuItem("Corridas finalizadas", false,  menuBar_corridasFinalizadas);
+		
+		menuBar_corridasFinalizadas.addItem(
+				new MenuItem("todas as corridas", false, new CriadorTela<List<CorridaFinalizada>>(new InputViewFactory<List<CorridaFinalizada>>() {
+					@Override
+					public InputView<List<CorridaFinalizada>> getInputView() {
+						return new FormRelacaoCorridasFinalizadas();
+					}
+				})));
 		menuBar_4.addItem(mntmNewItem);
 		menuBar.addItem(mntmNewMenu_3);
 	}

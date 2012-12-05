@@ -433,51 +433,28 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 		
 		PersistenceManager pm=pm();
 		pm.getFetchPlan().addGroup("corridasCanceladas");
-//		pm.getFetchPlan().setMaxFetchDepth(-1);
 
-
-	
-		
-//		javax.jdo.Transaction tx = pm.currentTransaction();
-//		tx.begin();
 		boolean result =true;
 
 		CorridaSolicitada d = pm.getObjectById(CorridaSolicitada.class, KeyFactory.stringToKey(a.getChave()));
 			
-
-//			objeto.getCorridaSolicitada().setChave(null);
-
-
-//			result &= f.getCorridasCanceladas().add(objeto);
-			
-//			if (result){
-				try {
-//					exclui(a);
+			try {
 					pm.deletePersistent(d);
-//					pm.deletePersistent(a);
-//					pm.makeTransient(pm.getObjectById(CorridaSolicitada.class, KeyFactory.stringToKey(a.getChave())));
-//					pm.makeTransient(objeto.getCorridaSolicitada());
 				} catch (Exception e) {
 					result=false;
 					new Exception("BBBBBBBBB").printStackTrace();
 					e.printStackTrace();
 					throw new RuntimeException();
 				}
-//			}
 
-//				Frota f = pm.detachCopy(pegarFrota(pm, chavePai));
 				Frota f = pegarFrota(pm, chavePai);
 				if(f==null){
 					return null;
 				}
-				
-//				result &= f.getCorridasSolicitadas().remove(d);
-//				result &= f.getCorridasSolicitadas().remove(a);
 
 				
 				f.getCorridasCanceladas().add(objeto);
 				
-//		if (result){
 			try {
 				pm.makePersistent(f);
 			} catch (Exception e) {
@@ -485,9 +462,7 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 				result=false;
 				e.printStackTrace();
 			}
-//		}
 		
-//		tx.commit();
 		pm.close();
 		
 
@@ -498,45 +473,109 @@ public class ArmazenamentoImpl extends RemoteServiceServlet implements Armazenam
 	}
 
 	public RespostaPersistencia cria(CorridaFinalizada objeto, String chavePai) {
+		CorridaSolicitada a = objeto.getCorridaSolicitada();
+		
+		CorridaSolicitada c= new CorridaSolicitada();
+			ParChaveDescricao<ClientePF> cli = new ParChaveDescricao<ClientePF>();
+			ParChaveDescricao<ClientePF> b = a.getCliente();
+				cli.setChaveObjeto(b.getChaveObjeto());
+				cli.setDescricao(b.getDescricao());
+				cli.setCopiaObjeto(b.getCopiaObjeto());
+			c.setCliente(cli);
+			c.setDataHoraEmbarque(a.getDataHoraEmbarque());
+			c.setLocalEmbarque(a.getLocalEmbarque());
+			c.setLocalPrevisaoDesembarque(a.getLocalPrevisaoDesembarque());
+			c.setStatus(CorridaSolicitada.Status.CANCELADA);
+
+			ParChaveDescricao<Motorista> mot = new ParChaveDescricao<Motorista>();
+			ParChaveDescricao<Motorista> z = a.getMotorista();
+				mot.setChaveObjeto(z.getChaveObjeto());
+				mot.setDescricao(z.getDescricao());
+				mot.setCopiaObjeto(z.getCopiaObjeto());
+			c.setMotorista(mot);
+			c.setObservacao(a.getObservacao());
+			
+		objeto.setCorridaSolicitada(c);
+		
+		
 		PersistenceManager pm=pm();
 		pm.getFetchPlan().addGroup("corridasFinalizadas");
-		pm.getFetchPlan().setMaxFetchDepth(-1);
-		Frota f = pegarFrota(pm, chavePai);
-		
-		if(f==null){
-			return null;
-		}
-		
-		boolean result =true;
-		
 
-			result &= f.getCorridasFinalizadas().add(objeto);
-			result &= f.getCorridasSolicitadas().remove(objeto.getCorridaSolicitada());
+		boolean result =true;
+
+		CorridaSolicitada d = pm.getObjectById(CorridaSolicitada.class, KeyFactory.stringToKey(a.getChave()));
 			
-		if (result){
 			try {
-				pm.deletePersistent(objeto.getCorridaSolicitada());
-			} catch (Exception e) {
-				result=false;
-				e.printStackTrace();
-			}
-		}
-			
-			objeto.getCorridaSolicitada().setChave(null);
-		
-		if (result){
+					pm.deletePersistent(d);
+				} catch (Exception e) {
+					result=false;
+					new Exception("BBBBBBBBB").printStackTrace();
+					e.printStackTrace();
+					throw new RuntimeException();
+				}
+
+				Frota f = pegarFrota(pm, chavePai);
+				if(f==null){
+					return null;
+				}
+
+				
+				f.getCorridasFinalizadas().add(objeto);
+				
 			try {
 				pm.makePersistent(f);
 			} catch (Exception e) {
+				new Exception("AAAA").printStackTrace();
 				result=false;
 				e.printStackTrace();
 			}
-		}
+		
 		pm.close();
+		
+
 		
 		RespostaPersistencia r = new RespostaPersistencia();
 			r.setOperacaoBemSucedida(result);
 		return r; 
+//		PersistenceManager pm=pm();
+//		pm.getFetchPlan().addGroup("corridasFinalizadas");
+//		pm.getFetchPlan().setMaxFetchDepth(-1);
+//		Frota f = pegarFrota(pm, chavePai);
+//		
+//		if(f==null){
+//			return null;
+//		}
+//		
+//		boolean result =true;
+//		
+//
+//			result &= f.getCorridasFinalizadas().add(objeto);
+//			result &= f.getCorridasSolicitadas().remove(objeto.getCorridaSolicitada());
+//			
+//		if (result){
+//			try {
+//				pm.deletePersistent(objeto.getCorridaSolicitada());
+//			} catch (Exception e) {
+//				result=false;
+//				e.printStackTrace();
+//			}
+//		}
+//			
+//			objeto.getCorridaSolicitada().setChave(null);
+//		
+//		if (result){
+//			try {
+//				pm.makePersistent(f);
+//			} catch (Exception e) {
+//				result=false;
+//				e.printStackTrace();
+//			}
+//		}
+//		pm.close();
+//		
+//		RespostaPersistencia r = new RespostaPersistencia();
+//			r.setOperacaoBemSucedida(result);
+//		return r; 
 	}
 
 	public RespostaPersistencia cria(Motorista objeto, String chavePai) {

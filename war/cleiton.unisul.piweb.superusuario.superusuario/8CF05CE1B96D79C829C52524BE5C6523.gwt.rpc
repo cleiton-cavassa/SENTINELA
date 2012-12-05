@@ -1,0 +1,70 @@
+cleiton.unisul.piweb.rpc.client.GreetingService, false, false, false, false, _, 3916195588
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF/2214763705, 2214763705
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePF,chave,chavePai,dadosPessoaFisica,dadosDeContato,preferencias,dadosClientePF
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ/3821741419, 3821741419
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.ClientePJ,chave,chavePai,dadosClientePJ,clientesPFVinculados,pessoaJuridica
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteEnviado, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteEnviado/1332018839, 1332018839
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteEnviado,chave,chavePai,cnpj,dataConvite,razaoSocial
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteRecebido, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteRecebido/1968276849, 1968276849
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.ConviteRecebido,chave,chavePai,cnpj,dataConvite,frotaRemetente,razaoSocial
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaCancelada, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaCancelada/646548225, 646548225
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaCancelada,chave,corridaSolicitada,chavePai,dataHoraCancelamento,motivo
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada/3011301684, 3011301684
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaFinalizada,chave,chavePai,corridaSolicitada,dataHoraDesembarque,localDesembarque
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada/2644197538, 2644197538
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.CorridaSolicitada,chave,chavePai,cliente,motorista,dataHoraEmbarque,localEmbarque,localPrevisaoDesembarque,observacao
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF/2978830547, 2978830547
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF,chave,chavePai,status,tipoNacionalidade
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF$Status, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF$Status/2743291946, 2743291946
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF$TipoNacionalidade, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePF$TipoNacionalidade/2693136070, 2693136070
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ/19517715, 19517715
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ,chave,chavePai,status,voucher
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ$Status, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ$Status/1330796535, 1330796535
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ$Voucher, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosClientePJ$Voucher/87429545, 87429545
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato/4003024345, 4003024345
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosDeContato,chave,chavePai,emails,endereco,telefones
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica/821363598, 821363598
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaFisica,chave,chavePai,cpf,dataNascimento,idiomasFalados,nome
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica/2422239881, 2422239881
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosPessoaJuridica,chave,chavePai,cnpj,razaoSocial,regioesDeAtuacao
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosProfissionais, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosProfissionais/933788987, 933788987
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosProfissionais,chave,chavePai,carro,turnos
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo/1958639084, 1958639084
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo,chave,chavePai,email,nivelAcesso
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo$NivelAcesso, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.DadosUsuarioAdministrativo$NivelAcesso/3138775793, 3138775793
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota/77565070, 77565070
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota,chave,corridasCanceladas,corridasFinalizadas,corridasSolicitadas,frotasParceirasForaDaRede,frotasParceirasNaRede,meusDadosCompartilhados,motoristas,usuariosAdministrativos,convitesEnviadosPendentes,convitesRecebidosPendentes
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados/3297078584, 3297078584
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.FrotaDadosCompartilhados,chave,chavePai,clientesPF,clientesPJ,dadosPessoaJuridica
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista/1344378846, 1344378846
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.Motorista,chave,chavePai,dadosPessoais,dadosProfissionais,preferencias
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao/1083148996, 1083148996
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.ParChaveDescricao,chave,chavePai,chaveObjeto,descricao
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica/4252898094, 4252898094
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaFisica,chave,chavePai,dadosPessoaFisica,dadosDeContato
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaJuridica, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaJuridica/2580743515, 2580743515
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.PessoaJuridica,chave,chavePai,dadosPessoaJuridica,dadosDeContato
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias/4283066540, 4283066540
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias,chave,chavePai,motoristaFumante,transportaAnimais
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias$MotoristaFumante, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias$MotoristaFumante/624641331, 624641331
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias$TransportaAnimais, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Preferencias$TransportaAnimais/2791297365, 2791297365
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno/841125981, 841125981
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.Turno,chave,chavePai,fim,inicio
+cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo, false, false, true, true, cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo/854581132, 854581132
+@ClientFields,cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo,chavePai,chave,dadosUsuarioAdministrativo,pessoaFisica
+cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.Usuario, true, true, false, false, cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.Usuario/1951789892, 1951789892
+com.google.gwt.i18n.shared.impl.DateRecord, false, false, true, true, com.google.gwt.i18n.shared.impl.DateRecord/3375188634, 3375188634
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true, true, true, true, com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533, 3936916533
+com.google.gwt.user.client.rpc.RpcTokenException, true, true, false, false, com.google.gwt.user.client.rpc.RpcTokenException/2345075298, 2345075298
+com.google.gwt.user.client.rpc.XsrfToken, false, false, true, true, com.google.gwt.user.client.rpc.XsrfToken/4254043109, 4254043109
+java.lang.Exception, true, false, true, false, java.lang.Exception/1920171873, 1920171873
+java.lang.IllegalArgumentException, true, true, false, false, java.lang.IllegalArgumentException/1755012560, 1755012560
+java.lang.NumberFormatException, true, true, false, false, java.lang.NumberFormatException/3305228476, 3305228476
+java.lang.RuntimeException, true, false, true, false, java.lang.RuntimeException/515124647, 515124647
+java.lang.String, true, true, true, true, java.lang.String/2004016611, 2004016611
+java.lang.Throwable, true, false, true, false, java.lang.Throwable/2953622131, 2953622131
+java.sql.Date, false, false, true, true, java.sql.Date/730999118, 730999118
+java.sql.Time, false, false, true, true, java.sql.Time/1816797103, 1816797103
+java.sql.Timestamp, false, false, true, true, java.sql.Timestamp/3040052672, 3040052672
+java.util.ArrayList, false, false, true, true, java.util.ArrayList/4159755760, 4159755760
+java.util.Date, false, false, true, true, java.util.Date/3385151746, 3385151746

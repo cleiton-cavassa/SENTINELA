@@ -36,7 +36,7 @@ public abstract class FormRelacao <Ob extends ObjetoChaveado>extends Composite i
 		FlowPanel flowPanel = new FlowPanel();
 		flowPanel.setStyleName("painelCadastro");
 		initWidget(flowPanel);
-		flowPanel.setSize("808px", "");
+		flowPanel.setSize("900px", "");
 		
 		VerticalPanel verticalPanel = new VerticalPanel();
 		flowPanel.add(verticalPanel);
