@@ -8,6 +8,8 @@ import cleiton.unisul.piweb.rpc.client.BotaoLogout;
 import cleiton.unisul.piweb.rpc.client.TabelasAtualizador;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.Frota;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.UsuarioAdministrativo;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.Atualizavel;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.BotaoSalvar;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.ColumnEditar;
 import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.ColumnExcluir;
 import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia;
@@ -31,7 +33,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.view.client.ListDataProvider;
 
-public class TelaInicial extends Composite implements BotoesHandler{
+public class TelaInicial extends Composite implements BotoesHandler, Atualizavel{
 	
 	private TabelasAtualizador<Frota> atualizador;
 	private Frota exemplo = new Frota();
@@ -57,10 +59,10 @@ public class TelaInicial extends Composite implements BotoesHandler{
 	private ClickHandler hNovo = new ClickHandler() {
 		@Override
 		public void onClick(ClickEvent event) {
-			FormFrota f =new FormFrota(atualizador, dp);
+			FormFrota f =new FormFrota(atualizador, dp, true);
 			f.addSalvarHandler(eu);
 			posFrota=-1;
-			new CriadorTela(f).execute();
+			new CriadorTela<Frota>(f).execute();
 		}
 	};
 	
@@ -100,6 +102,9 @@ public class TelaInicial extends Composite implements BotoesHandler{
 	
 	
 	public TelaInicial(){
+		
+		BotaoSalvar.addAtualizavel(this);
+		
 		eu=this;
 		atualizador=new TabelasAtualizador<Frota>(dp, null);
 		
@@ -151,7 +156,7 @@ public class TelaInicial extends Composite implements BotoesHandler{
 		},new InputViewFactory<Frota>() {
 			@Override
 			public InputView<Frota> getInputView() {
-				FormFrota f = new FormFrota(atualizador, dp);
+				FormFrota f = new FormFrota(atualizador, dp, false);
 				f.addSalvarHandler(eu);
 				return f;
 			}

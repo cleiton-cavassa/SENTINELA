@@ -33,7 +33,6 @@ import cleiton.unisul.piweb.sistema.client.formularios.individuais.FormClientePJ
 import cleiton.unisul.piweb.sistema.client.formularios.individuais.FormCorridaSolicitada;
 import cleiton.unisul.piweb.sistema.client.formularios.individuais.FormFrotaDadosCompartilhados;
 import cleiton.unisul.piweb.sistema.client.formularios.individuais.FormMotorista;
-import cleiton.unisul.piweb.sistema.client.telaspopup.corridas.CorridasFinalizadas;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.Window;
@@ -58,7 +57,7 @@ public class SENTINELA implements EntryPoint, AcessarHandler {
 	public static Frota getFrota(){
 		return frota;
 	}
-
+	
 	private static Usuario usuario=null;
 	private final Label lblFrota = new Label();
 	private final Label label = new Label();

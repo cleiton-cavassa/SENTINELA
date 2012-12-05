@@ -25,6 +25,10 @@ public class FormUsuarioAdministrativo extends
 	private final FormDadosPessoaFisica dadosPessoaFisica = new FormDadosPessoaFisica(); 
 	
 	private final VerticalPanel raiz;
+	
+	public String getTitulo(){
+		return "Usu‡rio Administrativo";
+	}
 //	private final ListDataProvider<UsuarioAdministrativo> dataProv;
 
 

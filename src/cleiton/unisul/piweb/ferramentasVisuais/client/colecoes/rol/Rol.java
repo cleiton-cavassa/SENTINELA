@@ -24,7 +24,7 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extend
 	}
 	
 	private final ArrayList<T> formularios;
-	private final Button botaoMais;
+	private final BotaoMais botaoMais;
 	private final VerticalPanel painelWidgets;
 	private final Parser<Ob, T>parser;
 	private FecharPopUpEventHandler f; 
@@ -48,7 +48,7 @@ public class Rol<T extends HasExcludeMePleaseHandlers, Ob extends Object> extend
 		painelIntermediario.add(painelWidgets);
 		painelIntermediario.add(botaoMais);
 		
-		((ClickHandler) botaoMais).onClick(null);
+		botaoMais.onClick(null);
 
 	}
 	

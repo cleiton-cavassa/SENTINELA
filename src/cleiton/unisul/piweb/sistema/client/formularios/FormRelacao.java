@@ -8,6 +8,8 @@ import cleiton.unisul.piweb.ferramentasVisuais.client.util.CriadorTela;
 import cleiton.unisul.piweb.ferramentasVisuais.client.util.FecharPopUpEventHandler;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.Atualizavel;
+import cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets.BotaoSalvar;
 import cleiton.unisul.piweb.rpc.shared.respostasdeconsulta.RespostaPersistencia;
 import cleiton.unisul.piweb.sistema.client.SENTINELA;
 
@@ -24,7 +26,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.ListDataProvider;
 
-public abstract class FormRelacao <Ob extends ObjetoChaveado>extends Composite implements InputView<List<Ob>>{
+public abstract class FormRelacao <Ob extends ObjetoChaveado>extends Composite implements InputView<List<Ob>>, Atualizavel{
 
 	abstract protected CellTable<Ob> criarTabela();
 	abstract protected Ob novoOb();
@@ -33,6 +35,9 @@ public abstract class FormRelacao <Ob extends ObjetoChaveado>extends Composite i
 	private FecharPopUpEventHandler f;
 	
 	protected Widget iniciarWidgets(){
+		
+		BotaoSalvar.addAtualizavel(this);
+		
 		FlowPanel flowPanel = new FlowPanel();
 		flowPanel.setStyleName("painelCadastro");
 		initWidget(flowPanel);

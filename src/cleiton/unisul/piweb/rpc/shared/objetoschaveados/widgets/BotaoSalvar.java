@@ -1,5 +1,7 @@
 package cleiton.unisul.piweb.rpc.shared.objetoschaveados.widgets;
 
+import java.util.ArrayList;
+
 import cleiton.unisul.piweb.ferramentasVisuais.client.inputview.InputView;
 import cleiton.unisul.piweb.rpc.client.ServicoArmazenamento;
 import cleiton.unisul.piweb.rpc.shared.ObjetoChaveado;
@@ -20,7 +22,15 @@ public class BotaoSalvar <Ob extends ObjetoChaveado>extends Button {
 	private Acionador acionador;
 	private String chaveFrota;
 
+	private static ArrayList<Atualizavel> atualizaveis=new ArrayList<Atualizavel>();
 	
+	public static boolean addAtualizavel(Atualizavel atualizavel){
+		return atualizaveis.add(atualizavel);
+	}
+	
+	public static boolean removeAtualizavel(Atualizavel atualizavel){
+		return atualizaveis.remove(atualizavel);
+	}
 	/**
 	 * Cria um botão especial com um ClickHandler preconfigurado, o qual aciona uma RPC de persistência de objeto a cada clique.
 	 * @param texto Texto que será exibido no botão
@@ -47,13 +57,36 @@ public class BotaoSalvar <Ob extends ObjetoChaveado>extends Button {
 		public void onClick(ClickEvent event) {
 			acionador.execute();
 			if (novoRegistro & chaveFrota != null){
-				ServicoArmazenamento.getArmazenamento().criar(inputView.getInput(), chaveFrota, callback);
+				ServicoArmazenamento.getArmazenamento().criar(inputView.getInput(), chaveFrota, new CallbackContainer(callback));
 			}else{
-				ServicoArmazenamento.getArmazenamento().persistir(inputView.getInput(), novoRegistro, salvarMesmoSeNaoOcorrerOEsperado, chaveFrota, callback);
+				ServicoArmazenamento.getArmazenamento().persistir(inputView.getInput(), novoRegistro, salvarMesmoSeNaoOcorrerOEsperado, chaveFrota, new CallbackContainer(callback));
 			}
 
 		}
 	};
+	
+	private class CallbackContainer implements AsyncCallback<RespostaPersistencia>{
+		private AsyncCallback<RespostaPersistencia> a;
+		
+		CallbackContainer(AsyncCallback<RespostaPersistencia> a){
+			this.a=a;
+		}
+
+		@Override
+		public void onFailure(Throwable caught) {
+			a.onFailure(caught);
+		}
+
+		@Override
+		public void onSuccess(RespostaPersistencia result) {
+			a.onSuccess(result);
+			for (Atualizavel b: atualizaveis){
+				try{
+					b.atualizar();					
+				}catch(Throwable t){}
+			}
+		}
+	}
 	
 	public interface Acionador extends Command{
 		AsyncCallback<RespostaPersistencia> getCallback();

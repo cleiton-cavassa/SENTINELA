@@ -60,6 +60,8 @@ public class InputViewInicio implements InputView<List<FrotaECredenciais>> {
 		raiz.addStyleName("padding5");
 		raiz.setSize("100%", "100%");
 		
+		raiz.setWidth(Window.getClientWidth()*80/100+"px");
+		raiz.setHeight(Window.getClientHeight()*70/100+"px");
 		VerticalPanel verticalPanel_1 = new VerticalPanel();
 		raiz.add(verticalPanel_1, DockPanel.NORTH);
 		verticalPanel_1.setWidth("100%");

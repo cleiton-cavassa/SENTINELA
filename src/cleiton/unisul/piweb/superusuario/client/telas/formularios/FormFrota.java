@@ -36,7 +36,7 @@ public class FormFrota extends Formulario<Frota>{
 	private FormDadosDeContato dadosDeContato= new FormDadosDeContato();
 	private FormTabelaUsuariosAdministrativos usuariosAdministrativos = new FormTabelaUsuariosAdministrativos(); 
 	
-	public FormFrota(TabelasAtualizador<Frota> atualizador, ListDataProvider<Frota> dataProvider){
+	public FormFrota(TabelasAtualizador<Frota> atualizador, ListDataProvider<Frota> dataProvider, boolean novoRegistro){
 		setInput(new Frota());
 		raiz = new VerticalPanel();
 		TabPanel tabPanel = new TabPanel();
@@ -55,7 +55,7 @@ public class FormFrota extends Formulario<Frota>{
 		raiz.add(horizontalPanel_1);
 		horizontalPanel_1.setWidth("211");
 		
-		Button button_1 = new BotaoSalvar<Frota>("salvar", this, true, false, null, new AcionadorSalvarFrota());
+		Button button_1 = new BotaoSalvar<Frota>("salvar", this, novoRegistro, false, null, new AcionadorSalvarFrota());
 		button_1.addClickHandler(new ClickHandler() {
 			
 			@Override

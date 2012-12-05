@@ -149,7 +149,8 @@ public class Mural <Input extends Object> extends Composite implements InputView
 
 		@Override
 		public String getTitulo() {
-			return inputView.getTitulo();
+//			return inputView.getTitulo();
+			return titulo;
 		}
 
 		@Override
